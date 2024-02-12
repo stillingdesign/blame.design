@@ -1,0 +1,74 @@
+{% import "components/_icons.njk" as icons %}
+
+{% set tagline = "The SaaS company for you" %}
+
+<footer class="section pt:48 {% if theme == 'dark' %}bg:sheet-5-i shadow:footerDark{% else %}bg:sheet-5 shadow:footerLight{% endif %}">
+    <div class="container flex flex:col md:grid grid-cols:12 md:gap:48 md:align-items:stretch pb:48">
+        <div class="relative flex align-items:center justify-content:between md:flex:col md:align-items:start col:4 border-b:1 md:border-b:0 pb:16 md:pb:0 mb:24 md:mb:0 {% if theme == 'dark' %}border:edge-1-i{% else %}border:edge-1{% endif %}">
+            <div>
+                <a href="/" class="px:10 py:6 ml:n10 mr:16 inline-flex align-items:center justify-content:start radius:full border:1 focus:primary md:mb:4">
+                    {{ icons.wordmark('w:64') }}
+                </a>
+                <p class="font:sm opacity:70">
+                    {{ tagline }}
+                </p>
+            </div>
+            <div class="flex align-items:center gap:12">
+                    {% macro footerSocial(link, icon) %}
+                        <a href="{{ link }}" class="w:32 h:32 sm:w:40 sm:h:40 flex align-items:center justify-content:center radius:full border:1 focus:primary bg-opacity:50 hover:bg-opacity:100 transition:100 {% if theme == 'dark' %}bg:sheet-1-i hover:color:link-hv-i{% else %}bg:sheet-1 hover:color:link-hv{% endif %}">
+                            {{ icon }}
+                        </a>
+                    {% endmacro %}
+                    {{ footerSocial(
+                        link=base.twitterLink,
+                        icon=icons.socialTwitter('w:16')
+                    )}}
+                    {{ footerSocial(
+                        link=base.linkedinLink,
+                        icon=icons.socialLinkedin('w:16')
+                    )}}
+                    {{ footerSocial(
+                        link=base.githubLink,
+                        icon=icons.socialGithub('w:18')
+                    )}}
+                </div>
+        </div>
+        <div class="flex flex:wrap align-items:start justify-content:between md:justify-content:start md:grid col:8 grid-cols:4 gap:24 sm:gap:0 md:gap:48 md:mt:8">
+            {% for collection in navigation | selectattr("footer") %}
+                <ul class="w:5-12 sm:w:auto md:w:auto">
+                    <li>
+                        <h3 class="mb:6">
+                            {{ collection.name }}
+                        </h3>
+                        <ul>
+                            {% for page in collection.menuItems | selectattr("footer") %}
+                                <li>
+                                    <a href="{{ page.url }}" class="inline-block font:sm opacity:70 py:6 px:12 ml:n12 radius:full space:nowrap border:1 focus:primary hover:opacity:100 transition:100 {% if theme == 'dark' %}hover:color:link-hv-i{% else %}hover:color:link-hv{% endif %}">
+                                        {{ page.label }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container flex align-items:center justify-content:between py:16 sm:py:0 border-t:1 {% if theme == 'dark' %}border:edge-2-i{% else %}border:edge-2{% endif %}">
+        <p class="font:sm opacity:70 sm:w:224">
+            ©{{ base.currentYear() }} {{ base.name }}
+        </p>
+        <div class="hidden sm:block w:0 h:72 border-l:1 {% if theme == 'dark' %}border:edge-2-i{% else %}border:edge-2{% endif %}"></div>
+        <ul class="flex align-items:center justify-content:end gap:4 mr:n12 sm:w:224">
+            {% for collection in navigation | selectattr("subFooter") %}
+                {% for page in collection.menuItems %}
+                    <li>
+                        <a href="{{ page.url }}" class="inline-block font:sm opacity:70 py:6 px:12 radius:full space:nowrap border:1 focus:primary hover:opacity:100 transition:100 {% if theme == 'dark' %}hover:color:link-hv-i{% else %}hover:color:link-hv{% endif %}">
+                            {{ page.label }}
+                        </a>
+                    </li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+</footer>

@@ -1,0 +1,126 @@
+@use "ratio" as *;
+
+$utilities: (
+    background-color: (
+        pseudos: (hover, group-hover, focus, group-focus),
+        responsive: true,
+        variants: (
+            transparent: transparent,
+        ),
+    ),
+    background: (
+        pseudos: (hover, group-hover, focus, group-focus),
+        responsive: true,
+        variants: (
+            transparent: transparent,
+        ),
+    ),
+    border: (
+        pseudos: (hover, group-hover, focus, group-focus),
+        responsive: true,
+    ),
+    bottom: (
+        variants: (
+            unset: unset,
+        ),
+    ),
+    color: (
+        pseudos: (hover, group-hover, focus, group-focus),
+        responsive: true,
+    ),
+    font-size: (
+        variants: (
+            3xs: 0.5rem,
+        ),
+    ),
+    height: (
+        variants: (
+            100p: 100%,
+            minus56: calc(100vh - 3.5rem),
+        ),
+    ),
+    left: (
+        variants: (
+            unset: unset,
+        ),
+    ),
+    max-width: (
+        variants: (
+            672: 42rem,
+            704: 44rem,
+            736: 46rem,
+            1920: 120rem,
+        ),
+    ),
+    min-width: (
+        variants: (
+            64: 4rem,
+            72: 4.5rem,
+            80: 5rem,
+            96: 6rem,
+            112: 7rem,
+        ),
+    ),
+    min-height: (
+        variants: (
+            48: 3rem,
+            56: 3.5rem,
+            64: 4rem,
+            72: 4.5rem,
+            80: 5rem,
+            88: 5.5rem,
+            96: 6rem,
+            112: 7rem,
+        ),
+    ),
+    right: (
+        variants: (
+            unset: unset,
+        ),
+    ),
+    scale: (
+        pseudos: (hover, group-hover, focus, group-focus),
+        variants: (
+            103: 1.03,
+        ),
+    ),
+    text-decoration: (
+        pseudos: (hover, group-hover, focus, group-focus),
+    ),
+    top: (
+        variants: (
+            unset: unset,
+            46: 2.875rem,
+        ),
+    ),
+    transition-timing-function: (
+        variants: (
+            ease-out: ease-out,
+            cubic-in: cubic-bezier(0.66, 0, 1, 0.33),
+            cubic-out: cubic-bezier(0, 0.66, 0.33, 1),
+            cubic-in-out: cubic-bezier(0.66, 0, 0.33, 1),
+            quint-in: cubic-bezier(0.78, 0, 1, 0.22),
+            quint-out: cubic-bezier(0, 0.78, 0.22, 1),
+            quint-in-out: cubic-bezier(0.78, 0, 0.22, 1),
+        ),
+    ),
+    translate-x: (
+        pseudos: (hover, group-hover, focus, group-focus),
+    ),
+    width: (
+        pseudos: (hover, group-hover, focus, group-focus),
+        variants: (
+            auto: auto,
+            0: 0,
+            plus48: calc(100% + 3rem),
+            plus96: calc(100% + 6rem),
+        ),
+    ),
+    z-index: (
+        responsive: true,
+        variants: (
+            n1: -1,
+        ),
+    ),
+    native-ratio: $ratio
+);

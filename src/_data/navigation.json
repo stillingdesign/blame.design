@@ -1,0 +1,190 @@
+[
+    {
+        "name": "Product",
+        "header": true,
+        "footer": true,
+        "mobile": true,
+        "menuItems": [
+            {
+                "label": "Collaborate",
+                "description": "Work across departments",
+                "icon": "users",
+                "header": true,
+                "footer": true,
+                "url": "/collaboration"
+            },
+            {
+                "label": "Automate",
+                "description": "Automate daily tasks",
+                "icon": "bolt",
+                "header": true,
+                "footer": true,
+                "url": "/automation"
+            },
+            {
+                "label": "Document",
+                "description": "Securely save work",
+                "icon": "share",
+                "header": true,
+                "footer": true,
+                "url": "/document"
+            },
+            {
+                "label": "Integrations",
+                "description": "Connect your tools",
+                "icon": "integration",
+                "header": true,
+                "footer": true,
+                "url": "/integrations"
+            },
+            {
+                "label": "Pricing",
+                "header": false,
+                "footer": true,
+                "url": "/pricing"
+            }
+        ]
+    },
+    {
+        "name": "Solutions",
+        "header": true,
+        "footer": true,
+        "mobile": true,
+        "menuItems": [
+            {
+                "label": "Leadership",
+                "description": "Share updates and insights, fast",
+                "header": true,
+                "footer": true,
+                "url": "/use-case/leadership"
+            },
+            {
+                "label": "Internal comms",
+                "description": "All of your company in one place",
+                "header": true,
+                "footer": true,
+                "url": "/use-case/internal-comms"
+            },
+            {
+                "label": "Product",
+                "description": "Customer-centric product development",
+                "header": true,
+                "footer": true,
+                "url": "/use-case/product"
+            },
+            {
+                "label": "Engineering",
+                "description": "More documentation, less distraction",
+                "header": true,
+                "footer": true,
+                "url": "/use-case/engineering"
+            }
+        ]
+    },
+    {
+        "name": "Resources",
+        "header": true,
+        "footer": true,
+        "menuItems": [
+            {
+                "label": "Blog",
+                "description": "Improving team work",
+                "header": true,
+                "footer": true,
+                "icon": "icons.paperplane('w:18')",
+                "url": "/blog"
+            },
+            {
+                "label": "Changelog",
+                "description": "Acme product updates",
+                "header": true,
+                "footer": true,
+                "url": "/changelog"
+            },
+            {
+                "label": "Customer stories",
+                "description": "How Acme helps other companies",
+                "header": true,
+                "footer": true,
+                "url": "/customers"
+            },
+            {
+                "label": "Downloads",
+                "description": "Get the Acme apps",
+                "header": true,
+                "footer": true,
+                "url": "/download"
+            },
+            {
+                "label": "Help center",
+                "header": false,
+                "footer": true,
+                "url": "/help"
+            }
+        ]
+    },
+    {
+        "name": "Company",
+        "header": false,
+        "footer": true,
+        "menuItems": [
+            {
+                "label": "Contact sales",
+                "header": false,
+                "footer": true,
+                "url": "/demo"
+            },
+            {
+                "label": "Security",
+                "header": false,
+                "footer": true,
+                "url": "/security"
+            },
+            {
+                "label": "Careers",
+                "header": false,
+                "footer": true,
+                "badge": "hiring",
+                "url": "/careers"
+            },
+            {
+                "label": "Login",
+                "header": false,
+                "footer": true,
+                "url": "/login"
+            }
+        ]
+    },
+    {
+        "name": "Legal",
+        "header": false,
+        "footer": false,
+        "subFooter": true,
+        "menuItems": [
+            {
+                "label": "Terms",
+                "header": false,
+                "footer": true,
+                "url": "/legal/terms"
+            },
+            {
+                "label": "Privacy",
+                "header": false,
+                "footer": true,
+                "url": "/legal/privacy"
+            },
+            {
+                "label": "Status",
+                "header": false,
+                "footer": true,
+                "url": "/status"
+            }
+        ]
+    },
+    {
+        "name": "Pricing",
+        "header": true,
+        "footer": false,
+        "url": "/pricing/"
+    }
+]

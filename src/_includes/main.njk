@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="canonical" href="{{- base.url -}}{{- page.url -}}" />
+    
+        {# Search + Tab #}
+        <title>{{ seoTitle }}</title>
+        <meta name="description" content="{{- seoDescription -}}">
+
+        {# OpenGraph #}
+        <meta property="og:site_name" content="{{ base.companyName }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="{{- ogTitle -}}" />
+        <meta property="og:description" content="{{- ogDescription -}}" />
+        <meta property="og:url" content="{{- base.url -}}{{- page.url -}}" />
+        <meta property="og:image" content="{{- base.url -}}{{- ogImage -}}" />
+        <meta property="og:image:alt" content="{{- ogImageAlt -}}" />
+
+        {# Twitter #}
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="{{- base.twitterUsername -}}">
+        <meta name="twitter:title" content="{{- ogTitle -}}">
+        <meta name="twitter:description" content="{{- ogDescription -}}">
+        <meta name="twitter:image" content="{{- base.url -}}{{- ogImage -}}">
+        <meta name="twitter:image:alt" content="{{- ogImageAlt -}}">
+
+        {# No index #}
+        {% if noindex == true %}<meta name="robots" content="noindex, nofollow">{% endif %}
+    
+        {# Stylesheet #}
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
+    
+        {# Website Icon #}
+        <link rel="icon" href="/assets/images/favicon/favicon.ico" sizes="any">
+        <link rel="icon" href="/assets/images/favicon/favicon.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href='/assets/images/favicon/apple-touch-icon.png'>
+        <link rel="manifest" href="/manifest.webmanifest">
+        
+    </head>
+
+    {# Body #}
+    <body data-barba="wrapper" class="w:100p max-w:100p font:md tracking:tight leading:160 font:sans kern:normal antialiased {% if theme == 'dark' %}bg:sheet-6-i color:ink-3-i{% else %}bg:sheet-6 color:ink-3{% endif %}">
+
+        <div class="relative w:100p">
+
+            {# Header #}
+            {% include "components/_header.njk" %}
+            
+            {# Nesting for smooth scroll if wanted later on #}
+            <div id="smooth-wrapper">
+                <div id="smooth-content">
+
+                    {# Page Content #}
+                    {{ content | safe }}
+
+                    {# Footer #}
+                    {% include "components/_footer.njk" %}
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="/assets/javascript/main.js"></script>
+    </body>
+
+</html>

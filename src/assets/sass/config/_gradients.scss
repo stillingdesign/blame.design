@@ -1,0 +1,15 @@
+@use "colors" as *;
+
+$gradients: (
+
+    fade-up:      linear-gradient(0deg,   rgba(var(--sheet-5), 0) 0%, rgba(var(--sheet-5), 1) 100%),
+    fade-left:    linear-gradient(-90deg, rgba(var(--sheet-5), 0) 0%, rgba(var(--sheet-5), 1) 100%),
+    fade-down:    linear-gradient(180deg, rgba(var(--sheet-5), 0) 0%, rgba(var(--sheet-5), 1) 100%),
+    fade-right:   linear-gradient(90deg,  rgba(var(--sheet-5), 0) 0%, rgba(var(--sheet-5), 1) 100%),
+
+    fade-up-i:    linear-gradient(0deg,   rgba(var(--sheet-5-i), 0) 0%, rgba(var(--sheet-5-i), 1) 100%),
+    fade-left-i:  linear-gradient(-90deg, rgba(var(--sheet-5-i), 0) 0%, rgba(var(--sheet-5-i), 1) 100%),
+    fade-down-i:  linear-gradient(180deg, rgba(var(--sheet-5-i), 0) 0%, rgba(var(--sheet-5-i), 1) 100%),
+    fade-right-i: linear-gradient(90deg,  rgba(var(--sheet-5-i), 0) 0%, rgba(var(--sheet-5-i), 1) 100%),
+
+);

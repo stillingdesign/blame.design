@@ -1,0 +1,76 @@
+@use "sass:map";
+@use "uniform" as *;
+
+/* purgecss start ignore */
+
+.form-full {
+    @include apply("relative w:100p p:48 bg:sheet-3 border:1 border:edge-1 shadow:2xl radius:2xl");
+
+    // Text, Textarea, and Select fields
+    .hs-fieldtype-text,
+    .hs-fieldtype-select,
+    .hs-fieldtype-textarea {
+        @include apply("relative pb:8");
+        label { @include apply("font:xs leading:100 color:ink-1 mb:4"); }
+        .hs-form-required { @include apply("color:link-rg inline-block"); transform: translate(2px, 2px); }
+        .hs-input { @include apply("py:12 px:16 bg:sheet-2 radius:md border:1 border:edge-1 font:sm transition:200 cubic-out"); }
+        .hs-input::placeholder { @include apply("color:ink-1"); }
+        // Errors
+        .hs-input.error { @include apply("bg:red bg-opacity:10 border:red border-opacity:30 color:red transition:200 cubic-out"); }
+        .hs-input.error::placeholder { @include apply("color:red opacity:70"); }
+        .hs-error-msgs { @include apply('absolute bottom:n14 right:0 text:right'); }
+        .hs-error-msgs label { @include apply('regular font:2xs color:red'); }
+        // Focus
+        &:focus-within label { @include apply('color:ink-3')}
+        .hs-input:focus-visible { @include apply('bg:sheet-1 border:edge-2 color:ink-3'); }
+        // Hover
+        @media (hover: hover) { .hs-input:hover { @include apply("bg:sheet-1 color:ink-3 shadow:sm transition:200 cubic-out"); } }
+    }
+
+    .hs-fieldtype-textarea .hs-input { @include apply("min-h:88"); }
+    .hs-fieldtype-select .hs-input { @include apply("cursor:pointer"); }
+
+    // Checkbox
+    .hs-fieldtype-booleancheckbox {
+        @include apply("relative py:12");
+        .hs-form-booleancheckbox-display { @include apply("flex align-items:center gap:6"); }
+        label { @include apply("font:sm leading:130 color:ink-3"); }
+        input { @include apply("w:24 h:24 radius:md border:1 border:edge-2 transition:200 cubic-out cursor:pointer color:primary-rg"); }
+        @media (hover: hover) { input:hover { @include apply("shadow:sm transition:200 cubic-out"); } }
+    }
+
+    // Dark theme
+    &.dark {
+        @include apply("bg:sheet-3-i border:edge-1-i");
+
+        // Text, Textarea, and Select fields
+        .hs-fieldtype-text,
+        .hs-fieldtype-select,
+        .hs-fieldtype-textarea {
+            @include apply("color:ink-3-i");
+            label { @include apply("color:ink-1-i"); }
+            .hs-form-required { @include apply("color:link-rg-i"); }
+            .hs-input { @include apply("bg:sheet-2-i border:edge-1-i"); }
+            .hs-input::placeholder { @include apply("color:ink-1-i"); }
+            // Errors
+            .hs-input.error { @include apply("bg:red-i border:red-i color:red-i bg-opacity:4 border-opacity:20"); }
+            .hs-input.error::placeholder { @include apply("color:red-i"); }
+            .hs-error-msgs label { @include apply('color:red-i'); }
+            // Focus
+            &:focus-within label { @include apply('color:ink-3-i')}
+            .hs-input:focus-visible { @include apply('bg:sheet-1-i border:edge-2-i color:ink-3-i'); }
+            // Hover
+            @media (hover: hover) { .hs-input:hover { @include apply("bg:sheet-1-i color:ink-3-i"); } }
+        }
+
+        // Checkbox
+        .hs-fieldtype-booleancheckbox {
+            label { @include apply("color:ink-3-i"); }
+            input { @include apply("border:edge-2-i"); }
+        }
+
+    }
+
+}
+
+/* purgecss end ignore */

@@ -1,0 +1,33 @@
+/* purgecss start ignore */
+@font-face {
+    font-family: 'Neue Montreal';
+    font-style:  normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("/assets/fonts/neuemontreal-var.woff2") format("woff2"),
+         url("/assets/fonts/neuemontreal-var.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'OT Brut';
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fonts/otbrut-400.woff2") format("woff2"),
+         url("/assets/fonts/otbrut-400.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'OT Brut';
+    font-style:  italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fonts/otbrut-400i.woff2") format("woff2"),
+         url("/assets/fonts/otbrut-400i.woff") format("woff");
+}
+/* purgecss end ignore */
+
+$font-families: (
+    sans: ('Neue Montreal', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'),
+    serif: ('OT Brut', Georgia, Cambria, 'Times New Roman', Times, serif),
+);

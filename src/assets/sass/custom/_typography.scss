@@ -1,0 +1,13 @@
+@use "sass:map";
+@use "uniform" as *;
+
+.headline { @include apply("leading:110 tracking:tightest"); }
+
+.faded { opacity: 0.85; }
+
+.highlight {
+    background: linear-gradient(0deg, rgba(var(--ui-green), 1) 0%, rgba(var(--ui-green), 1) 100%);
+    background-position: 0% 70%;
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+}

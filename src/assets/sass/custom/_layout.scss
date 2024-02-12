@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "uniform" as *;
+
+.section { @include apply("relative w:100p flex flex:col align-items:center justify-content:center sm:px:48"); }
+.section\:py { @include apply("py:72 sm:py:112 md:py:160"); }
+.section\:pt { @include apply("pt:72 sm:pt:112 md:pt:160"); }
+.section\:pb { @include apply("pb:72 sm:pb:112 md:pb:160"); }
+
+.section\:no-pad { @include apply("sm:px:0"); }
+.section\:row { @include apply("flex:row"); }
+
+.container { @include apply("relative w:100p md:max-w:1152 px:24 sm:px:0"); }
+.container\:no-pad { @include apply("relative w:100p md:max-w:1152"); }
+
+.sm\:grid\:normal { @include apply("sm:grid sm:gap:24 md:gap:48"); }
+.md\:grid\:normal { @include apply("md:grid md:gap:48"); }

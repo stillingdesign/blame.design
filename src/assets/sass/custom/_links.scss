@@ -1,0 +1,59 @@
+@use "sass:map";
+@use "uniform" as *;
+
+/* purgecss start ignore */
+
+// Base Button
+.btn { @include apply("flex align-items:center justify-content:center radius:full border:1 leading:100 semibold outline:none flex-shrink:0"); }
+
+// Button Sizes
+.btn\:sm { @include apply("font:xs px:12 py:10")}
+.btn\:md { @include apply("font:sm px:18 py:14")}
+.btn\:lg { @include apply("font:md px:20 py:18")}
+
+// Button Colors
+.btn\:primary   { @include apply("color:link-hv bg:primary-rg bg-opacity:10 border:primary-rg border-opacity:30 backdrop backdrop-blur:sm transition:200 cubic-out"); transform: translate3d(0, 0, 0); }
+.btn\:primary-i { @include apply("color:ink-3-i bg:primary-rg bg-opacity:20 border:primary-rg border-opacity:50 backdrop backdrop-blur:sm transition:200 cubic-out"); transform: translate3d(0, 0, 0); }
+.btn\:white     { @include apply("color:ink-3-i bg:sheet-1    bg-opacity:10 border:sheet-1    border-opacity:30 backdrop backdrop-blur:sm transition:200 cubic-out"); transform: translate3d(0, 0, 0); }
+.btn\:black     { @include apply("color:ink-3   bg:sheet-6-i  bg-opacity:10 border:sheet-6-i  border-opacity:30 backdrop backdrop-blur:sm transition:200 cubic-out"); transform: translate3d(0, 0, 0); }
+
+// Special Buttons
+.btn\:nav-item {@include apply("flex align-items:start gap:16 md:gap:8 font:lg md:font:sm leading:130 py:12 px:24 sm:px:48 md:px:16 w:100p bg:primary-rg bg-opacity:0 transition:200 cubic-out")}
+
+// Button Hovers
+@media (hover: hover) {
+    .btn\:primary:hover   { @include apply("shadow:xs bg-opacity:20 border-opacity:50 transition:200 cubic-out"); transform: translate3d(0, 0, 0); animation: bump 50ms ease-in-out 25ms;}
+    .btn\:primary-i:hover { @include apply("bg-opacity:40 border-opacity:70 transition:200 cubic-out"); transform: translate3d(0, 0, 0); animation: bump 50ms ease-in-out 25ms; }
+    .btn\:white:hover     { @include apply("shadow:xs bg-opacity:30 border-opacity:50 transition:200 cubic-out"); transform: translate3d(0, 0, 0); animation: bump 50ms ease-in-out 25ms; }
+    .btn\:black:hover     { @include apply("shadow:xs bg-opacity:20 border-opacity:50 transition:200 cubic-out"); transform: translate3d(0, 0, 0); animation: bump 50ms ease-in-out 25ms; }
+    .btn\:nav-item:hover  { @include apply("bg-opacity:10 transition:200 cubic-out")}
+    .hover\:bump:hover { animation: bump 50ms ease-in-out 25ms; }
+}
+
+// Links focuses
+.btn:focus-visible { @include apply("bg:primary-rg border:primary-rg color:ink-3-i opacity:100")}
+.btn\:nav-item:focus-visible  { @include apply("bg-opacity:100 color:white outline:none")}
+.focus\:primary:focus-visible {@include apply("opacity:100 color:white bg:primary-rg border:1 border:primary-rg outline:none"); }
+
+// Button Animations
+@keyframes bump {
+    0%    { transform: scale3d(1,1,1); }
+    50%   { transform: scale3d(1.03,1.03,1.03); }
+    100%  { transform: scale3d(1,1,1); }
+}
+
+// Inline Links
+.link-rg   { @include apply("color:link-rg underline"); }
+.link-rg-i { @include apply("color:link-rg-i underline"); }
+
+// Inline Link Hovers
+@media (hover: hover) {
+    .link-rg:hover   { @include apply("color:link-hv"); }
+    .link-rg-i:hover { @include apply("color:link-hv-i"); }
+}
+
+// Inline Link Focus
+.link-rg:focus-visible,
+.link-rg-i:focus-visible { @include apply("color:white bg:primary-rg outline:none")}
+
+/* purgecss end ignore */

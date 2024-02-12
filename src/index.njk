@@ -1,0 +1,44 @@
+---
+layout: "main.njk"
+seoTitle: "Acme: The search and tab title"
+seoDescription: "This is the description that shows up in search engines."
+ogTitle: "This is the title that shows up in social cards"
+ogDesc: "This is the description that shows up in social cards"
+ogImage: "/assets/images/og/default.png"
+ogImageAlt: "This is the alt text for social cards images"
+theme: dark
+changefreq: daily
+---
+
+<main>
+
+    <section class="section section:py">
+        <div class="container flex flex:col sm:grid grid-cols:2 gap:48">
+            <div class="flex flex:col align-items:start gap:16">
+                <h1 class="font:8xl medium tracking:tighter leading:110">
+                    The website template that means business
+                </h1>
+                <p class="font:3xl leading:150 tracking:tight color:ink-1">
+                    Increase efficiency, quality, and revenue <span class="space:nowrap">with the</span> Acme website template today.
+                </p>
+                <a href="#" class="btn btn:primary-i btn:lg">
+                    Try for free
+                </a>
+            </div>
+            <div class="w:100p bg:sheet-5 radius:md">
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="section min-h:640 pt:192 overflow:hidden">
+        <div class="container">
+            <p class="mb:20">Todo:</p>
+            <ul class="list:disc flex flex:col gap:12">
+                <li>Add foundational analytics and events</li>
+                <li>{{ base.url }}</li>
+            </ul>
+        </div>
+    </section>
+
+</main>

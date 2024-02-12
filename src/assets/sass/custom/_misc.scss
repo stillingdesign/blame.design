@@ -1,0 +1,11 @@
+@use "sass:map";
+@use "uniform" as *;
+
+.kern\:normal { font-kerning:normal; }
+.antialiased { -webkit-font-smoothing: antialiased; }
+.blur\:fix { transform: translate3d(0, 0, 0); }
+
+.scrollbar\:dark { scrollbar-color: rgba(var(--edge-1-i), 1) rgba(var(--sheet-4-i), 1); }
+.scrollbar\:dark::-webkit-scrollbar { width: 1rem; }
+.scrollbar\:dark::-webkit-scrollbar-thumb { background: rgba(var(--edge-1-i), 1); border-radius: 999px; border:4px solid rgba(var(--sheet-4-i), 1); }
+.scrollbar\:dark::-webkit-scrollbar-track { background: rgba(var(--sheet-4-i), 1); }

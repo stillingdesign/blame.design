@@ -1,0 +1,35 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "Stilling marketing site boiler plate code",
+  "main": ".eleventy.js",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "watch:sass": "sass --load-path=./node_modules/uniformcss --watch src/assets/sass:dist/assets/css",
+    "build:sass": "sass --load-path=./node_modules/uniformcss src/assets/sass/:dist/assets/css/",
+    "watch:webpack": "webpack --mode=development --watch",
+    "build:webpack": "webpack --mode=production",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all clean build:sass --parallel watch:*",
+    "prebuild": "rm -rf ./dist",
+    "build": "run-s clean build:*",
+    "postbuild": "postcss --config postcss.config.js dist/assets/css/main.css --no-map --replace"
+  },
+  "author": "Mike Stilling",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.14",
+    "dotenv": "^16.3.1",
+    "gsap": "file:gsap-bonus.tgz",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.63.6",
+    "uniformcss": "^1.5.4",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
