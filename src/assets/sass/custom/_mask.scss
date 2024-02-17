@@ -1,0 +1,43 @@
+// Masks
+
+.mask\:none { mask-image: none; -webkit-mask-image: none; }
+.mask\:fade-out-r { mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); }
+.mask\:fade-out-l { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); }
+.mask\:fade-out-t { mask-image: linear-gradient(0deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(0deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); }
+.mask\:fade-out-b { mask-image: linear-gradient(0deg,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(0deg,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); }
+.mask\:fade-out-x { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%); }
+.mask\:fade-out-x-75p { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); }
+.mask\:fade-out-x-90p { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%); }
+
+@media (min-width: 768px) {
+    .sm\:mask\:none { mask-image: none; -webkit-mask-image: none; }
+    .sm\:mask\:fade-out-r { mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); }
+    .sm\:mask\:fade-out-l { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); }
+    .sm\:mask\:fade-out-t { mask-image: linear-gradient(0deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(0deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); }
+    .sm\:mask\:fade-out-b { mask-image: linear-gradient(0deg,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(0deg,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); }
+    .sm\:mask\:fade-out-x { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%); }
+    .sm\:mask\:fade-out-x-75p { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); }
+    .sm\:mask\:fade-out-x-90p { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%); }
+}
+
+@media (min-width: 1024px) {
+    .md\:mask\:none { mask-image: none; -webkit-mask-image: none; }
+    .md\:mask\:fade-out-r { mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); }
+    .md\:mask\:fade-out-l { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); }
+    .md\:mask\:fade-out-t { mask-image: linear-gradient(0deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(0deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); }
+    .md\:mask\:fade-out-b { mask-image: linear-gradient(0deg,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(0deg,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); }
+    .md\:mask\:fade-out-x { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%); }
+    .md\:mask\:fade-out-x-75p { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); }
+    .md\:mask\:fade-out-x-90p { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%); }
+}
+
+@media (min-width: 1280px) {
+    .lg\:mask\:none { mask-image: none; -webkit-mask-image: none; }
+    .lg\:mask\:fade-out-r { mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); }
+    .lg\:mask\:fade-out-l { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); }
+    .lg\:mask\:fade-out-t { mask-image: linear-gradient(0deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(0deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); }
+    .lg\:mask\:fade-out-b { mask-image: linear-gradient(0deg,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(0deg,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); }
+    .lg\:mask\:fade-out-x { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%); }
+    .lg\:mask\:fade-out-x-75p { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%); }
+    .lg\:mask\:fade-out-x-90p { mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%); }
+}

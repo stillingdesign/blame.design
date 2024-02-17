@@ -5,5 +5,8 @@
 @use "custom/forms";
 @use "custom/layout";
 @use "custom/links";
+@use "custom/mask";
 @use "custom/misc";
 @use "custom/typography";
+
+:root { --current: currentcolor; }

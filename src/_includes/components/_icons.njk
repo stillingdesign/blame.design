@@ -2,34 +2,86 @@
 
 
 
-{% macro chevDown(classes) %}
+{% macro arrowL(classes) %}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="{{ classes }} h:auto">
+        <title>Arrow left icon</title>
+        <path fill-rule="evenodd" d="M14 8a.75.75 0 0 1-.75.75H4.56l3.22 3.22a.75.75 0 1 1-1.06 1.06l-4.5-4.5a.75.75 0 0 1 0-1.06l4.5-4.5a.75.75 0 0 1 1.06 1.06L4.56 7.25h8.69A.75.75 0 0 1 14 8Z" clip-rule="evenodd"/>
+    </svg>
+{% endmacro %}
+
+{% macro arrowR(classes) %}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="{{ classes }} h:auto">
+        <title>Arrow right icon</title>
+        <path fill-rule="evenodd" d="M2 8a.75.75 0 0 1 .75-.75h8.69L8.22 4.03a.75.75 0 0 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 0 1-1.06-1.06l3.22-3.22H2.75A.75.75 0 0 1 2 8Z" clip-rule="evenodd"/>
+    </svg>
+{% endmacro %}
+
+
+{% macro check(classes) %}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="{{ classes }} h:auto">
+        <title>Check icon</title>
+        <path fill-rule="evenodd" d="M12.42 3.38a.75.75 0 0 1 .2 1.04l-5 7.5a.75.75 0 0 1-1.15.11l-3-3a.75.75 0 0 1 1.06-1.06l2.35 2.35 4.5-6.74a.75.75 0 0 1 1.04-.2Z" clip-rule="evenodd"/>
+    </svg>
+{% endmacro %}
+
+{% macro chevD(classes) %}
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="{{ classes }} h:auto">
         <title>Chevron down icon</title>
         <path fill-rule="evenodd" d="M4.2 6.2a.8.8 0 0 1 1 0L8 9l2.7-2.7a.8.8 0 1 1 1 1l-3.2 3.3a.8.8 0 0 1-1 0L4.2 7.3a.8.8 0 0 1 0-1Z" clip-rule="evenodd"/>
     </svg>
 {% endmacro %}
 
-{% macro chevLeft(classes) %}
+{% macro chevL(classes) %}
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="{{ classes }} h:auto">
         <title>Chevron left icon</title>
         <path fill-rule="evenodd" d="M9.8 4.2a.8.8 0 0 1 0 1L7 8l2.7 2.7a.8.8 0 1 1-1 1L5.4 8.6a.8.8 0 0 1 0-1l3.2-3.3a.8.8 0 0 1 1 0Z" clip-rule="evenodd"/>
     </svg>
 {% endmacro %}
 
-{% macro chevRight(classes) %}
+{% macro chevR(classes) %}
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="{{ classes }} h:auto">
         <title>Chevron right icon</title>
         <path fill-rule="evenodd" d="M6.2 4.2a.8.8 0 0 1 1 0l3.3 3.3a.7.7 0 0 1 0 1l-3.2 3.3a.8.8 0 0 1-1-1L8.8 8 6.2 5.3a.8.8 0 0 1 0-1Z" clip-rule="evenodd"/>
     </svg>
 {% endmacro %}
 
-
-{% macro chevUp(classes) %}
+{% macro chevU(classes) %}
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="{{ classes }} h:auto">
         <title>Chevron up icon</title>
         <path fill-rule="evenodd" d="M11.8 9.8a.8.8 0 0 1-1 0L8 7 5.3 9.8a.8.8 0 0 1-1-1l3.2-3.3a.7.7 0 0 1 1 0l3.3 3.2a.8.8 0 0 1 0 1Z" clip-rule="evenodd"/>
     </svg>
 {% endmacro %}
+
+{% macro close(classes) %}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="{{ classes }} h:auto">
+        <title>Close icon</title>
+        <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z"/>
+    </svg>
+{% endmacro %}
+
+{% macro ellipsisH(classes) %}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="{{ classes }} h:auto">
+        <title>Ellipsis icon</title>
+        <path d="M2 8a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm4.5 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6-1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/>
+    </svg>
+{% endmacro %}
+
+{% macro email(classes) %}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" class="{{ classes }} h:auto">
+        <title>Email icon</title>
+        <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+        <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+    </svg>
+{% endmacro %}
+
+
+{% macro emailOutline(classes) %}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="{{ classes }} h:auto">
+        <title>Email icon</title>
+        <path fill-rule="evenodd" d="M2.38 4.63a3 3 0 0 1 2.12-.88h15a3 3 0 0 1 3 3v10.5a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3V6.75a3 3 0 0 1 .88-2.12ZM3 6.75v.24a1.5 1.5 0 0 0 .71 1.28l7.5 4.62a1.5 1.5 0 0 0 1.58 0l7.5-4.62A1.5 1.5 0 0 0 21 6.99v-.24a1.5 1.5 0 0 0-1.5-1.5h-15A1.5 1.5 0 0 0 3 6.75Zm18 2.84-7.43 4.57a3 3 0 0 1-3.14 0L3 9.6v7.66a1.5 1.5 0 0 0 1.5 1.5h15a1.5 1.5 0 0 0 1.5-1.5V9.59Z" clip-rule="evenodd"/>
+    </svg>
+{% endmacro %}
+
 
 
 {# Social Icons #}
@@ -59,13 +111,65 @@
 
 
 
+{# Integrations Logo #}
+
+
+{% macro iconGoogleAds(classes) %}
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" width="16" height="16" class="{{ classes }} h:auto">
+        <title>Google Ads Logo Icon</title>
+        <path fill="#3C8BD9" d="M5.44 2.84c.16-.4.37-.78.69-1.08a2.68 2.68 0 0 1 4.2.62c.65 1.18 1.33 2.32 2 3.48 1.1 1.93 2.23 3.86 3.32 5.79A2.66 2.66 0 1 1 11 14.23L8.07 9.16 8 9.06c-.1-.1-.15-.21-.22-.32l-1.3-2.27L5.63 5a2.67 2.67 0 0 1-.35-1.42c.02-.26.05-.52.16-.75Z"/>
+        <path fill="#FABC04" d="M5.44 2.84a2.78 2.78 0 0 0 .26 2.22c.72 1.22 1.43 2.45 2.13 3.67.06.11.11.22.18.32-.39.67-.77 1.34-1.17 2l-1.63 2.82c-.02 0-.03-.02-.04-.04 0-.05.02-.1.03-.14a2.6 2.6 0 0 0-.62-2.56c-.4-.45-.92-.7-1.51-.78a2.62 2.62 0 0 0-2.07.57c-.11.08-.18.2-.31.27-.03 0-.04-.01-.05-.03l.93-1.6L5.4 2.9l.04-.07Z"/>
+        <path fill="#34A852" d="M.67 11.18c.12-.11.24-.23.37-.33a2.66 2.66 0 0 1 4.15 2.99c0 .04 0 .07-.02.11l-.18.32a2.6 2.6 0 0 1-2.52 1.34A2.65 2.65 0 0 1 .38 11.6l.21-.33c.03-.03.02-.08.08-.08Z"/>
+        <path fill="#FABC04" d="M.67 11.18c-.03.02-.03.07-.07.08 0-.05.02-.07.04-.1l.03.02Z"/>
+        <path fill="#E1C025" d="M5.17 13.95c-.03-.05 0-.08.02-.11l.03.03-.05.08Z"/>
+    </svg>
+{% endmacro %}
+
+
+{% macro iconGoogleAnalytics(classes) %}
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" width="16" height="16" class="{{ classes }} h:auto">
+        <title>Google Analytics Logo Icon</title>
+        <path fill="#F8AB00" d="M11 1.9v12c0 1.35.93 2.1 1.9 2.1.92 0 1.92-.64 1.92-2.1V2c0-1.23-.91-2-1.91-2-1 0-1.91.85-1.91 1.9Z"/>
+        <path fill="#E37300" d="M6 8v5.9c0 1.35.93 2.1 1.9 2.1.92 0 1.92-.64 1.92-2.1V8.1c0-1.24-.91-2-1.91-2C6.9 6.1 6 6.93 6 8ZM4.82 14.1A1.91 1.91 0 1 1 1 14.08a1.91 1.91 0 0 1 3.82 0Z"/>
+    </svg>
+{% endmacro %}
+
+
+{% macro iconGoogleSheets(classes) %}
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" width="16" height="16" class="{{ classes }} h:auto">
+        <title>Google Sheets Logo Icon</title>
+        <path fill="#0F9D58" d="M9.45 0H3.27c-.6 0-1.09.5-1.09 1.1v13.8c0 .6.5 1.1 1.1 1.1h9.45c.6 0 1.09-.5 1.09-1.1V4.37l-2.55-1.81L9.45 0Z"/>
+        <path fill="#F1F1F1" d="M5.09 7.82v5.27h5.82V7.82H5.09Zm2.54 4.54H5.82v-.9h1.81v.9Zm0-1.45H5.82V10h1.81v.9Zm0-1.46H5.82v-.9h1.81v.9Zm2.55 2.91H8.36v-.9h1.82v.9Zm0-1.45H8.36V10h1.82v.9Zm0-1.46H8.36v-.9h1.82v.9Z"/>
+        <path fill="#148852" d="m9.77 4.04 4.05 4.05V4.36l-4.05-.32Z"/>
+        <path fill="#87CEAC" d="M9.45 0v3.27c0 .6.5 1.1 1.1 1.1h3.27L9.45 0Z"/>
+    </svg>
+{% endmacro %}
+
+{% macro iconLinkedIn(classes) %}
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" width="16" height="16" class="{{ classes }} h:auto">
+        <title>LinkedIn Logo Icon</title>
+        <path fill="#fff" d="M1 1h14v14H1z"/>
+        <path fill="#0A66C2" d="M13.63 13.63h-2.37V9.92c0-.89-.01-2.02-1.23-2.02-1.24 0-1.42.96-1.42 1.96v3.77H6.23V6h2.28v1.04h.03a2.5 2.5 0 0 1 2.25-1.23c2.4 0 2.84 1.58 2.84 3.63v4.2ZM3.56 4.95a1.38 1.38 0 1 1 0-2.75 1.38 1.38 0 0 1 0 2.75Zm1.19 8.68H2.37V6h2.38v7.63ZM14.8 0H1.18A1.17 1.17 0 0 0 0 1.15v13.7A1.17 1.17 0 0 0 1.18 16h13.63A1.17 1.17 0 0 0 16 14.84V1.15A1.17 1.17 0 0 0 14.81 0"/>
+    </svg>
+{% endmacro %}
+
+{% macro iconNotion(classes) %}
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" width="16" height="16" class="{{ classes }} h:auto">
+        <title>Notion logo icon</title>
+        <path fill="#fff" d="m1.32.69 8.85-.65c1.09-.1 1.37-.03 2.05.46l2.83 2c.46.34.62.43.62.8v10.92c0 .69-.25 1.09-1.12 1.15L4.27 16c-.65.04-.96-.06-1.3-.5L.87 12.8c-.37-.5-.53-.87-.53-1.3V1.77c0-.56.25-1.03.97-1.09Z"/>
+        <path fill="#000" fill-rule="evenodd" d="M10.17.04 1.32.69C.6.75.35 1.22.35 1.78v9.7c0 .44.16.81.53 1.31l2.08 2.7c.35.44.66.54 1.31.5l10.28-.62c.87-.06 1.12-.46 1.12-1.15V3.3c0-.35-.14-.45-.55-.75l-.07-.06L12.22.5c-.68-.5-.96-.56-2.05-.46ZM4.5 3.12c-.84.06-1.03.07-1.5-.31l-1.22-.97c-.12-.12-.06-.28.25-.31l8.51-.62c.72-.06 1.09.18 1.37.4l1.46 1.06c.06.03.22.22.03.22l-8.79.53h-.1Zm-.98 11V4.87c0-.4.13-.6.5-.62l10.1-.6c.34-.03.5.2.5.6v9.2c0 .4-.07.75-.63.78l-9.66.56c-.56.03-.8-.15-.8-.65Zm9.54-8.76c.06.28 0 .56-.28.59l-.47.09v6.84c-.4.22-.77.35-1.08.35-.5 0-.63-.16-1-.63L7.2 7.81v4.64l.96.22s0 .56-.78.56l-2.14.12c-.06-.12 0-.44.22-.5L6 12.7V6.57l-.78-.06c-.06-.28.1-.69.53-.72l2.3-.15 3.17 4.85v-4.3l-.81-.09c-.06-.34.19-.59.5-.62l2.14-.12Z" clip-rule="evenodd"/>
+    </svg>
+{% endmacro %}
+
+
 {# Company Logos #}
 
 
 
 {% macro wordmark(classes) %}
-    <svg width="80" height="24" viewBox="0 0 80 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="{{ classes }} h:auto">
-        <title>Acme logo</title>
-        <path d="M3.8 23.6H0L8.6 0h4.2l8.6 23.6h-3.9L10.8 4.3h-.2L3.8 23.6Zm.7-9.2h12.4v3H4.5v-3ZM29.4 24a7.7 7.7 0 0 1-7.4-4.4c-.7-1.4-1-3-1-4.7 0-1.8.3-3.4 1-4.8a7.8 7.8 0 0 1 7.3-4.4c1.4 0 2.6.2 3.7.7 1 .5 1.9 1.2 2.5 2.1.7.9 1 2 1.2 3.1h-3.4a3.8 3.8 0 0 0-4-3c-.9 0-1.8.2-2.5.8a5 5 0 0 0-1.7 2.1c-.4 1-.6 2-.6 3.3 0 1.3.2 2.4.6 3.3a5 5 0 0 0 1.7 2.2c.7.5 1.6.8 2.6.8.6 0 1.2-.1 1.8-.4.5-.2 1-.6 1.3-1 .4-.5.7-1 .8-1.7h3.4a6.5 6.5 0 0 1-3.6 5.2c-1.1.5-2.3.8-3.7.8ZM38 23.6V6h3.3v2.9h.3c.3-1 1-1.7 1.8-2.3.8-.5 1.9-.8 3-.8 1.2 0 2.2.3 3 .8.9.6 1.5 1.3 1.9 2.3h.1a5 5 0 0 1 2-2.3c1-.5 2.1-.8 3.4-.8 1.7 0 3 .5 4 1.5s1.6 2.5 1.6 4.6v11.8h-3.5V12.1c0-1.2-.4-2.1-1-2.6-.7-.6-1.5-.8-2.4-.8-1.1 0-2 .3-2.6 1-.7.7-1 1.6-1 2.6v11.3h-3.5V12a3 3 0 0 0-.9-2.4c-.6-.5-1.4-.8-2.3-.8-.7 0-1.3.1-1.9.5-.5.3-1 .8-1.3 1.4-.4.6-.5 1.3-.5 2.1v11H38ZM72.3 24c-1.8 0-3.3-.4-4.6-1.1a7.6 7.6 0 0 1-2.9-3.2c-.7-1.4-1-3-1-4.8 0-1.8.3-3.4 1-4.8a8 8 0 0 1 2.9-3.3 8.9 8.9 0 0 1 7.3-.7 7.1 7.1 0 0 1 4.3 4.4c.5 1.1.7 2.5.7 4v1.3H65.7v-2.6h10.9a5 5 0 0 0-.6-2.4 4.2 4.2 0 0 0-4-2.3 4.6 4.6 0 0 0-4.2 2.6c-.4.7-.5 1.6-.5 2.5v2c0 1.2.2 2.2.6 3 .4.8 1 1.5 1.8 1.9.7.4 1.6.6 2.6.6.7 0 1.3 0 1.9-.2a3.7 3.7 0 0 0 2.3-2.3l3.3.6c-.3 1-.8 1.8-1.4 2.5a7 7 0 0 1-2.6 1.7c-1 .4-2.2.6-3.5.6Z"/>
+    <svg width="66" height="20" viewBox="0 0 66 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="{{ classes }} h:auto">
+        <title>Blame logo</title>
+        <path d="m10.53 9.95 3.38-3.38v-3.9L10.23 0H0v.71h2.71v18.58H0V20h10.23l4.57-3.77v-3.47l-4.27-2.81ZM5.07.74h4.01l2.47 2.28v3.2L9.08 9.6H5.07V.74Zm7.37 15.14-3.36 3.38H5.07v-8.92h4.01l3.36 2.78v2.76Z"/>
+        <path d="M53.17 19.27V7.29l-1.89-3.33h-2.5L46.3 7.41v-.12l-1.89-3.33h-2.5l-2.48 3.45V3.96h-5.09l-2.39 3.21-1.01-3.21h-4.41l-3.96 3.97-1.67 7.87 1.82 3.48h-3.69V0h-4.72v.72h2.51v18.56h-2.51V20h13.22l2.69-3.51L31.68 20h.61l2.17-2.15 1.2-5.72h-.75l-1.2 5.63H31.8l2.78-13.07h2.64v14.58h-2.33V20H55.5v-.73h-2.33Zm-23.19-3.59-2.66 3.56h-3.03l-1.12-3.56 1.51-7.15 2.7-3.81h3.03l1.08 3.6-1.51 7.36Zm14.11 3.59h-4.66V8.53l2.74-3.81h.36l1.56 2.93v11.62Zm6.87 0H46.3V8.53l2.74-3.81h.36l1.56 2.93v11.62ZM66 10.35v-2.3l-3.04-4.09h-4.89L55 8.05v7.87l3.07 4.09h5.07l2.83-4.09v-3.78h-.74v3.57l-1.74 2.48h-4.28l-2-2.75v-5.08H66v-.01Zm-8.79-1.94 1.83-3.69h2.95l1.8 3.69v1.18h-6.58V8.41Z"/>
     </svg>
 {% endmacro %}

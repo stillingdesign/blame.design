@@ -19,9 +19,24 @@ $utilities: (
         pseudos: (hover, group-hover, focus, group-focus),
         responsive: true,
     ),
+    border-radius: (
+        variants: (
+            100p: 100%,
+            2: 0.125rem,
+            5: 0.3125rem,
+            7: 0.4375rem,
+            9: 0.5625rem,
+        ),
+    ),
     bottom: (
         variants: (
             unset: unset,
+            n448: -28rem,
+            n512: -32rem,
+            n640: -40rem,
+            8p: 8%,
+            50p: 50%,
+            58p: 58%,
         ),
     ),
     color: (
@@ -31,17 +46,35 @@ $utilities: (
     font-size: (
         variants: (
             3xs: 0.5rem,
+            13xl: 7rem,
+            14xl: 8rem,
+            15xl: 9rem,
+            16xl: 10rem,
+            '2-25vw': 2.25vw,
+            '4-5vw': 4.5vw,
+            '5-75vw': 5.75vw,
+            11vw: 11vw,
+            20vw: 20vw,
         ),
     ),
     height: (
         variants: (
+            44: 2.75rem,
             100p: 100%,
+            200p: 200%,
             minus56: calc(100vh - 3.5rem),
+            plus24: calc(100% + 1.5rem),
+            plus48: calc(100% + 3rem),
+            plus96: calc(100% + 6rem),
         ),
     ),
     left: (
         variants: (
             unset: unset,
+            n448: -28rem,
+            n512: -32rem,
+            n640: -40rem,
+            7: 0.4375rem,
         ),
     ),
     max-width: (
@@ -73,9 +106,45 @@ $utilities: (
             112: 7rem,
         ),
     ),
+    padding-bottom: (
+        variants: (
+            3: 0.1875rem,
+            5: 0.3125rem,
+            7: 0.4375rem,
+            9: 0.5625rem,
+            11: 0.6875rem,
+            13: 0.8125rem,
+            15: 0.9375rem,
+        ),
+    ),
+    padding-left: (
+        variants: (
+            44: 2.75rem,
+        ),
+    ),
+    padding-right: (
+        variants: (
+            44: 2.75rem,
+        ),
+    ),
+    padding-top: (
+        variants: (
+            3: 0.1875rem,
+            5: 0.3125rem,
+            7: 0.4375rem,
+            9: 0.5625rem,
+            11: 0.6875rem,
+            13: 0.8125rem,
+            15: 0.9375rem,
+        ),
+    ),
     right: (
         variants: (
             unset: unset,
+            n448: -28rem,
+            n512: -32rem,
+            n640: -40rem,
+            7: 0.4375rem,
         ),
     ),
     scale: (
@@ -91,6 +160,9 @@ $utilities: (
         variants: (
             unset: unset,
             46: 2.875rem,
+            n448: -28rem,
+            n512: -32rem,
+            n640: -40rem,
         ),
     ),
     transition-timing-function: (
@@ -112,6 +184,11 @@ $utilities: (
         variants: (
             auto: auto,
             0: 0,
+            44: 2.75rem,
+            68: 4.25rem,
+            86: 5.375rem,
+            100: 6.25rem,
+            plus24: calc(100% + 1.5rem),
             plus48: calc(100% + 3rem),
             plus96: calc(100% + 6rem),
         ),

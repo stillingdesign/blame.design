@@ -2,14 +2,30 @@
 
 $gradients: (
 
-    fade-up:      linear-gradient(0deg,   rgba(var(--sheet-5), 0) 0%, rgba(var(--sheet-5), 1) 100%),
-    fade-left:    linear-gradient(-90deg, rgba(var(--sheet-5), 0) 0%, rgba(var(--sheet-5), 1) 100%),
-    fade-down:    linear-gradient(180deg, rgba(var(--sheet-5), 0) 0%, rgba(var(--sheet-5), 1) 100%),
-    fade-right:   linear-gradient(90deg,  rgba(var(--sheet-5), 0) 0%, rgba(var(--sheet-5), 1) 100%),
+    fade-up:      linear-gradient(0deg,   rgba(var(--sheet-6), 0) 0%, rgba(var(--sheet-6), 1) 100%),
+    fade-left:    linear-gradient(-90deg, rgba(var(--sheet-6), 0) 0%, rgba(var(--sheet-6), 1) 100%),
+    fade-down:    linear-gradient(180deg, rgba(var(--sheet-6), 0) 0%, rgba(var(--sheet-6), 1) 100%),
+    fade-right:   linear-gradient(90deg,  rgba(var(--sheet-6), 0) 0%, rgba(var(--sheet-6), 1) 100%),
 
-    fade-up-i:    linear-gradient(0deg,   rgba(var(--sheet-5-i), 0) 0%, rgba(var(--sheet-5-i), 1) 100%),
-    fade-left-i:  linear-gradient(-90deg, rgba(var(--sheet-5-i), 0) 0%, rgba(var(--sheet-5-i), 1) 100%),
-    fade-down-i:  linear-gradient(180deg, rgba(var(--sheet-5-i), 0) 0%, rgba(var(--sheet-5-i), 1) 100%),
-    fade-right-i: linear-gradient(90deg,  rgba(var(--sheet-5-i), 0) 0%, rgba(var(--sheet-5-i), 1) 100%),
+    fade-up-i:    linear-gradient(0deg,   rgba(var(--sheet-6-i), 0) 0%, rgba(var(--sheet-6-i), 1) 100%),
+    fade-left-i:  linear-gradient(-90deg, rgba(var(--sheet-6-i), 0) 0%, rgba(var(--sheet-6-i), 1) 100%),
+    fade-down-i:  linear-gradient(180deg, rgba(var(--sheet-6-i), 0) 0%, rgba(var(--sheet-6-i), 1) 100%),
+    fade-right-i: linear-gradient(90deg,  rgba(var(--sheet-6-i), 0) 0%, rgba(var(--sheet-6-i), 1) 100%),
+
+    fade-up-sheet-3-i:    linear-gradient(0deg,   rgba(var(--sheet-3-i), 0) 0%, rgba(var(--sheet-3-i), 1) 100%),
+    fade-left-sheet-3-i:  linear-gradient(-90deg, rgba(var(--sheet-3-i), 0) 0%, rgba(var(--sheet-3-i), 1) 100%),
+    fade-down-sheet-3-i:  linear-gradient(180deg, rgba(var(--sheet-3-i), 0) 0%, rgba(var(--sheet-3-i), 1) 100%),
+    fade-right-sheet-3-i: linear-gradient(90deg,  rgba(var(--sheet-3-i), 0) 0%, rgba(var(--sheet-3-i), 1) 100%),
+
+    radial-t-sheet-4-i: radial-gradient(250% 50% at 50% 0%, rgba(var(--sheet-4-i), 1) 0%, rgba(var(--sheet-4-i), 0) 100%),
+
+    radial-red-i:    radial-gradient(50% 50% at 50% 50%, rgba(var(--red-i), 1) 0%, rgba(var(--red-i), 0) 100%),
+    radial-orange-i: radial-gradient(50% 50% at 50% 50%, rgba(var(--orange-i), 1) 0%, rgba(var(--orange-i), 0) 100%),
+    radial-yellow-i: radial-gradient(50% 50% at 50% 50%, rgba(var(--yellow-i), 1) 0%, rgba(var(--yellow-i), 0) 100%),
+    radial-green-i:  radial-gradient(50% 50% at 50% 50%, rgba(var(--green-i), 1) 0%, rgba(var(--green-i), 0) 100%),
+    radial-teal-i:   radial-gradient(50% 50% at 50% 50%, rgba(var(--teal-i), 1) 0%, rgba(var(--teal-i), 0) 100%),
+    radial-blue-i:   radial-gradient(50% 50% at 50% 50%, rgba(var(--blue-i), 1) 0%, rgba(var(--blue-i), 0) 100%),
+    radial-purple-i: radial-gradient(50% 50% at 50% 50%, rgba(var(--purple-i), 1) 0%, rgba(var(--purple-i), 0) 100%),
+    radial-pink-i:   radial-gradient(50% 50% at 50% 50%, rgba(var(--pink-i), 1) 0%, rgba(var(--pink-i), 0) 100%),
 
 );

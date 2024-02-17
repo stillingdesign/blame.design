@@ -3,57 +3,485 @@
 
 /* purgecss start ignore */
 
-// Base Button
-.btn { @include apply("flex align-items:center justify-content:center radius:full border:1 leading:100 semibold outline:none flex-shrink:0"); }
+/* ================== Buttons ================== */
+
+.btn { @include apply("flex align-items:center justify-content:center radius:full leading:100 semibold outline:none tracking:normal flex-shrink:0 overflow:hidden"); }
+.btn > .btn\:inner { @include apply("relative flex align-items:center justify-content:center radius:full w:100p"); }
 
 // Button Sizes
-.btn\:sm { @include apply("font:xs px:12 py:10")}
-.btn\:md { @include apply("font:sm px:18 py:14")}
-.btn\:lg { @include apply("font:md px:20 py:18")}
-
-// Button Colors
-.btn\:primary   { @include apply("color:link-hv bg:primary-rg bg-opacity:10 border:primary-rg border-opacity:30 backdrop backdrop-blur:sm transition:200 cubic-out"); transform: translate3d(0, 0, 0); }
-.btn\:primary-i { @include apply("color:ink-3-i bg:primary-rg bg-opacity:20 border:primary-rg border-opacity:50 backdrop backdrop-blur:sm transition:200 cubic-out"); transform: translate3d(0, 0, 0); }
-.btn\:white     { @include apply("color:ink-3-i bg:sheet-1    bg-opacity:10 border:sheet-1    border-opacity:30 backdrop backdrop-blur:sm transition:200 cubic-out"); transform: translate3d(0, 0, 0); }
-.btn\:black     { @include apply("color:ink-3   bg:sheet-6-i  bg-opacity:10 border:sheet-6-i  border-opacity:30 backdrop backdrop-blur:sm transition:200 cubic-out"); transform: translate3d(0, 0, 0); }
-
-// Special Buttons
-.btn\:nav-item {@include apply("flex align-items:start gap:16 md:gap:8 font:lg md:font:sm leading:130 py:12 px:24 sm:px:48 md:px:16 w:100p bg:primary-rg bg-opacity:0 transition:200 cubic-out")}
-
-// Button Hovers
-@media (hover: hover) {
-    .btn\:primary:hover   { @include apply("shadow:xs bg-opacity:20 border-opacity:50 transition:200 cubic-out"); transform: translate3d(0, 0, 0); animation: bump 50ms ease-in-out 25ms;}
-    .btn\:primary-i:hover { @include apply("bg-opacity:40 border-opacity:70 transition:200 cubic-out"); transform: translate3d(0, 0, 0); animation: bump 50ms ease-in-out 25ms; }
-    .btn\:white:hover     { @include apply("shadow:xs bg-opacity:30 border-opacity:50 transition:200 cubic-out"); transform: translate3d(0, 0, 0); animation: bump 50ms ease-in-out 25ms; }
-    .btn\:black:hover     { @include apply("shadow:xs bg-opacity:20 border-opacity:50 transition:200 cubic-out"); transform: translate3d(0, 0, 0); animation: bump 50ms ease-in-out 25ms; }
-    .btn\:nav-item:hover  { @include apply("bg-opacity:10 transition:200 cubic-out")}
-    .hover\:bump:hover { animation: bump 50ms ease-in-out 25ms; }
+.btn\:xs {
+    @include apply("font:xs p:1");
+    .btn\:inner { @include apply("px:12 py:8  ")}
 }
 
-// Links focuses
-.btn:focus-visible { @include apply("bg:primary-rg border:primary-rg color:ink-3-i opacity:100")}
-.btn\:nav-item:focus-visible  { @include apply("bg-opacity:100 color:white outline:none")}
+.btn\:sm {
+    @include apply("font:xs p:1");
+    .btn\:inner { @include apply("px:14 py:10  ")}
+}
+
+.btn\:md {
+    @include apply("font:sm p:1");
+    .btn\:inner { @include apply("px:18 py:12")}
+}
+
+.btn\:lg {
+    @include apply("font:md p:1");
+    .btn\:inner { @include apply("px:20 py:14")}
+}
+
+.btn\:xl {
+    @include apply("font:lg p:1");
+    .btn\:inner { @include apply("px:24 py:16")}
+}
+
+// Conic Initial Stop Vals
+@property --conic-t {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0.5;
+}
+
+@property --conic-b {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --conic-l {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 90deg;
+}
+
+@property --conic-r {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 270deg;
+}
+
+
+// Button Styles
+.btn\:primary-i   {
+    @include apply("color:ink-3-i bg:ink-3-i bg-opacity:10 backdrop backdrop-blur:sm transition:300");
+    transform: translate3d(0, 0, 0);
+    & > .btn\:inner { @include apply("bg:sheet-4-i bg-opacity:90 transition:300")}
+    & > .btn\:gradient {
+        @include apply("absolute w:100p flex ratio:1-1");
+        background: conic-gradient(from var(--conic-spin) at 50% 50%, rgba(var(--ink-3-i), var(--conic-b)) var(--conic-l), rgba(var(--ink-3-i), var(--conic-t)) 180deg, rgba(var(--ink-3-i), var(--conic-b)) var(--conic-r));
+    }
+    &.btn\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:20 transition:500");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+                & > .btn\:inner { @include apply("bg:sheet-3-i bg-opacity:90 transition:500")}
+            }
+        }
+    }
+}
+
+.btn\:simple   {
+    @include apply("color:ink-3 bg:ink-3 bg-opacity:10 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .btn\:inner { @include apply("bg:sheet-1 bg-opacity:70 transition:200")}
+    & > .btn\:gradient { @include apply("hidden"); }
+    &.btn\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:20 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+                & > .btn\:inner { @include apply("bg-opacity:50 transition:300")}
+            }
+        }
+    }
+}
+
+.btn\:simple-i   {
+    @include apply("color:ink-3-i bg:ink-3-i bg-opacity:10 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .btn\:inner { @include apply("bg:sheet-6-i bg-opacity:50 transition:200")}
+    & > .btn\:gradient { @include apply("hidden"); }
+    &.btn\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:20 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+                & > .btn\:inner { @include apply("bg-opacity:50 transition:300")}
+            }
+        }
+    }
+}
+
+.btn\:disabled-i   {
+    @include apply("color:ink-3-i bg:ink-3-i bg-opacity:10 backdrop backdrop-blur:sm transition:300");
+    transform: translate3d(0, 0, 0);
+    & > .btn\:inner { @include apply("color:ink-1-i bg:sheet-6-i bg-opacity:50 transition:300")}
+    & > .btn\:gradient { @include apply("hidden"); }
+    &.btn\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:20 transition:500");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+                & > .btn\:inner { @include apply("color:ink-3-i bg:sheet-3-i bg-opacity:50 transition:500")}
+            }
+        }
+    }
+}
+
+.btn\:tab-i   {
+    &.btn\:xs { @include apply("medium color:ink-3-i bg:ink-3-i bg-opacity:0 transition:300 radius:sm"); }
+    transform: translate3d(0, 0, 0);
+    &.btn\:xs  > .btn\:inner { @include apply("px:6 py:6 color:ink-3-i bg:ink-3-i bg-opacity:0 transition:300 radius:xs")}
+    & > .btn\:gradient { @include apply("hidden"); }
+    &.btn\:hover {
+        @media (hover: hover) {
+            &:hover {
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+                & > .btn\:inner { @include apply("bg-opacity:10 transition:500")}
+            }
+        }
+    }
+}
+
+.btn\:header   {
+    @include apply("color:current transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .btn\:inner { @include apply("bg:sheet-1 bg-opacity:50")}
+    & > .btn\:gradient { @include apply("absolute w:100p h:100p radius:full bg:ink-3 opacity:10 transition:200"); }
+    &.btn\:hover {
+        @media (hover: hover) {
+            &:hover {
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+                & > .btn\:gradient { @include apply("opacity:30 transition:300")}
+            }
+        }
+    }
+}
+
+.btn\:header-i   {
+    @include apply("color:current transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .btn\:inner { @include apply("bg:sheet-6-i bg-opacity:50")}
+    & > .btn\:gradient { @include apply("absolute w:100p h:100p radius:full bg:ink-3-i opacity:10 transition:200"); }
+    &.btn\:hover {
+        @media (hover: hover) {
+            &:hover {
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+                & > .btn\:gradient { @include apply("opacity:30 transition:300")}
+            }
+        }
+    }
+}
+
+.btn\:blue-i   {
+    @include apply("color:ink-3-i bg:blue-i bg-opacity:30 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .btn\:inner { @include apply("bg:sheet-6-i bg-opacity:50 transition:200")}
+    & > .btn\:gradient { @include apply("hidden"); }
+    &.btn\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:50 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+                & > .btn\:inner { @include apply("bg:blue-i bg-opacity:50 transition:300")}
+            }
+        }
+    }
+}
+
+.btn\:text-i   {
+    @include apply("color:ink-3-i transition:300");
+    transform: translate3d(0, 0, 0);
+    & > .btn\:inner { @include apply("medium transition:300"); }
+    & > .btn\:gradient { @include apply("hidden"); }
+    & > .btn\:inner > .btn\:text {
+        position: relative;
+        opacity:0.7;
+        transition: opacity 500ms cubic-bezier(0, 0.66, 0.33, 1) 25ms;
+    }
+    & > .btn\:inner > .btn\:text:before {
+        content:''; 
+        position: absolute;
+        width: 0;
+        height: 0.125em;
+        bottom: -0.25em;
+        left:0;
+        background-color: rgba(var(--primary-rg), 1);
+        transition: width 300ms cubic-bezier(0, 0.66, 0.33, 1) 25ms;
+    }
+    &.btn\:hover {
+        @media (hover: hover) {
+            &:hover {
+                & > .btn\:inner > .btn\:text {
+                    opacity:1;
+                    transition: opacity 500ms cubic-bezier(0, 0.66, 0.33, 1) 25ms;
+                }
+                & > .btn\:inner > .btn\:text:before {
+                    width: 100%;
+                    transition: width 500ms cubic-bezier(0, 0.66, 0.33, 1) 25ms;
+                }
+            }
+        }
+    }
+}
+
+.btn\:text-c   {
+    @include apply("color:current");
+    transform: translate3d(0, 0, 0);
+    & > .btn\:inner { @include apply("medium transition:300"); }
+    & > .btn\:gradient { @include apply("hidden"); }
+    & > .btn\:inner > .btn\:text {
+        position: relative;
+        opacity:0.7;
+        transition: opacity 500ms cubic-bezier(0, 0.66, 0.33, 1) 25ms;
+    }
+    & > .btn\:inner > .btn\:text:before {
+        content:''; 
+        position: absolute;
+        width: 0;
+        height: 0.125em;
+        bottom: -0.25em;
+        left:0;
+        background-color: rgba(var(--primary-rg), 1);
+        transition: width 300ms cubic-bezier(0, 0.66, 0.33, 1) 25ms;
+    }
+    &.btn\:hover {
+        @media (hover: hover) {
+            &:hover {
+                & > .btn\:inner > .btn\:text {
+                    opacity:1;
+                    transition: opacity 500ms cubic-bezier(0, 0.66, 0.33, 1) 25ms;
+                }
+                & > .btn\:inner > .btn\:text:before {
+                    width: 100%;
+                    transition: width 500ms cubic-bezier(0, 0.66, 0.33, 1) 25ms;
+                }
+            }
+        }
+    }
+}
+
+// Conic Gradient Rotation Animation
+@property --conic-spin {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 180deg;
+}
+  
+.animate\:conic-spin { animation: 10000ms linear 0ms infinite conic-spin; }
+  
+@keyframes conic-spin {
+    0%   {--conic-spin: 90deg;}
+    100% {--conic-spin:-270deg;}
+}
+
+// Button focuses
+.btn:focus-visible {
+    @include apply("color:ink-3-i bg:primary-rg bg-opacity:100 opacity:100 transition:300");
+    transform: translate3d(0, 0, 0);
+    & > .btn\:inner { @include apply("bg:primary-rg bg-opacity:100 color:ink-3-i transition:300")}
+    & > .btn\:inner > .btn\:text { opacity:1; }
+    & > .btn\:gradient {
+        @include apply("absolute w:100p flex ratio:1-1");
+        background: rgba(var(--primary-rg), 1);
+    }
+}
+
 .focus\:primary:focus-visible {@include apply("opacity:100 color:white bg:primary-rg border:1 border:primary-rg outline:none"); }
 
-// Button Animations
+// Bump Animation
 @keyframes bump {
     0%    { transform: scale3d(1,1,1); }
     50%   { transform: scale3d(1.03,1.03,1.03); }
     100%  { transform: scale3d(1,1,1); }
 }
 
+/* ================== Inline Links ================== */
+
 // Inline Links
-.link-rg   { @include apply("color:link-rg underline"); }
-.link-rg-i { @include apply("color:link-rg-i underline"); }
+.link\:current   {
+    @include apply("relative space:nowrap");
+    &:before {
+        content:'';
+        position: absolute;
+        bottom: -0.0625em;
+        left:0;
+        width: 100%;
+        height: 0.0625em;
+        background-color: currentColor;
+        opacity: 0.5;
+        transition: opacity 200ms cubic-bezier(0, 0.66, 0.33, 1) 0ms;
+    }
+}
 
 // Inline Link Hovers
 @media (hover: hover) {
-    .link-rg:hover   { @include apply("color:link-hv"); }
-    .link-rg-i:hover { @include apply("color:link-hv-i"); }
+    .link\:current:hover {
+        &:before {
+            opacity: 1;
+            transition: opacity 300ms cubic-bezier(0, 0.66, 0.33, 1) 0ms;
+        }
+    }
 }
 
 // Inline Link Focus
-.link-rg:focus-visible,
-.link-rg-i:focus-visible { @include apply("color:white bg:primary-rg outline:none")}
+.link\:current:focus-visible {
+    @include apply("color:white bg:primary-rg outline:none");
+    &:before {
+        opacity: 0;
+        transition: opacity 300ms cubic-bezier(0, 0.66, 0.33, 1) 0ms;
+    }
+}
+
+/* ================== Tags ================== */
+
+.tag { @include apply("flex align-items:center justify-content:center leading:100 font:mono outline:none flex-shrink:0 overflow:hidden"); }
+.tag > .tag\:inner { @include apply("relative flex align-items:center"); }
+
+// Button Sizes
+.tag\:xs {
+    @include apply("font:2xs p:1 tracking:tighter radius:xs");
+    .tag\:inner { @include apply("p:6 radius:2xs")}
+}
+
+.tag\:sm {
+    @include apply("font:xs p:1 tracking:tighter radius:xs");
+    .tag\:inner { @include apply("p:6 radius:2xs")}
+}
+
+.tag\:md {
+    @include apply("font:sm p:1 tracking:tighter radius:sm");
+    .tag\:inner { @include apply("px:8 pt:7 pb:8 radius:5")}
+}
+
+.tag\:lg {
+    @include apply("font:md p:1 tracking:tightest radius:sm");
+    .tag\:inner { @include apply("px:10 pt:9 pb:10 radius:5")}
+}
+
+.tag\:xl {
+    @include apply("font:lg p:1 tracking:tightest radius:md");
+    .tag\:inner { @include apply("px:12 pt:11 pb:12 radius:7")}
+}
+
+// Tag Styles
+.tag\:red-i {
+    @include apply("color:red-i bg:red-i bg-opacity:40 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .tag\:inner { @include apply("bg:sheet-6-i bg-opacity:60 transition:200")}
+    &.tag\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:60 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+            }
+        }
+    }
+}
+
+.tag\:orange-i {
+    @include apply("color:orange-i bg:orange-i bg-opacity:40 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .tag\:inner { @include apply("bg:sheet-6-i bg-opacity:60 transition:200")}
+    &.tag\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:60 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+            }
+        }
+    }
+}
+
+.tag\:yellow-i {
+    @include apply("color:yellow-i bg:yellow-i bg-opacity:30 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .tag\:inner { @include apply("bg:sheet-6-i bg-opacity:50 transition:200")}
+    &.tag\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:50 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+            }
+        }
+    }
+}
+
+.tag\:green-i {
+    @include apply("color:green-i bg:green-i bg-opacity:40 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .tag\:inner { @include apply("bg:sheet-6-i bg-opacity:50 transition:200")}
+    &.tag\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:60 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+            }
+        }
+    }
+}
+
+.tag\:teal-i {
+    @include apply("color:teal-i bg:teal-i bg-opacity:50 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .tag\:inner { @include apply("bg:sheet-6-i bg-opacity:50 transition:200")}
+    &.tag\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:70 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+            }
+        }
+    }
+}
+
+.tag\:blue-i {
+    @include apply("color:link-rg-i bg:blue-i bg-opacity:50 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .tag\:inner { @include apply("bg:sheet-6-i bg-opacity:70 transition:200")}
+    &.tag\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:70 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+            }
+        }
+    }
+}
+
+.tag\:purple-i {
+    @include apply("color:purple-i bg:purple-i bg-opacity:50 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .tag\:inner { @include apply("bg:sheet-6-i bg-opacity:70 transition:200")}
+    &.tag\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:70 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+            }
+        }
+    }
+}
+
+.tag\:pink-i {
+    @include apply("color:pink-i bg:pink-i bg-opacity:40 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .tag\:inner { @include apply("bg:sheet-6-i bg-opacity:60 transition:200")}
+    &.tag\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:60 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+            }
+        }
+    }
+}
+
+// Tag focuses
+.tag:focus-visible {
+    @include apply("color:ink-3-i bg:primary-rg bg-opacity:100 opacity:100 transition:300");
+    & > .tag\:inner { @include apply("bg:primary-rg bg-opacity:100 color:ink-3-i transition:300")}
+    & > .tag\:inner > .btn\:text { opacity:1; }
+}
 
 /* purgecss end ignore */

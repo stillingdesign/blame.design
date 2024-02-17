@@ -34,24 +34,7 @@
                 </div>
         </div>
         <div class="flex flex:wrap align-items:start justify-content:between md:justify-content:start md:grid col:8 grid-cols:4 gap:24 sm:gap:0 md:gap:48 md:mt:8">
-            {% for collection in navigation | selectattr("footer") %}
-                <ul class="w:5-12 sm:w:auto md:w:auto">
-                    <li>
-                        <h3 class="mb:6">
-                            {{ collection.name }}
-                        </h3>
-                        <ul>
-                            {% for page in collection.menuItems | selectattr("footer") %}
-                                <li>
-                                    <a href="{{ page.url }}" class="inline-block font:sm opacity:70 py:6 px:12 ml:n12 radius:full space:nowrap border:1 focus:primary hover:opacity:100 transition:100 {% if theme == 'dark' %}hover:color:link-hv-i{% else %}hover:color:link-hv{% endif %}">
-                                        {{ page.label }}
-                                    </a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </li>
-                </ul>
-            {% endfor %}
+            <!-- Previous Items -->
         </div>
     </div>
     <div class="container flex align-items:center justify-content:between py:16 sm:py:0 border-t:1 {% if theme == 'dark' %}border:edge-2-i{% else %}border:edge-2{% endif %}">

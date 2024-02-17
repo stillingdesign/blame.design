@@ -9,36 +9,363 @@ ogImageAlt: "This is the alt text for social cards images"
 theme: dark
 changefreq: daily
 ---
+{% import "components/_icons.njk" as icons %}
+{% import "components/_elements.njk" as elements %}
 
-<main>
+<main data-page="home">
 
-    <section class="section section:py">
-        <div class="container flex flex:col sm:grid grid-cols:2 gap:48">
-            <div class="flex flex:col align-items:start gap:16">
-                <h1 class="font:8xl medium tracking:tighter leading:110">
-                    The website template that means business
-                </h1>
-                <p class="font:3xl leading:150 tracking:tight color:ink-1">
-                    Increase efficiency, quality, and revenue <span class="space:nowrap">with the</span> Acme website template today.
-                </p>
-                <a href="#" class="btn btn:primary-i btn:lg">
-                    Try for free
-                </a>
+    {# Particles #}
+    <canvas id="particleCanvas" class="absolute top:0 left:0 w:100p h:100vh"></canvas>
+
+    {# Hero #}
+    <section class="section bg:radial-t-sheet-4-i overflow:hidden">
+        <div class="relative w:100p flex flex:col align-items:center justify-content:center section:pb pt:96 lg:pt:128">
+            {# Vert Dividers #}
+            <div class="absolute w:100p h:100p md:max-w:1152 px:24 sm:px:0">
+                <div class="absolute top:n112 sm:top:0 left:12 sm:left:n24 h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-b"></div>
+                <div class="absolute top:n112 sm:top:0 right:12 sm:right:n24 h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-b"></div>
             </div>
-            <div class="w:100p bg:sheet-5 radius:md">
-                
+            {# Horz Divider #}
+            <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3-i border:dashed border-opacity:10"></div>
+            {# Testing Elements #}
+            <div class="container flex justify-content:between align-items:center w:100p py:8">
+                {# Handles #}
+                <div class="absolute top:n8 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3-i"></div>
+                    <div class="h:1 w:100p bg:ink-3-i absolute"></div>
+                </div>
+                <div class="absolute top:n8 right:8 sm:right:n28 mt:1 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3-i"></div>
+                    <div class="h:1 w:100p bg:ink-3-i absolute"></div>
+                </div>
+                {# Left #}
+                <div class="relative flex align-items:center gap:4">
+                    {{ elements.btnBtn(
+                        color="blue-i",
+                        size="xs",
+                        label="Test A",
+                        attr='data-hero-btn="a"',
+                        classes='cursor:not-allowed'
+                    )}}
+                    {{ elements.btnBtn(
+                        color="disabled-i",
+                        size="xs",
+                        label="Test B",
+                        attr='data-hero-btn="b"',
+                        hover=true,
+                        classes=''
+                    )}}
+                    <div class="hidden sm:block font:2xs opacity:40 ml:4 sm:ml:8 font:mono uppercase tracking:loosest">
+                        headline
+                    </div>
+                </div>
+                {# Right #}
+                <div class="relative flex align-items:center gap:4">
+                    <div class="font:2xs opacity:40 mr:4 sm:mr:8 font:mono uppercase tracking:loosest">
+                        Conversion <span class="hidden sm:inline">rate</span>
+                    </div>
+                    {# Results #}
+                    <div data-hero-results class="relative">
+                        <div data-hero-results-a class="relative">
+                            {{ elements.tag(
+                                color="green-i",
+                                size="xs",
+                                label="+9.8%",
+                                classes=''
+                            ) }}
+                        </div>
+                        <div data-hero-results-b class="absolute right:0 top:24" style="opacity:0; visibility:hidden;">
+                            {{ elements.tag(
+                                color="red-i",
+                                size="xs",
+                                label="-1.3%",
+                                classes=''
+                            ) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {# Horz Divider #}
+            <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3-i border:dashed border-opacity:10 sm:mb:24"></div>
+            {# Headline #}
+            <div class="relative w:100p flex flex:col align-items:center justify-content:center">
+                {# Horz Dividers #}
+                <div class="absolute w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3-i border:dashed border-opacity:10 bottom:50p sm:bottom:58p lg:bottom:160 lg:mb:16"></div>
+                <div class="absolute w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3-i border:dashed border-opacity:10 bottom:0 sm:bottom:20 lg:bottom:24"></div>
+                {# Headline Desktop #}
+                <h1 data-headline class="container font:20vw sm:font:11vw lg:font:15xl medium tracking:tighter leading:100 text:center md:text:left">
+                    <div class="relative overflow:hidden w:100p">
+                        <div data-headline-one class="relative w:100p">
+                            <div data-headline-one-a class="relative pb:4 sm:pb:8 w:100p">
+                                <span class="sm:hidden space:nowrap">Growth</span>
+                                <span class="hidden sm:inline">Design-led growth</span>
+                            </div>
+                            <div data-headline-one-b class="absolute pb:4 sm:pb:8 w:100p" style="opacity:0; visibility:hidden; transform: rotate(6deg);">
+                                <span class="line-through sm:hidden">Marketing</span>
+                                <span class="hidden sm:inline">Stop marketing.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative overflow:hidden w:100p">
+                        <div data-headline-two class="relative w:100p">
+                            <div data-headline-two-a class="relative pb:8 w:100p mask:fade-out-b">
+                                <span class="sm:hidden">by design</span>
+                                <span class="hidden sm:inline">for SaaS companies</span>
+                            </div>
+                            <div data-headline-two-b class="absolute pb:8 w:100p mask:fade-out-b" style="opacity:0; visibility:hidden; transform: rotate(6deg);">
+                                <span class="sm:hidden">Making</span>
+                                <span class="hidden sm:inline">Start making.</span>
+                            </div>
+                        </div>
+                    </div>
+                </h1>
+            </div>
+            {# Handles #}
+            <div class="container mt:n12 sm:mt:n36 pt:1">
+                <div class="absolute left:8 sm:left:n28 mt:4 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3-i"></div>
+                    <div class="h:1 w:100p bg:ink-3-i absolute"></div>
+                </div>
+                <div class="absolute right:8 sm:right:n28 mt:4 mr:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3-i"></div>
+                    <div class="h:1 w:100p bg:ink-3-i absolute"></div>
+                </div>
+            </div>
+            {# Subhead + CTA #}
+            <div class="container z:3 flex flex:col md:flex:row md:justify-content:end pt:24 md:pt:0 pb:64 sm:pb:96 md:pb:0 md:py:72">
+                <p class="font:5-75vw sm:font:4-5vw md:font:2-25vw lg:font:4xl leading:150 tracking:tight opacity:50 md:w:50p lg:w:100p lg:max-w:640 text:center md:text:left pb:48 sm:pb:48 md:pb:0">
+                   Creators are the lifeblood of the internet, so why confine them when it comes to business? <span class="space:nowrap">This site is</span> dedicated to that question.
+                </p>
+                <div class="md:absolute md:top:0 md:left:0 w:100p md:w:5-12 h:100p pt:8">
+                    <div class="relative w:100p h:100p flex align-items:center justify-content:center md:pl:12">
+                        {# Grid Lines #}
+                        <div class="absolute w:plus24 sm:w:384 h:160 md:h:192 flex align-items:center justify-content:center">
+                            <div class="absolute top:12 w:plus24 border-t:1 border:ink-3-i border-opacity:10 border:dashed"></div>
+                            <div class="absolute bottom:12 w:plus24 border-t:1 border:ink-3-i border-opacity:10 border:dashed"></div>
+                            <div class="hidden sm:block absolute left:12  h:plus24 border-l:1 border:ink-3-i border-opacity:10 border:dashed"></div>
+                            <div class="hidden sm:block absolute right:12 h:plus24 border-l:1 border:ink-3-i border-opacity:10 border:dashed"></div>
+                            <div class="absolute left:n1  sm:left:12  top:12 sm:ml:n1 mt:n1 w:4 h:4 bg:ink-3-i radius:full flex align-items:center justify-content:center"></div>
+                            <div class="absolute right:n1 sm:right:12 top:12 sm:mr:n1 mt:n1 w:4 h:4 bg:ink-3-i radius:full flex align-items:center justify-content:center"></div>
+                            <div class="absolute left:n1  sm:left:12  bottom:12 sm:ml:n1 mb:n1 w:4 h:4 bg:ink-3-i radius:full flex align-items:center justify-content:center"></div>
+                            <div class="absolute right:n1 sm:right:12 bottom:12 sm:mr:n1 mb:n1 w:4 h:4 bg:ink-3-i radius:full flex align-items:center justify-content:center"></div>
+                        </div>
+                        {# CTA #}
+                        {{ elements.formSingle(
+                            color="primary-i",
+                            size="xl",
+                            classes="min-w:288",
+                            icon=icons.emailOutline('w:100p'),
+                            formName="subscribe",
+                            fieldType="email",
+                            fieldName="email",
+                            placeholder="Enter email for updates",
+                            animate=true, 
+                            hover=true,
+                            attr="data-hero-form",
+                            attrInner=""
+                        )}}
+                    </div>
+                </div>
+            </div>
+            {# Graphic #}
+            <div class="container">
+                {# Gradients #}
+                <div class="absolute w:100p top:n160 left:384 max-w:896 flex ratio:2-1 bg:radial-teal-i opacity:20"></div>
+                <div class="absolute w:100p top:n320 left:0 max-w:896 flex ratio:1-1 bg:radial-blue-i opacity:20"></div>
+                <div class="absolute w:100p top:n448 left:n448 max-w:896 flex ratio:1-1 bg:radial-purple-i opacity:20"></div>
+                {# Visuals #}
+                <div class="relative w:100p flex flex:col align-items:center justify-content:center">
+                    {# Browser #}
+                    <div class="relative w:100p lg:w:plus96 flex ratio:16-9 bg:white bg-opacity:10 backdrop backdrop-blur:md radius:xl shadow:xl p:1">
+                        <div class="relative w:100p h:100p radius:xl bg:sheet-6-i bg-opacity:70 flex flex:col">
+                            {# Status Bar #}
+                            <div class="relative flex justify-content:between pl:18 pr:2 pt:2 border-b:1 border:ink-3-i border-opacity:10">
+                                <div class="flex align-items:center gap:4 pb:2 flex-shrink:0">
+                                    <div class="w:8 h:8 radius:full bg-opacity:70 border:1 border:green-i bg:green-i"></div>
+                                    <div class="w:8 h:8 radius:full bg-opacity:70 border:1 border:yellow-i bg:yellow-i"></div>
+                                    <div class="w:8 h:8 radius:full bg-opacity:70 border:1 border:red-i bg:red-i"></div>
+                                    {{ icons.arrowL('ml:8 w:14 opacity:30')}}
+                                    {{ icons.arrowR('w:14 opacity:30')}}
+                                </div>
+                                <div class="relative flex align-items:center w:100p justify-content:end">
+                                    {% set tabClasses = 'border-x:1 border-t:1 bg:ink-3-i border:ink-3-i radius-t:md px:2 pt:2 pb:4' %}
+                                    <div class="bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
+                                        {{ elements.btnLink(
+                                            color="tab-i",
+                                            size="xs",
+                                            link="#",
+                                            label="Messaging",
+                                            animate=true,
+                                            hover=true,
+                                            iconL=icons.iconNotion('w:12 mr:4'),
+                                            iconR=icons.close('w:12 ml:8 opacity:70'),
+                                            classes=''
+                                        ) }}
+                                    </div>
+                                    <div class="w:1 h:12 bg:ink-3-i opacity:10"></div>
+                                    <div class="bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
+                                        {{ elements.btnLink(
+                                            color="tab-i",
+                                            size="xs",
+                                            link="#",
+                                            label="Google Ads",
+                                            animate=true,
+                                            hover=true,
+                                            iconL=icons.iconGoogleAds('w:12 mr:4'),
+                                            iconR=icons.close('w:12 ml:8 opacity:70'),
+                                            classes=''
+                                        ) }}
+                                    </div>
+                                    <div class="w:1 h:12 bg:ink-3-i opacity:10"></div>
+                                    <div class="bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
+                                        {{ elements.btnLink(
+                                            color="tab-i",
+                                            size="xs",
+                                            link="#",
+                                            label="Analytics",
+                                            animate=true,
+                                            hover=true,
+                                            iconL=icons.iconGoogleAnalytics('w:12 mr:4'),
+                                            iconR=icons.close('w:12 ml:8 opacity:70'),
+                                            classes=''
+                                        ) }}
+                                    </div>
+                                    <div class="w:1 h:12 bg:ink-3-i opacity:10"></div>
+                                    <div class="bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
+                                        {{ elements.btnLink(
+                                            color="tab-i",
+                                            size="xs",
+                                            link="#",
+                                            label="LinkedIn",
+                                            animate=true,
+                                            hover=true,
+                                            iconL=icons.iconLinkedIn('w:12 mr:4'),
+                                            iconR=icons.close('w:12 ml:8 opacity:70'),
+                                            classes=''
+                                        ) }}
+                                    </div>
+                                    <div class="w:1 h:12 bg:ink-3-i opacity:10"></div>
+                                    <div class="bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
+                                        {{ elements.btnLink(
+                                            color="tab-i",
+                                            size="xs",
+                                            link="#",
+                                            label="Weekly Signups",
+                                            animate=true,
+                                            hover=true,
+                                            iconL=icons.iconGoogleSheets('w:12 mr:4'),
+                                            iconR=icons.close('w:12 ml:8 opacity:70'),
+                                            classes=''
+                                        ) }}
+                                    </div>
+                                    <div class="bg-opacity:4 border-opacity:10 opacity:60 {{ tabClasses }}">
+                                        {{ elements.btnLink(
+                                            color="tab-i",
+                                            size="xs",
+                                            link="#",
+                                            label="Marketing site",
+                                            animate=true,
+                                            hover=true,
+                                            iconR=icons.close('w:12 ml:8 opacity:70'),
+                                            classes=''
+                                        ) }}
+                                    </div>
+                                    <div class="relative flex align-items:center justify-content:center h:100p ratio:1-1 border:1">
+                                        <div class="bg:ink-3-i bg-opacity:10 w:20 h:20 radius:full flex align-items:center justify-content:center">
+                                            {{ icons.ellipsisH('w:12 opacity:50')}}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {# Page Contents #}
+                            <div class="relative w:100p h:100p grid grid-cols:2">
+                                <div class="flex flex:col align-items:start pt:48 pl:56">
+                                    <div class="uppercase font:2xs tracking:loosest color:ink-1-i mb:12">
+                                        Let the chefs cook
+                                    </div>
+                                    <div class="relative font:8xl leading:110 tracking:tighter mb:10">
+                                        From strategy <span class="space:nowrap">to outcomes</span> in <span class="space:nowrap">weeks not years.</span>
+                                    </div>
+                                    <div class="font:2xl max-w:512 color:ink-1-i mb:24">
+                                        Consolidate ownership and decision making to the knowledgable people who are actually making it.
+                                    </div>
+                                    {{ elements.btnLink(
+                                        color="blue-i",
+                                        size="md",
+                                        link="#",
+                                        label="No more bogus ideas",
+                                        animate=true,
+                                        classes=''
+                                    ) }}
+                                </div>
+                                <div class="bg:ink-3-i bg-opacity:2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section min-h:640 pt:192 overflow:hidden">
-        <div class="container">
-            <p class="mb:20">Todo:</p>
-            <ul class="list:disc flex flex:col gap:12">
-                <li>Add foundational analytics and events</li>
-                <li>{{ base.url }}</li>
-            </ul>
+    <section data-invert="light" class="section min-h:100vh pt:192 overflow:hidden bg:sheet-6">
+        <div class="container flex flex:col align-items:center gap:32">
+            
+        </div>
+    </section>
+
+    <section data-invert="dark" class="section min-h:100vh pt:192 overflow:hidden bg:sheet-6-i">
+        <div class="container flex align-items:start">
+
         </div>
     </section>
 
 </main>
+
+<script>
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let particles = [];
+
+        function initParticles() {
+            for (let i = 0; i < 1000; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 1,
+                    vy: (Math.random() - 0.5) * 1,
+                    size: Math.random() * 0.125 + 0.5,
+                    opacity: Math.random(),
+                    fadeDirection: Math.random() < 0.5 ? -1 : 1 // Randomly choose initial fade direction
+                });
+            }
+        }
+
+        function updateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(particle => {
+                particle.x += particle.vx;
+                particle.y += particle.vy;
+                if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
+                if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+
+                // Update particle opacity for fade in/out effect
+                particle.opacity += 0.01 * particle.fadeDirection;
+                if (particle.opacity <= 0 || particle.opacity >= 1) {
+                    particle.fadeDirection *= -1; // Reverse fade direction
+                    particle.opacity = particle.opacity < 0 ? 0 : 1; // Clamp opacity to [0,1] range
+                }
+
+                ctx.beginPath();
+                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`; // Use particle's opacity
+                ctx.fill();
+            });
+            requestAnimationFrame(updateParticles);
+        }
+
+        initParticles();
+        updateParticles();
+    </script>

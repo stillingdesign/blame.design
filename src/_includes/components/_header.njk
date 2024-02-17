@@ -1,82 +1,41 @@
 {% import "components/_icons.njk" as icons %}
+{% import "components/_elements.njk" as elements %}
 
-{# Templating #}
-{% set topLevelItem = 'flex align-items:center justify-content:between md:justify-content:start radius:full border:1 leading:100 outline:none md:opacity:70 font:xl md:font:sm w:100p md:w:auto px:24 sm:px:48 md:px:18 py:10 md:py:14 hover:opacity:100 focus:primary' %}
-
-<header data-header class="fixed top:0 left:0 z:10 w:100p h:56 flex flex:col align-items:center justify-content:center sm:px:48 {% if theme == 'dark' %}color:ink-3-i{% endif %}">
-    <div data-header-bg class="absolute top:0 w:100p h:100p bg-opacity:80 backdrop backdrop-blur:sm blur:fix transform:top {% if theme == 'dark' %}bg:sheet-6-i shadow:headerDark color:ink-3-i{% else %}bg:sheet-6 shadow:headerLight{% endif %}"></div>
-    <div class="container flex align-items:center justify-content:between">
+<header data-header class="fixed top:0 left:0 z:10 w:100p h:56 flex flex:col align-items:center justify-content:center sm:px:48 color:current">
+    <div data-header-bg class="absolute top:0 w:100p h:100p bg-opacity:20 backdrop backdrop-blur:sm blur:fix transform:top border-b:1 border-opacity:8 mask:fade-out-x-90p transition:100 {% if theme == 'dark' %}bg:sheet-6-i color:ink-3-i border:ink-3-i{% else %}bg:sheet-6 border:ink-3{% endif %}" style="opacity:0;"></div>
+    <div class="container z:9 flex align-items:center justify-content:between font:sm">
         {# Logo #}
-        <div class="relative block flex-shrink:0 md:w:192">
-            <a href="/" class="h:40 px:14 ml:n14 inline-flex align-items:center justify-content:start radius:full focus:primary">
-                {{ icons.wordmark('w:80') }}
+        <div class="relative block flex-shrink:0">
+            <a href="/" data-header-logo class="h:40 px:8 ml:n8 inline-flex align-items:center justify-content:start radius:full focus:primary border:1">
+                {{ icons.wordmark('w:68 transition:100') }}
             </a>
         </div>
-        {# Mobile Menu + CTA #}
-        <div class="flex align-items:center gap:8 md:hidden">
-            <a href="{{ base.signupLink }}" class="btn btn:sm {% if theme == 'dark' %}btn:primary-i{% else %}btn:primary{% endif %} plausible-event-name=Signup">
-                {{ base.signupText }}
-            </a>
-            <button data-header-navigation-button aria-controls="nav-menu" aria-expanded="false" class="relative w:36 h:36 flex flex:col gap:6 align-items:center justify-content:center mr:n8">
-                <div class="w:20 h:2 {% if theme == 'dark' %}bg:ink-3-i{% else %}bg:ink-3{% endif %}"></div>
-                <div class="w:20 h:2 {% if theme == 'dark' %}bg:ink-3-i{% else %}bg:ink-3{% endif %}"></div>
-            </button>
-        </div>
-        {# Navigation #}
-        <nav data-header-navigation-menu id="nav-menu" class="hidden md:block absolute top:46 left:0 sm:left:n48 h:minus56 md:h:auto mt:n1 md:mt:0 w:100p sm:w:plus96 md:w:auto md:top:unset md:left:unset md:relative overflow:hidden md:overflow:visible shadow:2xl md:shadow:none">
-            <div class="absolute top:0 left:0 w:100p h:100p z:n1 block md:hidden bg-opacity:90 backdrop backdrop-blur:lg blur:fix border-t:1 {% if theme == 'dark' %}border:edge-2-i bg:sheet-5-i{% else %}border:edge-2 bg:sheet-5{% endif %}"></div>
-            <ul class="relative flex flex:col md:flex:row md:align-items:center md:gap:2">
+        {# Items #}
+        <nav class="relative flex-shrink:0 flex align-items:center gap:2 mr:n8">
+            <ul class="relative flex-shrink:0 flex align-items:center gap:2 px:8">
                 {% for collection in navigation | selectattr("header") %}
-                    {# Dropdowns #}
-                    {% if collection.menuItems %}
-                        <li data-header-dropdown class="relative">
-                            <div class="block border-b:1 md:border-b:0 {% if theme == 'dark' %}border:edge-2-i{% else %}border:edge-2 {% endif %}">
-                                <button data-header-dropdown-button aria-controls="nav-{{ collection.name | slugify }}" aria-expanded="false" type="button" class="{{ topLevelItem }}">
-                                    {{ collection.name }}
-                                    <div class="block w:36 h:36 md:w:auto md:h:auto flex align-items:center justify-content:center mr:n8 md:mr:0">
-                                        {{ icons.chevDown('w:20 md:w:14 transform blur:fix') }}
-                                    </div>
-                                </button>
-                            </div>
-                            {# Menus #}
-                            <div data-header-dropdown-pane id="nav-{{ collection.name | slugify }}" class="relative md:absolute md:top:100p md:left:n20 md:hidden md:opacity:0">
-                                <ul class="relative md:w:320 md:shadow:modal md:border:1 md:radius:lg md:overflow:hidden {% if theme == 'dark' %}md:bg:sheet-4-i border:edge-2-i{% else %}md:bg:sheet-4 border:edge-2{% endif %} h:0 md:h:auto overflow:hidden">
-                                    {% for page in collection.menuItems | selectattr("header") %}
-                                    <li class="border-b:1 md:mb:n1 {% if theme == 'dark' %}border:edge-2-i{% else %}border:edge-2{% endif %}">
-                                        <a href="{{ page.url }}" class="btn:nav-item">
-                                            <span class="mt:6 md:mt:2 font:2xs opacity:60 tracking:looser">
-                                                0{{ loop.index }}.
-                                            </span>
-                                            <div>
-                                                <p>{{ page.label }}</p>
-                                                <p class="font:s opacity:60">{{ page.description }}</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </li>
-                    {# Links #}
-                    {% else %}
-                        <li class="border-b:1 md:border-b:0 {% if theme == 'dark' %}border:edge-2-i{% else %}border:edge-2{% endif %}">
-                            <a href="{{ collection.url }}" class="{{ topLevelItem }}">
-                                {{ collection.name }}
-                                <div class="block md:hidden w:36 h:36 mr:n8 md:mr:0">
-                                </div>
-                            </a>
-                        </li>
-                    {% endif %}
+                    <li>
+                        {{ elements.btnLink(
+                            color="text-c",
+                            size="md",
+                            link=collection.url,
+                            label=collection.name,
+                            hover=true,
+                            classes=''
+                        )}} 
+                    </li>
                 {% endfor %}
             </ul>
         </nav>
-        {# Desktop CTAs #}
-        <div class="flex-shrink:0 hidden md:flex align-items:center justify-content:end gap:2 w:192">
-            <a href="{{ base.loginLink }}" class="{{ topLevelItem }}">
-                {{ base.loginText }}
-            </a>
-            <a href="{{ base.signupLink }}" class="btn btn:md {% if theme == 'dark' %}btn:primary-i{% else %}btn:primary{% endif %} plausible-event-name=Signup">
-                {{ base.signupText }}
+        {# CTA #}
+        <div class="relative flex-shrink:0">
+            <a href="{{ base.signupLink }}" data-header-btn class="relative btn btn:md btn:hover {% if theme == 'dark' %}btn:header-i{% else %}btn:header{% endif %}">
+                <div data-header-btn-bg class="btn:gradient"></div>
+                <div data-header-btn-inner class="btn:inner">
+                    <div class="btn:text">
+                        {{ base.signupText }}
+                    </div>
+                </div>
             </a>
         </div>
     </div>

@@ -1,0 +1,97 @@
+{% import "components/_icons.njk" as icons %}
+
+{# Button :: Link #}
+{% macro btnLink(color, size, classes, link, label, iconL, iconR, animate, hover, attr, attrInner) %}
+    <a href="{{ link }}" {{ attr }} class="relative btn btn:{{ color }} btn:{{ size }} {{ classes }} {% if hover %}btn:hover{% endif %}">
+        <div class="btn:gradient {% if animate %}animate:conic-spin{% endif %}"></div>
+        <div {{ attrInner }} class="btn:inner">
+            {% if iconL %}{{ iconL }}{% endif %}
+            <div class="btn:text">
+                {{ label }}
+            </div>
+            {% if iconR %}{{ iconR }}{% endif %}
+        </div>
+    </a>
+{% endmacro %}
+
+{# Button :: Btn #}
+{% macro btnBtn(color, size, classes, label, iconL, iconR, animate, hover, attr, attrInner) %}
+    <div role="button" tabindex="0" {{ attr }} class="relative btn btn:{{ color }} btn:{{ size }} {{ classes }} {% if hover %}btn:hover{% endif %}">
+        <div class="btn:gradient {% if animate %}animate:conic-spin{% endif %}"></div>
+        <div {{ attrInner }} class="btn:inner">
+            {% if iconL %}{{ iconL }}{% endif %}
+            <div class="btn:text">
+                {{ label }}
+            </div>
+            {% if iconR %}{{ iconR }}{% endif %}
+        </div>
+    </div>
+{% endmacro %}
+
+{# Tag :: Static #}
+{% macro tag(color, size, classes, label, iconL, iconR) %}
+    <div class="relative tag tag:{{ color }} tag:{{ size }} {{ classes }}">
+        <div class="tag:inner">
+            {% if iconL %}{{ iconL }}{% endif %}
+            <div class="tag:text">
+                {{ label }}
+            </div>
+            {% if iconR %}{{ iconR }}{% endif %}
+        </div>
+    </div>
+{% endmacro %}
+
+{# Tag :: Link #}
+{% macro tagLink(color, size, classes, link, label, iconL, iconR, hover) %}
+    <a href="{{ link }}" class="relative tag tag:{{ color }} tag:{{ size }} {{ classes }} {% if hover %}tag:hover{% endif %}">
+        <div class="tag:inner">
+            {% if iconL %}{{ iconL }}{% endif %}
+            <div class="tag:text">
+                {{ label }}
+            </div>
+            {% if iconR %}{{ iconR }}{% endif %}
+        </div>
+    </a>
+{% endmacro %}
+
+{# Single Field Form :: Link || still need to add theming to error/success #}
+{% macro formSingle(color, size, classes, icon, formName, fieldType, fieldName, placeholder, animate, hover, attr, attrInner) %}
+    <div data-form="{{ formLoc }}" class="relative flex flex:col align-items:center justify-content:center">
+        <form name="{{ formName }}" method="POST" netlify {{ attr }} novalidate class="relative form:single form:{{ color }} form:{{ size }} {{ classes }}">
+            <div class="form:gradient {% if animate %}animate:conic-spin{% endif %}"></div>
+            <div class="form:icon">
+                {{ icon }}
+            </div>
+            <div {{ attrInner }} class="form:inner">
+                <input autocomplete="off" type="{{ fieldType | slugify }}" name="{{ fieldName | slugify }}" id="{{ fieldName | slugify }}" placeholder="{{ placeholder }}" />
+                <button type="submit" aria-label="Submit form">
+                    {{ icons.arrowR('w:14 mr:n2') }}
+                </button>
+            </div>
+            {# Success #}
+            <div data-success class="form:success" style="visibility:hidden; opacity:0; box-shadow: 0 0 48px 10px rgba(0,0,0,1); transform: translate3d(100%, 0px, 0px);">
+                <div>
+                    {{ icons.check('w:16 color:green ml:n1') }}
+                </div>
+                <span class="semibold">Subscribed!&nbsp;</span> Check your email.
+            </div>
+        </form>
+        {# Errors #}
+        <div data-error-email class="absolute top:n32 pl:4 pr:6 py:4 flex align-items:center radius:sm font:mono leading:100 font:2xs tracking:tighter bg:red-i bg-opacity:20 border:1 border:red-i border-opacity:30 backdrop backdrop-blur:xs" style="transform: scale3d(0.7,0.7,0.7); opacity:0; visibility:hidden;">
+            <div class="bg:red-i px:4 pt:3 pb:3 radius:2xs mr:4">
+                OPE!
+            </div>
+            <span>
+                Plz enter a valid email
+            </span>
+        </div>
+        <div data-error-fail class="absolute top:n32 pl:4 pr:6 py:4 flex align-items:center radius:sm font:mono leading:100 font:2xs tracking:tighter bg:red-i bg-opacity:20 border:1 border:red-i border-opacity:30 backdrop backdrop-blur:xs" style="transform: scale3d(0.7,0.7,0.7); opacity:0; visibility:hidden;">
+            <div class="bg:red-i px:4 pt:3 pb:3 radius:2xs mr:4">
+                OPE!
+            </div>
+            <span>
+                Shit broke. <a class="link:current" href="mailto:mike@mikestilling.com?subject=Your form is broken, idiot!">Email Blame</a> instead?
+            </span>
+        </div>
+    </div>
+{% endmacro %}

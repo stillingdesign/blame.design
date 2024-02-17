@@ -3,6 +3,110 @@
 
 /* purgecss start ignore */
 
+/* ================== Single Field ================== */
+
+.form\:single { @include apply("flex align-items:center justify-content:center radius:full leading:100 medium outline:none tracking:normal flex-shrink:0 overflow:hidden"); }
+.form\:single .form\:inner { @include apply('relative flex align-items:center justify-content:center w:100p'); }
+.form\:single input { @include apply("relative flex align-items:center justify-content:center radius:full w:100p"); }
+.form\:single .form\:icon { @include apply("absolute z:2 pointer-events:none");}
+.form\:single button { @include apply("absolute flex align-items:center justify-content:center radius:full z:3 transition:200 cubic-out"); transform: translate3d(0, 0, 0);}
+.form\:single .form\:success { @include apply("absolute z:4 top:0 left:0 w:100p h:100p color:ink-3 bg:sheet-1 radius:full flex align-items:center justify-content:center"); }
+.form\:single .form\:success div { @include apply("absolute bg:green-i bg-opacity:30 radius:full flex align-items:center justify-content:center"); }
+
+// Button Sizes
+.form\:single.form\:sm {
+    @include apply("font:xs p:1 min-w:224");
+    input { @include apply("font:xs pr:28 pl:28 pt:7 pb:7")}
+    .form\:icon { @include apply("left:12 w:14 h:auto mb:1")}
+    button { @include apply("right:4 w:24 h:24")}
+    .form\:success { @include apply("font:xs")}
+    .form\:success div { @include apply("left:8 w:20 h:20")}
+}
+
+.form\:single.form\:md {
+    @include apply("font:sm p:1 min-w:256");
+    input { @include apply("font:sm pr:36 pl:32 pt:9 pb:9")}
+    .form\:icon { @include apply("left:14 w:14 h:auto")}
+    button { @include apply("right:6 w:28 h:28")}
+    .form\:success { @include apply("font:xs")}
+    .form\:success div { @include apply("left:8 w:28 h:28")}
+}
+
+.form\:single.form\:lg {
+    @include apply("font:sm p:1 min-w:256");
+    input { @include apply("font:sm pr:40 pl:36 pt:13 pb:14")}
+    .form\:icon { @include apply("left:16 w:14 h:auto")}
+    button { @include apply("right:8 w:36 h:36")}
+    .form\:success { @include apply("font:xs")}
+    .form\:success div { @include apply("left:8 w:36 h:36")}
+}
+
+.form\:single.form\:xl {
+    @include apply("font:md p:1 min-w:288");
+    input { @include apply("font:md pr:48 pl:44 pt:15 pb:16")}
+    .form\:icon { @include apply("left:20 w:16 h:auto")}
+    button { @include apply("right:8 w:40 h:40")}
+    .form\:success { @include apply("font:sm tracking:tight")}
+    .form\:success div { @include apply("left:8 w:40 h:40")}
+}
+
+// Conic Initial Stop Vals
+@property --conic-t {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0.5;
+}
+
+@property --conic-b {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+}
+
+@property --conic-l {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 90deg;
+}
+
+@property --conic-r {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 270deg;
+}
+
+
+// Form Field Styles
+.form\:primary-i   {
+    @include apply("color:ink-3-i bg:ink-3-i bg-opacity:10 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    input { @include apply("bg:sheet-4-i bg-opacity:90 transition:200")}
+    input::placeholder { color: rgba(var(--ink-3-i), 0.5); transition: color 200ms linear 0ms; }
+    button { @include apply("bg:ink-3-i border:1 border:ink-3-i bg-opacity:10 border-opacity:30")}
+    & > .form\:gradient {
+        @include apply("absolute w:100p flex ratio:1-1");
+        background: conic-gradient(from var(--conic-spin) at 50% 50%, rgba(var(--ink-3-i), var(--conic-b)) var(--conic-l), rgba(var(--ink-3-i), var(--conic-t)) 180deg, rgba(var(--ink-3-i), var(--conic-b)) var(--conic-r));
+    }
+    // Hover
+    @media (hover: hover) {
+        &:hover {
+            @include apply("bg-opacity:15 transition:300");
+            animation: bump 50ms cubic-bezier(0,0.7,1,0.7) 25ms;
+            input { @include apply("bg:sheet-3-i bg-opacity:90 transition:300")}
+            input::placeholder { color: rgba(var(--ink-3-i), 0.6); }
+        }
+        button:hover {
+            @include apply("bg-opacity:30 border-opacity:50 transition:300 cubic-out");
+            animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+        }
+    }
+    // Focus Within + Focus Visible
+    &:focus-within { @include apply("bg-opacity:30 transition:300"); }
+    input:focus-visible { @include apply("bg:sheet-3-i bg-opacity:90 transition:300")}
+    input:focus-visible::placeholder { color: rgba(var(--ink-3-i), 0.7); }
+    button:focus-visible { @include apply("bg-opacity:20 border-opacity:40 transition:300 cubic-out"); }
+}
+
 .form-full {
     @include apply("relative w:100p p:48 bg:sheet-3 border:1 border:edge-1 shadow:2xl radius:2xl");
 
