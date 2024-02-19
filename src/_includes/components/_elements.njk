@@ -28,6 +28,20 @@
     </div>
 {% endmacro %}
 
+{# Button :: Fake #}
+{% macro btnFake(color, size, classes, label, iconL, iconR, animate, hover, attr, attrInner) %}
+    <div {{ attr }} class="relative btn btn:{{ color }} btn:{{ size }} {{ classes }} {% if hover %}btn:hover{% endif %}">
+        <div class="btn:gradient {% if animate %}animate:conic-spin{% endif %}"></div>
+        <div {{ attrInner }} class="btn:inner">
+            {% if iconL %}{{ iconL }}{% endif %}
+            <div class="btn:text">
+                {{ label }}
+            </div>
+            {% if iconR %}{{ iconR }}{% endif %}
+        </div>
+    </div>
+{% endmacro %}
+
 {# Tag :: Static #}
 {% macro tag(color, size, classes, label, iconL, iconR) %}
     <div class="relative tag tag:{{ color }} tag:{{ size }} {{ classes }}">

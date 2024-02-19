@@ -1,9 +1,9 @@
 ---
 layout: "main.njk"
-seoTitle: "Acme: The search and tab title"
-seoDescription: "This is the description that shows up in search engines."
-ogTitle: "This is the title that shows up in social cards"
-ogDesc: "This is the description that shows up in social cards"
+seoTitle: "Blame: Design-led growth for SaaS companies"
+seoDescription: "Unleash creative people and processes to unlock the next large wave of growth for your business."
+ogTitle: "Blame: Design-led growth for SaaS companies"
+ogDesc: "Unleash creative people and processes to unlock the next large wave of growth for your business."
 ogImage: "/assets/images/og/default.png"
 ogImageAlt: "This is the alt text for social cards images"
 theme: dark
@@ -15,16 +15,19 @@ changefreq: daily
 <main data-page="home">
 
     {# Particles #}
-    <canvas id="particleCanvas" class="absolute top:0 left:0 w:100p h:100vh"></canvas>
+    <canvas data-particles class="absolute top:0 left:0 w:100p h:100vh"></canvas>
 
     {# Hero #}
-    <section class="section bg:radial-t-sheet-4-i overflow:hidden">
-        <div class="relative w:100p flex flex:col align-items:center justify-content:center section:pb pt:96 lg:pt:128">
-            {# Vert Dividers #}
-            <div class="absolute w:100p h:100p md:max-w:1152 px:24 sm:px:0">
-                <div class="absolute top:n112 sm:top:0 left:12 sm:left:n24 h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-b"></div>
-                <div class="absolute top:n112 sm:top:0 right:12 sm:right:n24 h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-b"></div>
+    <section data-hero class="section bg:radial-t-sheet-4-i overflow:hidden">
+        {# Vert Dividers #}
+        <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
+            <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
+                <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-b"></div>
+                <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-b"></div>
             </div>
+        </div>
+        {# Content #}
+        <div data-hero-content class="relative w:100p flex flex:col align-items:center justify-content:center pt:96 lg:pt:128">
             {# Horz Divider #}
             <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3-i border:dashed border-opacity:10"></div>
             {# Testing Elements #}
@@ -121,7 +124,7 @@ changefreq: daily
                 </h1>
             </div>
             {# Handles #}
-            <div class="container mt:n12 sm:mt:n36 pt:1">
+            <div class="container mt:n12 sm:mt:n32 lg:mt:n36 pt:1">
                 <div class="absolute left:8 sm:left:n28 mt:4 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
                     <div class="w:1 h:100p bg:ink-3-i"></div>
                     <div class="h:1 w:100p bg:ink-3-i absolute"></div>
@@ -132,9 +135,9 @@ changefreq: daily
                 </div>
             </div>
             {# Subhead + CTA #}
-            <div class="container z:3 flex flex:col md:flex:row md:justify-content:end pt:24 md:pt:0 pb:64 sm:pb:96 md:pb:0 md:py:72">
+            <div class="container z:3 flex flex:col md:flex:row md:justify-content:end pt:24 sm:pt:28 md:pt:0 pb:64 sm:pb:96 md:pb:0 md:py:96">
                 <p class="font:5-75vw sm:font:4-5vw md:font:2-25vw lg:font:4xl leading:150 tracking:tight opacity:50 md:w:50p lg:w:100p lg:max-w:640 text:center md:text:left pb:48 sm:pb:48 md:pb:0">
-                   Creators are the lifeblood of the internet, so why confine them when it comes to business? <span class="space:nowrap">This site is</span> dedicated to that question.
+                   Unleash creative people and processes <span class="space:nowrap">to unlock</span> the next large wave of growth <span class="space:nowrap">for your business.</span>
                 </p>
                 <div class="md:absolute md:top:0 md:left:0 w:100p md:w:5-12 h:100p pt:8">
                     <div class="relative w:100p h:100p flex align-items:center justify-content:center md:pl:12">
@@ -167,7 +170,9 @@ changefreq: daily
                     </div>
                 </div>
             </div>
-            {# Graphic #}
+        </div>
+        {# Graphic #}
+        <div class="relative w:100p flex flex:col align-items:center justify-content:center">
             <div class="container">
                 {# Gradients #}
                 <div class="absolute w:100p top:n160 left:384 max-w:896 flex ratio:2-1 bg:radial-teal-i opacity:20"></div>
@@ -277,26 +282,55 @@ changefreq: daily
                                     </div>
                                 </div>
                             </div>
+                            {# Website Header #}
+                            <div class="absolute top:56 w:100p px:48 flex align-items:center justify-content:between">
+                                <div>
+                                    {{ icons.pearWordmark('w:48') }}
+                                </div>
+                                <div class="flex align-items:center gap:14 font:xs opacity:70">
+                                    <div>
+                                        Products
+                                    </div>
+                                    <div>
+                                        Solutions
+                                    </div>
+                                    <div>
+                                        Use cases
+                                    </div>
+                                    <div>
+                                        Support
+                                    </div>
+                                    <div>
+                                        Pricing
+                                    </div>
+                                </div>
+                            </div>
                             {# Page Contents #}
                             <div class="relative w:100p h:100p grid grid-cols:2">
-                                <div class="flex flex:col align-items:start pt:48 pl:56">
-                                    <div class="uppercase font:2xs tracking:loosest color:ink-1-i mb:12">
-                                        Let the chefs cook
-                                    </div>
-                                    <div class="relative font:8xl leading:110 tracking:tighter mb:10">
-                                        From strategy <span class="space:nowrap">to outcomes</span> in <span class="space:nowrap">weeks not years.</span>
+                                <div class="flex flex:col align-items:start pt:96 pl:48">
+                                    <div class="relative font:10xl leading:100 tracking:tighter medium mb:14 max-w:448">
+                                        Revenue fueled by skill and craft
                                     </div>
                                     <div class="font:2xl max-w:512 color:ink-1-i mb:24">
-                                        Consolidate ownership and decision making to the knowledgable people who are actually making it.
+                                        Your favorite company isn't built on marketing hacks, it's built on authentic and highly performant design.
                                     </div>
-                                    {{ elements.btnLink(
-                                        color="blue-i",
-                                        size="md",
-                                        link="#",
-                                        label="No more bogus ideas",
-                                        animate=true,
-                                        classes=''
-                                    ) }}
+                                    <div class="flex align-items:center gap:4">
+                                        {{ elements.btnFake(
+                                            color="simple-i",
+                                            size="md",
+                                            iconL=icons.check('w:14 color:green-i ml:n6 mr:4'),
+                                            label="Performant",
+                                            classes=''
+                                        )}}
+                                        {{ elements.btnFake(
+                                            color="red-i",
+                                            size="md",
+                                            link="#",
+                                            iconL=icons.close('w:14 color:red-i ml:n6 mr:4'),
+                                            label="Collaborative",
+                                            classes=''
+                                        )}}
+                                    </div>
                                 </div>
                                 <div class="bg:ink-3-i bg-opacity:2"></div>
                             </div>
@@ -307,65 +341,17 @@ changefreq: daily
         </div>
     </section>
 
-    <section data-invert="light" class="section min-h:100vh pt:192 overflow:hidden bg:sheet-6">
-        <div class="container flex flex:col align-items:center gap:32">
-            
+    <section class="section section:py overflow:hidden bg:sheet-6-i">
+        <div class="container flex align-items:start">
+            <h2 class="font:12xl medium w:100p max-w:640 tracking:tighter leading:100">
+                The builders know best
+            </h2>
         </div>
     </section>
 
-    <section data-invert="dark" class="section min-h:100vh pt:192 overflow:hidden bg:sheet-6-i">
-        <div class="container flex align-items:start">
-
+    <section data-invert="light" class="section min-h:100vh pt:192 overflow:hidden bg:sheet-6">
+        <div class="container flex flex:col align-items:center gap:32">
         </div>
     </section>
 
 </main>
-
-<script>
-        const canvas = document.getElementById('particleCanvas');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        let particles = [];
-
-        function initParticles() {
-            for (let i = 0; i < 1000; i++) {
-                particles.push({
-                    x: Math.random() * canvas.width,
-                    y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 1,
-                    vy: (Math.random() - 0.5) * 1,
-                    size: Math.random() * 0.125 + 0.5,
-                    opacity: Math.random(),
-                    fadeDirection: Math.random() < 0.5 ? -1 : 1 // Randomly choose initial fade direction
-                });
-            }
-        }
-
-        function updateParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(particle => {
-                particle.x += particle.vx;
-                particle.y += particle.vy;
-                if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
-                if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
-
-                // Update particle opacity for fade in/out effect
-                particle.opacity += 0.01 * particle.fadeDirection;
-                if (particle.opacity <= 0 || particle.opacity >= 1) {
-                    particle.fadeDirection *= -1; // Reverse fade direction
-                    particle.opacity = particle.opacity < 0 ? 0 : 1; // Clamp opacity to [0,1] range
-                }
-
-                ctx.beginPath();
-                ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(255, 255, 255, ${particle.opacity})`; // Use particle's opacity
-                ctx.fill();
-            });
-            requestAnimationFrame(updateParticles);
-        }
-
-        initParticles();
-        updateParticles();
-    </script>

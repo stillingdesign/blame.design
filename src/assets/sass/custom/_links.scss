@@ -34,6 +34,11 @@
     .btn\:inner { @include apply("px:24 py:16")}
 }
 
+.btn\:nav {
+    @include apply("font:sm p:1");
+    .btn\:inner { @include apply("px:12 sm:px:18 py:12")}
+}
+
 // Conic Initial Stop Vals
 @property --conic-t {
     syntax: '<number>';
@@ -168,6 +173,38 @@
             &:hover {
                 animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
                 & > .btn\:gradient { @include apply("opacity:30 transition:300")}
+            }
+        }
+    }
+}
+
+.btn\:red-i   {
+    @include apply("color:ink-3-i bg:red-i bg-opacity:30 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .btn\:inner { @include apply("bg:sheet-6-i bg-opacity:50 transition:200")}
+    & > .btn\:gradient { @include apply("hidden"); }
+    &.btn\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:50 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+                & > .btn\:inner { @include apply("bg:red-i bg-opacity:50 transition:300")}
+            }
+        }
+    }
+}
+
+.btn\:green-i   {
+    @include apply("color:ink-3-i bg:green-i bg-opacity:30 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .btn\:inner { @include apply("bg:sheet-6-i bg-opacity:50 transition:200")}
+    & > .btn\:gradient { @include apply("hidden"); }
+    &.btn\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:50 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+                & > .btn\:inner { @include apply("transition:300")}
             }
         }
     }

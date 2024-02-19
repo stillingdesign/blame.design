@@ -2,22 +2,22 @@
 {% import "components/_elements.njk" as elements %}
 
 <header data-header class="fixed top:0 left:0 z:10 w:100p h:56 flex flex:col align-items:center justify-content:center sm:px:48 color:current">
-    <div data-header-bg class="absolute top:0 w:100p h:100p bg-opacity:20 backdrop backdrop-blur:sm blur:fix transform:top border-b:1 border-opacity:8 mask:fade-out-x-90p transition:100 {% if theme == 'dark' %}bg:sheet-6-i color:ink-3-i border:ink-3-i{% else %}bg:sheet-6 border:ink-3{% endif %}" style="opacity:0;"></div>
+    <div data-header-bg class="absolute top:0 w:100p h:100p bg-opacity:20 backdrop backdrop-blur:sm blur:fix transform:top border-b:1 border-opacity:8 lg:mask:fade-out-x-90p transition:100 {% if theme == 'dark' %}bg:sheet-6-i color:ink-3-i border:ink-3-i{% else %}bg:sheet-6 border:ink-3{% endif %}" style="opacity:0;"></div>
     <div class="container z:9 flex align-items:center justify-content:between font:sm">
         {# Logo #}
-        <div class="relative block flex-shrink:0">
+        <div class="relative block flex-shrink:0 sm:min-w:112">
             <a href="/" data-header-logo class="h:40 px:8 ml:n8 inline-flex align-items:center justify-content:start radius:full focus:primary border:1">
-                {{ icons.wordmark('w:68 transition:100') }}
+                {{ icons.wordmark('w:66 transition:100') }}
             </a>
         </div>
         {# Items #}
-        <nav class="relative flex-shrink:0 flex align-items:center gap:2 mr:n8">
-            <ul class="relative flex-shrink:0 flex align-items:center gap:2 px:8">
+        <nav class="relative flex-shrink:0 flex align-items:center gap:2 mr:n12">
+            <ul class="relative flex-shrink:0 flex align-items:center sm:gap:2 sm:px:8">
                 {% for collection in navigation | selectattr("header") %}
                     <li>
                         {{ elements.btnLink(
                             color="text-c",
-                            size="md",
+                            size="nav",
                             link=collection.url,
                             label=collection.name,
                             hover=true,
@@ -28,7 +28,7 @@
             </ul>
         </nav>
         {# CTA #}
-        <div class="relative flex-shrink:0">
+        <div class="relative flex-shrink:0 hidden sm:block min-w:112">
             <a href="{{ base.signupLink }}" data-header-btn class="relative btn btn:md btn:hover {% if theme == 'dark' %}btn:header-i{% else %}btn:header{% endif %}">
                 <div data-header-btn-bg class="btn:gradient"></div>
                 <div data-header-btn-inner class="btn:inner">
