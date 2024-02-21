@@ -181,8 +181,8 @@ changefreq: daily
                 {# Visuals #}
                 <div class="relative w:100p flex flex:col align-items:center justify-content:center">
                     {# Browser #}
-                    <div class="relative w:100p lg:w:plus96 flex ratio:16-9 bg:white bg-opacity:10 backdrop backdrop-blur:md radius:xl shadow:xl p:1">
-                        <div class="relative w:100p h:100p radius:xl bg:sheet-6-i bg-opacity:70 flex flex:col align-items:center">
+                    <div class="relative w:100p lg:w:plus96 flex ratio:3-4 sm:ratio:16-9 bg:white bg-opacity:8 backdrop backdrop-blur:md radius:xl shadow:xl p:1 overflow:hidden">
+                        <div class="relative w:100p h:100p radius:xl bg:sheet-6-i bg-opacity:60 flex flex:col align-items:center">
                             {# Status Bar #}
                             <div class="relative flex justify-content:between w:100p pl:18 pr:2 pt:2 border-b:1 border:ink-3-i border-opacity:10">
                                 <div class="flex align-items:center gap:4 pb:2 flex-shrink:0">
@@ -192,71 +192,61 @@ changefreq: daily
                                     {{ icons.arrowL('ml:8 w:14 opacity:30')}}
                                     {{ icons.arrowR('w:14 opacity:30')}}
                                 </div>
-                                <div class="relative flex align-items:center w:100p justify-content:end">
-                                    {% set tabClasses = 'border-x:1 border-t:1 bg:ink-3-i border:ink-3-i radius-t:md px:2 pt:2 pb:4' %}
-                                    <div class="bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
-                                        {{ elements.btnLink(
+                                <div class="relative flex align-items:center justify-content:end w:100p sm:mask:fade-out-l md:mask:none">
+                                    {% set tabClasses = 'border-x:1 border-t:1 bg:ink-3-i border:ink-3-i radius-t:md px:2 pt:2 pb:4 space:nowrap flex-shrink:0' %}
+                                    <div class="hidden sm:block bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
+                                        {{ elements.btnFake(
                                             color="tab-i",
                                             size="xs",
-                                            link="#",
                                             label="Messaging",
-                                            animate=true,
                                             hover=true,
                                             iconL=icons.iconNotion('w:12 mr:4'),
                                             iconR=icons.close('w:12 ml:8 opacity:70'),
                                             classes=''
                                         ) }}
                                     </div>
-                                    <div class="w:1 h:12 bg:ink-3-i opacity:10"></div>
-                                    <div class="bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
-                                        {{ elements.btnLink(
+                                    <div class="hidden sm:block w:1 h:12 bg:ink-3-i opacity:10"></div>
+                                    <div class="hidden sm:block bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
+                                        {{ elements.btnFake(
                                             color="tab-i",
                                             size="xs",
-                                            link="#",
                                             label="Google Ads",
-                                            animate=true,
                                             hover=true,
                                             iconL=icons.iconGoogleAds('w:12 mr:4'),
                                             iconR=icons.close('w:12 ml:8 opacity:70'),
                                             classes=''
                                         ) }}
                                     </div>
-                                    <div class="w:1 h:12 bg:ink-3-i opacity:10"></div>
-                                    <div class="bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
-                                        {{ elements.btnLink(
+                                    <div class="hidden sm:block w:1 h:12 bg:ink-3-i opacity:10"></div>
+                                    <div class="hidden sm:block bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
+                                        {{ elements.btnFake(
                                             color="tab-i",
                                             size="xs",
-                                            link="#",
                                             label="Analytics",
-                                            animate=true,
                                             hover=true,
                                             iconL=icons.iconGoogleAnalytics('w:12 mr:4'),
                                             iconR=icons.close('w:12 ml:8 opacity:70'),
                                             classes=''
                                         ) }}
                                     </div>
-                                    <div class="w:1 h:12 bg:ink-3-i opacity:10"></div>
-                                    <div class="bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
-                                        {{ elements.btnLink(
+                                    <div class="hidden sm:block w:1 h:12 bg:ink-3-i opacity:10"></div>
+                                    <div class="hidden sm:block bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
+                                        {{ elements.btnFake(
                                             color="tab-i",
                                             size="xs",
-                                            link="#",
                                             label="LinkedIn",
-                                            animate=true,
                                             hover=true,
                                             iconL=icons.iconLinkedIn('w:12 mr:4'),
                                             iconR=icons.close('w:12 ml:8 opacity:70'),
                                             classes=''
                                         ) }}
                                     </div>
-                                    <div class="w:1 h:12 bg:ink-3-i opacity:10"></div>
-                                    <div class="bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
-                                        {{ elements.btnLink(
+                                    <div class="hidden sm:block w:1 h:12 bg:ink-3-i opacity:10"></div>
+                                    <div class="hidden sm:block bg-opacity:0 border-opacity:0 opacity:60 {{ tabClasses }}">
+                                        {{ elements.btnFake(
                                             color="tab-i",
                                             size="xs",
-                                            link="#",
                                             label="Weekly Signups",
-                                            animate=true,
                                             hover=true,
                                             iconL=icons.iconGoogleSheets('w:12 mr:4'),
                                             iconR=icons.close('w:12 ml:8 opacity:70'),
@@ -264,15 +254,14 @@ changefreq: daily
                                         ) }}
                                     </div>
                                     <div class="bg-opacity:4 border-opacity:10 opacity:60 {{ tabClasses }}">
-                                        {{ elements.btnLink(
+                                        {{ elements.btnFake(
                                             color="tab-i",
                                             size="xs",
-                                            link="#",
                                             label="Marketing site",
-                                            animate=true,
                                             hover=true,
+                                            iconL=icons.pearIcon('w:12 mr:4'),
                                             iconR=icons.close('w:12 ml:8 opacity:70'),
-                                            classes=''
+                                            classes='space:nowrap'
                                         ) }}
                                     </div>
                                     <div class="relative flex align-items:center justify-content:center h:100p ratio:1-1 border:1">
@@ -283,38 +272,82 @@ changefreq: daily
                                 </div>
                             </div>
                             {# Website Header #}
-                            <div class="absolute top:56 w:100p px:48 flex align-items:center justify-content:start gap:16">
-                                <div>
-                                    {{ icons.pearWordmark('w:40') }}
+                            <div class="absolute z:3 top:56 w:100p px:16 sm:px:48 flex align-items:center justify-content:between">
+                                <div class="flex align-items:center gap:16">
+                                    <div>
+                                        {{ icons.pearWordmark('w:40') }}
+                                    </div>
+                                    <div class="hidden sm:block border-l:1 border:white h:12 mt:6"></div>
+                                    <div class="hidden sm:flex align-items:center gap:14 font:xs opacity:70 pt:5">
+                                        <div>
+                                            Products
+                                        </div>
+                                        <div>
+                                            Solutions
+                                        </div>
+                                        <div>
+                                            Use cases
+                                        </div>
+                                        <div>
+                                            Support
+                                        </div>
+                                        <div>
+                                            Pricing
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="border-l:1 border:white h:12 mt:6"></div>
-                                <div class="flex align-items:center gap:14 font:xs opacity:70 mt:6">
-                                    <div>
-                                        Products
-                                    </div>
-                                    <div>
-                                        Solutions
-                                    </div>
-                                    <div>
-                                        Use cases
-                                    </div>
-                                    <div>
-                                        Support
-                                    </div>
-                                    <div>
-                                        Pricing
-                                    </div>
-                                </div>
+                                {{ elements.btnFake(
+                                    color="simple-i",
+                                    size="xs",
+                                    classes="mt:2",
+                                    label="Try for free",
+                                    iconL="",
+                                    iconR="",
+                                    animate=false,
+                                    hover=true,
+                                    attr="",
+                                    attrInner=""
+                                )}}
                             </div>
                             {# Page Contents #}
                             <div class="relative w:100p h:100p">
-                                <div class="flex flex:col align-items:start justify-content:center pl:48 h:100p">
-                                    <div class="font:9xl leading:120 tracking:tighter max-w:768 mb:24">
-                                        <span class="opacity:50">Your favorite SaaS company <span class="tracking:tight"><span class="space:nowrap">is built</span> on authenticity and</span> <span class="space:nowrap">highly performant</span> design,</span> <span class="space:nowrap">not marketing hacks.</span>
+                                <div class="absolute right:0 w:640 h:640 bg:radial-blue-i opacity:15"></div>
+                                <div class="flex flex:col align-items:center sm:align-items:start justify-content:center pl:16 pr:16 sm:pr:0 sm:pl:48 h:100p">
+                                    <div class="hidden md:block font:lg mb:16 pt:24 lg:pt:0">
+                                        Optimized for Revenue
+                                    </div>
+                                    <div class="font:8-5vw sm:font:6xl md:font:7xl lg:font:8xl leading:120 tracking:tighter mb:24 max-w:512 md:max-w:640 sm:pt:24 md:pt:0 text:center sm:text:left">
+                                        <span class="opacity:50"><span class="tracking:tight">Your favorite tech company</span> <span class="tracking:tight"><span class="sm:space:nowrap">is built</span> on authenticity and</span> <span class="sm:space:nowrap">highly performant</span> design,</span> <span class="space:nowrap">not marketing hacks.</span>
+                                    </div>
+                                    <div class="flex align-items:center pb:16 sm:pb:0 lg:pb:8">
+                                        {{ elements.btnFake(
+                                            color="blue-i",
+                                            size="lg",
+                                            classes="mt:2",
+                                            label="Click here now",
+                                            iconL="",
+                                            iconR="",
+                                            animate=false,
+                                            hover=true,
+                                            attr="",
+                                            attrInner=""
+                                        )}}
+                                        {{ elements.btnFake(
+                                            color="text-i",
+                                            size="lg",
+                                            classes="mt:2",
+                                            label="Click again later",
+                                            iconL="",
+                                            iconR="",
+                                            animate=false,
+                                            hover=true,
+                                            attr="",
+                                            attrInner=""
+                                        )}}
                                     </div>
                                 </div>
                                 <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.53/build/spline-viewer.js"></script>
-                                <spline-viewer url="https://prod.spline.design/rekKHMXVjqLwm5K7/scene.splinecode" class="absolute right:0 top:0 h:100p w:auto"></spline-viewer>
+                                <spline-viewer url="https://prod.spline.design/FMTAYdURmSouCt1c/scene.splinecode" class="absolute right:0 top:0 h:100p w:auto"></spline-viewer>
                             </div>
                         </div>
                     </div>

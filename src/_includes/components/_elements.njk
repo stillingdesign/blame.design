@@ -30,7 +30,7 @@
 
 {# Button :: Fake #}
 {% macro btnFake(color, size, classes, label, iconL, iconR, animate, hover, attr, attrInner) %}
-    <div {{ attr }} class="relative btn btn:{{ color }} btn:{{ size }} {{ classes }} {% if hover %}btn:hover{% endif %}">
+    <div {{ attr }} class="relative btn btn:{{ color }} btn:{{ size }} cursor:default {{ classes }} {% if hover %}btn:hover{% endif %}">
         <div class="btn:gradient {% if animate %}animate:conic-spin{% endif %}"></div>
         <div {{ attrInner }} class="btn:inner">
             {% if iconL %}{{ iconL }}{% endif %}

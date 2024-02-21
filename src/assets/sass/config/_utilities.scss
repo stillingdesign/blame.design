@@ -53,6 +53,7 @@ $utilities: (
             '2-25vw': 2.25vw,
             '4-5vw': 4.5vw,
             '5-75vw': 5.75vw,
+            '8-5vw': 8.5vw,
             11vw: 11vw,
             20vw: 20vw,
         ),
@@ -183,6 +184,9 @@ $utilities: (
     ),
     translate-x: (
         pseudos: (hover, group-hover, focus, group-focus),
+    ),
+    white-space: (
+        responsive: true,
     ),
     width: (
         pseudos: (hover, group-hover, focus, group-focus),
