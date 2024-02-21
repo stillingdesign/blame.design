@@ -182,9 +182,9 @@ changefreq: daily
                 <div class="relative w:100p flex flex:col align-items:center justify-content:center">
                     {# Browser #}
                     <div class="relative w:100p lg:w:plus96 flex ratio:16-9 bg:white bg-opacity:10 backdrop backdrop-blur:md radius:xl shadow:xl p:1">
-                        <div class="relative w:100p h:100p radius:xl bg:sheet-6-i bg-opacity:70 flex flex:col">
+                        <div class="relative w:100p h:100p radius:xl bg:sheet-6-i bg-opacity:70 flex flex:col align-items:center">
                             {# Status Bar #}
-                            <div class="relative flex justify-content:between pl:18 pr:2 pt:2 border-b:1 border:ink-3-i border-opacity:10">
+                            <div class="relative flex justify-content:between w:100p pl:18 pr:2 pt:2 border-b:1 border:ink-3-i border-opacity:10">
                                 <div class="flex align-items:center gap:4 pb:2 flex-shrink:0">
                                     <div class="w:8 h:8 radius:full bg-opacity:70 border:1 border:green-i bg:green-i"></div>
                                     <div class="w:8 h:8 radius:full bg-opacity:70 border:1 border:yellow-i bg:yellow-i"></div>
@@ -283,11 +283,12 @@ changefreq: daily
                                 </div>
                             </div>
                             {# Website Header #}
-                            <div class="absolute top:56 w:100p px:48 flex align-items:center justify-content:between">
+                            <div class="absolute top:56 w:100p px:48 flex align-items:center justify-content:start gap:16">
                                 <div>
-                                    {{ icons.pearWordmark('w:48') }}
+                                    {{ icons.pearWordmark('w:40') }}
                                 </div>
-                                <div class="flex align-items:center gap:14 font:xs opacity:70">
+                                <div class="border-l:1 border:white h:12 mt:6"></div>
+                                <div class="flex align-items:center gap:14 font:xs opacity:70 mt:6">
                                     <div>
                                         Products
                                     </div>
@@ -306,33 +307,14 @@ changefreq: daily
                                 </div>
                             </div>
                             {# Page Contents #}
-                            <div class="relative w:100p h:100p grid grid-cols:2">
-                                <div class="flex flex:col align-items:start pt:96 pl:48">
-                                    <div class="relative font:10xl leading:100 tracking:tighter medium mb:14 max-w:448">
-                                        Revenue fueled by skill and craft
-                                    </div>
-                                    <div class="font:2xl max-w:512 color:ink-1-i mb:24">
-                                        Your favorite company isn't built on marketing hacks, it's built on authentic and highly performant design.
-                                    </div>
-                                    <div class="flex align-items:center gap:4">
-                                        {{ elements.btnFake(
-                                            color="simple-i",
-                                            size="md",
-                                            iconL=icons.check('w:14 color:green-i ml:n6 mr:4'),
-                                            label="Performant",
-                                            classes=''
-                                        )}}
-                                        {{ elements.btnFake(
-                                            color="red-i",
-                                            size="md",
-                                            link="#",
-                                            iconL=icons.close('w:14 color:red-i ml:n6 mr:4'),
-                                            label="Collaborative",
-                                            classes=''
-                                        )}}
+                            <div class="relative w:100p h:100p">
+                                <div class="flex flex:col align-items:start justify-content:center pl:48 h:100p">
+                                    <div class="font:9xl leading:120 tracking:tighter max-w:768 mb:24">
+                                        <span class="opacity:50">Your favorite SaaS company <span class="tracking:tight"><span class="space:nowrap">is built</span> on authenticity and</span> <span class="space:nowrap">highly performant</span> design,</span> <span class="space:nowrap">not marketing hacks.</span>
                                     </div>
                                 </div>
-                                <div class="bg:ink-3-i bg-opacity:2"></div>
+                                <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.53/build/spline-viewer.js"></script>
+                                <spline-viewer url="https://prod.spline.design/rekKHMXVjqLwm5K7/scene.splinecode" class="absolute right:0 top:0 h:100p w:auto"></spline-viewer>
                             </div>
                         </div>
                     </div>

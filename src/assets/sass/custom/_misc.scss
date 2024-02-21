@@ -11,3 +11,5 @@
 .scrollbar\:dark::-webkit-scrollbar-track { background: rgba(var(--sheet-4-i), 1); }
 
 .gradient-text { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+spline-viewer canvas { width: 100%; height: 100%; }
