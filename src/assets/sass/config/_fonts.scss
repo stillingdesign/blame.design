@@ -3,9 +3,9 @@
     font-family: 'Neue Montreal';
     font-style:  normal;
     font-weight: 100 900;
-    font-display: swap;
-    src: url("/assets/fonts/neuemontreal-var.woff2") format("woff2"),
-         url("/assets/fonts/neuemontreal-var.woff") format("woff");
+    font-display: block;
+    src: url("/assets/fonts/neuemontreal-var.woff2") format("woff2");
+    unicode-range: U+0020-007F,U+00A0-00FF,U+20AC,U+2010,U+2013,U+2014,U+2018,U+2019,U+201A,U+201C,U+201D,U+201E,U+2039,U+203A,U+2026,U+2022;
 }
 
 @font-face {
@@ -13,8 +13,8 @@
     font-style:  normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/assets/fonts/otbrut-400.woff2") format("woff2"),
-         url("/assets/fonts/otbrut-400.woff") format("woff");
+    src: url("/assets/fonts/otbrut-400.woff2") format("woff2");
+    unicode-range: U+0020-007F,U+00A0-00FF,U+20AC,U+2010,U+2013,U+2014,U+2018,U+2019,U+201A,U+201C,U+201D,U+201E,U+2039,U+203A,U+2026,U+2022;
 }
 
 @font-face {
@@ -22,8 +22,8 @@
     font-style:  italic;
     font-weight: 400;
     font-display: swap;
-    src: url("/assets/fonts/otbrut-400i.woff2") format("woff2"),
-         url("/assets/fonts/otbrut-400i.woff") format("woff");
+    src: url("/assets/fonts/otbrut-400i.woff2") format("woff2");
+    unicode-range: U+0020-007F,U+00A0-00FF,U+20AC,U+2010,U+2013,U+2014,U+2018,U+2019,U+201A,U+201C,U+201D,U+201E,U+2039,U+203A,U+2026,U+2022;
 }
 
 @font-face {
@@ -31,8 +31,8 @@
     font-style:  normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/assets/fonts/spacemono.woff2") format("woff2"),
-         url("/assets/fonts/spacemono.woff") format("woff");
+    src: url("/assets/fonts/spacemono.woff2") format("woff2");
+    unicode-range: U+0020-007F,U+00A0-00FF,U+20AC,U+2010,U+2013,U+2014,U+2018,U+2019,U+201A,U+201C,U+201D,U+201E,U+2039,U+203A,U+2026,U+2022;
 }
 
 @font-face {
@@ -40,8 +40,8 @@
     font-style:  italic;
     font-weight: 400;
     font-display: swap;
-    src: url("/assets/fonts/spacemono-i.woff2") format("woff2"),
-         url("/assets/fonts/spacemono-i.woff") format("woff");
+    src: url("/assets/fonts/spacemono-i.woff2") format("woff2");
+    unicode-range: U+0020-007F,U+00A0-00FF,U+20AC,U+2010,U+2013,U+2014,U+2018,U+2019,U+201A,U+201C,U+201D,U+201E,U+2039,U+203A,U+2026,U+2022;
 }
 /* purgecss end ignore */
 

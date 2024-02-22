@@ -31,7 +31,19 @@
         {# No index #}
         {% if noindex == true %}<meta name="robots" content="noindex, nofollow">{% endif %}
     
-        {# Stylesheet #}
+        {# Styling #}
+        <link rel="preload" href="{{ '/assets/fonts/neuemontreal-var.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+        <style>
+            @font-face {
+                font-family: 'Neue Montreal';
+                font-style:  normal;
+                font-weight: 100 900;
+                font-display: block;
+                src: url("/assets/fonts/neuemontreal-var.woff2") format("woff2");
+                unicode-range: U+0020-007F,U+00A0-00FF,U+20AC,U+2010,U+2013,U+2014,U+2018,U+2019,U+201A,U+201C,U+201D,U+201E,U+2039,U+203A,U+2026,U+2022;
+            }
+            :root { --sans: 'Neue Montreal', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+        </style>
         <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
     
         {# Website Icon #}
@@ -43,7 +55,7 @@
     </head>
 
     {# Body #}
-    <body data-barba="wrapper" class="w:100p max-w:100p font:md tracking:tight leading:160 font:sans kern:normal antialiased {% if theme == 'dark' %}bg:sheet-6-i color:ink-3-i{% else %}bg:sheet-6 color:ink-3{% endif %}">
+    <body data-barba="wrapper" class="w:100p max-w:100p font:md tracking:tight leading:160 font:sans kern:normal antialiased {% if theme == 'dark' %}bg:sheet-6-i color:ink-3-i{% else %}bg:sheet-6 color:ink-3{% endif %}" style="font-family: var(--sans);">
 
         <div class="relative w:100p">
 
