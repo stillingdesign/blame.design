@@ -376,7 +376,7 @@ changefreq: daily
     document.addEventListener("DOMContentLoaded", function() {
         var splineScript = document.createElement('script');
         splineScript.src = 'https://unpkg.com/@splinetool/viewer@1.0.53/build/spline-viewer.js';
-        splineScript.async = true;
+        splineScript.defer = true;
         splineScript.type = 'module';
         document.body.appendChild(splineScript);
     });
