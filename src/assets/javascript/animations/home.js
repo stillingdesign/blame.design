@@ -3,6 +3,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 if(document.querySelector('[data-page="home"]')) {
 
+    // Spline
+    function loadSplineScript() {
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.src = 'https://unpkg.com/@splinetool/viewer@1.0.53/build/spline-viewer.js';
+        document.head.appendChild(script);
+    }
+    window.addEventListener('load', loadSplineScript);
+
     // Variables
     const btns = document.querySelectorAll('[data-hero-btn]');
     const lineOne = document.querySelector('[data-headline-one]');
