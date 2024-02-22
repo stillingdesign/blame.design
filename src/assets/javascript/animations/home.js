@@ -3,8 +3,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 if(document.querySelector('[data-page="home"]')) {
 
-    
-
     // Variables
     const btns = document.querySelectorAll('[data-hero-btn]');
     const lineOne = document.querySelector('[data-headline-one]');

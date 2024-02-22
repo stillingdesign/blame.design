@@ -348,7 +348,7 @@ changefreq: daily
                                         )}}
                                     </div>
                                 </div>
-                                
+                                <spline-viewer loading="lazy" url="https://prod.spline.design/FMTAYdURmSouCt1c/scene.splinecode" class="absolute right:0 top:0 h:100p w:auto"></spline-viewer>
                             </div>
                         </div>
                     </div>
@@ -371,3 +371,13 @@ changefreq: daily
     </section>
 
 </main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var splineScript = document.createElement('script');
+        splineScript.src = 'https://unpkg.com/@splinetool/viewer@1.0.53/build/spline-viewer.js';
+        splineScript.async = true;
+        splineScript.type = 'module';
+        document.body.appendChild(splineScript);
+    });
+</script>
