@@ -128,4 +128,50 @@ if(document.querySelector('[data-page="home"]')) {
     }
     particles();
 
+    // Scroll Phones
+    function scrollPhonesD() {
+        const tmln = gsap.timeline({
+            scrollTrigger: {
+                trigger: `[data-hero]`,
+                start: `top top`,
+                end: `bottom center`,
+                scrub: 1,
+            }
+        });
+        tmln
+            .to('[data-phone-1]', { x:0, y:0, autoAlpha:1, }, 0)
+            .to('[data-phone-2]', { x:0, y:0, autoAlpha:1, }, 0)
+            .to('[data-phone-3]', { x:0, y:0, autoAlpha:1, }, 0)
+            .to('[data-phone-4]', { x:0, y:0, autoAlpha:1, }, 0)
+            .to('[data-phone-5]', { x:0, y:0, autoAlpha:1, }, 0)
+    }
+
+    function scrollPhonesM() {
+        const tmln = gsap.timeline({
+            scrollTrigger: {
+                trigger: `[data-hero]`,
+                start: `top top`,
+                end: `bottom center`,
+                scrub: 1,
+            }
+        });
+        tmln
+            .to('[data-phone-1]', { x:0, y:0, autoAlpha:1, }, 0)
+            .to('[data-phone-2]', { x:0, y:0, autoAlpha:1, }, 0)
+            .to('[data-phone-3]', { x:0, y:0, autoAlpha:1, }, 0)
+            .to('[data-phone-m2]', { x:0, y:0, autoAlpha:1, }, 0)
+            .to('[data-phone-m3]', { x:0, y:0, autoAlpha:1, }, 0)
+    }
+
+    // Media Queries
+    let mm = gsap.matchMedia();
+
+    mm.add("(max-width: 1023px)", () => {
+        scrollPhonesM();
+    });
+
+    mm.add("(min-width: 1024px)", () => {
+        scrollPhonesD();
+    });
+
 }

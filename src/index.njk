@@ -181,8 +181,8 @@ changefreq: daily
                 {# Visuals #}
                 <div class="relative w:100p flex flex:col align-items:center justify-content:center">
                     {# Browser #}
-                    <div class="relative w:100p lg:w:plus96 flex ratio:3-4 sm:ratio:16-9 bg:white bg-opacity:8 backdrop backdrop-blur:md radius:xl shadow:xl p:1 overflow:hidden">
-                        <div class="relative w:100p h:100p radius:xl bg:sheet-6-i bg-opacity:60 flex flex:col align-items:center">
+                    <div class="relative w:100p lg:w:plus96 flex ratio:3-4 sm:ratio:4-3 md:ratio:16-9 bg:white bg-opacity:8 backdrop backdrop-blur:md radius:xl shadow:xl p:1 overflow:hidden">
+                        <div class="relative w:100p h:100p radius:xl bg:sheet-6-i bg-opacity:60 flex flex:col align-items:center overflow:hidden">
                             {# Status Bar #}
                             <div class="relative flex justify-content:between w:100p pl:18 pr:2 pt:2 border-b:1 border:ink-3-i border-opacity:10">
                                 <div class="flex align-items:center gap:4 pb:2 flex-shrink:0">
@@ -278,7 +278,7 @@ changefreq: daily
                                         {{ icons.pearWordmark('w:40') }}
                                     </div>
                                     <div class="hidden sm:block border-l:1 border:white h:12 mt:6"></div>
-                                    <div class="hidden sm:flex align-items:center gap:14 font:xs opacity:70 pt:5">
+                                    <div class="hidden sm:flex align-items:center gap:14 font:xs opacity:70 pt:5 tracking:normal">
                                         <div>
                                             Products
                                         </div>
@@ -310,18 +310,16 @@ changefreq: daily
                                 )}}
                             </div>
                             {# Page Contents #}
-                            <div class="relative w:100p h:100p">
-                                {# BG #}
-                                <div class="absolute right:0 w:640 h:640 bg:radial-blue-i opacity:15"></div>
+                            <div class="relative w:100p h:100p flex flex:col justify-content:start md:justify-content:center align-items:center md:align-items:start pt:72 md:pt:0">
                                 {# Copy #}
-                                <div class="flex flex:col align-items:center sm:align-items:start justify-content:center pl:16 pr:16 sm:pr:0 sm:pl:48 h:100p">
+                                <div class="relative z:3 flex flex:col align-items:center md:align-items:start justify-content:center pl:16 pr:16 md:pr:0 md:pl:48 md:h:100p text:center md:text:left">
                                     <div class="hidden md:block font:lg mb:16 pt:24 lg:pt:0">
                                         Think about it...
                                     </div>
-                                    <div class="font:8-5vw sm:font:6xl md:font:7xl lg:font:8xl leading:120 tracking:tighter mb:24 max-w:512 md:max-w:640 sm:pt:24 md:pt:0 text:center sm:text:left">
-                                        <span class="opacity:50"><span class="tracking:tight">Your favorite tech company</span> <span class="tracking:tight"><span class="sm:space:nowrap">is built</span> on authenticity and</span> <span class="sm:space:nowrap">highly performant</span> design,</span> <span class="space:nowrap">not marketing hacks.</span>
+                                    <div class="font:7vw sm:font:4xl md:font:6xl leading:120 tracking:tighter mb:24 sm:max-w:640 md:max-w:512 sm:pt:24 md:pt:0">
+                                        <span class="opacity:50"><span class="tracking:tight">Your favorite tech company</span> <span class="tracking:tight"><span class="space:nowrap">is built</span> on authenticity and</span> <span class="space:nowrap">highly performant</span> design,</span> <span class="space:nowrap">not marketing hacks.</span>
                                     </div>
-                                    <div class="flex align-items:center pb:16 sm:pb:0 lg:pb:8">
+                                    <div class="hidden sm:flex align-items:center pb:16 sm:pb:0 lg:pb:8">
                                         {{ elements.btnFake(
                                             color="blue-i",
                                             size="lg",
@@ -348,12 +346,35 @@ changefreq: daily
                                         )}}
                                     </div>
                                 </div>
+                                {# Phones Image #}
+                                <div class="w:120p sm:w:100p h:100p absolute bottom:n40p sm:bottom:n192 md:bottom:0 md:right:0 flex align-items:start justify-content:center md:justify-content:end pt:24 md:pr:48 pointer-events:none">
+                                    <div data-phone-5 class="hidden md:block relative w:5p lg:w:88 h:auto pt:30p lg:pt:320 mask:fade-out-r overflow:hidden" style="opacity:0; visibility:hidden;">
+                                        <img src="/assets/images/home/phone-vercel.webp" alt="" loading="lazy" class="relative w:225p lg:w:192 max-w:none h:auto opacity:30">
+                                    </div>
+                                    <div data-phone-4 class="hidden md:block relative w:6p lg:w:96 h:auto pt:24p lg:pt:256 mask:fade-out-r overflow:hidden" style="opacity:0; visibility:hidden;">
+                                        <img src="/assets/images/home/phone-figma.webp" alt="" loading="lazy" class="relative w:225p lg:w:224 max-w:none h:auto opacity:40">
+                                    </div>
+                                    <div data-phone-3 class="relative w:14p sm:w:10p md:w:8p lg:w:112 h:auto pt:18p lg:pt:192 mask:fade-out-r overflow:hidden" style="opacity:0; visibility:hidden;">
+                                        <img src="/assets/images/home/phone-linear.webp" alt="" loading="lazy" class="relative w:225p lg:w:256 max-w:none h:auto opacity:60">
+                                    </div>
+                                    <div data-phone-2 class="relative w:16p sm:w:12p md:w:10p lg:w:128 h:auto pt:12p lg:pt:128 mask:fade-out-r overflow:hidden" style="opacity:0; visibility:hidden;">
+                                        <img src="/assets/images/home/phone-notion.webp" alt="" class="relative w:225p lg:w:288 max-w:none h:auto opacity:80">
+                                    </div>
+                                    <div data-phone-1 class="relative w:40p sm:w:25p lg:w:320 h:auto pt:6p lg:pt:72" style="opacity:0; visibility:hidden;">
+                                        <img src="/assets/images/home/phone-apple.webp" alt="" class="relative w:100p h:auto">
+                                    </div>
+                                    <div data-phone-m2 class="relative w:16p sm:w:12p h:auto pt:12p mask:fade-out-l overflow:hidden flex justify-content:end md:hidden" style="opacity:0; visibility:hidden;">
+                                        <img src="/assets/images/home/phone-figma.webp" alt="" class="relative w:225p max-w:none h:auto opacity:80">
+                                    </div>
+                                    <div data-phone-m3 class="relative w:14p sm:w:10p lg:w:112 h:auto pt:18p lg:pt:192 mask:fade-out-l overflow:hidden flex justify-content:end md:hidden" style="opacity:0; visibility:hidden;">
+                                        <img src="/assets/images/home/phone-vercel.webp" alt="" loading="lazy" class="relative w:225p lg:w:256 max-w:none h:auto opacity:60">
+                                    </div>
+                                </div>
+                                {# Fader #}
+                                <div class="absolute bottom:0 right:0 w:100p h:288 bg:fade-down-i"></div>
                             </div>
                         </div>
                     </div>
-                    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.54/build/spline-viewer.js"></script>
-                    <spline-viewer url="https://prod.spline.design/uq07yUL-yCgw5zud/scene.splinecode" class="absolute top:0 left:0 w:100p h:100p"></spline-viewer>
-                    {#<img src="/assets/images/home/phones-d.webp" width="1246" height="700" alt="" class="absolute bottom:0 right:n224 w:100p max-w:832 h:auto pointer-events:none">#}
                 </div>
             </div>
         </div>
