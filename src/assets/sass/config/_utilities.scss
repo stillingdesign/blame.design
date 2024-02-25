@@ -26,6 +26,7 @@ $utilities: (
             5: 0.3125rem,
             7: 0.4375rem,
             9: 0.5625rem,
+            15: 0.9375rem,
         ),
     ),
     bottom: (
@@ -80,6 +81,11 @@ $utilities: (
             n512: -32rem,
             n640: -40rem,
             7: 0.4375rem,
+        ),
+    ),
+    max-height: (
+        variants: (
+            100p: 100%,
         ),
     ),
     max-width: (

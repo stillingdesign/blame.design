@@ -181,10 +181,10 @@ changefreq: daily
                 {# Visuals #}
                 <div class="relative w:100p flex flex:col align-items:center justify-content:center">
                     {# Browser #}
-                    <div class="relative w:100p lg:w:plus96 flex ratio:3-4 sm:ratio:4-3 md:ratio:16-9 bg:white bg-opacity:8 backdrop backdrop-blur:md radius:xl shadow:xl p:1 overflow:hidden">
-                        <div class="relative w:100p h:100p radius:xl bg:sheet-6-i bg-opacity:60 flex flex:col align-items:center overflow:hidden">
+                    <div class="relative w:100p lg:w:plus96 flex bg:sheet-1-8-4 backdrop backdrop-blur:md radius:xl shadow:xl p:1 overflow:hidden">
+                        <div class="relative w:100p radius:15 bg:sheet-6-i bg-opacity:60 flex flex:col align-items:center justify-content:start ratio:3-4 sm:ratio:4-3 md:ratio:16-9 overflow:hidden overflow:fix z:2">
                             {# Status Bar #}
-                            <div class="relative flex justify-content:between w:100p pl:18 pr:2 pt:2 border-b:1 border:ink-3-i border-opacity:10">
+                            <div class="relative flex flex-shrink:0 justify-content:between w:100p pl:18 pr:2 pt:2 border-b:1 border:ink-3-i border-opacity:10 z:1">
                                 <div class="flex align-items:center gap:4 pb:2 flex-shrink:0">
                                     <div class="w:8 h:8 radius:full bg-opacity:70 border:1 border:green-i bg:green-i"></div>
                                     <div class="w:8 h:8 radius:full bg-opacity:70 border:1 border:yellow-i bg:yellow-i"></div>
@@ -271,46 +271,8 @@ changefreq: daily
                                     </div>
                                 </div>
                             </div>
-                            {# Website Header #}
-                            <div class="absolute z:3 top:56 w:100p px:16 sm:px:48 flex align-items:center justify-content:between">
-                                <div class="flex align-items:center gap:16">
-                                    <div>
-                                        {{ icons.pearWordmark('w:40') }}
-                                    </div>
-                                    <div class="hidden sm:block border-l:1 border:white h:12 mt:6"></div>
-                                    <div class="hidden sm:flex align-items:center gap:14 font:xs opacity:70 pt:5 tracking:normal">
-                                        <div>
-                                            Products
-                                        </div>
-                                        <div>
-                                            Solutions
-                                        </div>
-                                        <div>
-                                            Use cases
-                                        </div>
-                                        <div>
-                                            Support
-                                        </div>
-                                        <div>
-                                            Pricing
-                                        </div>
-                                    </div>
-                                </div>
-                                {{ elements.btnFake(
-                                    color="simple-i",
-                                    size="xs",
-                                    classes="mt:2",
-                                    label="Try for free",
-                                    iconL="",
-                                    iconR="",
-                                    animate=false,
-                                    hover=true,
-                                    attr="",
-                                    attrInner=""
-                                )}}
-                            </div>
                             {# Page Contents #}
-                            <div class="relative w:100p h:100p flex flex:col justify-content:start md:justify-content:center align-items:center md:align-items:start pt:72 md:pt:0">
+                            <div class="relative w:100p h:100p flex flex:col justify-content:start md:justify-content:center align-items:center md:align-items:start pt:72 md:pt:0 z:1">
                                 {# Copy #}
                                 <div class="relative z:3 flex flex:col align-items:center md:align-items:start justify-content:center pl:16 pr:16 md:pr:0 md:pl:48 md:h:100p text:center md:text:left">
                                     <div class="hidden md:block font:lg mb:16 pt:24 lg:pt:0">
@@ -373,6 +335,44 @@ changefreq: daily
                                 {# Fader #}
                                 <div class="absolute bottom:0 right:0 w:100p h:128 md:h:224 lg:h:288 bg:fade-down-i"></div>
                             </div>
+                            {# Website Header #}
+                            <div class="absolute top:56 w:100p px:16 sm:px:48 flex align-items:center justify-content:between z:1">
+                                <div class="flex align-items:center gap:16">
+                                    <div>
+                                        {{ icons.pearWordmark('w:40') }}
+                                    </div>
+                                    <div class="hidden sm:block border-l:1 border:white h:12 mt:6"></div>
+                                    <div class="hidden sm:flex align-items:center gap:14 font:xs opacity:70 pt:5 tracking:normal">
+                                        <div>
+                                            Products
+                                        </div>
+                                        <div>
+                                            Solutions
+                                        </div>
+                                        <div>
+                                            Use cases
+                                        </div>
+                                        <div>
+                                            Support
+                                        </div>
+                                        <div>
+                                            Pricing
+                                        </div>
+                                    </div>
+                                </div>
+                                {{ elements.btnFake(
+                                    color="simple-i",
+                                    size="xs",
+                                    classes="mt:2",
+                                    label="Try for free",
+                                    iconL="",
+                                    iconR="",
+                                    animate=false,
+                                    hover=true,
+                                    attr="",
+                                    attrInner=""
+                                )}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -381,8 +381,8 @@ changefreq: daily
     </section>
 
     {# Intro #}
-    <section class="section section:py overflow:hidden bg:sheet-6-i">
-        <div class="container flex flex:col md:flex:row md:align-items:end justify-content:between mb:48 md:mb:72">
+    <section class="section section:pb pt:72 sm:pt:96 lg:pt:144 overflow:hidden bg:sheet-6-i">
+        <div class="container flex flex:col md:flex:row md:align-items:end justify-content:between mb:36 sm:mb:48 md:mb:80 lg:mb:128">
             <h2 class="font:8xl sm:font:11xl md:font:12xl medium w:100p tracking:tighter leading:100 max-w:320 sm:max-w:448 mb:12 md:mb:0">
                 Power to <span class="space:nowrap">the makers</span>
             </h2>
@@ -390,12 +390,11 @@ changefreq: daily
                 Build, test, and iterate—remove all else. Do'ers know best. Stop blocking them.
             </p>
         </div>
-        <ul class="container grid md:grid-cols:3 gap:48 sm:gap:28">
-            {% macro introCard(head,desc) %}
+        <ul class="container grid md:grid-cols:3 gap:36 sm:gap:28">
+            {% macro introCard(numb,head,desc) %}
                 <li class="relative flex">
-                    <div class="relative w:100p h:100p flex flex:col sm:flex:row-reverse md:flex:col sm:align-items:center md:align-items:stretch justify-content:between overflow:hidden">
-                        <div class="w:100p sm:w:50p md:w:100p flex ratio:4-3 sm:ratio:1-1 bg:sheet-4-i"></div>
-                        <div class="w:100p sm:w:50p md:w:100p max-w:288 sm:max-w:336 md:max-w:none pt:16 sm:pt:0 md:pt:20 flex-shrink:0 lg:pr:48">
+                    <div class="relative w:100p h:100p flex flex:col-reverse sm:flex:row md:flex:col sm:align-items:center md:align-items:stretch justify-content:between overflow:hidden">
+                        <div class="w:100p sm:w:50p md:w:100p max-w:288 sm:max-w:336 md:max-w:none pt:16 sm:pt:0 md:pb:20 flex-shrink:0 lg:pr:48">
                             <h3 class="font:xl sm:font:3xl md:font:2xl medium mb:6 sm:mb:12 leading:110">
                                 {{ head | safe }}
                             </h3>
@@ -403,18 +402,22 @@ changefreq: daily
                                 {{ desc | safe }}
                             </p>
                         </div>
+                        <div class="w:100p sm:w:50p md:w:100p flex ratio:4-3 sm:ratio:1-1 bg:sheet-4-i"></div>
                     </div>
                 </li>
             {% endmacro %}
             {{ introCard(
+                numb='1',
                 head="You build it, you own it",
                 desc='Know-how drives efficiency, quality, <span class="space:nowrap">and results,</span> not corporate politics.'
             )}}
             {{ introCard(
+                numb='2',
                 head="Land then expand",
                 desc='Start small, find what works, then scale with purpose to prevent misalignment.'
             )}}
             {{ introCard(
+                numb='3',
                 head="Better beats perfect",
                 desc='Don’t let subjective feedback stand <span class="space:nowrap">in the way</span> of fast and simple success.'
             )}}

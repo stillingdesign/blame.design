@@ -4,6 +4,16 @@
 .kern\:normal { font-kerning:normal; }
 .antialiased { -webkit-font-smoothing: antialiased; }
 .blur\:fix { transform: translate3d(0, 0, 0); }
+.overflow\:fix {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    mask-image: -webkit-radial-gradient(white, black);
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
 
 .scrollbar\:dark { scrollbar-color: rgba(var(--edge-1-i), 1) rgba(var(--sheet-4-i), 1); }
 .scrollbar\:dark::-webkit-scrollbar { width: 1rem; }
