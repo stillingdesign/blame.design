@@ -18,7 +18,7 @@ changefreq: daily
     <canvas data-particles class="absolute top:0 left:0 w:100p h:100vh"></canvas>
 
     {# Hero #}
-    <section data-hero class="section bg:radial-t-sheet-4-i overflow:hidden">
+    <section data-hero class="section bg:radial-t-sheet-4-i overflow:hidden z:1">
         {# Vert Dividers #}
         <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
             <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
@@ -381,11 +381,43 @@ changefreq: daily
     </section>
 
     {# Intro #}
-    <section class="section section:pb pt:72 sm:pt:96 lg:pt:144 overflow:hidden bg:sheet-6-i">
+    <section class="section section:pb pt:48 sm:pt:96 lg:pt:144">
+        {# Vert Dividers #}
+        <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
+            <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
+                <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-t"></div>
+                <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-t"></div>
+            </div>
+        </div>
+        {# Content #}
         <div class="container flex flex:col md:flex:row md:align-items:end justify-content:between mb:36 sm:mb:48 md:mb:80 lg:mb:128">
-            <h2 class="font:8xl sm:font:11xl md:font:12xl medium w:100p tracking:tighter leading:100 max-w:320 sm:max-w:448 mb:12 md:mb:0">
-                Power to <span class="space:nowrap">the makers</span>
-            </h2>
+            <div class="absolute left:n320 top:n256 w:768 flex ratio:1-1 bg:radial-white opacity:4"></div>
+            <div class="absolute left:n320 top:n192 w:512 h:384 bg:radial-white opacity:6"></div>
+            <div class="absolute right:n320 top:n384 w:640 h:448 bg:radial-purple-i opacity:10"></div>
+            <div class="absolute right:0 top:n320 w:640 h:512 bg:radial-blue-i opacity:10"></div>
+            <div class="absolute right:320 top:n384 w:640 h:640 bg:radial-teal-i opacity:10"></div>
+            <div class="relative font:8xl sm:font:11xl md:font:12xl medium w:100p tracking:tighter leading:100 max-w:320 sm:max-w:448 mb:12 md:mb:0">
+                <div class="absolute top:0 left:0">
+                    <div aria-hidden="true" class="absolute top:n32 left:n32 filter filter-blur:xl opacity:50 color:blue-i">
+                        Power
+                    </div>
+                    <div aria-hidden="true" class="absolute top:16 left:16 filter filter-blur:xl opacity:80 color:purple-i">
+                        Power
+                    </div>
+                    <div aria-hidden="true" class="absolute top:8 left:0 filter filter-blur:sm color:sheet-6-i">
+                        Power
+                    </div>
+                    <div aria-hidden="true" class="absolute top:4 left:0 filter filter-blur:xs color:sheet-6-i opacity:40">
+                        Power
+                    </div>
+                    <div aria-hidden="true" class="absolute top:0 left:0 filter filter-blur:2xs opacity:40">
+                        Power
+                    </div>
+                </div>
+                <h2 class="relative">
+                    Power <span class="opacity:80">to <span class="space:nowrap">the makers</span></span>
+                </h2>
+            </div>
             <p class="font:xl sm:font:4xl md:font:3xl lg:font:4xl leading:130 opacity:70 mb:4 lg:mb:2 max-w:320 sm:max-w:528 md:max-w:448 lg:max-w:528">
                 Build, test, and iterate—remove all else. Do'ers know best. Stop blocking them.
             </p>
