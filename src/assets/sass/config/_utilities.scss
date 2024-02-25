@@ -57,6 +57,7 @@ $utilities: (
             7vw: 7vw,
             '8-5vw': 8.5vw,
             11vw: 11vw,
+            15vw: 15vw,
             20vw: 20vw,
         ),
     ),
@@ -83,6 +84,9 @@ $utilities: (
     ),
     max-width: (
         variants: (
+            336: 21rem,
+            352: 22rem,
+            528: 33rem,
             672: 42rem,
             704: 44rem,
             736: 46rem,
