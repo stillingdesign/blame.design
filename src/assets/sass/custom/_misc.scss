@@ -22,6 +22,22 @@
 
 .gradient-text { background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
+.animate\:gradient-highlight {
+    background: var(--highlight-across);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    animation: gradient-highlight 3500ms linear infinite normal;
+}
+
+@keyframes gradient-highlight {
+	0% { background-position: 0% 0%; }
+	100% { background-position: -200% 0%; }
+}
+
 // Homepage Phone Scroll
 [data-phone-1] { transform: translate3d(0px, 35%, 0px); }
 [data-phone-2] { transform: translate3d(100%, 35%, 0px); }
