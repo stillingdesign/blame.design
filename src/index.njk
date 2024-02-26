@@ -381,7 +381,7 @@ changefreq: daily
     </section>
 
     {# Intro #}
-    <section class="section section:pb pt:48 sm:pt:96 lg:pt:144">
+    <section class="section pt:48 sm:pt:96 lg:pt:144">
         {# Vert Dividers #}
         <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
             <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
@@ -389,8 +389,8 @@ changefreq: daily
                 <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-t"></div>
             </div>
         </div>
-        {# Content #}
-        <div class="container flex flex:col md:flex:row md:align-items:end justify-content:between mb:36 sm:mb:48 md:mb:80 lg:mb:128">
+        {# Headline + Sub #}
+        <div class="container flex flex:col md:flex:row md:align-items:end justify-content:between mb:36 sm:mb:56 md:mb:0">
             <div class="absolute left:n320 top:n256 w:768 flex ratio:1-1 bg:radial-white opacity:4"></div>
             <div class="absolute left:n320 top:n192 w:512 h:384 bg:radial-white opacity:6"></div>
             <div class="absolute right:n320 top:n384 w:640 h:448 bg:radial-purple-i opacity:10"></div>
@@ -422,42 +422,65 @@ changefreq: daily
                 Build, test, and iterate—remove all else. Do'ers know best. Stop blocking them.
             </p>
         </div>
-        <ul class="container grid md:grid-cols:3 gap:36 sm:gap:28">
-            {% macro introCard(numb,head,desc) %}
-                <li class="relative flex">
-                    <div class="relative w:100p h:100p flex flex:col-reverse sm:flex:row md:flex:col sm:align-items:center md:align-items:stretch justify-content:between overflow:hidden">
-                        <div class="w:100p sm:w:50p md:w:100p max-w:288 sm:max-w:336 md:max-w:none pt:16 sm:pt:0 md:pb:20 flex-shrink:0 lg:pr:48">
-                            <h3 class="font:xl sm:font:3xl md:font:2xl medium mb:6 sm:mb:12 leading:110">
-                                {{ head | safe }}
-                            </h3>
-                            <p class="font:lg sm:font:xl md:font:lg lg:font:xl opacity:70 md:max-w:288 lg:max-w:none">
-                                {{ desc | safe }}
-                            </p>
+        {# Horz Divider #}
+        <div class="hidden md:block w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3-i border:dashed border-opacity:10 md:mt:64 lg:mt:72 mb:28 lg:mb:32"></div>
+        <div class="hidden md:block w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3-i border:dashed border-opacity:10 md:mb:36 lg:mb:40"></div>
+        {# Cards #}
+        <div class="relative w:100p lg:w:auto">
+            {# Vertical Grid #}
+            <div class="hidden md:flex absolute top:n320 left:0 w:100p h:plus320 justify-content:between">
+                <div></div>
+                <div class="relative w:28 flex-shrink:0 flex justify-content:center h:100p">
+                    <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-t"></div>
+                </div>
+                <div class="relative w:28 flex-shrink:0 flex justify-content:center h:100p">
+                    <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-t"></div>
+                </div>
+                <div></div>
+            </div>
+            <ul class="container grid md:grid-cols:3 gap:36 sm:gap:28 section:pb">
+                {# List items #}
+                {% macro introCard(numb,head,desc) %}
+                    <li class="relative flex">
+                        <div class="hidden md:flex absolute top:n56 lg:top:n64 mt:n4 pt:1 lg:pt:0 lg:mt:n1 font:2xs font:mono uppercase tracking:looser gradient-text bg:white bg-opacity:30 align-items:center gap:4">
+                            {{ icons.star('w:10 opacity:30 mt:n1') }}
+                            <span>Principle 0{{ numb }}</span>
                         </div>
-                        <div class="w:100p sm:w:50p md:w:100p flex ratio:4-3 sm:ratio:1-1 bg:sheet-4-i"></div>
-                    </div>
-                </li>
-            {% endmacro %}
-            {{ introCard(
-                numb='1',
-                head="You build it, you own it",
-                desc='Know-how drives efficiency, quality, <span class="space:nowrap">and results,</span> not corporate politics.'
-            )}}
-            {{ introCard(
-                numb='2',
-                head="Land then expand",
-                desc='Start small, find what works, then scale with purpose to prevent misalignment.'
-            )}}
-            {{ introCard(
-                numb='3',
-                head="Better beats perfect",
-                desc='Don’t let subjective feedback stand <span class="space:nowrap">in the way</span> of fast and simple success.'
-            )}}
-        </ul>
+                        <div class="relative w:100p h:100p flex flex:col-reverse sm:flex:row md:flex:col sm:align-items:center md:align-items:stretch justify-content:between overflow:hidden">
+                            <div class="w:100p sm:w:50p md:w:100p max-w:288 sm:max-w:336 md:max-w:none pt:16 sm:pt:0 md:pb:20 flex-shrink:0 lg:pr:48">
+                                <h3 class="font:xl sm:font:3xl md:font:2xl medium mb:6 sm:mb:12 leading:110">
+                                    {{ head | safe }}
+                                </h3>
+                                <p class="font:lg sm:font:xl md:font:lg lg:font:xl opacity:70 md:max-w:288 lg:max-w:none">
+                                    {{ desc | safe }}
+                                </p>
+                            </div>
+                            <div class="w:100p sm:w:50p md:w:100p flex ratio:4-3 sm:ratio:1-1 bg:sheet-4-i"></div>
+                        </div>
+                    </li>
+                {% endmacro %}
+                {{ introCard(
+                    numb='1',
+                    head="You build it, you own it",
+                    desc='Know-how drives efficiency, quality, <span class="space:nowrap">and results,</span> not corporate politics.'
+                )}}
+                {{ introCard(
+                    numb='2',
+                    head="Land then expand",
+                    desc='Start small, find what works, then scale with purpose to prevent misalignment.'
+                )}}
+                {{ introCard(
+                    numb='3',
+                    head="Better beats perfect",
+                    desc='Don’t let subjective feedback stand <span class="space:nowrap">in the way</span> of fast and simple success.'
+                )}}
+            </ul>
+        </div>
     </section>
 
-    <section data-invert="light" class="section min-h:100vh pt:192 overflow:hidden bg:sheet-6">
+    <section data-invert="light" class="section min-h:100vh pt:192 overflow:hidden bg:sheet-6 color:ink-3">
         <div class="container flex flex:col align-items:center gap:32">
+            one person built this website
         </div>
     </section>
 
