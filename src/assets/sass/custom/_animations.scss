@@ -1,0 +1,72 @@
+@use "sass:map";
+@use "uniform" as *;
+
+.animate\:rotate-clockwise-20 { animation: rotate-clockwise 20s linear infinite; }
+
+@keyframes rotate-clockwise {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.animate\:gradient-highlight {
+    background: var(--highlight-across);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    animation: gradient-highlight 3500ms linear infinite normal;
+}
+
+@keyframes gradient-highlight {
+	0% { background-position: 0% 0%; }
+	100% { background-position: -200% 0%; }
+}
+
+.animate\:build-own-dash-down { animation: build-own-dash-down 4000ms cubic-bezier(.6,0,.2,1) infinite; }
+.animate\:build-own-dash-down-2 { animation: build-own-dash-down 4000ms cubic-bezier(.6,0,.2,1) infinite 100ms; }
+
+@keyframes build-own-dash-down {
+	0% { top: -1.5rem; }
+    100% { top: calc(100% + 1.5rem); }
+}
+
+.animate\:build-own-dash-up { animation: build-own-dash-up 4000ms cubic-bezier(.6,0,.2,1) infinite; }
+.animate\:build-own-dash-up-2 { animation: build-own-dash-up 4000ms cubic-bezier(.6,0,.2,1) infinite 100ms; }
+
+@keyframes build-own-dash-up {
+	0% { bottom: -1.5rem; }
+    100% { bottom: calc(100% + 1.5rem); }
+}
+
+.animate\:build-own-dash-right { animation: build-own-dash-right 4000ms cubic-bezier(.6,0,.2,1) infinite; }
+.animate\:build-own-dash-right-2 { animation: build-own-dash-right 4000ms cubic-bezier(.6,0,.2,1) infinite 100ms; }
+
+@keyframes build-own-dash-right {
+	0% { left: -1.5rem; }
+    100% { left: calc(100% + 1.5rem); }
+}
+
+.animate\:build-own-dash-left { animation: build-own-dash-left 4000ms cubic-bezier(.6,0,.2,1) infinite; }
+.animate\:build-own-dash-left-2 { animation: build-own-dash-left 4000ms cubic-bezier(.6,0,.2,1) infinite 100ms; }
+
+@keyframes build-own-dash-left {
+	0%   { right: -1.5rem; }
+    100% { right: calc(100% + 1.5rem); }
+}
+
+.animate\:build-own-pulse { animation: build-own-pulse 4000ms cubic-bezier(0,.6,.2,1) infinite 2000ms; }
+@keyframes build-own-pulse {
+	0%   { width: 9rem; height:9rem; opacity:0; }
+    10%  { opacity:1; }
+    99%  { width: 24rem; height:24rem; opacity:0; }
+    100% { display:none; }
+}
+
+.animate\:build-own-pulse-reverse { animation: build-own-pulse-reverse 4000ms cubic-bezier(0,.6,.2,1) infinite 2000ms; }
+@keyframes build-own-pulse-reverse {
+	0%   { width: 9rem; height:9rem; opacity:0; }
+    10%  { opacity:1; }
+    100% { width: 0; height: 0; opacity:0; }
+}
