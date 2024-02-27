@@ -2,10 +2,16 @@
 @use "uniform" as *;
 
 .animate\:rotate-clockwise-20 { animation: rotate-clockwise 20s linear infinite; }
+.animate\:rotate-counterclockwise-10 { animation: rotate-counterclockwise 10s linear infinite; }
 
 @keyframes rotate-clockwise {
 	0% { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
+}
+
+@keyframes rotate-counterclockwise {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(-360deg); }
 }
 
 .animate\:gradient-highlight {

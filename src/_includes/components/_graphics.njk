@@ -5,34 +5,6 @@
     <div class="absolute flex w:100p h:100p ratio:1-1 flex align-items:center justify-content:center" aria-hidden="true">
         {# Tape #}
         <div class="absolute w:100p h:100p flex align-items:center justify-content:center">
-            <div class="absolute font:mono font:2xs uppercase bg:sheet-5-i tracking:looser mb:192 mask:fade-out-x" style="transform:rotate(45deg); box-shadow: 0 0 24px 16px rgba(var(--sheet-5-i), 0.8);">
-                <div class="bg:white bg-opacity:6">
-                    <div class="gradient-text space:nowrap bg:white bg-opacity:20 py:2">
-                        concept concept concept concept concept concept concept concept concept concept concept
-                    </div>
-                </div>
-            </div>
-            <div class="absolute font:mono font:2xs uppercase bg:sheet-5-i tracking:looser mb:192 mask:fade-out-x" style="transform:rotate(-45deg); box-shadow: 0 0 24px 16px rgba(var(--sheet-5-i), 0.8);">
-                <div class="bg:white bg-opacity:6">
-                    <div class="gradient-text space:nowrap bg:white bg-opacity:20 py:2">
-                        design design design design design design design design design design design design design 
-                    </div>
-                </div>
-            </div>
-            <div class="absolute font:mono font:2xs uppercase bg:sheet-5-i tracking:looser mt:192 mask:fade-out-x" style="transform:rotate(135deg); box-shadow: 0 0 24px 16px rgba(var(--sheet-5-i), 0.8);">
-                <div class="bg:white bg-opacity:6">
-                    <div class="gradient-text space:nowrap bg:white bg-opacity:20 py:2">
-                        development development development development development development development development 
-                    </div>
-                </div>
-            </div>
-            <div class="absolute font:mono font:2xs uppercase bg:sheet-5-i tracking:looser mt:192 mask:fade-out-x" style="transform:rotate(-135deg); box-shadow: 0 0 24px 16px rgba(var(--sheet-5-i), 0.8);">
-                <div class="bg:white bg-opacity:6">
-                    <div class="gradient-text space:nowrap bg:white bg-opacity:20 py:2">
-                    outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes 
-                    </div>
-                </div>
-            </div>
             <div class="absolute font:mono font:2xs uppercase bg:sheet-5-i tracking:looser mb:192" style="box-shadow: 0 0 24px 16px rgba(var(--sheet-5-i), 0.8);">
                 <div class="bg:white bg-opacity:6">
                     <div class="gradient-text space:nowrap bg:white bg-opacity:20 py:2">
@@ -113,7 +85,9 @@
                         <div class="absolute top:0 left:0 w:100p h:100p opacity:20" style="background-image: url('/assets/images/utility/sparkle-24.svg'); background-size: 0.5rem 0.5rem;"></div>
                         <div class="absolute top:n32 left:n32 w:192 h:192" style="background: radial-gradient(50% 50% at 50% 50%, rgba(var(--sheet-6-i), 1) 0%, rgba(var(--sheet-6-i), 0.8) 30%, rgba(var(--sheet-6-i), 0) 100%)"></div>
                         <div class="absolute w:144 h:144 radius:100p animate:build-own-pulse-reverse opacity:0" style="background: radial-gradient(50% 50% at 50% 50%, rgba(var(--white), 0) 50%, rgba(var(--white), 0.02) 75%, rgba(var(--white), 0) 100%)"></div>
-                        {{ icons.check('relative w:36 mask:fade-out-b') }}
+                        <div class="mask:fade-out-b">
+                            {{ icons.cogOutline('relative w:48') }}
+                        </div>
                     </div>
                 </div>
             </div>
