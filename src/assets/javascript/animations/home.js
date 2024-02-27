@@ -152,7 +152,7 @@ if(document.querySelector('[data-page="home"]')) {
                 trigger: `[data-hero]`,
                 start: `top top`,
                 end: `bottom center`,
-                scrub: 1,
+                scrub: true,
             }
         });
         tmln
