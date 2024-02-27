@@ -11,6 +11,7 @@ changefreq: daily
 ---
 {% import "components/_icons.njk" as icons %}
 {% import "components/_elements.njk" as elements %}
+{% import "components/_graphics.njk" as graphics %}
 
 <main data-page="home" class="w:100p overflow:hidden">
 
@@ -402,6 +403,7 @@ changefreq: daily
             <div class="absolute right:n320 top:n384 w:640 h:448 bg:radial-purple-i opacity:10"></div>
             <div class="absolute right:0 top:n320 w:640 h:512 bg:radial-blue-i opacity:10"></div>
             <div class="absolute right:320 top:n384 w:640 h:640 bg:radial-teal-i opacity:10"></div>
+            {# Headline #}
             <div class="relative font:8xl sm:font:11xl md:font:12xl medium w:100p tracking:tighter leading:100 max-w:320 sm:max-w:448 mb:12 md:mb:0">
                 <div class="absolute top:0 left:0">
                     <div aria-hidden="true" class="absolute top:n32 left:n32 filter filter-blur:xl opacity:50 color:blue-i">
@@ -424,6 +426,7 @@ changefreq: daily
                     Power <span class="opacity:80">to <span class="space:nowrap">the makers</span></span>
                 </h2>
             </div>
+            {# Sub #}
             <p class="font:xl sm:font:4xl md:font:3xl lg:font:4xl leading:130 opacity:70 mb:4 lg:mb:2 max-w:320 sm:max-w:528 md:max-w:448 lg:max-w:528">
                 Build, test, and iterate—remove all else. Do'ers know best. Stop blocking them.
             </p>
@@ -446,7 +449,7 @@ changefreq: daily
             </div>
             <ul class="container grid md:grid-cols:3 gap:36 sm:gap:28 section:pb">
                 {# List items #}
-                {% macro introCard(numb,head,desc) %}
+                {% macro introCard(numb,head,desc,graphic) %}
                     <li class="relative flex">
                         <div class="hidden md:flex absolute top:n56 lg:top:n64 mt:n4 pt:1 lg:pt:0 lg:mt:n1 font:2xs font:mono uppercase tracking:looser gradient-text bg:white bg-opacity:30 align-items:center gap:4">
                             {{ icons.star('w:10 opacity:30 mt:n1') }}
@@ -461,14 +464,17 @@ changefreq: daily
                                     {{ desc | safe }}
                                 </p>
                             </div>
-                            <div class="w:100p sm:w:50p md:w:100p flex ratio:4-3 sm:ratio:1-1 bg:sheet-4-i"></div>
+                            <div class="relative w:100p sm:w:50p md:w:100p flex align-items:center justify-content:center ratio:4-3 sm:ratio:1-1 bg:sheet-5-i radius:xl overflow:hidden border:1 border:white border-opacity:4">
+                                {{ graphic }}
+                            </div>
                         </div>
                     </li>
                 {% endmacro %}
                 {{ introCard(
                     numb='1',
                     head="You build it, you own it",
-                    desc='Know-how drives efficiency, quality, <span class="space:nowrap">and results,</span> not corporate politics.'
+                    desc='Know-how drives efficiency, quality, <span class="space:nowrap">and results,</span> not corporate politics.',
+                    graphic=graphics.buildOwn()
                 )}}
                 {{ introCard(
                     numb='2',
@@ -478,7 +484,8 @@ changefreq: daily
                 {{ introCard(
                     numb='3',
                     head="Better beats perfect",
-                    desc='Don’t let subjective feedback stand <span class="space:nowrap">in the way</span> of fast and simple success.'
+                    desc='Don’t let subjective feedback stand <span class="space:nowrap">in the way</span> of fast and simple success.',
+                    graphic=graphics.betterPerfect()
                 )}}
             </ul>
         </div>

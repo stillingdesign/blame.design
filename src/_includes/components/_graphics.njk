@@ -1,0 +1,92 @@
+{% import "components/_icons.njk" as icons %}
+
+{% macro buildOwn() %}
+{# Graphic #}
+<div class="absolute flex w:100p h:100p ratio:1-1 flex align-items:center justify-content:center" aria-hidden="true">
+    <div class="absolute w:100p h:100p opacity:20" style="background-image: url('/assets/images/utility/sparkle-24.svg'); background-size: 0.75rem 0.75rem;"></div>
+    <div class="absolute w:100p h:100p" style="background: radial-gradient(50% 50% at 50% 50%, rgba(var(--sheet-5-i), 1) 0%, rgba(var(--sheet-5-i), 1) 50%, rgba(var(--sheet-5-i), 0.5) 100%)"></div>
+    {# Lines Left #}
+    <div class="relative flex flex:col w:100p gap:16 mask:fade-out-x">
+        <div class="relative border-t:1 border:white border-opacity:20">
+            <div class="absolute left:n24 top:n1 w:24 border-t:1 border:white mask:fade-out-x animate:dash-right-2"></div>
+        </div>
+        <div class="relative border-t:1 border:white border-opacity:20">
+            <div class="absolute left:n24 top:n1 w:24 border-t:1 border:white mask:fade-out-x animate:dash-right"></div>
+        </div>
+        <div class="relative border-t:1 border:white border-opacity:20">
+            <div class="absolute left:n24 top:n1 w:24 border-t:1 border:white mask:fade-out-x animate:dash-right-2"></div>
+        </div>
+    </div>
+    {# Center #}
+    <div class="relative flex flex:col align-items:center justify-content:center h:100p">
+        {# Expanders #}
+        <div class="absolute w:144 h:144 radius:100p animate:build-own-pulse" style="background: radial-gradient(50% 50% at 50% 50%, rgba(var(--white), 0) 80%, rgba(var(--white), 0.02) 90%, rgba(var(--white), 0) 100%)"></div>
+        {# Lines Top #}
+        <div class="relative flex h:100p gap:16 mask:fade-out-y">
+            <div class="relative border-l:1 border:white border-opacity:20">
+                <div class="absolute top:n24 left:n1 h:24 border-l:1 border:white mask:fade-out-y animate:dash-down-2"></div>
+            </div>
+            <div class="relative border-l:1 border:white border-opacity:20">
+                <div class="absolute top:n24 left:n1 h:24 border-l:1 border:white mask:fade-out-y animate:dash-down"></div>
+            </div>
+            <div class="relative border-l:1 border:white border-opacity:20">
+                <div class="absolute top:n24 left:n1 h:24 border-l:1 border:white mask:fade-out-y animate:dash-down-2"></div>
+            </div>
+        </div>
+        {# Chip #}
+        <div class="flex-shrink:0 relative flex align-items:center justify-content:center">
+            {# Gradients Outer #}
+            <div class="absolute top:0 left:0 w:100p h:100p flex align-items:center justify-content:center animate:rotate-clockwise-20">
+                <div class="w:192 h:192 absolute top:n64 left:n64 bg:radial-teal-i opacity:20"></div>
+                <div class="w:192 h:192 absolute top:n64 right:n64 bg:radial-teal-i opacity:20"></div>
+                <div class="w:192 h:192 absolute left:n112 bg:radial-blue-i opacity:10"></div>
+                <div class="w:192 h:192 absolute right:n112 bg:radial-blue-i opacity:10"></div>
+                <div class="w:192 h:192 absolute bottom:n72 left:n64 bg:radial-purple-i opacity:10"></div>
+                <div class="w:192 h:192 absolute bottom:n72 right:n64 bg:radial-purple-i opacity:10"></div>
+            </div>
+            {# Inner #}
+            <div class="relative w:144 h:144 bg:white bg-opacity:6 radius:xl p:8 overflow:hidden" style="box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.35);">
+                <div class="absolute w:100p h:100p top:0 left:0 bg:fade-up opacity:30"></div>
+                <div class="absolute w:100p h:72 top:0 left:0 bg:fade-up opacity:60"></div>
+                <div class="relative w:100p h:100p flex align-items:center justify-content:center bg:sheet-6-i radius:md overflow:hidden" style="box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.35);">
+                    <div class="absolute w:100p h:100p top:0 left:0 bg:fade-up opacity:10"></div>
+                    <div class="absolute top:0 left:0 w:100p h:100p opacity:20" style="background-image: url('/assets/images/utility/sparkle-24.svg'); background-size: 0.5rem 0.5rem;"></div>
+                    <div class="absolute top:n32 left:n32 w:192 h:192" style="background: radial-gradient(50% 50% at 50% 50%, rgba(var(--sheet-6-i), 1) 0%, rgba(var(--sheet-6-i), 0.8) 30%, rgba(var(--sheet-6-i), 0) 100%)"></div>
+                    <div class="absolute w:144 h:144 radius:100p animate:build-own-pulse-reverse opacity:0" style="background: radial-gradient(50% 50% at 50% 50%, rgba(var(--white), 0) 50%, rgba(var(--white), 0.02) 75%, rgba(var(--white), 0) 100%)"></div>
+                    {{ icons.check('relative w:36 mask:fade-out-b') }}
+                </div>
+            </div>
+        </div>
+        {# Lines Bottom #}
+        <div class="relative flex h:100p gap:16 mask:fade-out-y">
+            <div class="relative border-l:1 border:white border-opacity:20">
+                <div class="absolute bottom:n24 left:n1 h:24 border-l:1 border:white mask:fade-out-y animate:dash-up-2"></div>
+            </div>
+            <div class="relative border-l:1 border:white border-opacity:20">
+                <div class="absolute bottom:n24 left:n1 h:24 border-l:1 border:white mask:fade-out-y animate:dash-up"></div>
+            </div>
+            <div class="relative border-l:1 border:white border-opacity:20">
+                <div class="absolute bottom:n24 left:n1 h:24 border-l:1 border:white mask:fade-out-y animate:dash-up-2"></div>
+            </div>
+        </div>
+    </div>
+    {# Lines Right #}
+    <div class="relative flex flex:col w:100p gap:16 mask:fade-out-x">
+        <div class="relative border-t:1 border:white border-opacity:20">
+            <div class="absolute right:n24 top:n1 w:24 border-t:1 border:white mask:fade-out-x animate:dash-left-2"></div>
+        </div>
+        <div class="relative border-t:1 border:white border-opacity:20">
+            <div class="absolute right:n24 top:n1 w:24 border-t:1 border:white mask:fade-out-x animate:dash-left"></div>
+        </div>
+        <div class="relative border-t:1 border:white border-opacity:20">
+            <div class="absolute right:n24 top:n1 w:24 border-t:1 border:white mask:fade-out-x animate:dash-left-2"></div>
+        </div>
+    </div>
+</div>
+{% endmacro %}
+
+{% macro betterPerfect() %}
+<div class="absolute flex w:100p h:100p h:auto ratio:1-1 flex align-items:center justify-content:center" aria-hidden="true">
+    <img src="/assets/images/home/build-own.webp" width="364" height="364" loading="lazy" alt class="absolute w:100p flex ratio:1-1">
+</div>
+{% endmacro %}
