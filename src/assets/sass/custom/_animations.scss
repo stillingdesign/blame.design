@@ -76,3 +76,13 @@
     10%  { opacity:1; }
     100% { width: 0; height: 0; opacity:0; }
 }
+
+.animate\:build-own-float { animation: build-own-float 10000ms ease-in-out infinite 0ms; }
+
+@keyframes build-own-float {
+	0%   { transform: translate3d(0,6px,0) rotate(-2deg); }
+    25%  { transform: translate3d(0,-12px,0) rotate(8deg); }
+    50%  { transform: translate3d(0,3px,0) rotate(-10deg); }
+    75%  { transform: translate3d(0,-8px,0) rotate(6deg); }
+    100% { transform: translate3d(0,6px,0) rotate(-2deg); }
+}
