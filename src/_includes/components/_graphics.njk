@@ -3,37 +3,6 @@
 {% macro buildOwn() %}
     {# Graphic #}
     <div class="absolute flex w:100p h:100p ratio:1-1 flex align-items:center justify-content:center" aria-hidden="true">
-        {# Tape #}
-        <div class="absolute w:100p h:100p flex align-items:center justify-content:center transform">
-            <div class="absolute font:mono font:2xs uppercase bg:sheet-5-i tracking:looser mb:192" style="box-shadow: 0 0 24px 16px rgba(var(--sheet-5-i), 0.8);">
-                <div class="bg:white bg-opacity:6">
-                    <div class="gradient-text space:nowrap bg:white bg-opacity:20 py:2">
-                        concept concept concept concept concept concept concept concept concept concept concept
-                    </div>
-                </div>
-            </div>
-            <div class="absolute font:mono font:2xs uppercase bg:sheet-5-i tracking:looser ml:192" style="transform:rotate(90deg); box-shadow: 0 0 24px 16px rgba(var(--sheet-5-i), 0.8);">
-                <div class="bg:white bg-opacity:6">
-                    <div class="gradient-text space:nowrap bg:white bg-opacity:20 py:2">
-                        design design design design design design design design design design design design design 
-                    </div>
-                </div>
-            </div>
-            <div class="absolute font:mono font:2xs uppercase bg:sheet-5-i tracking:looser mt:192" style="transform:rotate(180deg); box-shadow: 0 0 24px 16px rgba(var(--sheet-5-i), 0.8);">
-                <div class="bg:white bg-opacity:6">
-                    <div class="gradient-text space:nowrap bg:white bg-opacity:20 py:2">
-                        development development development development development development development development 
-                    </div>
-                </div>
-            </div>
-            <div class="absolute font:mono font:2xs uppercase bg:sheet-5-i tracking:looser mr:192" style="transform:rotate(-90deg); box-shadow: 0 0 24px 16px rgba(var(--sheet-5-i), 0.8);">
-                <div class="bg:white bg-opacity:6">
-                    <div class="gradient-text space:nowrap bg:white bg-opacity:20 py:2">
-                        outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes outcomes 
-                    </div>
-                </div>
-            </div>
-        </div>
         {# Lines Left #}
         <div class="relative flex flex:col w:100p gap:16 mask:fade-out-x">
             <div class="relative border-t:1  border-opacity:20">
@@ -83,7 +52,7 @@
                         <div class="absolute top:n32 left:n32 w:192 h:192" style="background: radial-gradient(50% 50% at 50% 50%, rgba(var(--sheet-6-i), 1) 0%, rgba(var(--sheet-6-i), 0.8) 30%, rgba(var(--sheet-6-i), 0) 100%)"></div>
                         <div class="absolute w:144 h:144 radius:100p animate:build-own-pulse-reverse opacity:0" style="background: radial-gradient(50% 50% at 50% 50%, rgba(var(--white), 0) 50%, rgba(var(--white), 0.02) 75%, rgba(var(--white), 0) 100%)"></div>
                         <div class="mask:fade-out-b">
-                            {{ icons.cogOutline('relative w:48') }}
+                            {{ icons.check('relative w:32') }}
                         </div>
                     </div>
                 </div>
