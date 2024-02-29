@@ -178,17 +178,43 @@ if(document.querySelector('[data-page="home"]')) {
     function animateToggle() {
         const tmln = gsap.timeline({ repeat: -1, repeatDelay: 3 });
             tmln
-                .to('[data-animate-toggle-knob]', {x: 96, duration: 2.5, ease: "expo.inOut"}, 0)
-                .to('[data-animate-toggle-pill]', {backgroundColor: 'rgba(0,190,99,0.08)', duration: 2.5, ease: "expo.inOut"}, 0)
-                .to('[data-animate-toggle-dots]', {backgroundColor: 'rgba(0,190,99,0.6)', duration: 2.5, ease: "expo.inOut"}, 0)
-                .to('[data-animate-toggle-text-r]', {autoAlpha:0, duration: 2.5, ease: "expo.inOut"}, 0)
-                .to('[data-animate-toggle-text-l]', {autoAlpha:1, duration: 2.5, ease: "expo.inOut"}, 0)
-                .to('[data-animate-toggle-knob]', {x: 0, duration: 2.5, ease: "expo.inOut"}, 5.5)
-                .to('[data-animate-toggle-pill]', {backgroundColor: 'rgba(255,92,119,0.1)', duration: 2.5, ease: "expo.inOut"}, 5.5)
-                .to('[data-animate-toggle-dots]', {backgroundColor: 'rgba(255,92,119,0.7)', duration: 2.5, ease: "expo.inOut"}, 5.5)
-                .to('[data-animate-toggle-text-r]', {autoAlpha:1, duration: 2.5, ease: "expo.inOut"}, 5.5)
-                .to('[data-animate-toggle-text-l]', {autoAlpha:0, duration: 2.5, ease: "expo.inOut"}, 5.5)
+                .to('[data-animate-toggle-knob]', {x: 96, duration: 2.5, ease: 'expo.inOut'}, 0)
+                .to('[data-animate-toggle-pill]', {backgroundColor: 'rgba(0,190,99,0.08)', duration: 2.5, ease: 'expo.inOut'}, 0)
+                .to('[data-animate-toggle-dots]', {backgroundColor: 'rgba(0,190,99,0.6)', duration: 2.5, ease: 'expo.inOut'}, 0)
+                .to('[data-animate-toggle-text-r]', {autoAlpha:0, duration: 2.5, ease: 'expo.inOut'}, 0)
+                .to('[data-animate-toggle-text-l]', {autoAlpha:1, duration: 2.5, ease: 'expo.inOut'}, 0)
+                .to('[data-animate-toggle-knob]', {x: 0, duration: 2.5, ease: 'expo.inOut'}, 5.5)
+                .to('[data-animate-toggle-pill]', {backgroundColor: 'rgba(255,92,119,0.1)', duration: 2.5, ease: 'expo.inOut'}, 5.5)
+                .to('[data-animate-toggle-dots]', {backgroundColor: 'rgba(255,92,119,0.7)', duration: 2.5, ease: 'expo.inOut'}, 5.5)
+                .to('[data-animate-toggle-text-r]', {autoAlpha:1, duration: 2.5, ease: 'expo.inOut'}, 5.5)
+                .to('[data-animate-toggle-text-l]', {autoAlpha:0, duration: 2.5, ease: 'expo.inOut'}, 5.5)
     }
     animateToggle();
+
+    // Ball Roll Expand Animation
+    function animateBallRollExpand() {
+        const tmln = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+            tmln
+                .to('[data-animate-roll-expand-ball-1]', {y: '0', duration: 2.5, ease: 'expo.out'}, 0)
+                .to('[data-animate-ball-roll-expand-inner]', {width: '9rem', height: '9rem', opacity:0, duration: 2.5, ease: 'expo.out'}, 2)
+                .to('[data-animate-ball-roll-expand-outer-1]', {width: '36rem', height: '36rem', opacity:0, duration: 5, ease: 'power4.out'}, 2)
+                .to('[data-animate-roll-expand-ball-1]', {y: '-5rem', duration: 2.5, ease: 'expo.in'}, 2.5)
+                .set('[data-animate-ball-roll-expand-inner]', {width: '0', height: '0', opacity:1}, 4.5)
+                .to('[data-animate-roll-expand-ball-2]', {x: '0', duration: 2.5, ease: 'expo.out'}, 5)
+                .to('[data-animate-ball-roll-expand-inner]', {width: '9rem', height: '9rem', opacity:0, duration: 2.5, ease: 'expo.out'}, 7)
+                .to('[data-animate-ball-roll-expand-outer-2]', {width: '36rem', height: '36rem', opacity:0, duration: 5, ease: 'power4.out'}, 7)
+                .to('[data-animate-roll-expand-ball-2]', {x: '-5rem', duration: 2.5, ease: 'expo.in'}, 7.5)
+                .set('[data-animate-ball-roll-expand-inner]', {width: '0', height: '0', opacity:1}, 9.5)
+                .to('[data-animate-roll-expand-ball-1]', {y: '0', duration: 2.5, ease: 'expo.out'}, 10)
+                .to('[data-animate-ball-roll-expand-inner]', {width: '9rem', height: '9rem', opacity:0, duration: 2.5, ease: 'expo.out'}, 12)
+                .to('[data-animate-ball-roll-expand-outer-3]', {width: '36rem', height: '36rem', opacity:0, duration: 5, ease: 'power4.out'}, 12)
+                .to('[data-animate-roll-expand-ball-1]', {y: '5rem', duration: 2.5, ease: 'expo.in'}, 12.5)
+                .set('[data-animate-ball-roll-expand-inner]', {width: '0', height: '0', opacity:1}, 14.5)
+                .to('[data-animate-roll-expand-ball-2]', {x: '0', duration: 2.5, ease: 'expo.out'}, 15)
+                .to('[data-animate-ball-roll-expand-inner]', {width: '9rem', height: '9rem', opacity:0, duration: 2.5, ease: 'expo.out'}, 17)
+                .to('[data-animate-ball-roll-expand-outer-4]', {width: '36rem', height: '36rem', opacity:0, duration: 5, ease: 'power4.out'}, 17)
+                .to('[data-animate-roll-expand-ball-2]', {x: '5rem', duration: 2.5, ease: 'expo.in'}, 17.5)
+    }
+    animateBallRollExpand();
 
 }
