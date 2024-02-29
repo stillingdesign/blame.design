@@ -427,7 +427,7 @@ changefreq: daily
                 </h2>
             </div>
             {# Sub #}
-            <p class="font:xl sm:font:4xl md:font:3xl lg:font:4xl leading:130 opacity:70 mb:4 lg:mb:2 max-w:320 sm:max-w:528 md:max-w:448 lg:max-w:528">
+            <p class="font:xl sm:font:4xl md:font:3xl lg:font:4xl sm:leading:130 opacity:70 mb:4 lg:mb:2 max-w:320 sm:max-w:528 md:max-w:448 lg:max-w:528">
                 Build, test, and iterate—remove all else. Do'ers know best. Stop <span class="space:nowrap">blocking them.</span>
             </p>
         </div>
@@ -492,7 +492,8 @@ changefreq: daily
         </div>
     </section>
 
-    <section data-invert="light" class="section section:py overflow:hidden bg:sheet-5 color:ink-3">
+    {# Ownership #}
+    <section data-invert="light" class="section section:py overflow:hidden bg:sheet-6 color:ink-3">
         {# Vert Dividers + Sparkles #}
         <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
             <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
@@ -501,16 +502,39 @@ changefreq: daily
             </div>
         </div>
         {# Headline + Sub #}
-        <div class="container flex flex:col md:flex:row md:align-items:end justify-content:between mb:36 sm:mb:56 md:mb:0">
+        <div class="container flex flex:col md:flex:row md:align-items:center justify-content:between mb:16 sm:mb:56 md:mb:64">
             {# Headline #}
-            <div class="relative font:8xl sm:font:11xl md:font:12xl medium w:100p tracking:tighter leading:100 max-w:320 sm:max-w:512 mb:12 md:mb:0">
-                <div class="relative flex align-items:center justify-content:center gradient-text bg:edge-2 ml:n6">
-                    <span>Collaboration</span>
-                    <div class="absolute w:100p h:8 bg:edge-2"></div>
+            <div class="relative flex flex:col align-items:start font:8xl sm:font:11xl md:font:12xl medium w:100p tracking:tighter leading:100 max-w:320 sm:max-w:512 mb:12 md:mb:0">
+                <div class="relative flex align-items:center justify-content:center">
+                    <div class="gradient-text bg:ink-1 bg-opacity:20">Collaboration</div>
+                    <div aria-hidden="true" class="absolute font:2xs font:mono leading:100 tracking:looser uppercase bg:yellow-i color:ink-1 py:2 px:4 space:nowrap mt:8 overflow:hidden max-w:304 sm:max-w:448 md:max-w:none transform rotate:2 radius:2xs">
+                        caution caution caution caution caution caution caution caution caution caution
+                        <div class="absolute h:100p w:16 top:0 left:0 bg:fade-left-i opacity:20"></div>
+                        <div class="absolute h:100p w:16 top:0 right:0 bg:fade-right-i opacity:20"></div>
+                    </div>
                 </div>
-                <h2 class="relative flex flex:col gradient-text" style="background-image: linear-gradient(0deg, rgba(var(--ink-3), 1) 0%, rgba(var(--ink-3), 0.5) 100%);">
-                    Ownership
-                </h2>
+                <div>
+                    <h2 class="relative flex flex:col gradient-text pr:2" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);">
+                        Ownership
+                    </h2>
+                </div>
+            </div>
+            <div class="relative mt:24 flex align-items:center justify-content:center ">
+                {{ elements.btnLink(
+                    color="simple",
+                    size="xl",
+                    link=collection.url,
+                    label="Sign up for updates",
+                    hover=true,
+                    classes=''
+                )}} 
+            </div>
+        </div>
+        {# Horz Divider #}
+        <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:10 mb:24"></div>
+        <div class="container">
+            <div class="relative bg:sheet-4 radius:xl h:448 shadow:2xl overflow:hidden">
+                <div class="absolute bg:fade-down w:100p h:100p"></div>
             </div>
         </div>
     </section>

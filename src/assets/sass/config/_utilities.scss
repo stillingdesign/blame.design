@@ -95,8 +95,10 @@ $utilities: (
     ),
     max-width: (
         variants: (
+            304: 19rem,
             336: 21rem,
             352: 22rem,
+            464: 29rem,
             528: 33rem,
             672: 42rem,
             704: 44rem,
@@ -251,6 +253,7 @@ $utilities: (
             40p: 40%,
             120p: 120%,
             225p: 225%,
+            plus12: calc(100% + 0.75rem),
             plus24: calc(100% + 1.5rem),
             plus48: calc(100% + 3rem),
             plus96: calc(100% + 6rem),
