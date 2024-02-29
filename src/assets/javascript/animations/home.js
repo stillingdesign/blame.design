@@ -163,7 +163,7 @@ if(document.querySelector('[data-page="home"]')) {
             .to('[data-phone-m3]', { x:0, y:0, autoAlpha:1, }, 0)
     }
 
-    // Media Queries
+    // Phone Scroll Media Queries
     let mm = gsap.matchMedia();
 
     mm.add("(max-width: 1023px)", () => {
@@ -173,5 +173,20 @@ if(document.querySelector('[data-page="home"]')) {
     mm.add("(min-width: 1024px)", () => {
         scrollPhonesD();
     });
+
+    // Toggle Animation
+    function animateToggle() {
+        const tmln = gsap.timeline({ repeat: -1, repeatDelay: 3 });
+            tmln
+                .to('[data-animate-toggle-knob]', {x: 96, duration: 2.5, ease: "expo.inOut"}, 0)
+                .to('[data-animate-toggle-pill]', {backgroundColor: 'rgba(0,190,99,0.08)', duration: 2.5, ease: "expo.inOut"}, 0)
+                .to('[data-animate-toggle-text-r]', {autoAlpha:0, duration: 2.5, ease: "expo.inOut"}, 0)
+                .to('[data-animate-toggle-text-l]', {autoAlpha:1, duration: 2.5, ease: "expo.inOut"}, 0)
+                .to('[data-animate-toggle-knob]', {x: 0, duration: 2.5, ease: "expo.inOut"}, 5.5)
+                .to('[data-animate-toggle-pill]', {backgroundColor: 'rgba(255,92,119,0.1)', duration: 2.5, ease: "expo.inOut"}, 5.5)
+                .to('[data-animate-toggle-text-r]', {autoAlpha:1, duration: 2.5, ease: "expo.inOut"}, 5.5)
+                .to('[data-animate-toggle-text-l]', {autoAlpha:0, duration: 2.5, ease: "expo.inOut"}, 5.5)
+    }
+    animateToggle();
 
 }

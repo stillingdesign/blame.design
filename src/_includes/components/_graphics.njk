@@ -96,5 +96,30 @@
 {% macro betterPerfect() %}
     {# Graphic #}
     <div class="absolute flex w:100p h:100p h:auto ratio:1-1 flex align-items:center justify-content:center" aria-hidden="true">
+        {# Toggle #}
+        <div data-animate-toggle class="flex-shrink:0 relative flex flex:col align-items:center justify-content:center gap:24">
+            <div data-animate-toggle-pill class="relative w:160 h:64 bg:sheet-4-i radius:full flex align-items:center " style="background-color: rgba(255,92,119,0.1); box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.04), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.2), inset 0 16px 16px -8px rgba(0,0,0,0.5), inset 0 24px 24px -8px rgba(0,0,0,0.2);">
+                <div data-animate-toggle-text-r class="absolute right:24 font:mono font:2xs uppercase tracking:loosest">
+                    <div class="absolute filter filter-blur:2xs opacity:50 animation:pulse">
+                        Pending
+                    </div>
+                    <div class="gradient-text bg:white bg-opacity:50">
+                        Pending
+                    </div>
+                </div>
+                <div data-animate-toggle-text-l class="absolute left:24 font:mono font:2xs uppercase tracking:loosest" style="visibility:hidden; opacity:0;">
+                    <div class="absolute filter filter-blur:2xs opacity:50">
+                        Shipped
+                    </div>
+                    <div class="gradient-text bg:white bg-opacity:50">
+                        Shipped
+                    </div>
+                </div>
+                {# Knob #}
+                <div data-animate-toggle-knob class="absolute h:100p w:auto flex ratio:1-1 bg:sheet-5-i radius:full p:2" style="box-shadow: inset 0 -1px 1px 0 rgba(255,255,255,0.02), inset 0 1px 1px 0 rgba(255,255,255,0.08), inset 0 2px 1px 0 rgba(0,0,0,0.2), 0 16px 16px rgba(0,0,0,0.4);">
+                    <div class="absolute top:0 left:0 w:100p h:100p radius:full bg:radial-white opacity:2"></div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endmacro %}
