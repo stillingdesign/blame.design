@@ -34,6 +34,8 @@ $gradients: (
     radial-purple-i: radial-gradient(50% 50% at 50% 50%, rgba(var(--purple-i), 1) 0%, rgba(var(--purple-i), 0) 100%),
     radial-pink-i:   radial-gradient(50% 50% at 50% 50%, rgba(var(--pink-i), 1) 0%, rgba(var(--pink-i), 0) 100%),
 
+    radial-inverse-red-i:    radial-gradient(50% 50% at 50% 50%, rgba(var(--red-i), 0) 0%, rgba(var(--red-i), 1) 100%),
+
     highlight-across: linear-gradient(90deg, rgba(var(--white), 0) 0%, rgba(var(--white), 0.1) 25%, rgba(var(--white), 1) 50%, rgba(var(--white), 0.1) 75%, rgba(var(--white), 0) 100%),
 
 );

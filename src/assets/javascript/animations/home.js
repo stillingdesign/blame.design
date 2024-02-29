@@ -180,10 +180,12 @@ if(document.querySelector('[data-page="home"]')) {
             tmln
                 .to('[data-animate-toggle-knob]', {x: 96, duration: 2.5, ease: "expo.inOut"}, 0)
                 .to('[data-animate-toggle-pill]', {backgroundColor: 'rgba(0,190,99,0.08)', duration: 2.5, ease: "expo.inOut"}, 0)
+                .to('[data-animate-toggle-dots]', {backgroundColor: 'rgba(0,190,99,0.6)', duration: 2.5, ease: "expo.inOut"}, 0)
                 .to('[data-animate-toggle-text-r]', {autoAlpha:0, duration: 2.5, ease: "expo.inOut"}, 0)
                 .to('[data-animate-toggle-text-l]', {autoAlpha:1, duration: 2.5, ease: "expo.inOut"}, 0)
                 .to('[data-animate-toggle-knob]', {x: 0, duration: 2.5, ease: "expo.inOut"}, 5.5)
                 .to('[data-animate-toggle-pill]', {backgroundColor: 'rgba(255,92,119,0.1)', duration: 2.5, ease: "expo.inOut"}, 5.5)
+                .to('[data-animate-toggle-dots]', {backgroundColor: 'rgba(255,92,119,0.7)', duration: 2.5, ease: "expo.inOut"}, 5.5)
                 .to('[data-animate-toggle-text-r]', {autoAlpha:1, duration: 2.5, ease: "expo.inOut"}, 5.5)
                 .to('[data-animate-toggle-text-l]', {autoAlpha:0, duration: 2.5, ease: "expo.inOut"}, 5.5)
     }
