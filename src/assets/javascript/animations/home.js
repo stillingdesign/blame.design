@@ -217,4 +217,15 @@ if(document.querySelector('[data-page="home"]')) {
     }
     animateBallRollExpand();
 
+    // Toggle Animation
+    function animateCubeDrop() {
+        const tmln = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+            tmln
+                .to('[data-animate-cube-drop-cube]', {y: 0, opacity:1, duration: 0.5, stagger:0.5, ease: 'bounce.out'}, 0)
+                .to('[data-animate-cube-drop-container]', {rotate: -180, boxShadow: '0 2px 2px 0 rgba(255,255,255,0.03)', duration: 4, ease: 'power4.inOut'}, 11.5)
+                .to('[data-animate-cube-drop-shading]', {boxShadow: 'inset 0 -6px 6px 0 rgba(0,0,0,0.8), inset 0 1px 1px 0 rgba(255,255,255,0.06), inset 0 4px 4px 0 rgba(0,0,0,0.3)', duration: 4, ease: 'power4.inOut'}, 11.5)
+                .to('[data-animate-cube-drop-col]', {y: '-8rem', duration: 2, stagger:0.05, ease: 'power4.in'}, 11.5)
+    }
+    animateCubeDrop();
+
 }
