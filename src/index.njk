@@ -492,9 +492,26 @@ changefreq: daily
         </div>
     </section>
 
-    <section data-invert="light" class="section min-h:100vh pt:192 overflow:hidden bg:sheet-6 color:ink-3">
-        <div class="container flex flex:col align-items:center gap:32">
-            one person built this website
+    <section data-invert="light" class="section section:py overflow:hidden bg:sheet-5 color:ink-3">
+        {# Vert Dividers + Sparkles #}
+        <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
+            <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
+            </div>
+        </div>
+        {# Headline + Sub #}
+        <div class="container flex flex:col md:flex:row md:align-items:end justify-content:between mb:36 sm:mb:56 md:mb:0">
+            {# Headline #}
+            <div class="relative font:8xl sm:font:11xl md:font:12xl medium w:100p tracking:tighter leading:100 max-w:320 sm:max-w:512 mb:12 md:mb:0">
+                <div class="relative flex align-items:center justify-content:center gradient-text bg:edge-2 ml:n6">
+                    <span>Collaboration</span>
+                    <div class="absolute w:100p h:8 bg:edge-2"></div>
+                </div>
+                <h2 class="relative flex flex:col gradient-text" style="background-image: linear-gradient(0deg, rgba(var(--ink-3), 1) 0%, rgba(var(--ink-3), 0.5) 100%);">
+                    Ownership
+                </h2>
+            </div>
         </div>
     </section>
 
