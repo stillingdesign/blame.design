@@ -585,26 +585,34 @@ changefreq: daily
         <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:10 mb:24"></div>
         {# Block 1 #}
         <div class="container">
-            <div class="relative flex h:448 bg:sheet-4 radius:xl shadow:2xl overflow:hidden">
-                <div class="absolute bg:fade-down w:100p h:100p"></div>
-                <div class="relative p:96 w:50p flex flex:col align-items:start justify-content:center h:100p">
-                    <h3 class="font:2xl sm:font:3xl md:font:5xl tracking:tight mb:4 sm:mb:16 leading:110 max-w:320 color:ink-2">
-                        Better ideas come from the bottom up.
-                    </h3>
-                    <p class="font:lg sm:font:xl md:font:lg lg:font:xl opacity:70 md:max-w:336 mb:4">
-                        Get solutions faster by first consulting folks that know how to implement them.
-                    </p>
-                    {{ elements.btnLink(
-                        color="text-primary",
-                        size="lg",
-                        link=collection.url,
-                        label="The problem with non-technical directors",
-                        iconR=icons.chevR('w:16 ml:2'),
-                        hover=true,
-                        classes='ml:n18'
-                    )}} 
+            <div class="relative grid grid-cols:2 h:448">
+                {# Content #}
+                <div class="relative z:2 w:100p flex flex:col align-items:center justify-content:center h:100p bg:sheet-4 radius:xl overflow:hidden shadow:xl">
+                    <div class="absolute w:100p h:100p bg:sheet-6 mask:fade-out-t"></div>
+                    <div class="relative flex flex:col align-items:start gap:2 max-w:336">
+                        <h3 class="font:2xl sm:font:3xl md:font:5xl tracking:tight leading:110 color:ink-2 mb:8">
+                            Better ideas come from the bottom up
+                        </h3>
+                        <p class="font:lg sm:font:xl md:font:lg lg:font:xl opacity:70">
+                            Get solutions faster by first consulting folks that know how to implement them.
+                        </p>
+                        {{ elements.btnLink(
+                            color="text-primary",
+                            size="lg",
+                            link=collection.url,
+                            label="The problem with non-technical directors",
+                            iconR=icons.chevR('w:16 ml:2'),
+                            hover=true,
+                            classes='ml:n18'
+                        )}}
+                    </div> 
                 </div>
-                <div class="relative w:50p bg:blue-i bg-opacity:30"></div>
+                {# Graphic #}
+                <div class="relative w:100p">
+                    <div class="absolute right:0 top:48 w:plus24 h:100p radius:xl overflow:hidden" style="box-shadow: inset 0 32px 32px 0 rgba(0,0,0,0.06), inset 0 16px 16px 0 rgba(0,0,0,0.1), inset 0 6px 6px 0 rgba(0,0,0,0.1), inset 0 -6px 6px 0 rgba(0,0,0,0.06); background-image: linear-gradient(0deg, rgba(var(--blue-i), 0.8) 0%, rgba(var(--blue-i), 0.5) 100%);">
+                        <div class="absolute top:0 left:0 w:80 h:100p bg:fade-left-i opacity:10"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
