@@ -439,15 +439,16 @@ changefreq: daily
             {# Vertical Grid #}
             <div class="hidden md:flex absolute top:n320 left:0 w:100p h:plus320 justify-content:between">
                 <div></div>
-                <div class="relative w:28 flex-shrink:0 flex justify-content:center h:100p">
+                <div class="relative w:48 flex-shrink:0 flex justify-content:center h:100p">
                     <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-t"></div>
                 </div>
-                <div class="relative w:28 flex-shrink:0 flex justify-content:center h:100p">
+                <div class="relative w:48 flex-shrink:0 flex justify-content:center h:100p">
                     <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-t"></div>
                 </div>
                 <div></div>
             </div>
-            <ul class="container grid md:grid-cols:3 gap:36 sm:gap:28 section:pb">
+            {# List #}
+            <ul class="container grid md:grid-cols:3 gap:36 sm:gap:48 pb:96 sm:pb:112 md:pb:160">
                 {# List items #}
                 {% macro introCard(numb,head,desc,graphic) %}
                     <li class="relative flex">
@@ -479,7 +480,7 @@ changefreq: daily
                 {{ introCard(
                     numb='2',
                     head="Land then expand",
-                    desc='Start small, find what works, then scale with purpose to prevent misalignment.',
+                    desc='Start small, find what works, scale <span class="space:nowrap">with purpose</span> to avoid misalignment.',
                     graphic=graphics.landExpand()
                 )}}
                 {{ introCard(
@@ -493,18 +494,45 @@ changefreq: daily
     </section>
 
     {# Ownership #}
-    <section data-invert="light" class="section section:py overflow:hidden bg:sheet-6 color:ink-3">
-        {# Vert Dividers + Sparkles #}
+    <section data-invert="light" class="section section:pb overflow:hidden bg:sheet-6 color:ink-3">
+        {# Vert Dividers #}
         <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
             <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
                 <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
                 <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
             </div>
         </div>
-        {# Headline + Sub #}
-        <div class="container flex flex:col md:flex:row md:align-items:center justify-content:between mb:16 sm:mb:56 md:mb:64">
+        {# Horz Divider #}
+        <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p md:border-b:1 border:ink-3 border:dashed border-opacity:10 pt:72 sm:pt:112 md:pt:128 lg:pt:144"></div>
+        {# Headline + Button #}
+        <div class="container flex flex:col sm:flex:row justify-content:between md:grid md:grid-cols:3 md:gap:48 pt:24 pb:20">
+            {# Handles #}
+            <div class="absolute top:n8 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
+                <div class="w:1 h:100p bg:ink-3"></div>
+                <div class="h:1 w:100p bg:ink-3 absolute"></div>
+            </div>
+            <div class="absolute top:n8 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
+                <div class="w:1 h:100p bg:ink-3"></div>
+                <div class="h:1 w:100p bg:ink-3 absolute"></div>
+            </div>
+            <div class="absolute bottom:n8 left:8 sm:left:n28 mb:2 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                <div class="w:1 h:100p bg:ink-3"></div>
+                <div class="h:1 w:100p bg:ink-3 absolute"></div>
+            </div>
+            <div class="absolute bottom:n8 right:8 sm:right:n28 mb:2 mr:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                <div class="w:1 h:100p bg:ink-3"></div>
+                <div class="h:1 w:100p bg:ink-3 absolute"></div>
+            </div>
+            {# Inner Grid Lines #}
+            <div class="absolute md:top:n128 lg:top:n144 w:100p h:plus128 lg:h:plus144 hidden md:flex justify-content:between">
+                <div></div>
+                <div class="relative px:24 h:100p"><div class="relative h:100p border-l:1 border:ink-3 border-opacity:0"></div></div>
+                <div class="relative px:24 h:100p"><div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div></div>
+                <div></div>
+            </div>
             {# Headline #}
-            <div class="relative flex flex:col align-items:start font:8xl sm:font:11xl md:font:12xl medium w:100p tracking:tighter leading:100 max-w:320 sm:max-w:512 mb:12 md:mb:0">
+            <div class="relative col:2 flex flex:col align-items:start font:8xl sm:font:11xl md:font:12xl medium w:100p tracking:tighter leading:100 max-w:320 md:max-w:512">
+                {# Collaboration Watermark #}
                 <div class="relative flex align-items:center justify-content:center">
                     <div class="gradient-text bg:ink-1 bg-opacity:20">Collaboration</div>
                     <div aria-hidden="true" class="absolute font:2xs font:mono leading:100 tracking:looser uppercase bg:yellow-i color:ink-1 py:2 px:4 space:nowrap mt:8 overflow:hidden max-w:304 sm:max-w:448 md:max-w:none transform rotate:2 radius:2xs">
@@ -513,28 +541,70 @@ changefreq: daily
                         <div class="absolute h:100p w:16 top:0 right:0 bg:fade-right-i opacity:20"></div>
                     </div>
                 </div>
-                <div>
-                    <h2 class="relative flex flex:col gradient-text pr:2" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);">
-                        Ownership
-                    </h2>
-                </div>
+                {# Heading #}
+                <h2 class="relative flex flex:col gradient-text pr:2 pb:4" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);">
+                    Ownership
+                </h2>
             </div>
-            <div class="relative mt:24 flex align-items:center justify-content:center ">
-                {{ elements.btnLink(
-                    color="simple",
-                    size="xl",
-                    link=collection.url,
-                    label="Sign up for updates",
-                    hover=true,
-                    classes=''
-                )}} 
+            {# Button #}
+            <div class="relative mt:16 md:mt:0 flex align-items:center md:justify-content:center">
+                {# Handle #}
+                <div class="absolute top:n32 left:8 sm:left:n28 mt:1 ml:n2 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                {# Handle #}
+                <div class="absolute bottom:n28 left:8 sm:left:n28 mb:2 ml:n2 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                {# Button #}
+                <div class="md:hidden flex-shrink:0">
+                    {{ elements.btnLink(
+                        color="simple",
+                        size="md",
+                        link=collection.url,
+                        label="Get Blame's Newsletter",
+                        hover=true,
+                        classes=''
+                    )}} 
+                </div>
+                <div class="hidden md:block">
+                    {{ elements.btnLink(
+                        color="simple",
+                        size="xl",
+                        link=collection.url,
+                        label="Get Blame's Newsletter",
+                        hover=true,
+                        classes=''
+                    )}} 
+                </div>
             </div>
         </div>
         {# Horz Divider #}
         <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:10 mb:24"></div>
+        {# Block 1 #}
         <div class="container">
-            <div class="relative bg:sheet-4 radius:xl h:448 shadow:2xl overflow:hidden">
+            <div class="relative flex h:448 bg:sheet-4 radius:xl shadow:2xl overflow:hidden">
                 <div class="absolute bg:fade-down w:100p h:100p"></div>
+                <div class="relative p:96 w:50p flex flex:col align-items:start justify-content:center h:100p">
+                    <h3 class="font:2xl sm:font:3xl md:font:5xl tracking:tight mb:4 sm:mb:16 leading:110 max-w:320 color:ink-2">
+                        Better ideas come from the bottom up.
+                    </h3>
+                    <p class="font:lg sm:font:xl md:font:lg lg:font:xl opacity:70 md:max-w:336 mb:4">
+                        Get solutions faster by first consulting folks that know how to implement them.
+                    </p>
+                    {{ elements.btnLink(
+                        color="text-primary",
+                        size="lg",
+                        link=collection.url,
+                        label="The problem with non-technical directors",
+                        iconR=icons.chevR('w:16 ml:2'),
+                        hover=true,
+                        classes='ml:n18'
+                    )}} 
+                </div>
+                <div class="relative w:50p bg:blue-i bg-opacity:30"></div>
             </div>
         </div>
     </section>
