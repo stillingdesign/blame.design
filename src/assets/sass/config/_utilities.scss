@@ -29,6 +29,36 @@ $utilities: (
             15: 0.9375rem,
         ),
     ),
+    border-top-radius: (
+        variants: (
+            100p: 100%,
+            2: 0.125rem,
+            5: 0.3125rem,
+            7: 0.4375rem,
+            9: 0.5625rem,
+            15: 0.9375rem,
+        ),
+    ),
+    border-bottom-left-radius: (
+        variants: (
+            100p: 100%,
+            2: 0.125rem,
+            5: 0.3125rem,
+            7: 0.4375rem,
+            9: 0.5625rem,
+            15: 0.9375rem,
+        ),
+    ),
+    border-bottom-right-radius: (
+        variants: (
+            100p: 100%,
+            2: 0.125rem,
+            5: 0.3125rem,
+            7: 0.4375rem,
+            9: 0.5625rem,
+            15: 0.9375rem,
+        ),
+    ),
     bottom: (
         variants: (
             unset: unset,
@@ -68,6 +98,7 @@ $utilities: (
             100p: 100%,
             110p: 110%,
             200p: 200%,
+            minus48: calc(100% - 3rem),
             minus56: calc(100vh - 3.5rem),
             plus24: calc(100% + 1.5rem),
             plus48: calc(100% + 3rem),

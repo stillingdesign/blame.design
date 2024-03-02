@@ -500,6 +500,20 @@
     }
 }
 
+.tag\:blue {
+    @include apply("color:link-rg-i bg:blue-i bg-opacity:50 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .tag\:inner { @include apply("bg:sheet-6-i bg-opacity:70 transition:200")}
+    &.tag\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("bg-opacity:70 transition:300");
+                animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+            }
+        }
+    }
+}
+
 .tag\:blue-i {
     @include apply("color:link-rg-i bg:blue-i bg-opacity:50 backdrop backdrop-blur:sm transition:200");
     transform: translate3d(0, 0, 0);
