@@ -630,13 +630,15 @@ changefreq: daily
         {# Block 2 + 3 #}
         <div class="container grid sm:grid-cols:2 gap:12 sm:gap:24">
             {# Block 2 #}
-            <div class="flex flex:col">
+            <div class="relative flex flex:col align-items:center justify-content:center">
+                {# Conic Outer #}
+                <div class="sm:block absolute w:plus24 h:plus24 conic:card-spin-blue animate:conic-card-spin-clockwise radius:2xl opacity:30" style="box-shadow: inset 0 0 12px 10px rgba(var(--sheet-6), 1);"></div>
                 {# Content #}
-                <div class="relative w:100p flex align-items:center justify-content:center px:1 pb:1 radius:xl overflow:hidden" style="box-shadow: 0 -1px 1px 0 rgba(255,255,255,0.5), 0 1px 1px 0 rgba(255,255,255,0.4);">
-                    <div class="sm:block absolute bottom:n160 sm:bottom:n224 left:n160 sm:left:n224 w:320 h:320 sm:w:448 sm:h:448 bg:radial-blue-i"></div>
-                    <div class="absolute w:100p h:100p border:1 border:sheet-6 border:dashed radius:xl"></div>
-                    <div class="relative w:100p sm:h:288 flex flex:col sm:align-items:center sm:justify-content:center bg:sheet-3 radius:15 px:24 sm:px:0 pt:24 sm:pt:8 pb:12 sm:pb:0 overflow:hidden" style="box-shadow: inset 0 48px 48px 0 rgba(0,0,0,0.06), inset 0 20px 20px 0 rgba(0,0,0,0.06), inset 0 8px 8px 0 rgba(0,0,0,0.06), inset -8px 0 8px -4px rgba(0,0,0,0.04), inset 8px 0 8px -4px rgba(0,0,0,0.06), inset 0 -6px 6px 0 rgba(0,0,0,0.08);">
-                        <div class="absolute left:0 w:100p h:100p bg:fade-down"></div>
+                <div class="relative w:100p flex align-items:center justify-content:center p:1 radius:xl overflow:hidden" style="box-shadow: 0 -1px 1px -0.5px rgba(255,255,255,0.75), 0 1px 1px -0.5px rgba(255,255,255,0.5);">
+                    <div class="sm:block absolute top:n1 left:n1 w:plus2 h:plus2 conic:card-spin-blue animate:conic-card-spin-clockwise"></div>
+                    {# Copy Frame #}
+                    <div class="relative w:100p sm:h:288 flex flex:col sm:align-items:center sm:justify-content:center bg:sheet-3 radius:15 px:24 sm:px:0 pt:24 sm:pt:8 pb:12 sm:pb:0 overflow:hidden" style="background: linear-gradient(180deg, rgba(var(--sheet-4), 1) 0%, rgba(var(--sheet-6), 1) 100%), rgba(var(--sheet-4), 1);">
+                        {# Copy #}
                         <div class="relative flex flex:col align-items:start sm:gap:2 w:100p max-w:256 md:max-w:336">
                             <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
                                 Generalize your skillset
@@ -654,17 +656,21 @@ changefreq: daily
                                 classes='ml:n18'
                             )}}
                         </div>
+                        {# Shading #}
+                        <div class="absolute top:0 left:0 w:100p h:100p pointer-events:none" style="box-shadow: inset 0 48px 48px 0 rgba(0,0,0,0.06), inset 0 20px 20px 0 rgba(0,0,0,0.06), inset 0 8px 8px 0 rgba(0,0,0,0.06), inset 0 -4px 4px 0 rgba(0,0,0,0.02);"></div>
                     </div>
                 </div>
             </div>
             {# Block 3 #}
-            <div class="flex flex:col">
+            <div class="relative flex flex:col align-items:center justify-content:center">
+                {# Conic Outer #}
+                <div class="sm:block absolute w:plus24 h:plus24 conic:card-spin-blue animate:conic-card-spin-counter-clockwise radius:2xl opacity:30" style="box-shadow: inset 0 0 12px 10px rgba(var(--sheet-6), 1);"></div>
                 {# Content #}
-                <div class="relative w:100p flex align-items:center justify-content:center px:1 pb:1 radius:xl overflow:hidden" style="box-shadow: 0 -1px 1px 0 rgba(255,255,255,0.5), 0 1px 1px 0 rgba(255,255,255,0.4);">
-                    <div class="absolute bottom:n160 sm:bottom:n224 right:n160 sm:right:n224 w:320 h:320 sm:w:448 sm:h:448 bg:radial-purple-i"></div>
-                    <div class="absolute w:100p h:100p border:1 border:sheet-6 border:dashed radius:xl"></div>
-                    <div class="relative w:100p sm:h:288 flex flex:col sm:align-items:center sm:justify-content:center bg:sheet-3 radius:15 px:24 sm:px:0 pt:24 sm:pt:8 pb:12 sm:pb:0 overflow:hidden" style="box-shadow: inset 0 48px 48px 0 rgba(0,0,0,0.06), inset 0 20px 20px 0 rgba(0,0,0,0.06), inset 0 8px 8px 0 rgba(0,0,0,0.06), inset -8px 0 8px -4px rgba(0,0,0,0.04), inset 8px 0 8px -4px rgba(0,0,0,0.06), inset 0 -6px 6px 0 rgba(0,0,0,0.08);">
-                        <div class="absolute left:0 w:100p h:100p bg:fade-down"></div>
+                <div class="relative w:100p flex align-items:center justify-content:center p:1 radius:xl overflow:hidden" style="box-shadow: 0 -1px 1px -0.5px rgba(255,255,255,0.75), 0 1px 1px -0.5px rgba(255,255,255,0.5);">
+                    <div class="sm:block absolute top:n1 left:n1 w:plus2 h:plus2 conic:card-spin-blue animate:conic-card-spin-counter-clockwise"></div>
+                    {# Copy Frame #}
+                    <div class="relative w:100p sm:h:288 flex flex:col sm:align-items:center sm:justify-content:center bg:sheet-3 radius:15 px:24 sm:px:0 pt:24 sm:pt:8 pb:12 sm:pb:0 overflow:hidden" style="background: linear-gradient(180deg, rgba(var(--sheet-4), 1) 0%, rgba(var(--sheet-6), 1) 100%), rgba(var(--sheet-4), 1);">
+                        {# Copy #}
                         <div class="relative flex flex:col align-items:start sm:gap:2 w:100p max-w:256 md:max-w:336">
                             <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
                                 Don't plan it, build it
@@ -682,6 +688,8 @@ changefreq: daily
                                 classes='ml:n18'
                             )}}
                         </div>
+                        {# Shading #}
+                        <div class="absolute top:0 left:0 w:100p h:100p pointer-events:none" style="box-shadow: inset 0 48px 48px 0 rgba(0,0,0,0.06), inset 0 20px 20px 0 rgba(0,0,0,0.06), inset 0 8px 8px 0 rgba(0,0,0,0.06), inset 0 -4px 4px 0 rgba(0,0,0,0.02);"></div>
                     </div>
                 </div>
             </div>

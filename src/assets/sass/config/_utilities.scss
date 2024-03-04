@@ -108,6 +108,7 @@ $utilities: (
             100p: 100%,
             110p: 110%,
             200p: 200%,
+            minus24: calc(100% - 1.5rem),
             minus48: calc(100% - 3rem),
             minus56: calc(100vh - 3.5rem),
             plus2: calc(100% + 0.125rem),
@@ -301,6 +302,7 @@ $utilities: (
             plus24: calc(100% + 1.5rem),
             plus48: calc(100% + 3rem),
             plus96: calc(100% + 6rem),
+            minus24: calc(100% - 1.5rem),
         ),
     ),
     z-index: (
