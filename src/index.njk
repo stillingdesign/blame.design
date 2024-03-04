@@ -590,46 +590,109 @@ changefreq: daily
         {# Block 1 #}
         <div class="container mb:24">
             <div class="relative flex flex:col-reverse sm:grid grid-cols:2 sm:h:384 md:h:448">
+                {# Note #}
+                <div class="hidden sm:block absolute top:18 right:0 w:50p pl:16 font:mono font:2xs uppercase tracking:loosest opacity:50">
+                    Part 01: deconstructing hierarchy
+                </div>
                 {# Content #}
                 <div class="relative z:2 w:100p flex flex:col align-items:center justify-content:center h:100p bg:sheet-4 sm:radius-t:xl radius-bl:xl radius-br:xl sm:radius-br:none overflow:hidden shadow:xl px:1 sm:pt:1 pb:1">
                     <div class="absolute w:100p h:100p bg:fade-up-sheet-1"></div>
                     <div class="absolute h:320 sm:w:640 w:320 sm:h:640 top:0 left:n160 sm:top:n224 sm:left:n320 mask:radial" style="background-image: linear-gradient(0deg, rgba(var(--blue-i), 0.8) 0%, rgba(var(--blue-i), 0.5) 100%);"></div>
-                    <div class="relative w:100p h:100p flex align-items:center sm:justify-content:center bg:sheet-4 bg-opacity:100 sm:radius-t:15 radius-bl:15 sm:radius-br:15 px:24 pt:20 pb:12 sm:px:0 sm:pt:0 sm:pb:0">
-                        <div class="relative flex flex:col align-items:start sm:gap:2 max-w:256 md:max-w:336">
-                            <h3 class="font:2xl sm:font:4xl md:font:5xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:224 sm:max-w:none">
-                                Better ideas come from the bottom up
+                    <div class="relative w:100p h:100p flex align-items:center sm:justify-content:center bg:sheet-4 sm:radius-t:15 radius-bl:15 sm:radius-br:15 px:24 pt:20 pb:12 sm:px:0 sm:pt:0 sm:pb:0">
+                        <div class="relative flex flex:col align-items:start sm:gap:2 w:100p max-w:256 md:max-w:336">
+                            <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
+                                Stop letting non-technical stakeholders decide
                             </h3>
                             <p class="font:md md:font:xl opacity:70">
-                                Get solutions faster by first consulting folks that know how to implement them.
+                                Get refined solutions faster by allowing the folks that implement them to lead.
                             </p>
                             {{ elements.btnLink(
                                 color="text-primary",
                                 size="lg",
                                 link=collection.url,
-                                label="Starting with implementation",
-                                iconR=icons.chevR('w:16 ml:2 transform translate-y:1'),
+                                label="How collaboration became a hoax",
+                                iconR=icons.chevR('w:16 ml:2 transform translate-y:1 flex-shrink:0'),
                                 hover=true,
-                                classes='ml:n18'
+                                classes='ml:n18 space:nowrap'
                             )}}
                         </div> 
                     </div>
                 </div>
                 {# Graphic #}
                 <div class="relative w:100p flex ratio:4-3 sm:ratio:unset">
-                    <div class="absolute right:0 sm:top:48 w:100p sm:w:plus24 h:100p sm:h:minus48 sm:radius-b:xl radius-t:xl overflow:hidden" style="box-shadow: inset 0 32px 32px 0 rgba(0,0,0,0.06), inset 0 16px 16px 0 rgba(0,0,0,0.1), inset 0 6px 6px 0 rgba(0,0,0,0.1), inset 0 -6px 6px 0 rgba(0,0,0,0.06); background-image: linear-gradient(0deg, rgba(var(--blue-i), 1) 0%, rgba(var(--blue-i), 0.7) 100%);">
+                    <div class="absolute right:0 sm:top:48 w:100p sm:w:plus24 h:100p sm:h:minus48 sm:radius-b:xl radius-t:xl overflow:hidden flex align-items:center justify-content:center" style="box-shadow: inset 0 32px 32px 0 rgba(0,0,0,0.06), inset 0 16px 16px 0 rgba(0,0,0,0.1), inset 0 6px 6px 0 rgba(0,0,0,0.1), inset 0 -6px 6px 0 rgba(0,0,0,0.06); background-image: linear-gradient(0deg, rgba(var(--blue-i), 1) 0%, rgba(var(--blue-i), 0.7) 100%);">
                         <div class="absolute top:0 left:0 w:80 h:100p bg:fade-left-i opacity:10"></div>
+                        <img src="/assets/images/home/chess.webp" loading="lazy" width="575" height="400" alt="" class="relative flex w:100p h:100p object:cover">
                     </div>
-                </div>
-                {# Note #}
-                <div class="hidden sm:block absolute top:18 right:0 w:50p pl:16 font:mono font:2xs uppercase tracking:loosest opacity:50">
-                    Part 01: deconstructing hierarchy
                 </div>
             </div>
         </div>
         {# Block 2 + 3 #}
         <div class="container grid sm:grid-cols:2 gap:24">
-            <div class="bg:sheet-3 flex ratio:4-3 radius:xl"></div>
-            <div class="bg:sheet-3 flex ratio:4-3 radius:xl "></div>
+            {# Block 2 #}
+            <div class="bg:sheet-3 flex flex:col radius:xl">
+                {# Graphic #}
+                <div class="relative w:100p sm:h:288 flex ratio:4-3 sm:ratio:unset flex-shrink:0">
+                    <div class="relative w:100p h:100p radius-t:xl overflow:hidden" style="box-shadow: inset 0 32px 32px 0 rgba(0,0,0,0.06), inset 0 24px 24px 0 rgba(0,0,0,0.08), inset 0 6px 6px 0 rgba(0,0,0,0.08), inset 0 -6px 6px 0 rgba(0,0,0,0.02), 0 -1px 1px 0 rgba(255,255,255,0.3); background-image: linear-gradient(0deg, rgba(var(--edge-1), 1) 0%, rgba(var(--edge-1), 0.8) 100%);">
+                        <div class="absolute bottom:0 left:0 h:192 w:100p bg:fade-down"></div>
+                    </div>
+                </div>
+                {# Content #}
+                <div class="relative w:100p flex align-items:center justify-content:center px:1 pb:1 bg:sheet-4 radius-b:xl overflow:hidden">
+                    <div></div>
+                    <div class="relative w:100p sm:h:288 flex flex:col sm:align-items:center sm:justify-content:center bg:sheet-4 radius-b:15 px:24 sm:px:0 pt:20 sm:pt:8 pb:12 sm:pb:0">
+                        <div class="flex flex:col  align-items:start sm:gap:2 w:100p max-w:256 md:max-w:336">
+                            <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
+                                Generalize your skillset
+                            </h3>
+                            <p class="font:md md:font:xl opacity:70">
+                                Unlock impact and unblock workflows <span class="space:nowrap">by understanding</span> more of the process.
+                            </p>
+                            {{ elements.btnLink(
+                                color="text-primary",
+                                size="lg",
+                                link=collection.url,
+                                label="The Growth Design Toolkit",
+                                iconR=icons.chevR('w:16 ml:2 transform translate-y:1'),
+                                hover=true,
+                                classes='ml:n18'
+                            )}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {# Block 3 #}
+            <div class="bg:sheet-3 flex flex:col radius:xl">
+                {# Graphic #}
+                <div class="relative w:100p sm:h:288 flex ratio:4-3 sm:ratio:unset flex-shrink:0">
+                    <div class="relative w:100p h:100p radius-t:xl overflow:hidden" style="box-shadow: inset 0 32px 32px 0 rgba(0,0,0,0.06), inset 0 24px 24px 0 rgba(0,0,0,0.08), inset 0 6px 6px 0 rgba(0,0,0,0.08), inset 0 -6px 6px 0 rgba(0,0,0,0.02), 0 -1px 1px 0 rgba(255,255,255,0.3); background-image: linear-gradient(0deg, rgba(var(--edge-1), 1) 0%, rgba(var(--edge-1), 0.8) 100%);">
+                        <div class="absolute bottom:0 left:0 h:192 w:100p bg:fade-down"></div>
+                    </div>
+                </div>
+                {# Content #}
+                <div class="relative w:100p flex align-items:center justify-content:center px:1 pb:1 bg:sheet-4 radius-b:xl overflow:hidden">
+                    <div></div>
+                    <div class="relative w:100p sm:h:288 flex flex:col sm:align-items:center sm:justify-content:center bg:sheet-4 radius-b:15 px:24 sm:px:0 pt:20 sm:pt:8 pb:12 sm:pb:0">
+                        <div class="flex flex:col  align-items:start sm:gap:2 w:100p max-w:256 md:max-w:336">
+                            <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
+                                Don't plan it, build it
+                            </h3>
+                            <p class="font:md md:font:xl opacity:70">
+                                Great design isn't made in Notion <span class="space:nowrap">or Figma,</span> it's built in a code editor.
+                            </p>
+                            {{ elements.btnLink(
+                                color="text-primary",
+                                size="lg",
+                                link=collection.url,
+                                label="Why coding is required",
+                                iconR=icons.chevR('w:16 ml:2 transform translate-y:1'),
+                                hover=true,
+                                classes='ml:n18'
+                            )}}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
