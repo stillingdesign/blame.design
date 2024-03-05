@@ -653,7 +653,7 @@ changefreq: daily
                                 <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
                                     Generalize your skillset
                                 </h3>
-                                <p class="font:md md:font:xl opacity:70">
+                                <p class="font:md md:font:xl opacity:60">
                                     Unlock impact and unblock workflows <span class="space:nowrap">by understanding</span> more of the process.
                                 </p>
                                 {{ elements.btnLink(
@@ -685,7 +685,7 @@ changefreq: daily
                                 <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
                                     Don't plan it, build it
                                 </h3>
-                                <p class="font:md md:font:xl opacity:70">
+                                <p class="font:md md:font:xl opacity:60">
                                     Great design isn't made in Notion <span class="space:nowrap">or Figma,</span> it's built in a code editor.
                                 </p>
                                 {{ elements.btnLink(
@@ -754,22 +754,74 @@ changefreq: daily
                 </div>
             </div>
             {# Blocks #}
-            <div class="container grid sm:grid-cols:3 gap:24 mt:24 md:mt:0 z:2">
+            <div class="container grid sm:grid-cols:2 md:grid-cols:3 align-items:start gap:24 mt:24 md:mt:0 z:2">
+                <div class="absolute w:640 h:448 bg:radial-teal-i opacity:10 bottom:n128 left:n288"></div>
+                <div class="absolute w:640 h:448 bg:radial-purple-i opacity:10 bottom:n128 right:n288"></div>
+                <div class="absolute w:100p h:448 bg:radial-blue-i opacity:10 bottom:n192 left:0"></div>
                 {# Note #}
-                <div class="absolute top:48 w:100p text:center">
+                <div class="hidden md:block absolute top:48 w:100p text:center">
                     <div class="hidden sm:block font:mono font:2xs uppercase tracking:loosest opacity:50">
                         Part 02: Preventing bloat
                     </div>
                 </div>
                 {# Cards #}
-                <div class="flex ratio:1-1 shadow:xl w:100p relative bg:sheet-5 radius:xl"><div class="absolute w:100p h:100p radius:xl bg:fade-down"></div></div>
-                <div class="flex ratio:1-1 shadow:xl w:100p relative bg:sheet-5 radius:xl sm:mt:72"><div class="absolute w:100p h:100p radius:xl bg:fade-down"></div></div>
-                <div class="flex ratio:1-1 shadow:xl w:100p relative bg:sheet-5 radius:xl"><div class="absolute w:100p h:100p radius:xl bg:fade-down"></div></div>
+                {% macro scaleCard(head, desc, link, cta, classes) %}
+                    <div class="relative flex flex:col shadow:xl w:100p relative bg:sheet-5 radius:xl overflow:hidden {{ classes }}">
+                        <div class="absolute w:100p h:100p radius:xl bg:fade-down"></div>
+                        {# Graphic #}
+                        <div class="relative w:100p h:224 sm:h:288 radius-t:xl">
+                            <div class="absolute top:0 left:0 w:100p h:100p bg:radial-white opacity:50"></div>
+                            <div class="absolute top:0 left:0 w:100p h:100p radius-t:xl" style="box-shadow: inset 0 -12px 24px -24px rgba(0,0,0,0.2), 0 1px 2px 0 rgba(255,255,255,0.3);"></div>
+                        </div>
+                        {# Content #}
+                        <div class="relative flex flex:col align-items:start px:24 sm:px:28 pt:20 pb:16">
+                            <h3 class="font:2xl md:font:xl lg:font:2xl leading:130 mb:6">
+                                {{ head | safe }}
+                            </h3>
+                            <p class="font:lg lg:font:xl opacity:60 max-w:256 md:max-w:192 lg:max-w:288">
+                                {{ desc | safe }}
+                            </p>
+                        </div>
+                        <div class="relative w:100p px:8 pb:8">
+                            <a href="{{ link }}" class="relative flex align-items:center justify-content:between color:primary-rg  medium tracking:normal px:16 sm:px:20 py:10 sm:py:12 radius:md" style="box-shadow: 0 -1px 1px 0 rgba(255,255,255,0.2), 0 1px 1px 0 rgba(255,255,255,0.3);">
+                                <div class="absolute top:0 left:0 w:100p h:100p" style="background: linear-gradient(355deg, rgba(var(--blue-i), 0.2) 0%, rgba(var(--blue-i), 0) 50%); box-shadow: 0 -16px 16px 0 rgba(var(--sheet-6),1); display:none;"></div>
+                                <p class="relative">
+                                    {{ cta }}
+                                </p>
+                                {{ icons.chevR('relative w:16 mr:n4 transform translate-y:1') }}
+                                <div class="absolute top:0 left:0 w:100p h:100p radius:md pointer-events:none" style="box-shadow: inset 0 6px 6px 0 rgba(0,0,0,0.04), inset 0 2px 2px 0 rgba(0,0,0,0.04), inset 0 -2px 2px 0 rgba(0,0,0,0.04);"></div>
+                            </a>
+                        </div>
+                    </div>
+                {% endmacro %}
+                {{ scaleCard(
+                    head='Start with <span class="space:nowrap">something great</span>',
+                    desc='Make your effort count by starting with a solid, well-tested foundation.',
+                    link='#',
+                    cta='The real cost of a webpage',
+                    classes='sm:col:2 md:col:1'
+                )}}
+                {{ scaleCard(
+                    head='Refine more, <span class="space:nowrap">add less</span>',
+                    desc='Focus on the right things, not more things, to build better experiences.',
+                    link='#',
+                    cta='Prioritizing design work 101',
+                    classes='md:mt:72'
+                )}}
+                {{ scaleCard(
+                    head='Fight 3rd <span class="space:nowrap">party tools</span>',
+                    desc='Stay smart and nimble by keeping your tech stack lean and simple.',
+                    link='#',
+                    cta='Marketing tools are a trap',
+                    classes=''
+                )}}
             </div>
             {# Fader #}
             <div class="hidden sm:block absolute bottom:0 w:plus384 h:100p pointer-events:none" style="background: linear-gradient(180deg, rgba(var(--sheet-6), 0) 25%, rgba(var(--sheet-6), 1) 100%);"></div>
         </section>
 
     </div>
+
+    <section data-invert="dark" class="section section:py"></section>
 
 </main>
