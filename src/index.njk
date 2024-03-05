@@ -686,7 +686,7 @@ changefreq: daily
                                     Don't plan it, build it
                                 </h3>
                                 <p class="font:md md:font:xl opacity:60">
-                                    Define tangible solutions by creating production-ready design in context.
+                                    Drive actionable results by creating production-ready design, in context.
                                 </p>
                                 {{ elements.btnLink(
                                     color="text-primary",
@@ -782,14 +782,22 @@ changefreq: daily
                                 {{ desc | safe }}
                             </p>
                         </div>
+                        {# Link #}
                         <div class="relative w:100p px:8 pb:8">
-                            <a href="{{ link }}" class="relative flex align-items:center justify-content:between color:primary-rg  medium tracking:normal px:16 sm:px:20 py:10 sm:py:12 radius:md" style="box-shadow: 0 -1px 1px 0 rgba(255,255,255,0.2), 0 1px 1px 0 rgba(255,255,255,0.3);">
-                                <div class="absolute top:0 left:0 w:100p h:100p" style="background: linear-gradient(355deg, rgba(var(--blue-i), 0.2) 0%, rgba(var(--blue-i), 0) 50%); box-shadow: 0 -16px 16px 0 rgba(var(--sheet-6),1); display:none;"></div>
-                                <p class="relative">
-                                    {{ cta }}
-                                </p>
-                                {{ icons.chevR('relative w:16 mr:n4 transform translate-y:1') }}
-                                <div class="absolute top:0 left:0 w:100p h:100p radius:md pointer-events:none" style="box-shadow: inset 0 6px 6px 0 rgba(0,0,0,0.04), inset 0 2px 2px 0 rgba(0,0,0,0.04), inset 0 -2px 2px 0 rgba(0,0,0,0.04);"></div>
+                            <a href="{{ link }}" class="card-inset-cta relative flex align-items:center color:primary-rg  medium tracking:normal px:16 sm:px:20 py:10 sm:py:12 radius:md overflow:hidden" style="box-shadow: 0 -1px 1px 0 rgba(255,255,255,0.2), 0 1px 1px 0 rgba(255,255,255,0.3);">
+                                <div class="card-inset-cta-normal relative w:100p flex align-items:center justify-content:between ">
+                                    <p class="relative">
+                                        {{ cta }}
+                                    </p>
+                                    {{ icons.chevR('relative w:16 mr:n4 transform translate-y:1') }}
+                                </div>
+                                <div class="card-inset-cta-hover absolute top:0 left:0 w:100p h:100p flex align-items:center justify-content:between px:16 sm:px:20 bg:primary-rg color:white">
+                                    <p class="relative">
+                                        Read the article
+                                    </p>
+                                    {{ icons.chevR('relative w:16 mr:n4 transform translate-y:1') }}
+                                </div>
+                                <div class="card-inset-cta-shading absolute top:0 left:0 w:100p h:100p radius:md pointer-events:none"></div>
                             </a>
                         </div>
                     </div>
