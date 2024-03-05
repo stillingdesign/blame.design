@@ -123,6 +123,13 @@ $utilities: (
             plus320: calc(100% + 20rem),
         ),
     ),
+    line-height: (
+        variants: (
+            80: 0.8,
+            85: 0.85,
+            90: 0.9,
+        ),
+    ),
     left: (
         variants: (
             unset: unset,
@@ -302,7 +309,10 @@ $utilities: (
             plus24: calc(100% + 1.5rem),
             plus48: calc(100% + 3rem),
             plus96: calc(100% + 6rem),
+            plus192: calc(100% + 12rem),
+            plus384: calc(100% + 24rem),
             minus24: calc(100% - 1.5rem),
+            minus96: calc(100% - 6rem),
         ),
     ),
     z-index: (

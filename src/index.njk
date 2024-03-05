@@ -493,207 +493,281 @@ changefreq: daily
         </div>
     </section>
 
-    {# Ownership #}
-    <section data-invert="light" class="section section:pb overflow:hidden bg:sheet-6 color:ink-3">
-        <div class="absolute top:n2 w:100p h:12" style="background-image: url('/assets/images/utility/tooth-down-16-080808.svg'); background-size: 1rem 1rem;"></div>
-        {# Vert Dividers #}
-        <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
-            <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
-                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
-                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
+    {# Light #}
+    <div data-invert="light" class="relative w:100p max-w:100p overflow:hidden bg:sheet-6 color:ink-3">
+
+        {# Ownership #}
+        <section class="section section:pb">
+            <div class="absolute top:n2 w:100p h:12" style="background-image: url('/assets/images/utility/tooth-down-16-080808.svg'); background-size: 1rem 1rem;"></div>
+            {# Vert Dividers #}
+            <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
+                <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
+                    <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
+                    <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
+                </div>
             </div>
-        </div>
-        {# Horz Divider #}
-        <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p md:border-b:1 border:ink-3 border:dashed border-opacity:10 pt:72 sm:pt:112 md:pt:128 lg:pt:144"></div>
-        {# Headline + Button #}
-        <div class="container flex flex:col sm:flex:row justify-content:between md:grid md:grid-cols:3 md:gap:48 pt:24 pb:20">
-            {# Handles #}
-            <div class="absolute top:n8 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
-                <div class="w:1 h:100p bg:ink-3"></div>
-                <div class="h:1 w:100p bg:ink-3 absolute"></div>
-            </div>
-            <div class="absolute top:n8 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
-                <div class="w:1 h:100p bg:ink-3"></div>
-                <div class="h:1 w:100p bg:ink-3 absolute"></div>
-            </div>
-            <div class="absolute bottom:n8 left:8 sm:left:n28 mb:2 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
-                <div class="w:1 h:100p bg:ink-3"></div>
-                <div class="h:1 w:100p bg:ink-3 absolute"></div>
-            </div>
-            <div class="absolute bottom:n8 right:8 sm:right:n28 mb:2 mr:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
-                <div class="w:1 h:100p bg:ink-3"></div>
-                <div class="h:1 w:100p bg:ink-3 absolute"></div>
-            </div>
-            {# Inner Grid Lines #}
-            <div class="absolute md:top:n128 lg:top:n144 w:100p h:plus128 lg:h:plus144 hidden md:flex justify-content:between">
-                <div></div>
-                <div class="relative px:24 h:100p"><div class="relative h:100p border-l:1 border:ink-3 border-opacity:0"></div></div>
-                <div class="relative px:24 h:100p"><div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div></div>
-                <div></div>
-            </div>
-            {# Headline #}
-            <div class="relative col:2 flex flex:col align-items:start font:8xl sm:font:11xl md:font:12xl medium w:100p tracking:tighter leading:100 max-w:320 md:max-w:512">
-                {# Collaboration Watermark #}
-                <div class="relative flex align-items:center justify-content:center">
-                    <div class="gradient-text bg:ink-1 bg-opacity:20">Collaboration</div>
-                    <div aria-hidden="true" class="absolute font:2xs font:mono leading:100 tracking:looser uppercase bg:yellow-i color:ink-1 py:2 px:4 space:nowrap mt:8 overflow:hidden max-w:304 sm:max-w:448 md:max-w:none transform rotate:2 radius:2xs">
-                        caution caution caution caution caution caution caution caution caution caution
-                        <div class="absolute h:100p w:16 top:0 left:0 bg:fade-left-i opacity:20"></div>
-                        <div class="absolute h:100p w:16 top:0 right:0 bg:fade-right-i opacity:20"></div>
+            {# Horz Divider #}
+            <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p md:border-b:1 border:ink-3 border:dashed border-opacity:10 pt:72 sm:pt:112 md:pt:128 lg:pt:144"></div>
+            {# Headline + Button #}
+            <div class="container flex flex:col sm:flex:row justify-content:between md:grid md:grid-cols:3 md:gap:48 pt:24 pb:20">
+                {# Handles #}
+                <div class="absolute top:n8 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <div class="absolute top:n8 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <div class="absolute bottom:n8 left:8 sm:left:n28 mb:2 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <div class="absolute bottom:n8 right:8 sm:right:n28 mb:2 mr:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                {# Inner Grid Lines #}
+                <div class="absolute md:top:n128 lg:top:n144 w:100p h:plus128 lg:h:plus144 hidden md:flex justify-content:between">
+                    <div></div>
+                    <div class="relative px:24 h:100p"><div class="relative h:100p border-l:1 border:ink-3 border-opacity:0"></div></div>
+                    <div class="relative px:24 h:100p"><div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div></div>
+                    <div></div>
+                </div>
+                {# Headline #}
+                <div class="relative col:2 flex flex:col align-items:start font:8xl sm:font:11xl md:font:12xl medium w:100p tracking:tighter leading:100 max-w:320 md:max-w:512">
+                    {# Collaboration Watermark #}
+                    <div class="relative flex align-items:center justify-content:center">
+                        <div class="gradient-text bg:ink-1 bg-opacity:20">Collaboration</div>
+                        <div aria-hidden="true" class="absolute font:2xs font:mono leading:100 tracking:looser uppercase bg:yellow-i color:ink-1 py:2 px:4 space:nowrap mt:8 overflow:hidden max-w:304 sm:max-w:448 md:max-w:none transform rotate:2 radius:2xs">
+                            caution caution caution caution caution caution caution caution caution caution
+                            <div class="absolute h:100p w:16 top:0 left:0 bg:fade-left-i opacity:20"></div>
+                            <div class="absolute h:100p w:16 top:0 right:0 bg:fade-right-i opacity:20"></div>
+                        </div>
                     </div>
+                    {# Heading #}
+                    <h2 class="relative flex flex:col gradient-text pr:2 pb:4" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);">
+                        Ownership
+                    </h2>
                 </div>
-                {# Heading #}
-                <h2 class="relative flex flex:col gradient-text pr:2 pb:4" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);">
-                    Ownership
-                </h2>
-            </div>
-            {# Button #}
-            <div class="relative mt:16 md:mt:0 flex align-items:center sm:justify-content:center border:1 sm:w:50p md:w:auto">
-                {# Handle #}
-                <div class="absolute top:n32 left:8 sm:left:n28 mt:1 ml:n2 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
-                    <div class="w:1 h:100p bg:ink-3"></div>
-                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
-                </div>
-                {# Handle #}
-                <div class="absolute bottom:n28 left:8 sm:left:n28 mb:2 ml:n2 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
-                    <div class="w:1 h:100p bg:ink-3"></div>
-                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
-                </div>
-                <p class="absolute left:192 sm:left:unset sm:mt:96 md:mt:112 font:mono font:2xs sm:font:xs sm:text:center w:144 sm:w:224 opacity:70">
-                    <span class="hidden sm:inline">The latest</span> Design-led Growth tips directly to your inbox!
-                </p>
                 {# Button #}
-                <div class="md:hidden flex-shrink:0">
-                    {{ elements.btnLink(
-                        color="simple",
-                        size="md",
-                        link=collection.url,
-                        label="Get Blame's Newsletter",
-                        hover=true,
-                        classes=''
-                    )}} 
-                </div>
-                <div class="hidden md:block">
-                    {{ elements.btnLink(
-                        color="simple",
-                        size="xl",
-                        link=collection.url,
-                        label="Get Blame's Newsletter",
-                        hover=true,
-                        classes=''
-                    )}} 
+                <div class="relative mt:16 md:mt:0 flex align-items:center sm:justify-content:center border:1 sm:w:50p md:w:auto">
+                    {# Handle #}
+                    <div class="absolute top:n32 left:8 sm:left:n28 mt:1 ml:n2 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
+                        <div class="w:1 h:100p bg:ink-3"></div>
+                        <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                    </div>
+                    {# Handle #}
+                    <div class="absolute bottom:n28 left:8 sm:left:n28 mb:2 ml:n2 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
+                        <div class="w:1 h:100p bg:ink-3"></div>
+                        <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                    </div>
+                    <p class="absolute left:192 sm:left:unset sm:mt:96 md:mt:112 font:mono font:2xs sm:font:xs sm:text:center w:144 sm:w:224 opacity:70">
+                        <span class="hidden sm:inline">The latest</span> Design-led Growth tips directly to your inbox!
+                    </p>
+                    {# Button #}
+                    <div class="md:hidden flex-shrink:0">
+                        {{ elements.btnLink(
+                            color="simple",
+                            size="md",
+                            link=collection.url,
+                            label="Get Blame's Newsletter",
+                            hover=true,
+                            classes=''
+                        )}} 
+                    </div>
+                    <div class="hidden md:block">
+                        {{ elements.btnLink(
+                            color="simple",
+                            size="xl",
+                            link=collection.url,
+                            label="Get Blame's Newsletter",
+                            hover=true,
+                            classes=''
+                        )}} 
+                    </div>
                 </div>
             </div>
-        </div>
-        {# Horz Divider #}
-        <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:10 mb:24"></div>
-        {# Block 1 #}
-        <div class="container mb:12 sm:mb:24 z:3">
-            <div class="relative flex flex:col-reverse sm:grid grid-cols:2 sm:h:384 md:h:448">
+            {# Horz Divider #}
+            <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:10 mb:24"></div>
+            {# Block 1 #}
+            <div class="container mb:12 sm:mb:24 z:3">
+                <div class="relative flex flex:col-reverse sm:grid grid-cols:2 sm:h:384 md:h:448">
+                    {# Note #}
+                    <div class="hidden sm:block absolute top:18 right:0 w:50p pl:16 font:mono font:2xs uppercase tracking:loosest opacity:50">
+                        Part 01: deconstructing hierarchy
+                    </div>
+                    {# Content #}
+                    <div class="relative z:2 w:100p flex flex:col align-items:center justify-content:center h:100p bg:sheet-4 radius-bl:xl radius-br:xl sm:radius-br:none sm:radius-t:xl overflow:hidden shadow:xl px:1 sm:pt:1 pb:1">
+                        <div class="absolute w:100p h:100p bg:fade-up-sheet-1"></div>
+                        <div class="sm:block absolute h:320 sm:w:640 w:320 sm:h:640 top:0 left:n160 sm:top:n224 sm:left:n320 mask:radial" style="background-image: linear-gradient(0deg, rgba(var(--blue-i), 0.8) 0%, rgba(var(--blue-i), 0.5) 100%);"></div>
+                        <div class="relative w:100p h:100p flex align-items:center sm:justify-content:center bg:sheet-4 sm:radius-t:15 radius-bl:15 radius-br:15 sm:radius-br:none px:24 pt:20 pb:12 sm:px:0 sm:pt:0 sm:pb:0">
+                            <div class="relative flex flex:col align-items:start sm:gap:2 w:100p max-w:256 md:max-w:336">
+                                <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
+                                    Stop letting non-technical stakeholders decide
+                                </h3>
+                                <p class="font:md md:font:xl opacity:70">
+                                    Get refined solutions faster by allowing the folks that implement them to lead.
+                                </p>
+                                {{ elements.btnLink(
+                                    color="text-primary",
+                                    size="lg",
+                                    link="#",
+                                    label="How collaboration became a hoax",
+                                    iconR=icons.chevR('w:16 ml:2 transform translate-y:1 flex-shrink:0'),
+                                    hover=true,
+                                    classes='ml:n18 space:nowrap'
+                                )}}
+                            </div> 
+                        </div>
+                    </div>
+                    {# Graphic #}
+                    <div class="relative w:100p flex ratio:4-3 sm:ratio:unset">
+                        <div class="absolute right:0 sm:top:48 w:100p sm:w:plus24 h:100p sm:h:minus48 radius-t:xl sm:radius-br:xl overflow:hidden flex align-items:center justify-content:center" style="box-shadow: inset 0 32px 32px 0 rgba(0,0,0,0.06), inset 0 16px 16px 0 rgba(0,0,0,0.1), inset 0 6px 6px 0 rgba(0,0,0,0.1), inset 0 -6px 6px 0 rgba(0,0,0,0.06); background: radial-gradient(400% 100% at 50% 0%, rgba(var(--blue-i), 0.7) 0%, rgba(var(--blue-i), 1) 100%), rgba(var(--sheet-6), 1);">
+                            <div class="absolute top:0 left:0 w:80 h:100p bg:fade-left-i opacity:10"></div>
+                            <img src="/assets/images/home/chess.webp" loading="lazy" width="575" height="400" alt="" class="relative flex w:100p h:100p object:cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {# Block 2 + 3 #}
+            <div class="container grid sm:grid-cols:2 gap:12 sm:gap:24">
+                {# Dots #}
+                <div class="absolute bottom:n320 left:n320 w:640 h:640 bg:radial-sheet-6-i opacity:50">
+                    <div class="absolute w:100p h:100p" style="background-image: url('/assets/images/utility/inverse-dot-8-d9d9d9.svg'); background-size: 0.5rem 0.5rem;"></div>
+                </div>
+                <div class="absolute bottom:n320 right:n320 w:640 h:640 bg:radial-sheet-6-i opacity:50">
+                    <div class="absolute w:100p h:100p" style="background-image: url('/assets/images/utility/inverse-dot-8-d9d9d9.svg'); background-size: 0.5rem 0.5rem;"></div>
+                </div>
+                {# Block 2 #}
+                <div class="relative flex flex:col align-items:center justify-content:center">
+                    {# Conic Outer #}
+                    <div class="sm:block absolute w:plus24 h:plus24 conic:card-spin-blue animate:conic-card-spin-clockwise radius:2xl opacity:30" style="box-shadow: inset 0 0 12px 10px rgba(var(--sheet-6), 1);"></div>
+                    {# Content #}
+                    <div class="relative w:100p flex align-items:center justify-content:center p:1 radius:xl overflow:hidden" style="box-shadow: 0 -1px 1px -0.5px rgba(255,255,255,0.75), 0 1px 1px -0.5px rgba(255,255,255,0.5);">
+                        <div class="sm:block absolute top:n1 left:n1 w:plus2 h:plus2 conic:card-spin-blue animate:conic-card-spin-clockwise"></div>
+                        {# Copy Frame #}
+                        <div class="relative w:100p sm:h:288 flex flex:col sm:align-items:center sm:justify-content:center bg:sheet-3 radius:15 px:24 sm:px:0 pt:24 sm:pt:8 pb:12 sm:pb:0 overflow:hidden" style="background: linear-gradient(180deg, rgba(var(--sheet-4), 1) 0%, rgba(var(--sheet-6), 1) 100%), rgba(var(--sheet-4), 1);">
+                            {# Copy #}
+                            <div class="relative flex flex:col align-items:start sm:gap:2 w:100p max-w:256 md:max-w:336">
+                                <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
+                                    Generalize your skillset
+                                </h3>
+                                <p class="font:md md:font:xl opacity:70">
+                                    Unlock impact and unblock workflows <span class="space:nowrap">by understanding</span> more of the process.
+                                </p>
+                                {{ elements.btnLink(
+                                    color="text-primary",
+                                    size="lg",
+                                    link="#",
+                                    label="The Growth Design Toolkit",
+                                    iconR=icons.chevR('w:16 ml:2 transform translate-y:1'),
+                                    hover=true,
+                                    classes='ml:n18'
+                                )}}
+                            </div>
+                            {# Shading #}
+                            <div class="absolute top:0 left:0 w:100p h:100p pointer-events:none" style="box-shadow: inset 0 48px 48px 0 rgba(0,0,0,0.06), inset 0 20px 20px 0 rgba(0,0,0,0.06), inset 0 8px 8px 0 rgba(0,0,0,0.06), inset 0 -4px 4px 0 rgba(0,0,0,0.02);"></div>
+                        </div>
+                    </div>
+                </div>
+                {# Block 3 #}
+                <div class="relative flex flex:col align-items:center justify-content:center">
+                    {# Conic Outer #}
+                    <div class="sm:block absolute w:plus24 h:plus24 conic:card-spin-blue animate:conic-card-spin-counter-clockwise radius:2xl opacity:30" style="box-shadow: inset 0 0 12px 10px rgba(var(--sheet-6), 1);"></div>
+                    {# Content #}
+                    <div class="relative w:100p flex align-items:center justify-content:center p:1 radius:xl overflow:hidden" style="box-shadow: 0 -1px 1px -0.5px rgba(255,255,255,0.75), 0 1px 1px -0.5px rgba(255,255,255,0.5);">
+                        <div class="sm:block absolute top:n1 left:n1 w:plus2 h:plus2 conic:card-spin-blue animate:conic-card-spin-counter-clockwise"></div>
+                        {# Copy Frame #}
+                        <div class="relative w:100p sm:h:288 flex flex:col sm:align-items:center sm:justify-content:center bg:sheet-3 radius:15 px:24 sm:px:0 pt:24 sm:pt:8 pb:12 sm:pb:0 overflow:hidden" style="background: linear-gradient(180deg, rgba(var(--sheet-4), 1) 0%, rgba(var(--sheet-6), 1) 100%), rgba(var(--sheet-4), 1);">
+                            {# Copy #}
+                            <div class="relative flex flex:col align-items:start sm:gap:2 w:100p max-w:256 md:max-w:336">
+                                <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
+                                    Don't plan it, build it
+                                </h3>
+                                <p class="font:md md:font:xl opacity:70">
+                                    Great design isn't made in Notion <span class="space:nowrap">or Figma,</span> it's built in a code editor.
+                                </p>
+                                {{ elements.btnLink(
+                                    color="text-primary",
+                                    size="lg",
+                                    link="#",
+                                    label="Why code is required",
+                                    iconR=icons.chevR('w:16 ml:2 transform translate-y:1'),
+                                    hover=true,
+                                    classes='ml:n18'
+                                )}}
+                            </div>
+                            {# Shading #}
+                            <div class="absolute top:0 left:0 w:100p h:100p pointer-events:none" style="box-shadow: inset 0 48px 48px 0 rgba(0,0,0,0.06), inset 0 20px 20px 0 rgba(0,0,0,0.06), inset 0 8px 8px 0 rgba(0,0,0,0.06), inset 0 -4px 4px 0 rgba(0,0,0,0.02);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {# Scale #}
+        <section class="section section:pb pt:64">
+            {# Vert Dividers #}
+            <div class="absolute top:64 w:100p h:100p hidden sm:flex align-items:center justify-content:center px:12 sm:px:24">
+                <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
+                    <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
+                    <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
+                </div>
+            </div>
+            {# Horz Divider #}
+            <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p md:border-b:1 border:ink-3 border:dashed border-opacity:10"></div>
+            {# Container #}
+            <div class="container flex flex:col align-items:center">
+                {# Angled Colors #}
+                <div class="absolute top:n48 sm:top:0 left:12 sm:left:n24 ml:1 w:224 h:224" style="background: linear-gradient(135deg, rgba(var(--blue-i), 0.3) 0%, rgba(var(--blue-i), 0) 50%); box-shadow: 0 -16px 16px 0 rgba(var(--sheet-6),1);"></div>
+                <div class="absolute top:n48 sm:top:0 right:12 sm:right:n24 mr:1 w:224 h:224" style="background: linear-gradient(225deg, rgba(var(--purple-i), 0.3) 0%, rgba(var(--purple-i), 0) 50%); box-shadow: 0 -16px 16px 0 rgba(var(--sheet-6),1);"></div>
+                {# Handles #}
+                <div class="absolute top:n56 sm:top:n8 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <div class="absolute top:n56 sm:top:n8 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                {# Circles #}
+                <div class="absolute top:n96 flex flex:col align-items:center justify-content:center w:100p">
+                    <div class="absolute top:0 w:plus384 opacity:30 flex ratio:1-1 radius:100p shadow:2xl" style="background: linear-gradient(180deg, rgba(var(--sheet-1), 0.8) 0%, rgba(var(--sheet-1), 0) 50%)"></div>
+                    <div class="absolute top:0 w:plus192 opacity:30 flex ratio:1-1 radius:100p shadow:2xl" style="background: linear-gradient(180deg, rgba(var(--sheet-1), 0.8) 0%, rgba(var(--sheet-1), 0) 50%); box-shadow: 0 -16px 16px 0 rgba(var(--sheet-6),1);"></div>
+                    <div class="absolute top:0 w:100p flex ratio:1-1 radius:100p bg:sheet-5"  style="background: linear-gradient(180deg, rgba(var(--sheet-4), 1) 0%, rgba(var(--sheet-5), 1) 15%, rgba(var(--sheet-6), 1) 50%); box-shadow: 0 -16px 16px 0 rgba(var(--sheet-6),1);"></div>
+                </div>
+                {# Headline #}
+                <div class="relative flex flex:col align-items:center justify-content:center w:100p text:center mt:n24 sm:mt:0 sm:pt:16">
+                    {# Copy #}
+                    <h2 class="relative flex flex:col align-items:center font:8xl sm:font:11xl md:font:12xl medium tracking:tighter leading:85">
+                        <div class="gradient-text" style="background-image: linear-gradient(180deg, rgba(var(--ink-3), 0.5) 0%, rgba(var(--ink-3), 1) 130%);">
+                            Scale with
+                        </div>
+                        <div class="relative block gradient-text pr:2 pb:16" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);">
+                            purpose
+                        </div>
+                    </h2>
+                    <p class="sm:mt:6 font:lg sm:font:2xl opacity:50 max-w:320 leading:130">
+                        Ain't nobody got time for debt.
+                    </p>
+                </div>
+            </div>
+            {# Blocks #}
+            <div class="container grid sm:grid-cols:3 gap:24 mt:24 md:mt:0">
                 {# Note #}
-                <div class="hidden sm:block absolute top:18 right:0 w:50p pl:16 font:mono font:2xs uppercase tracking:loosest opacity:50">
-                    Part 01: deconstructing hierarchy
-                </div>
-                {# Content #}
-                <div class="relative z:2 w:100p flex flex:col align-items:center justify-content:center h:100p bg:sheet-4 radius-bl:xl radius-br:xl sm:radius-br:none sm:radius-t:xl overflow:hidden shadow:xl px:1 sm:pt:1 pb:1">
-                    <div class="absolute w:100p h:100p bg:fade-up-sheet-1"></div>
-                    <div class="sm:block absolute h:320 sm:w:640 w:320 sm:h:640 top:0 left:n160 sm:top:n224 sm:left:n320 mask:radial" style="background-image: linear-gradient(0deg, rgba(var(--blue-i), 0.8) 0%, rgba(var(--blue-i), 0.5) 100%);"></div>
-                    <div class="relative w:100p h:100p flex align-items:center sm:justify-content:center bg:sheet-4 sm:radius-t:15 radius-bl:15 radius-br:15 sm:radius-br:none px:24 pt:20 pb:12 sm:px:0 sm:pt:0 sm:pb:0">
-                        <div class="relative flex flex:col align-items:start sm:gap:2 w:100p max-w:256 md:max-w:336">
-                            <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
-                                Stop letting non-technical stakeholders decide
-                            </h3>
-                            <p class="font:md md:font:xl opacity:70">
-                                Get refined solutions faster by allowing the folks that implement them to lead.
-                            </p>
-                            {{ elements.btnLink(
-                                color="text-primary",
-                                size="lg",
-                                link="#",
-                                label="How collaboration became a hoax",
-                                iconR=icons.chevR('w:16 ml:2 transform translate-y:1 flex-shrink:0'),
-                                hover=true,
-                                classes='ml:n18 space:nowrap'
-                            )}}
-                        </div> 
+                <div class="absolute top:48 w:100p text:center">
+                    <div class="hidden sm:block font:mono font:2xs uppercase tracking:loosest opacity:50">
+                        Part 02: Preventing bloat
                     </div>
                 </div>
-                {# Graphic #}
-                <div class="relative w:100p flex ratio:4-3 sm:ratio:unset">
-                    <div class="absolute right:0 sm:top:48 w:100p sm:w:plus24 h:100p sm:h:minus48 radius-t:xl sm:radius-br:xl overflow:hidden flex align-items:center justify-content:center" style="box-shadow: inset 0 32px 32px 0 rgba(0,0,0,0.06), inset 0 16px 16px 0 rgba(0,0,0,0.1), inset 0 6px 6px 0 rgba(0,0,0,0.1), inset 0 -6px 6px 0 rgba(0,0,0,0.06); background: radial-gradient(400% 100% at 50% 0%, rgba(var(--blue-i), 0.7) 0%, rgba(var(--blue-i), 1) 100%), rgba(var(--sheet-6), 1);">
-                        <div class="absolute top:0 left:0 w:80 h:100p bg:fade-left-i opacity:10"></div>
-                        <img src="/assets/images/home/chess.webp" loading="lazy" width="575" height="400" alt="" class="relative flex w:100p h:100p object:cover">
-                    </div>
-                </div>
+                {# Cards #}
+                <div class="flex ratio:1-1 shadow:xl w:100p relative bg:sheet-5 radius:xl"><div class="absolute w:100p h:100p radius:xl bg:fade-down"></div></div>
+                <div class="flex ratio:1-1 shadow:xl w:100p relative bg:sheet-5 radius:xl sm:mt:72"><div class="absolute w:100p h:100p radius:xl bg:fade-down"></div></div>
+                <div class="flex ratio:1-1 shadow:xl w:100p relative bg:sheet-5 radius:xl"><div class="absolute w:100p h:100p radius:xl bg:fade-down"></div></div>
             </div>
-        </div>
-        {# Block 2 + 3 #}
-        <div class="container grid sm:grid-cols:2 gap:12 sm:gap:24">
-            {# Block 2 #}
-            <div class="relative flex flex:col align-items:center justify-content:center">
-                {# Conic Outer #}
-                <div class="sm:block absolute w:plus24 h:plus24 conic:card-spin-blue animate:conic-card-spin-clockwise radius:2xl opacity:30" style="box-shadow: inset 0 0 12px 10px rgba(var(--sheet-6), 1);"></div>
-                {# Content #}
-                <div class="relative w:100p flex align-items:center justify-content:center p:1 radius:xl overflow:hidden" style="box-shadow: 0 -1px 1px -0.5px rgba(255,255,255,0.75), 0 1px 1px -0.5px rgba(255,255,255,0.5);">
-                    <div class="sm:block absolute top:n1 left:n1 w:plus2 h:plus2 conic:card-spin-blue animate:conic-card-spin-clockwise"></div>
-                    {# Copy Frame #}
-                    <div class="relative w:100p sm:h:288 flex flex:col sm:align-items:center sm:justify-content:center bg:sheet-3 radius:15 px:24 sm:px:0 pt:24 sm:pt:8 pb:12 sm:pb:0 overflow:hidden" style="background: linear-gradient(180deg, rgba(var(--sheet-4), 1) 0%, rgba(var(--sheet-6), 1) 100%), rgba(var(--sheet-4), 1);">
-                        {# Copy #}
-                        <div class="relative flex flex:col align-items:start sm:gap:2 w:100p max-w:256 md:max-w:336">
-                            <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
-                                Generalize your skillset
-                            </h3>
-                            <p class="font:md md:font:xl opacity:70">
-                                Unlock impact and unblock workflows <span class="space:nowrap">by understanding</span> more of the process.
-                            </p>
-                            {{ elements.btnLink(
-                                color="text-primary",
-                                size="lg",
-                                link="#",
-                                label="The Growth Design Toolkit",
-                                iconR=icons.chevR('w:16 ml:2 transform translate-y:1'),
-                                hover=true,
-                                classes='ml:n18'
-                            )}}
-                        </div>
-                        {# Shading #}
-                        <div class="absolute top:0 left:0 w:100p h:100p pointer-events:none" style="box-shadow: inset 0 48px 48px 0 rgba(0,0,0,0.06), inset 0 20px 20px 0 rgba(0,0,0,0.06), inset 0 8px 8px 0 rgba(0,0,0,0.06), inset 0 -4px 4px 0 rgba(0,0,0,0.02);"></div>
-                    </div>
-                </div>
-            </div>
-            {# Block 3 #}
-            <div class="relative flex flex:col align-items:center justify-content:center">
-                {# Conic Outer #}
-                <div class="sm:block absolute w:plus24 h:plus24 conic:card-spin-blue animate:conic-card-spin-counter-clockwise radius:2xl opacity:30" style="box-shadow: inset 0 0 12px 10px rgba(var(--sheet-6), 1);"></div>
-                {# Content #}
-                <div class="relative w:100p flex align-items:center justify-content:center p:1 radius:xl overflow:hidden" style="box-shadow: 0 -1px 1px -0.5px rgba(255,255,255,0.75), 0 1px 1px -0.5px rgba(255,255,255,0.5);">
-                    <div class="sm:block absolute top:n1 left:n1 w:plus2 h:plus2 conic:card-spin-blue animate:conic-card-spin-counter-clockwise"></div>
-                    {# Copy Frame #}
-                    <div class="relative w:100p sm:h:288 flex flex:col sm:align-items:center sm:justify-content:center bg:sheet-3 radius:15 px:24 sm:px:0 pt:24 sm:pt:8 pb:12 sm:pb:0 overflow:hidden" style="background: linear-gradient(180deg, rgba(var(--sheet-4), 1) 0%, rgba(var(--sheet-6), 1) 100%), rgba(var(--sheet-4), 1);">
-                        {# Copy #}
-                        <div class="relative flex flex:col align-items:start sm:gap:2 w:100p max-w:256 md:max-w:336">
-                            <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
-                                Don't plan it, build it
-                            </h3>
-                            <p class="font:md md:font:xl opacity:70">
-                                Great design isn't made in Notion <span class="space:nowrap">or Figma,</span> it's built in a code editor.
-                            </p>
-                            {{ elements.btnLink(
-                                color="text-primary",
-                                size="lg",
-                                link="#",
-                                label="Why code is required",
-                                iconR=icons.chevR('w:16 ml:2 transform translate-y:1'),
-                                hover=true,
-                                classes='ml:n18'
-                            )}}
-                        </div>
-                        {# Shading #}
-                        <div class="absolute top:0 left:0 w:100p h:100p pointer-events:none" style="box-shadow: inset 0 48px 48px 0 rgba(0,0,0,0.06), inset 0 20px 20px 0 rgba(0,0,0,0.06), inset 0 8px 8px 0 rgba(0,0,0,0.06), inset 0 -4px 4px 0 rgba(0,0,0,0.02);"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+
+    </div>
 
 </main>
