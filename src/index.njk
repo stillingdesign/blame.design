@@ -709,7 +709,7 @@ changefreq: daily
         {# Scale #}
         <section class="section section:pb pt:64">
             {# Vert Dividers #}
-            <div class="absolute top:64 w:100p h:100p hidden sm:flex align-items:center justify-content:center px:12 sm:px:24">
+            <div class="absolute z:2 top:64 w:100p h:100p hidden sm:flex align-items:center justify-content:center px:12 sm:px:24">
                 <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
                     <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
                     <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
@@ -723,7 +723,7 @@ changefreq: daily
                 <div class="absolute top:n48 sm:top:0 left:12 sm:left:n24 ml:1 w:224 h:224" style="background: linear-gradient(135deg, rgba(var(--blue-i), 0.3) 0%, rgba(var(--blue-i), 0) 50%); box-shadow: 0 -16px 16px 0 rgba(var(--sheet-6),1);"></div>
                 <div class="absolute top:n48 sm:top:0 right:12 sm:right:n24 mr:1 w:224 h:224" style="background: linear-gradient(225deg, rgba(var(--purple-i), 0.3) 0%, rgba(var(--purple-i), 0) 50%); box-shadow: 0 -16px 16px 0 rgba(var(--sheet-6),1);"></div>
                 {# Handles #}
-                <div class="absolute top:n56 sm:top:n8 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                <div class="absolute z:2 top:n56 sm:top:n8 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
                     <div class="w:1 h:100p bg:ink-3"></div>
                     <div class="h:1 w:100p bg:ink-3 absolute"></div>
                 </div>
@@ -732,13 +732,13 @@ changefreq: daily
                     <div class="h:1 w:100p bg:ink-3 absolute"></div>
                 </div>
                 {# Circles #}
-                <div class="absolute top:n96 flex flex:col align-items:center justify-content:center w:100p">
+                <div class="absolute top:n96 flex flex:col align-items:center justify-content:center w:100p ratio:1-1">
                     <div class="absolute top:0 w:plus384 opacity:30 flex ratio:1-1 radius:100p shadow:2xl" style="background: linear-gradient(180deg, rgba(var(--sheet-1), 0.8) 0%, rgba(var(--sheet-1), 0) 50%)"></div>
                     <div class="absolute top:0 w:plus192 opacity:30 flex ratio:1-1 radius:100p shadow:2xl" style="background: linear-gradient(180deg, rgba(var(--sheet-1), 0.8) 0%, rgba(var(--sheet-1), 0) 50%); box-shadow: 0 -16px 16px 0 rgba(var(--sheet-6),1);"></div>
                     <div class="absolute top:0 w:100p flex ratio:1-1 radius:100p bg:sheet-5"  style="background: linear-gradient(180deg, rgba(var(--sheet-4), 1) 0%, rgba(var(--sheet-5), 1) 15%, rgba(var(--sheet-6), 1) 50%); box-shadow: 0 -16px 16px 0 rgba(var(--sheet-6),1);"></div>
                 </div>
                 {# Headline #}
-                <div class="relative flex flex:col align-items:center justify-content:center w:100p text:center mt:n24 sm:mt:0 sm:pt:16">
+                <div class="relative z:2 flex flex:col align-items:center justify-content:center w:100p text:center mt:n24 sm:mt:0 sm:pt:16">
                     {# Copy #}
                     <h2 class="relative flex flex:col align-items:center font:8xl sm:font:11xl md:font:12xl medium tracking:tighter leading:85">
                         <div class="gradient-text" style="background-image: linear-gradient(180deg, rgba(var(--ink-3), 0.5) 0%, rgba(var(--ink-3), 1) 130%);">
@@ -754,7 +754,7 @@ changefreq: daily
                 </div>
             </div>
             {# Blocks #}
-            <div class="container grid sm:grid-cols:3 gap:24 mt:24 md:mt:0">
+            <div class="container grid sm:grid-cols:3 gap:24 mt:24 md:mt:0 z:2">
                 {# Note #}
                 <div class="absolute top:48 w:100p text:center">
                     <div class="hidden sm:block font:mono font:2xs uppercase tracking:loosest opacity:50">
@@ -766,6 +766,8 @@ changefreq: daily
                 <div class="flex ratio:1-1 shadow:xl w:100p relative bg:sheet-5 radius:xl sm:mt:72"><div class="absolute w:100p h:100p radius:xl bg:fade-down"></div></div>
                 <div class="flex ratio:1-1 shadow:xl w:100p relative bg:sheet-5 radius:xl"><div class="absolute w:100p h:100p radius:xl bg:fade-down"></div></div>
             </div>
+            {# Fader #}
+            <div class="hidden sm:block absolute bottom:0 w:plus384 h:100p pointer-events:none" style="background: linear-gradient(180deg, rgba(var(--sheet-6), 0) 25%, rgba(var(--sheet-6), 1) 100%);"></div>
         </section>
 
     </div>
