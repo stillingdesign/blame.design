@@ -765,12 +765,13 @@ changefreq: daily
                     </div>
                 </div>
                 {# Cards #}
-                {% macro scaleCard(head, desc, link, cta, classes) %}
+                {% macro scaleCard(head, desc, link, cta, graphic, classes) %}
                     <div class="relative flex flex:col shadow:xl w:100p relative bg:sheet-5 radius:xl overflow:hidden {{ classes }}">
                         <div class="absolute w:100p h:100p radius:xl bg:fade-down"></div>
                         {# Graphic #}
                         <div class="relative w:100p h:224 sm:h:288 radius-t:xl">
                             <div class="absolute top:0 left:0 w:100p h:100p bg:radial-white opacity:50"></div>
+                            {{ graphic }}
                             <div class="absolute top:0 left:0 w:100p h:100p radius-t:xl" style="box-shadow: inset 0 -12px 24px -24px rgba(0,0,0,0.2), 0 1px 2px 0 rgba(255,255,255,0.3);"></div>
                         </div>
                         {# Content #}
@@ -807,6 +808,7 @@ changefreq: daily
                     desc='Make your effort count by starting with a solid, well-tested foundation.',
                     link='#',
                     cta='The real cost of a webpage',
+                    graphic=graphics.startGreat(),
                     classes='sm:col:2 md:col:1'
                 )}}
                 {{ scaleCard(

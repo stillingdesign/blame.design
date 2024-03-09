@@ -217,7 +217,7 @@ if(document.querySelector('[data-page="home"]')) {
     }
     animateBallRollExpand();
 
-    // Toggle Animation
+    // Toggle Switch Animation
     function animateCubeDrop() {
         const tmln = gsap.timeline({ repeat: -1, repeatDelay: 0 });
             tmln
@@ -231,4 +231,23 @@ if(document.querySelector('[data-page="home"]')) {
     }
     animateCubeDrop();
 
+    // Toggle Switch Animation
+    function animateBubbleTubes() {
+        function randomBetween(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        const tubes = document.querySelectorAll('[data-bubble-tube]');
+        tubes.forEach(tube => {
+            const bubbles = document.querySelectorAll('[data-bubble]');
+            bubbles.forEach(bubble => {
+                const duration = randomBetween(1, 4);
+                const tmln = gsap.timeline({ repeat: -1, repeatDelay: randomBetween(0, 4) });
+                tmln
+                    .to(bubble, {opacity:1, duration: duration / 2, ease: 'none'}, 0)
+                    .to(bubble, {y: randomBetween(-24, -64), x: randomBetween(-16, 16), duration: duration, ease: 'none'}, 0)
+                    .to(bubble, {opacity:0, duration: duration / 2, ease: 'none'}, duration / 2)
+            });
+        });
+    }
+    animateBubbleTubes();
 }

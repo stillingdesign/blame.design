@@ -114,3 +114,76 @@
         </div>
     </div>
 {% endmacro %}
+
+{% macro startGreat() %}
+    <div class="absolute w:100p h:100p flex align-items:center justify-content:center" aria-hidden="true">
+        <div class="relative flex align-items:start gap:8 mt:8">
+            {% macro bubble() %}
+                <div data-bubble class="absolute bottom:4 w:4 h:4 radius:full" style="box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.7); opacity:0;"></div>
+            {% endmacro %}
+            {% macro bubbleSmall() %}
+                <div data-bubble class="absolute bottom:4 w:2 h:2 radius:full" style="box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.7); opacity:0;"></div>
+            {% endmacro %}
+            {# Test Tube 1 #}
+            <div class="flex flex:col align-items:center mt:10">
+                <div class="w:36 h:4 radius:full bg:sheet-1 bg-opacity:30" style="box-shadow: inset -8px 0 8px -4px rgba(0,0,0,0.1), inset 4px 0 4px -2px rgba(0,0,0,0.05), inset 0 -2px 2px 0 rgba(0,0,0,0.06), inset 0 2px 2px 0 rgba(255,255,255,0.8);"></div>
+                <div class="relative w:28 h:128 radius-b:full overflow:hidden bg:sheet-1 bg-opacity:20 flex flex:col align-items:center">
+                    <div class="absolute bottom:0 left:0 w:100p bg:blue" style="height:87px; background: linear-gradient(0deg,  rgba(var(--purple-i), 0.4) 0%, rgba(var(--blue-i), 0.5) 50%, rgba(var(--teal-i), 0.6) 98%, rgba(var(--teal-i), 0.8) 100%);"></div>
+                    {# Bubbles #}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {# Shading #}
+                    <div class="absolute top:0 left:0 w:100p h:100p radius-b:full" style="box-shadow: inset -8px 0 8px -4px rgba(0,0,0,0.1), inset 4px 0 4px -2px rgba(0,0,0,0.05);"></div>
+                    <div class="absolute left:4 w:12 h:100p bg:radial-white opacity:30"></div>
+                </div>
+                <div class="w:36 h:12 mt:12 bg:radial-sheet-6-i opacity:6"></div>
+            </div>
+            {# Test Tube 2 #}
+            <div data-bubble-tube class="flex flex:col align-items:center">
+                <div class="w:48 h:6 radius:full bg:sheet-1 bg-opacity:30" style="box-shadow: inset -8px 0 8px -4px rgba(0,0,0,0.1), inset 4px 0 4px -2px rgba(0,0,0,0.05), inset 0 -2px 2px 0 rgba(0,0,0,0.06), inset 0 2px 2px 0 rgba(255,255,255,0.8);"></div>
+                <div class="relative w:36 h:144 radius-b:full overflow:hidden bg:sheet-1 bg-opacity:20 flex flex:col align-items:center">
+                    <div class="absolute bottom:0 left:0 w:100p h:96 bg:blue" style="background: linear-gradient(0deg,  rgba(var(--teal-i), 0.4) 0%, rgba(var(--blue-i), 0.5) 50%, rgba(var(--purple-i), 0.6) 98%, rgba(var(--purple-i), 0.8) 100%);"></div>
+                    {# Bubbles #}
+                    {{ bubble() }}
+                    {{ bubble() }}
+                    {{ bubble() }}
+                    {{ bubble() }}
+                    {{ bubble() }}
+                    {{ bubble() }}
+                    {{ bubble() }}
+                    {{ bubble() }}
+                    {# Shading #}
+                    <div class="absolute top:0 left:0 w:100p h:100p radius-b:full" style="box-shadow: inset -8px 0 8px -4px rgba(0,0,0,0.1), inset 4px 0 4px -2px rgba(0,0,0,0.05);"></div>
+                    <div class="absolute left:4 w:12 h:100p bg:radial-white opacity:30"></div>
+                </div>
+                <div class="w:48 h:12 mt:12 bg:radial-sheet-6-i opacity:6"></div>
+            </div>
+            {# Test Tube 3 #}
+            <div class="flex flex:col align-items:center mt:10">
+                <div class="w:36 h:4 radius:full bg:sheet-1 bg-opacity:30" style="box-shadow: inset -8px 0 8px -4px rgba(0,0,0,0.1), inset 4px 0 4px -2px rgba(0,0,0,0.05), inset 0 -2px 2px 0 rgba(0,0,0,0.06), inset 0 2px 2px 0 rgba(255,255,255,0.8);"></div>
+                <div class="relative w:28 h:128 radius-b:full overflow:hidden bg:sheet-1 bg-opacity:20 flex flex:col align-items:center">
+                    <div class="absolute bottom:0 left:0 w:100p" style="height:87px; background: linear-gradient(0deg,  rgba(var(--purple-i), 0.4) 0%, rgba(var(--teal-i), 0.5) 50%, rgba(var(--blue-i), 0.6) 98%, rgba(var(--blue-i), 0.8) 100%);"></div>
+                    {# Bubbles #}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {{ bubbleSmall() }}
+                    {# Shading #}
+                    <div class="absolute top:0 left:0 w:100p h:100p radius-b:full" style="box-shadow: inset -8px 0 8px -4px rgba(0,0,0,0.1), inset 4px 0 4px -2px rgba(0,0,0,0.05);"></div>
+                    <div class="absolute left:4 w:12 h:100p bg:radial-white opacity:30"></div>
+                </div>
+                <div class="w:36 h:12 mt:12 bg:radial-sheet-6-i opacity:6"></div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
