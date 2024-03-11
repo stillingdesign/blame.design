@@ -217,7 +217,7 @@ if(document.querySelector('[data-page="home"]')) {
     }
     animateBallRollExpand();
 
-    // Toggle Switch Animation
+    // Cube Drop Animation
     function animateCubeDrop() {
         const tmln = gsap.timeline({ repeat: -1, repeatDelay: 0 });
             tmln
@@ -231,7 +231,7 @@ if(document.querySelector('[data-page="home"]')) {
     }
     animateCubeDrop();
 
-    // Toggle Switch Animation
+    // Test Tube Bubble Animation
     function animateBubbleTubes() {
         function randomBetween(min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
@@ -250,4 +250,20 @@ if(document.querySelector('[data-page="home"]')) {
         });
     }
     animateBubbleTubes();
+
+    // Toggle Switch Animation
+    function animateMagnifier() {
+        const duration = 20;
+        const outerOffset = document.querySelector('[data-magnify-outer-1]').offsetWidth * -1;
+        const innerOffset = document.querySelector('[data-magnify-inner-1]').offsetWidth * -3;
+        const tmln = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+            tmln
+                .to('[data-magnify-outer-1]', {x: outerOffset, duration: duration, ease: 'none'}, 0)
+                .to('[data-magnify-outer-2]', {x: outerOffset, duration: duration, ease: 'none'}, 0)
+                .to('[data-magnify-inner-1]', {x: innerOffset, duration: duration, ease: 'none'}, 0)
+                .to('[data-magnify-inner-2]', {x: innerOffset, duration: duration, ease: 'none'}, 0)
+                .to('[data-magnify-inner-3]', {x: innerOffset, duration: duration, ease: 'none'}, 0)
+                .to('[data-magnify-inner-4]', {x: innerOffset, duration: duration, ease: 'none'}, 0)
+    }
+    window.onload = function() { animateMagnifier(); }
 }

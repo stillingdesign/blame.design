@@ -190,3 +190,51 @@
         </div>
     </div>
 {% endmacro %}
+
+{% macro refineMore() %}
+    <div class="absolute w:100p h:100p flex align-items:center justify-content:center overflow:hidden" aria-hidden="true">
+        {# Background Text #}
+        <div class="absolute top:64 sm:top:80 sm:mt:16 lg:mt:14 flex justify-content:start leading:100 font:6xl mask:fade-out-x w:100p">
+            <div class="w:100p flex justify-content:start flex-shrink:0">
+                <div data-magnify-outer-1 class="space:nowrap gradient-text bg:blue bg-opacity:40">
+                    Focus Focus Focus Focus&nbsp;
+                </div>
+                <div data-magnify-outer-2 class="space:nowrap gradient-text bg:blue bg-opacity:40">
+                    Focus Focus Focus Focus&nbsp;
+                </div>
+            </div>
+        </div>
+        {# Magnifier #}
+        <div class="relative flex flex:col align-items:center justify-content:center">
+            {# Glass Ring #}
+            <div class="relative block flex-shrink:0 w:128 h:128 radius:full bg:sheet-5 p:6 z:2" style="box-shadow: inset 0 4px 4px 0 rgba(255,255,255,1), inset 0 -4px 4px 0 rgba(0,0,0,0.1);">
+                <div class="relative flex align-items:center justify-content:center w:100p h:100p radius:full overflow:hidden" style="box-shadow: 0 0 4px 0 rgba(0,0,0,0.06), 0 0 1px 0 rgba(0,0,0,0.2);">
+                    {# Focus #}
+                    <div class="absolute h:72 w:100p flex justify-content:start font:10xl color:blue leading:100 mask:fade-out-x mb:4">
+                        <div data-magnify-inner-1 class="flex-shrink:0">
+                            Focus&nbsp;
+                        </div>
+                        <div data-magnify-inner-2 class="flex-shrink:0">
+                            Focus&nbsp;
+                        </div>
+                        <div data-magnify-inner-3 class="flex-shrink:0">
+                            Focus&nbsp;
+                        </div>
+                        <div data-magnify-inner-4 class="flex-shrink:0">
+                            Focus&nbsp;
+                        </div>
+                    </div>
+                    {# Inner Shading #}
+                    <div class="absolute top:0 left:0 w:100p h:100p radius:full" style="background: radial-gradient(50% 50% at 50% 50%, rgba(var(--black), 0.04) 0%, rgba(var(--black), 0) 100%);"></div>
+                    <div class="absolute top:0 left:0 w:100p h:100p radius:full" style="background: radial-gradient(50% 50% at 50% 50%, rgba(var(--white), 0) 0%, rgba(var(--white), 0.2) 100%);"></div>
+                    <div class="absolute top:16 w:40 h:8 bg:white radius:100p opacity:70"></div>
+                </div>
+            </div>
+            {# Shaft #}
+            <div class="relative flex flex:col align-items:center w:12 mt:n2 overflow:hidden radius-b:full">
+                <div class="w:100p h:64" style="background: linear-gradient(0deg, rgba(var(--sheet-6), 1) 0%, rgba(var(--sheet-5), 1) 90%, rgba(var(--sheet-6), 1) 100%)"></div>
+                <div class="absolute top:0 left:0 w:100p h:100p radius-b:full" style="background: linear-gradient(90deg, rgba(var(--sheet-6), 1) 0%, rgba(var(--sheet-5), 0) 30%, rgba(var(--sheet-5), 0) 70%, rgba(var(--sheet-6), 1) 100%)"></div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
