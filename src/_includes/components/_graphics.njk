@@ -238,3 +238,39 @@
         </div>
     </div>
 {% endmacro %}
+
+{% macro thirdParty() %}
+    <div class="absolute w:100p h:100p flex align-items:center justify-content:center overflow:hidden" aria-hidden="true">
+        {% macro intEnemy(attr,style,icon) %}
+            <div {{ attr }} class="absolute flex align-items:center justify-content:center w:32 h:32 radius:full bg:sheet-3 transform" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.08); background: linear-gradient(0deg,  rgba(var(--sheet-4), 1) 0%, rgba(var(--sheet-2), 1) 100%); {{ style }}">
+                {{ icon }}
+            </div>
+        {% endmacro %}
+        {{ intEnemy(
+            attr="data-third-party-1",
+            style="transform: translate3d(-6.5rem, -6.5rem, 0) rotate(-45deg); opacity:0;",
+            icon=icons.iconHubspot('w:16')
+        )}}
+        {{ intEnemy(
+            attr="data-third-party-2",
+            style="transform: translate3d(6.5rem, -6.5rem, 0) rotate(45deg); opacity:0;",
+            icon=icons.iconIntercom('w:16')
+        )}}
+        {{ intEnemy(
+            attr="data-third-party-4",
+            style="transform: translate3d(-6.5rem, 6.5rem, 0) rotate(-45deg); opacity:0;",
+            icon=icons.iconTagManager('w:20')
+        )}}
+        {{ intEnemy(
+            attr="data-third-party-3",
+            style="transform: translate3d(6.5rem, 6.5rem, 0) rotate(45deg); opacity:0;",
+            icon=icons.iconContentful('w:18')
+        )}}
+        <div class="relative flex align-items:center justify-content:center w:112 h:112">
+            <div data-third-party-guard class="absolute w:100p h:100p radius:lg transform rotate:45" style="box-shadow: -1px -1px 1px 0 rgba(255,255,255,0.7), 1px 1px 1px 0 rgba(255,255,255,0.4), inset 12px 12px 12px -4px rgba(0,0,0,0.08), inset 4px 4px 4px -2px rgba(0,0,0,0.08), inset -4px -4px 4px -2px rgba(0,0,0,0.04); background: linear-gradient(135deg,  rgba(var(--sheet-4), 1) 0%, rgba(var(--sheet-3), 1) 30%, rgba(var(--sheet-5), 1) 100%);"></div>
+            <div class="relative w:48 h:48 radius:full flex align-items:center justify-content:center color:blue">
+                {{ icons.home('w:24 opacity:80')}}
+            </div>
+        </div>
+    </div>
+{% endmacro %}

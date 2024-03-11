@@ -251,7 +251,7 @@ if(document.querySelector('[data-page="home"]')) {
     }
     animateBubbleTubes();
 
-    // Toggle Switch Animation
+    // Magnifier Animation
     function animateMagnifier() {
         const duration = 20;
         const outerOffset = document.querySelector('[data-magnify-outer-1]').offsetWidth * -1;
@@ -266,4 +266,20 @@ if(document.querySelector('[data-page="home"]')) {
                 .to('[data-magnify-inner-4]', {x: innerOffset, duration: duration, ease: 'none'}, 0)
     }
     window.onload = function() { animateMagnifier(); }
+
+    // Third Party Animation
+    function animateThirdParty() {
+        const duration = 1;
+        const tmln = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+            tmln
+                .to('[data-third-party-1]', {y: '-3.25rem', x: '-3.25rem', opacity:1, rotate:0,   duration: duration, ease: 'linear'}, 0)
+                .to('[data-third-party-1]', {y: '-6.5rem',  x: '-6.5rem',  opacity:0, rotate:45,  duration: duration, ease: 'linear'}, duration)
+                .to('[data-third-party-2]', {y: '-3.25rem', x: '3.25rem',  opacity:1, rotate:0,   duration: duration, ease: 'linear'}, duration * 2)
+                .to('[data-third-party-2]', {y: '-6.5rem',  x: '6.5rem',   opacity:0, rotate:-45, duration: duration, ease: 'linear'}, duration * 3)
+                .to('[data-third-party-3]', {y: '3.25rem',  x: '3.25rem',  opacity:1, rotate:0,   duration: duration, ease: 'linear'}, duration * 4)
+                .to('[data-third-party-3]', {y: '6.5rem',   x: '6.5rem',   opacity:0, rotate:45,  duration: duration, ease: 'linear'}, duration * 5)
+                .to('[data-third-party-4]', {y: '3.25rem',  x: '-3.25rem', opacity:1, rotate:0,   duration: duration, ease: 'linear'}, duration * 6)
+                .to('[data-third-party-4]', {y: '6.5rem',   x: '-6.5rem',  opacity:0, rotate:-45, duration: duration, ease: 'linear'}, duration * 7)
+    }
+    animateThirdParty();
 }
