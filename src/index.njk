@@ -895,14 +895,63 @@ changefreq: daily
             <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-b:1 border:ink-3 border:dashed border-opacity:10 mt:8 sm:mt:n16 mb:12 sm:mb:96"></div>
             {# Block 1 + 2 #}
             <div class="container">
-                <div class="relative w:100p h:448 grid sm:grid-cols:2 gap:24 md:gap:48">
+                <div class="relative w:100p grid sm:grid-cols:2 gap:8 sm:gap:24 md:gap:48">
+                    {# Block 1 #}
                     <div class="relative">
-                        <div class="relative w:100p h:100p flex align-items:center justify-content:center radius:xl" style="box-shadow: inset 0 24px 24px 0 rgba(0,0,0,0.1), inset 0 6px 6px 0 rgba(0,0,0,0.1), inset 0 -4px 4px 0 rgba(0,0,0,0.04);">
+                        <div class="relative w:100p h:100p flex flex:col align-items:start justify-content:center">
+                            {# Image #}
+                            <div class="relative w:100p h:320 mb:16 md:mb:24">
+                                <div class="absolute pointer-events:none top:0 left:0 w:100p h:100p radius:xl" style="box-shadow: inset 0 24px 24px 0 rgba(0,0,0,0.06), inset 0 6px 6px 0 rgba(0,0,0,0.06), inset 0 -4px 4px 0 rgba(0,0,0,0.04);"></div>
+                            </div>
+                            {# Copy #}
+                            <div class="relative flex flex:col align-items:start sm:gap:2 w:100p max-w:288 sm:max-w:320 md:max-w:384 pb:16">
+                                <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
+                                    Implement on-the-fly
+                                </h3>
+                                <p class="font:md sm:font:lg md:font:xl opacity:60">
+                                    Move faster while maintaing quality by designing and developing synchronously.
+                                </p>
+                                {{ elements.btnLink(
+                                    color="text-primary",
+                                    size="lg",
+                                    link="#",
+                                    label="Bye Figma: Design with code",
+                                    iconR=icons.chevR('w:16 ml:2 transform translate-y:1'),
+                                    hover=true,
+                                    classes='ml:n18'
+                                )}}
+                            </div>
                         </div>
                     </div>
+                    {# Block 2 #}
                     <div class="relative">
-                        <div class="relative w:100p h:100p flex align-items:center justify-content:center radius:xl" style="box-shadow: inset 0 24px 24px 0 rgba(0,0,0,0.1), inset 0 6px 6px 0 rgba(0,0,0,0.1), inset 0 -4px 4px 0 rgba(0,0,0,0.04);">
+                        <div class="relative w:100p h:100p flex flex:col align-items:start justify-content:center">
+                            {# Image #}
+                            <div class="relative w:100p h:320 mb:16 md:mb:24">
+                                <div class="absolute pointer-events:none top:0 left:0 w:100p h:100p radius:xl" style="box-shadow: inset 0 24px 24px 0 rgba(0,0,0,0.06), inset 0 6px 6px 0 rgba(0,0,0,0.06), inset 0 -4px 4px 0 rgba(0,0,0,0.04);"></div>
+                            </div>
+                            {# Copy #}
+                            <div class="relative flex flex:col align-items:start sm:gap:2 w:100p max-w:288 sm:max-w:320 md:max-w:384 pb:16">
+                                <h3 class="font:2xl sm:font:2xl md:font:4xl tracking:tight leading:110 color:ink-2 mb:6 sm:mb:8 max-w:256 sm:max-w:none">
+                                    Skip overthinking it
+                                </h3>
+                                <p class="font:md sm:font:lg md:font:xl opacity:60">
+                                    Increase velocity by distinguishing between meaningful and miniscule feedback.
+                                </p>
+                                {{ elements.btnLink(
+                                    color="text-primary",
+                                    size="lg",
+                                    link="#",
+                                    label="How feedback kills productivity",
+                                    iconR=icons.chevR('w:16 ml:2 transform translate-y:1'),
+                                    hover=true,
+                                    classes='ml:n18'
+                                )}}
+                            </div>
                         </div>
+                    </div>
+                    {# Block 3 #}
+                    <div class="relative sm:col:2 w:100p h:448 mb:16 md:mb:24 bg:sheet-6 radius:xl shadow:xl" style="box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.3), inset 0 -1px 1px 0 rgba(255,255,255,0.1), 0 16px 32px rgba(0,0,0,0.07); background: linear-gradient(0deg, rgba(var(--sheet-6), 1) 0%, rgba(var(--sheet-5), 0.5) 100%), rgba(var(--sheet-6),1);">
                     </div>
                 </div>
             </div>
