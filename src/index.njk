@@ -709,10 +709,11 @@ changefreq: daily
         {# Scale #}
         <section class="section section:pb pt:64">
             {# Vert Dividers #}
-            <div class="absolute z:2 top:64 w:100p h:100p hidden sm:flex align-items:center justify-content:center px:12 sm:px:24">
-                <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
-                    <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
-                    <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-b"></div>
+            <div class="absolute z:2 top:64 w:100p h:minus64 hidden sm:flex align-items:center justify-content:center px:12 sm:px:24">
+                <div class="relative w:100p h:100p max-w:1200 flex justify-content:between align-items:end">
+                    <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div>
+                    <div class="relative h:192 border-l:1 border:ink-3 border-opacity:10 hidden sm:block border:dashed mask:fade-out-t"></div>
+                    <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div>
                 </div>
             </div>
             {# Horz Divider #}
@@ -733,8 +734,8 @@ changefreq: daily
                 </div>
                 {# Circles #}
                 <div class="absolute top:n96 flex flex:col align-items:center justify-content:center w:100p ratio:1-1">
-                    <div class="absolute top:0 w:plus384 opacity:30 flex ratio:1-1 radius:100p shadow:2xl" style="background: linear-gradient(180deg, rgba(var(--sheet-1), 0.8) 0%, rgba(var(--sheet-1), 0) 50%)"></div>
-                    <div class="absolute top:0 w:plus192 opacity:30 flex ratio:1-1 radius:100p shadow:2xl" style="background: linear-gradient(180deg, rgba(var(--sheet-1), 0.8) 0%, rgba(var(--sheet-1), 0) 50%); box-shadow: 0 -16px 16px 0 rgba(var(--sheet-6),1);"></div>
+                    <div class="absolute top:0 w:plus384 opacity:30 flex ratio:1-1 radius:100p shadow:2xl mask:fade-out-b-20p" style="background: linear-gradient(180deg, rgba(var(--sheet-1), 0.8) 0%, rgba(var(--sheet-1), 0) 50%)"></div>
+                    <div class="absolute top:0 w:plus192 opacity:30 flex ratio:1-1 radius:100p shadow:2xl mask:fade-out-b-20p" style="background: linear-gradient(180deg, rgba(var(--sheet-1), 0.8) 0%, rgba(var(--sheet-1), 0) 50%); box-shadow: 0 -16px 16px 0 rgba(var(--sheet-6),1);"></div>
                     <div class="absolute top:0 w:100p flex ratio:1-1 radius:100p bg:sheet-5"  style="background: linear-gradient(180deg, rgba(var(--sheet-4), 1) 0%, rgba(var(--sheet-5), 1) 15%, rgba(var(--sheet-6), 1) 50%); box-shadow: 0 -16px 16px 0 rgba(var(--sheet-6),1);"></div>
                 </div>
                 {# Headline #}
@@ -828,8 +829,83 @@ changefreq: daily
                     classes=''
                 )}}
             </div>
-            {# Fader #}
-            <div class="hidden sm:block absolute bottom:0 w:plus384 h:100p pointer-events:none" style="background: linear-gradient(180deg, rgba(var(--sheet-6), 0) 25%, rgba(var(--sheet-6), 1) 100%);"></div>
+        </section>
+
+        {# Ship #}
+        <section class="section section:pb">
+            {# Vert Dividers #}
+            <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
+                <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
+                    <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div>
+                    <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 hidden sm:block border:dashed mt:80"></div>
+                    <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div>
+                </div>
+            </div>
+            {# Horz Divider #}
+            <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-b:1 border:ink-3 border:dashed border-opacity:10 mb:24 sm:mb:0"></div>
+            {# Dashers #}
+            <div data-dasher-1 class="absolute top:n192 w:1 h:12 bg:blue radius:full" style="opacity:0;"></div>
+            <div data-dasher-2 class="absolute top:n192 w:1 h:12 bg:blue radius:full" style="opacity:0;"></div>
+            <div data-dasher-3 class="absolute top:n192 w:1 h:12 bg:blue radius:full" style="opacity:0;"></div>
+            {# Container #}
+            <div class="container z:2">
+                {# Handles #}
+                <div class="absolute z:2 top:n32 sm:top:n8 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <div class="absolute top:n32 sm:top:n8 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <div class="absolute z:2 bottom:n14 sm:bottom:10 left:8 sm:left:n28 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <div class="absolute bottom:n14 sm:bottom:10 right:8 sm:right:n28 mr:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                {# Headline #}
+                <div class="relative w:100p flex flex:col gap:12 sm:flex:row align-items:center justify-content:center md:justify-content:between font:10xl sm:font:11xl md:font:12xl medium tracking:tighter leading:85">
+                    <div class="relative gradient-text pb:16 w:100p max-w:336 bg:ink-3 bg-opacity:10 sm:mask:fade-out-x md:mask:none text:center sm:text:left mb:n1 sm:mb:0">
+                        <span class="space:nowrap">Create it</span>
+                    </div>
+                    <h2 class="relative z:2 w:100p max-w:192 sm:max-w:224 md:max-w:256 flex-shrink:0 transform sm:translate-y:n2 md:translate-y:0">
+                        <div class="absolute top:n32 left:n22 w:plus48 h:plus48 border:1 border:edge-2">
+                            <div class="absolute top:n4 left:n4 mt:1 ml:1 w:6 h:6 bg:ink-3 bg-opacity:30 p:1 radius:full"><div class="w:100p h:100p bg:sheet-1 radius:full"></div></div>
+                            <div class="absolute top:n4 right:n4 mt:1 mr:1 w:6 h:6 bg:ink-3 bg-opacity:30 p:1 radius:full"><div class="w:100p h:100p bg:sheet-1 radius:full"></div></div>
+                            <div class="absolute bottom:n4 right:n4 mb:1 mr:1 w:6 h:6 bg:ink-3 bg-opacity:30 p:1 radius:full"><div class="w:100p h:100p bg:sheet-1 radius:full"></div></div>
+                            <div class="absolute bottom:n4 left:n4 mb:1 ml:1 w:6 h:6 bg:ink-3 bg-opacity:30 p:1 radius:full"><div class="w:100p h:100p bg:sheet-1 radius:full"></div></div>
+                        </div>
+                        <div class="absolute top:n80 left:n128 w:320 h:160 bg:radial-teal-i opacity:30"></div>
+                        <div class="absolute top:n72 left:n56 w:384 h:224 bg:radial-blue-i opacity:40 transform" style="transform: rotate(-20deg);"></div>
+                        <div class="absolute bottom:n80 right:n128 w:320 h:160 bg:radial-purple-i opacity:20"></div>
+                        <div class="absolute top:n20 left:n10 w:plus24 h:plus24 radius:xl" style="background-image: linear-gradient(180deg, rgba(var(--sheet-6), 1) 0%, rgba(var(--sheet-6), 0.5) 130%); box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.3), 0 16px 24px 0 rgba(0,0,0,0.08), 0 4px 6px 0 rgba(0,0,0,0.06);"></div>
+                        <div class="relative block gradient-text pb:16 w:100p text:center" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);">
+                            Ship it
+                        </div>
+                    </h2>
+                    <div class="relative gradient-text pb:16 w:100p max-w:336 text:center sm:text:right bg:ink-3 bg-opacity:10 sm:mask:fade-out-x md:mask:none mt:n1 sm:mt:0">
+                        <span class="space:nowrap">Revise it</span>
+                    </div>
+                </div>
+            </div>
+            {# Horz Divider #}
+            <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-b:1 border:ink-3 border:dashed border-opacity:10 mt:8 sm:mt:n16 mb:12 sm:mb:96"></div>
+            {# Block 1 + 2 #}
+            <div class="container">
+                <div class="relative w:100p h:448 grid sm:grid-cols:2 gap:24 md:gap:48">
+                    <div class="relative">
+                        <div class="relative w:100p h:100p flex align-items:center justify-content:center radius:xl" style="box-shadow: inset 0 24px 24px 0 rgba(0,0,0,0.1), inset 0 6px 6px 0 rgba(0,0,0,0.1), inset 0 -4px 4px 0 rgba(0,0,0,0.04);">
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="relative w:100p h:100p flex align-items:center justify-content:center radius:xl" style="box-shadow: inset 0 24px 24px 0 rgba(0,0,0,0.1), inset 0 6px 6px 0 rgba(0,0,0,0.1), inset 0 -4px 4px 0 rgba(0,0,0,0.04);">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </div>

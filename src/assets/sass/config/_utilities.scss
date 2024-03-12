@@ -111,6 +111,7 @@ $utilities: (
             minus24: calc(100% - 1.5rem),
             minus48: calc(100% - 3rem),
             minus56: calc(100vh - 3.5rem),
+            minus64: calc(100% - 4rem),
             plus2: calc(100% + 0.125rem),
             plus24: calc(100% + 1.5rem),
             plus48: calc(100% + 3rem),
@@ -133,10 +134,19 @@ $utilities: (
     left: (
         variants: (
             unset: unset,
+            n22: -1.375rem,
             n448: -28rem,
             n512: -32rem,
             n640: -40rem,
             7: 0.4375rem,
+        ),
+    ),
+    letter-spacing: (
+        variants: (
+            unset: unset,
+            n5: -0.05em,
+            n6: -0.06em,
+            n7: -0.07em,
         ),
     ),
     max-height: (

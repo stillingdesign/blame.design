@@ -277,9 +277,28 @@ if(document.querySelector('[data-page="home"]')) {
                 .to('[data-third-party-2]', {y: '-3.25rem', x: '3.25rem',  opacity:1, rotate:0,   duration: duration, ease: 'linear'}, duration * 2)
                 .to('[data-third-party-2]', {y: '-6.5rem',  x: '6.5rem',   opacity:0, rotate:-45, duration: duration, ease: 'linear'}, duration * 3)
                 .to('[data-third-party-3]', {y: '3.25rem',  x: '3.25rem',  opacity:1, rotate:0,   duration: duration, ease: 'linear'}, duration * 4)
-                .to('[data-third-party-3]', {y: '6.5rem',   x: '6.5rem',   opacity:0, rotate:45,  duration: duration, ease: 'linear'}, duration * 5)
+                .to('[data-third-party-3]', {y: '6.5rem',   x: '6.5rem',   opacity:0, rotate:-45,  duration: duration, ease: 'linear'}, duration * 5)
                 .to('[data-third-party-4]', {y: '3.25rem',  x: '-3.25rem', opacity:1, rotate:0,   duration: duration, ease: 'linear'}, duration * 6)
-                .to('[data-third-party-4]', {y: '6.5rem',   x: '-6.5rem',  opacity:0, rotate:-45, duration: duration, ease: 'linear'}, duration * 7)
+                .to('[data-third-party-4]', {y: '6.5rem',   x: '-6.5rem',  opacity:0, rotate:45, duration: duration, ease: 'linear'}, duration * 7)
     }
     animateThirdParty();
+
+    // Dash Animation
+    function animateDashDown() {
+        const distance = 512;
+        const duration = 3;
+        const tmln = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+            tmln
+                .to('[data-dasher-1]', {y: distance, duration: duration, ease: 'linear'}, 0)
+                .to('[data-dasher-1]', {opacity: 1, duration: duration / 2, ease: 'linear'}, 0)
+                .to('[data-dasher-1]', {opacity: 0, duration: duration / 2, ease: 'linear'}, duration / 2)
+                .to('[data-dasher-2]', {y: distance, duration: duration, ease: 'linear'}, duration / 2)
+                .to('[data-dasher-2]', {opacity: 1, duration: duration / 2, ease: 'linear'}, 0)
+                .to('[data-dasher-2]', {opacity: 0, duration: duration / 2, ease: 'linear'}, (duration * 2) / 2)
+                .to('[data-dasher-3]', {y: distance, duration: duration, ease: 'linear'}, (duration * 2) / 2)
+                .to('[data-dasher-3]', {opacity: 1, duration: duration / 2, ease: 'linear'}, 0)
+                .to('[data-dasher-3]', {opacity: 0, duration: duration / 2, ease: 'linear'}, (duration * 3) / 2)
+                
+    }
+    mm.add("(min-width: 1024px)", () => { animateDashDown(); });
 }

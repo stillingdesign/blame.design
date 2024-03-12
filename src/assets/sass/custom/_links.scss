@@ -564,7 +564,7 @@
         transition: transform 300ms cubic-bezier(.8,0,.2,1) 0ms;
     }
     .card-inset-cta-hover {
-        transform: translate3d(0,100%,0);
+        transform: translate3d(0,calc(100% + 0.125rem),0);
         transition: transform 300ms cubic-bezier(.8,0,.2,1) 0ms;
     }
     .card-inset-cta-shading {
