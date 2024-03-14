@@ -893,8 +893,8 @@ changefreq: daily
             </div>
             {# Horz Divider #}
             <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-b:1 border:ink-3 border:dashed border-opacity:10 mt:8 sm:mt:n16 mb:12 sm:mb:96"></div>
-            {# Block 1 + 2 + 3 #}
-            <div class="container flex flex:col align-items:center">
+            {# Block 1 + 2 #}
+            <div class="container flex flex:col align-items:center mb:12 sm:mb:48">
                 {# Note #}
                 <div class="hidden sm:block absolute top:144 mt:8 text:center w:320 font:mono font:2xs uppercase tracking:loosest transform rotate:90" style="background: linear-gradient(-90deg, rgba(var(--sheet-6), 0) 0%, rgba(var(--sheet-6), 1) 25%, rgba(var(--sheet-6), 1) 75%, rgba(var(--sheet-6), 0) 100%);">
                     <span class="opacity:50">Part 03: Moving faster</span>
@@ -920,7 +920,7 @@ changefreq: daily
                                     color="text-primary",
                                     size="lg",
                                     link="#",
-                                    label="Bye Figma: Design with code",
+                                    label="Growth Design Fundamentals",
                                     iconR=icons.chevR('w:16 ml:2 transform translate-y:1'),
                                     hover=true,
                                     classes='ml:n18'
@@ -947,7 +947,7 @@ changefreq: daily
                                     color="text-primary",
                                     size="lg",
                                     link="#",
-                                    label="How feedback kills productivity",
+                                    label="Why feedback kills productivity",
                                     iconR=icons.chevR('w:16 ml:2 transform translate-y:1'),
                                     hover=true,
                                     classes='ml:n18'
@@ -955,11 +955,111 @@ changefreq: daily
                             </div>
                         </div>
                     </div>
-                    {# Block 3 #}
-                    <div class="relative sm:col:2 w:100p h:448 mb:16 md:mb:24 bg:sheet-6 radius:xl shadow:xl" style="box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.3), inset 0 -1px 1px 0 rgba(255,255,255,0.1), 0 16px 32px rgba(0,0,0,0.07); background: linear-gradient(0deg, rgba(var(--sheet-6), 1) 0%, rgba(var(--sheet-5), 0.5) 100%), rgba(var(--sheet-6),1);">
-                    </div>
                 </div>
             </div>
+            {# Horz Divider #}
+            <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-b:1 border:ink-3 border:dashed border-opacity:10"></div>
+            {# Block 3 #}
+            <div class="container">
+                <div class="relative w:100p sm:h:384 md:h:448 grid sm:grid-cols:2 sm:gap:48">
+                    {# Left #}
+                    <div class="relative w:100p h:384 sm:h:100p flex flex:col align-items:center justify-content:center py:24">
+                        <div class="relative w:100p h:100p flex flex:col align-items:center justify-content:center radius:xl overflow:hidden" style="background-image: linear-gradient(180deg, rgba(var(--sheet-5), 0.5) 0%, rgba(var(--sheet-6), 0.5) 130%); box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.3), 0 16px 24px 0 rgba(0,0,0,0.08), 0 4px 6px 0 rgba(0,0,0,0.06);">
+                            {# Graph #}
+                            <div aria-hidden="true" class="absolute w:100p h:100p flex justify-content:between font:mono font:2xs uppercase leading:100">
+                                <div class="absolute w:100p flex justify-content:center top:24">
+                                    <div class="px:10 py:8 text:center tracking:loosest bg:sheet-5 radius:sm border:1 border:black border-opacity:10 shadow:sm">
+                                        <span class="opacity:60">Conversion rate</span>
+                                    </div>
+                                </div>
+                                <div class="absolute w:100p bottom:32 border-t:1 border:black border-opacity:6"></div>
+                                <div class="absolute top:0 left:0 w:100p h:100p flex flex:col justify-content:between pb:88 pt:36">
+                                    {% macro horzGraph(value) %}
+                                        <div class="flex align-items:center w:100p mt:1">
+                                            <div class="w:100p border-t:1 border:black border-opacity:6 border:dashed"></div>
+                                        </div>
+                                    {% endmacro %}
+                                    {{ horzGraph('20%') }}
+                                    {{ horzGraph('16%') }}
+                                    {{ horzGraph('12%') }}
+                                    {{ horzGraph('08%') }}
+                                    {{ horzGraph('04%') }}
+                                </div>
+                                <div></div>
+                                {% macro vertGraph(when) %}
+                                    <div class="relative flex flex:col align-items:center h:100p">
+                                        <div class="h:100p border-l:1 border:black border-opacity:6 border:dashed"></div>
+                                        <div class="py:12 gradient-text bg:ink-3 bg-opacity:30">
+                                            {{ when }}
+                                        </div>
+                                    </div>
+                                {% endmacro %}
+                                {{ vertGraph('Jan')}}
+                                {{ vertGraph('Feb')}}
+                                {{ vertGraph('Mar')}}
+                                {{ vertGraph('Apr')}}
+                                {{ vertGraph('May')}}
+                                <div></div>
+                            </div>
+                            {# Headline #}
+                            <h3 class="relative flex flex:col align-items:center justify-content:center font:8xl md:font:10xl leading:90 pb:12">
+                                <div class="gradient-text pb:12 mb:n12 tracking:tight" style="background-image: linear-gradient(180deg, rgba(var(--ink-3), 0) -10%, rgba(var(--ink-3), 0.8) 100%);">
+                                    Get your
+                                </div>
+                                <div class="tracking:tight color:blue">direction</div>
+                                <div class="gradient-text tracking:n6 pb:12 mb:n12" style="background-image: linear-gradient(180deg, rgba(var(--ink-3), 0.8) 0%, rgba(var(--ink-3), 0) 100%);">
+                                    from data
+                                </div>
+                            </h3>
+                            <div class="absolute bottom:0 left:0 w:100p h:100p pb:36 flex align-items:end">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 552 317" class="w:100p h:auto">
+                                    <path fill="url(#curve-graph)" d="M86.2 172.8C43 172.8 58.2 291 0 291v26h552V1c-2 0-50 18-85.2 66.1-35 48.1-59.6 89.2-99.6 89.2-40.1 0-46.6 71-76.2 90.1-29.5 19-59.6-21-110.2-21s-66.6-52.6-94.6-52.6Z"/>
+                                    <path stroke="rgba(var(--blue),1)" d="M0 291c58.1 0 43-118.2 86.2-118.2 28 0 44 52.6 94.6 52.6 50.6 0 80.7 40 110.2 21 29.6-19 36-90.1 76.2-90.1 40 0 64.6-41.1 99.6-89.2C502 19.1 550 1 552 1"/>
+                                    <defs>
+                                        <linearGradient id="curve-graph" x1="276" x2="276" y1="1" y2="317" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="rgba(var(--blue),1)" stop-opacity=".3"/>
+                                        <stop offset="1" stop-color="rgba(var(--blue),1)" stop-opacity="0"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    {# Right #}
+                    <div class="relative flex flex:col align-items:center justify-content:center font:xl sm:font:2xl md:font:3xl text:center pb:32 sm:pb:0">
+                        <p class="opacity:60 max-w:320 md:max-w:432 mb:12">
+                            <span class="tracking:normal">Let real viewers decide what works</span> <span class="tracking:normal">and what doesn't. Understand why</span> <span class="tracking:tighter">and where <span class="space:nowrap">to make</span> the right changes.</span>
+                        </p>
+                        {{ elements.btnLink(
+                            color="simple",
+                            size="md",
+                            link="#",
+                            label="How to design with data",
+                            hover=true,
+                            classes=''
+                        )}} 
+                    </div>
+                </div>
+                {# Handles #}
+                <div class="absolute z:2 top:n32 sm:top:n8 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <div class="absolute top:n32 sm:top:n8 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <div class="absolute z:2 bottom:n14 sm:bottom:n6 left:8 sm:left:n28 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <div class="absolute bottom:n14 sm:bottom:n6 right:8 sm:right:n28 mr:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+            </div>
+            {# Horz Divider #}
+            <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-b:1 border:ink-3 border:dashed border-opacity:10"></div>
         </section>
 
     </div>
