@@ -274,3 +274,71 @@
         </div>
     </div>
 {% endmacro %}
+
+{% macro theMedium() %}
+    <div class="absolute w:100p h:100p flex flex:col align-items:center justify-content:center overflow:hidden" aria-hidden="true">
+        <div class="relative flex flex:col align-items:center justify-content:center mask:fade-out-y w:100p h:100p pt:24">
+            {% macro pr(icon,head,desc,numb,when) %}
+                <div class="relative flex align-items:start h:80 flex-shrink:0 ">
+                    <div class="absolute left:n28 top:0 w:28 h:28 border-l:1 border-b:1 border:edge-2 radius-bl:lg"></div>
+                    <div class="absolute left:n28 top:0 w:0 h:80 border-l:1 border:edge-2 mask:fade-out-t"></div>
+                    <div class="relative flex align-items:center justify-content:between relative w:288 md:w:320 h:56 bg:sheet-5 radius:md px:12 z:1 overflow:hidden" style="box-shadow: inset 0 1px 1px 0 rgba(255,255,255,0.5), inset 0 -1px 1px 0 rgba(255,255,255,0.3), 0px 12px 12px -4px rgba(0,0,0,0.06), 0px 2px 2px 0 rgba(0,0,0,0.02);">
+                        <div class="flex align-items:center gap:8">
+                            <div class="relative flex align-items:center justify-content:center w:32 h:32 radius:full bg:sheet-5" style="box-shadow: 0 8px 8px 0 rgba(0,0,0,0.08), 0 2px 2px 0 rgba(0,0,0,0.04), inset 0 1px 1px 0 rgba(255,255,255,0.7);">
+                                {{ icon }}
+                            </div>
+                            <div class="tracking:normal leading:140">
+                                <div class="font:xs medium opacity:80">
+                                    {{ head }}
+                                </div>
+                                <div class="font:2xs opacity:60">
+                                    {{ desc }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex:col align-items:end font:mono">
+                            <div class="font:2xs opacity:70">#{{ numb }}</div>
+                            <div class="font:3xs opacity:50">{{ when }}/2025</div>
+                        </div>
+                    </div>
+                    <div class="absolute top:24 left:n4 w:8 h:8 bg:blue radius:full z:2" style="box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2), inset 0 1px 1px 0 rgba(255,255,255,0.3);"></div>
+                </div>
+            {% endmacro %}
+            {{ pr(
+                icon=icons.branch('w:14 opacity:80 ml:1'),
+                head='Improve load times',
+                desc='Cleaned up Tag Manager',
+                numb='135',
+                when='11/03'
+            )}}
+            {{ pr(
+                icon=icons.pullRequest('w:14 opacity:80 ml:1'),
+                head='Cover functionality in headline',
+                desc='Current headline is too vague',
+                numb='131',
+                when='11/05'
+            )}}
+            {{ pr(
+                icon=icons.merge('w:14 opacity:80 ml:1'),
+                head='Account for primary search terms',
+                desc='Anchoring content around user needs',
+                numb='133',
+                when='11/06'
+            )}}
+            {{ pr(
+                icon=icons.issueClosed('w:14 opacity:80 ml:1'),
+                head='Polish up design',
+                desc='Added fast-follow animations',
+                numb='137',
+                when='11/09'
+            )}}
+            {{ pr(
+                icon=icons.issueOpen('w:14 opacity:80 ml:1'),
+                head='Change primary CTA',
+                desc='Lead with PLG vs. Sales form',
+                numb='141',
+                when='11/11'
+            )}}
+        </div>
+    </div>
+{% endmacro %}
