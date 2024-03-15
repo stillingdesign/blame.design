@@ -66,3 +66,25 @@
         rgba(var(--blue-i), 0.5) 247.5deg,
         rgba(var(--purple), 0) 270deg,
 );}
+
+.animate\:message-1 { animation: messageBounce1 1000ms cubic-bezier(0.6,0,0.4,1) infinite normal; }
+.animate\:message-2 { animation: messageBounce2 1000ms cubic-bezier(0.6,0,0.4,1) infinite normal; }
+.animate\:message-3 { animation: messageBounce3 1000ms cubic-bezier(0.6,0,0.4,1) infinite normal; }
+
+@keyframes messageBounce1 {
+    0%  {transform: translateY(0);}
+    25% {transform: translateY(-0.25rem);}
+    50% {transform: translateY(0);}
+}
+
+@keyframes messageBounce2 {
+    0%  {transform: translateY(0);}
+    50% {transform: translateY(-0.25rem);}
+    75% {transform: translateY(0);}
+}
+
+@keyframes messageBounce3 {
+    0%   {transform: translateY(0);}
+    75%  {transform: translateY(-0.25rem);}
+    100% {transform: translateY(0);}
+}

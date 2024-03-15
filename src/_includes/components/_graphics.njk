@@ -342,3 +342,39 @@
         </div>
     </div>
 {% endmacro %}
+
+{% macro skipOverthinking() %}
+    <div class="absolute w:100p h:100p flex flex:col align-items:center justify-content:center gap:12 overflow:hidden mask:fade-out-y" aria-hidden="true">
+        <div class="relative w:320 px:18 font:2xs medium tracking:normal opacity:60 mb:n10">
+            VP of Marketing
+        </div>
+        <div class="relative w:288 md:w:320 px:18 py:12 font:xs md:font:sm tracking:normal medium radius:full h:46">
+            <div class="absolute left:0 top:0 w:100p h:100p bg:black color:black radius:full opacity:15">
+                {{ icons.tailL('absolute bottom:0 w:16')}}
+            </div>
+            <div class="relative">
+                Switch "fast" to "blazing fast" before shipping.
+            </div>
+        </div>
+        <div class="relative w:288 md:w:320 px:18 py:12 font:xs md:font:sm tracking:tight medium color:white radius:full h:46">
+            <div class="absolute left:0 top:0 w:100p h:100p bg:blue color:blue radius:full">
+                {{ icons.tailR('absolute right:0 bottom:0 w:16')}}
+            </div>
+            <div class="relative">
+                Will this really make a difference for conversion?
+            </div>
+        </div>
+        <div class="relative w:288 md:w:320 flex justify-content:start mt:n2">
+            <div class="relative w:96 md:w:48 px:16 py:12 font:xs md:font:sm tracking:normal medium radius:full h:48">
+                <div class="absolute left:0 top:0 w:100p h:100p bg:black color:black radius:full opacity:15">
+                    {{ icons.tailL('absolute bottom:0 w:16')}}
+                </div>
+                <div class="relative flex w:100p h:100p justify-content:center align-items:center gap:2">
+                    <div class="w:4 h:4 bg:ink-3 radius:full animate:message-1"></div>
+                    <div class="w:4 h:4 bg:ink-3 radius:full animate:message-2"></div>
+                    <div class="w:4 h:4 bg:ink-3 radius:full animate:message-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
