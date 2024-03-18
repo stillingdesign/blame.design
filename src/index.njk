@@ -833,6 +833,8 @@ changefreq: daily
 
         {# Ship #}
         <section class="section section:pb">
+            {# Zig Zag Edge #}
+            <div class="absolute bottom:n1 w:100p h:12 z:3 transform rotate:180" style="background-image: url('/assets/images/utility/tooth-down-16-080808.svg'); background-size: 1rem 1rem;"></div>
             {# Vert Dividers #}
             <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
                 <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
@@ -1066,6 +1068,93 @@ changefreq: daily
 
     </div>
 
-    <section data-invert="dark" class="section section:py"></section>
+    {# Mission #}
+    <section data-invert="dark" class="section section:py">
+        {# Vert Dividers #}
+        <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
+            <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
+                <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-b"></div>
+                <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-b"></div>
+            </div>
+        </div>
+        {# Horz Divider #}
+        <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-b:1 border:ink-3-i border:dashed border-opacity:10 mb:24"></div>
+        {# Content #}
+        <div class="container">
+            {# Subtle Gradients #}
+            <div class="absolute bottom:n160 sm:bottom:n320 left:n160 sm:left:n320 w:320 h:320 sm:w:640 sm:h:640 bg:radial-teal-i opacity:10"></div>
+            <div class="absolute bottom:n96 sm:bottom:n192 left:n48 sm:left:n96 w:100p h:224 sm:h:448 bg:radial-blue-i opacity:20"></div>
+            <div class="absolute bottom:n112 sm:bottom:n224 right:n80 sm:right:n160 w:320 h:320 sm:w:640 sm:h:640 bg:radial-purple-i opacity:10"></div>
+            {# Handles #}
+            <div class="absolute z:2 top:n32 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                <div class="w:1 h:100p bg:ink-3-i"></div>
+                <div class="h:1 w:100p bg:ink-3-i absolute"></div>
+            </div>
+            <div class="absolute top:n32 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                <div class="w:1 h:100p bg:ink-3-i"></div>
+                <div class="h:1 w:100p bg:ink-3-i absolute"></div>
+            </div>
+            {# Btn + Headline #}
+            <div class="relative flex flex:col align-items:start">
+                <div class="hidden md:block">
+                    {{ elements.btnLink(
+                        color="primary-i",
+                        size="lg",
+                        link="/mission/",
+                        label="Blame's mission",
+                        animate=true,
+                        hover=true,
+                        classes='mb:16'
+                    )}}
+                </div>
+                <div class="md:hidden">
+                    {{ elements.btnLink(
+                        color="primary-i",
+                        size="sm",
+                        link="/mission/",
+                        label="Blame's mission",
+                        animate=true,
+                        hover=true,
+                        classes='mb:16'
+                    )}}
+                </div>
+                <h2 class="relative font:6-25vw sm:font:7xl md:font:9xl lg:font:11xl medium tracking:tighter leading:120 sm:leading:110 sm:max-w:704 md:max-w:896 lg:max-w:none">
+                    One person built this entire website, over two months, in their spare time. <span class="gradient-text bg:ink-3-i bg-opacity:30">Chances are, it looks and performs better than your company's site.</span> <span class="relative block gradient-text" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);"><span class="space:nowrap">Plus, it</span> was enjoyable <span class="space:nowrap">to make.</span></span>
+                </h2>
+            </div>
+        </div>
+        {# Horz Divider #}
+        <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-b:1 border:ink-3-i border:dashed border-opacity:10 my:12 sm:my:24 md:my:36"></div>
+        {# Horz Divider Mobile #}
+        <div class="relative w:100p sm:hidden">
+            <div class="absolute top:64 w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-b:1 border:ink-3-i border:dashed border-opacity:10"></div>
+        </div>
+        {# Support #}
+        <div class="container grid sm:grid-cols:2 gap:24 sm:gap:48 font:lg md:font:2xl lg:font:4xl leading:150">
+            {# Dots #}
+            <div class="hidden sm:block absolute left:n24 ml:n2  top:n24 md:top:n36 mt:n2 bg:white bg-opacity:50 border:1 border:white w:4 h:4 radius:full"></div>
+            <div class="hidden sm:block absolute right:n24 mr:n2 top:n24 md:top:n36 mt:n2 bg:white bg-opacity:50 border:1 border:white w:4 h:4 radius:full"></div>
+            <div class="hidden sm:block absolute left:n24 ml:n2  bottom:n28 md:bottom:n40 mb:n2 bg:white bg-opacity:50 border:1 border:white w:4 h:4 radius:full"></div>
+            <div class="hidden sm:block absolute right:n24 mr:n2 bottom:n28 md:bottom:n40 mb:n2 bg:white bg-opacity:50 border:1 border:white w:4 h:4 radius:full"></div>
+            {# Copy #}
+            <p class="opacity:60 max-w:288 md:max-w:384 lg:max-w:none">
+                B2B SaaS marketing and design practices are bloated and inefficient.
+            </p>
+            <p class="opacity:60 max-w:320 md:max-w:432 lg:max-w:none">
+                Blame explores user-centered ways to fix these processes via actually building shit.
+            </p>
+        </div>
+        {# Horz Divider #}
+        <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-b:1 border:ink-3-i border:dashed border-opacity:10 mt:14 sm:mt:28 md:mt:40"></div>
+    </section>
+
+    {# CTA #}
+    <section class="section section:py bg:blue-i" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);">
+        {# Zig Zag Edge #}
+        <div class="absolute top:n1 w:100p h:12 z:3" style="background-image: url('/assets/images/utility/tooth-down-16-080808.svg'); background-size: 1rem 1rem;"></div>
+        <div class="container text:center">
+            CTA Section goes here
+        </div>
+    </section>
 
 </main>

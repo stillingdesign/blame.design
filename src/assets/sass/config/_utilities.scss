@@ -99,6 +99,7 @@ $utilities: (
             '2-25vw': 2.25vw,
             '4-5vw': 4.5vw,
             '5-75vw': 5.75vw,
+            '6-25vw': 6.25vw,
             7vw: 7vw,
             '8-5vw': 8.5vw,
             11vw: 11vw,
@@ -130,6 +131,7 @@ $utilities: (
         ),
     ),
     line-height: (
+        responsive: true,
         variants: (
             80: 0.8,
             85: 0.85,
