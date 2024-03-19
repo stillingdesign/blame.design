@@ -1069,12 +1069,19 @@ changefreq: daily
     </div>
 
     {# Mission #}
-    <section data-invert="dark" class="section section:py">
+    <section data-invert="dark" class="section section:pt pb:72 sm:pb:112 md:pb:128">
+        {# Dots #}
+        <div class="absolute bottom:n160 sm:bottom:n320 left:n160 sm:left:n320 w:320 h:320 sm:w:640 sm:h:640 bg:radial-white opacity:50">
+            <div class="absolute w:100p h:100p" style="background-image: url('/assets/images/utility/inverse-dot-8-080808.svg'); background-size: 0.5rem 0.5rem;"></div>
+        </div>
+        <div class="absolute bottom:n160 sm:bottom:n320 right:n160 sm:right:n320 w:320 h:320 sm:w:640 sm:h:640 bg:radial-white opacity:50">
+            <div class="absolute w:100p h:100p" style="background-image: url('/assets/images/utility/inverse-dot-8-080808.svg'); background-size: 0.5rem 0.5rem;"></div>
+        </div>
         {# Vert Dividers #}
-        <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
+        <div class="absolute top:0 w:100p h:plus320 flex align-items:center justify-content:center px:12 sm:px:24">
             <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
-                <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-b"></div>
-                <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-b"></div>
+                <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10"></div>
+                <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10"></div>
             </div>
         </div>
         {# Horz Divider #}
@@ -1119,7 +1126,7 @@ changefreq: daily
                     )}}
                 </div>
                 <h2 class="relative font:6-25vw sm:font:7xl md:font:9xl lg:font:11xl medium tracking:tighter leading:120 sm:leading:110 sm:max-w:704 md:max-w:896 lg:max-w:none">
-                    One person built this entire website, over two months, in their spare time. <span class="gradient-text bg:ink-3-i bg-opacity:30">Chances are, it looks and performs better than your company's site.</span> <span class="relative block gradient-text" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);"><span class="space:nowrap">Plus, it</span> was enjoyable <span class="space:nowrap">to make.</span></span>
+                    One person built this entire website, over two months, in their spare time. <span class="gradient-text bg:ink-3-i bg-opacity:30 block">Chances are, it looks and performs better than your company's site.</span> <span class="relative block gradient-text" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);"><span class="space:nowrap">Plus, it</span> was enjoyable <span class="space:nowrap">to make.</span></span>
                 </h2>
             </div>
         </div>
@@ -1149,11 +1156,199 @@ changefreq: daily
     </section>
 
     {# CTA #}
-    <section class="section section:py bg:blue-i" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);">
-        {# Zig Zag Edge #}
-        <div class="absolute top:n1 w:100p h:12 z:3" style="background-image: url('/assets/images/utility/tooth-down-16-080808.svg'); background-size: 1rem 1rem;"></div>
-        <div class="container text:center">
-            CTA Section goes here
+    <section class="section pt:72 sm:pt:112 md:pt:128 overflow:hidden radius-t:25p sm:radius-t:100p" style="background: radial-gradient(50% 100% at 50% 0%, rgba(var(--sheet-4-i),1) 0%, rgba(var(--sheet-6-i),1) 100%); box-shadow: 0 -48px 48px 0 rgba(var(--sheet-6-i),1)">
+        {# Border top #}
+        <div class="absolute top:0 left:0 w:100p h:100p border-t:1 border-opacity:10 border:white mask:fade-out-x-90p radius-t:25p sm:radius-t:100p"></div>
+        {# Vert Dividers #}
+        <div class="absolute bottom:0 w:100p h:minus320 lg:h:minus128 flex align-items:center justify-content:center px:12 sm:px:24">
+            <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
+                <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-t"></div>
+                <div class="relative h:100p border-l:1 border:ink-3-i border-opacity:10 mask:fade-out-t"></div>
+            </div>
+        </div>
+        {# Content #}
+        <div class="container z:3 flex flex:col align-items:center text:center">
+            <div class="relative z:2 flex flex:col align-items:center">
+                <h2 class="flex flex:col align-items:center font:7xl sm:font:9xl md:font:10xl medium tracking:tighter leading:100 mb:12">
+                    <span class="gradient-text block px:4" style="background-image: linear-gradient(0deg, rgba(var(--ink-3-i), 0.2) 0%, rgba(var(--ink-3-i), 1) 100%)">
+                        Get Blame's
+                    </span>
+                    <span>Newsletter</span>
+                </h2>
+                <p class="font:xl sm:font:2xl leading:130 opacity:60 mb:24 max-w:288 sm:max-w:352">
+                    <span class="tracking:normal">How to drive revenue with design</span> <span>and prove it—directly to you inbox.</span>
+                </p>
+                {# CTA #}
+                {{ elements.formSingle(
+                    color="primary-i",
+                    size="xl",
+                    classes="min-w:288",
+                    icon=icons.emailOutline('w:100p'),
+                    formName="subscribe",
+                    fieldType="email",
+                    fieldName="email",
+                    placeholder="Enter email for updates",
+                    animate=true, 
+                    hover=true,
+                    attr="data-hero-form",
+                    attrInner=""
+                )}}
+            </div>
+        </div>
+        {# Graphics #}
+        <div class="container flex align-items:end justify-content:center mt:32 sm:mt:48" aria-hidden="true">
+            {# Gradients #}
+            <div class="absolute w:512 h:512 top:n80 left:n256 bg:radial-teal-i opacity:10 transform rotate:n12"></div>
+            <div class="absolute w:512 h:512 top:n80 right:n256 bg:radial-purple-i opacity:10 transform rotate:12"></div>
+            <div class="absolute w:100p h:448 top:n192 bg:radial-blue-i opacity:20"></div>
+            {# Pane 1 #}
+            <div class="hidden sm:block relative w:100p h:224 bg:sheet-4-i radius-tl:xl overflow:hidden pt:1 px:1" style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--edge-2-i),1) 0%, rgba(var(--sheet-6-i),1) 100%); box-shadow: 0 48px 96px 24px rgba(var(--sheet-6-i), 1);">
+                <div class="absolute top:n112 left:n112 w:224 h:224 bg:radial-teal-i opacity:30"></div>
+                <div class="absolute top:n48 left:n48 w:96 h:96 bg:radial-teal-i opacity:30"></div>
+                <div class="absolute top:1 left:1 w:640 h:100p radius-tl:15 overflow:hidden"  style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--sheet-4-i),1) 0%, rgba(var(--sheet-6-i),1) 100%);">
+                    <div class="absolute top:n320 left:n320 w:640 h:640 bg:radial-teal-i opacity:6"></div>
+                    {# Contents #}
+                    <div class="absolute top:0 left:0 w:100p h:100p overflow:hidden tracking:normal opacity:50">
+                        {# Email Header #}
+                        <div class="flex justify-content:between align-items:center px:14 pt:14 pb:14">
+                            {# Left #}
+                            <div class="flex align-items:center gap:8 leading:130">
+                                <div class="w:36 h:36 bg:sheet-1-i radius:full flex align-items:center justify-content:center" style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--sheet-1-i),1) 0%, rgba(var(--sheet-4-i),1) 100%); box-shadow: 0 8px 16px 0px rgba(var(--sheet-6-i), 0.2), 0 4px 4px 0px rgba(var(--sheet-6-i), 0.5), inset 0 1px 1px 0 rgba(255,255,255,0.08);">
+                                    {{ icons.logoIcon('w:16')}}
+                                </div>
+                                <div class="mb:2">
+                                    <div>
+                                        <div class="inline-block font:xs medium opacity:70">
+                                            Mike @ Blame
+                                        </div>
+                                        <div class="hidden sm:inline-block font:2xs medium opacity:50">
+                                            info@blame.design
+                                        </div>
+                                    </div>
+                                    <div class="font:2xs medium opacity:50">
+                                        to you
+                                    </div>
+                                </div>
+                            </div>
+                            {# Right #}
+                            <div class="flex align-items:center gap:12 pr:4">
+                                <div class="font:2xs opacity:50">
+                                    Nov 7, 2025, 3:00 PM (moments ago)
+                                </div>
+                                {{ icons.back('w:12 opacity:50 mb:2')}}
+                                {{ icons.ellipsisV('w:12 opacity:50 mb:2')}}
+                            </div>
+                        </div>
+                        {# Divider #}
+                        <div class="w:100p h:1 bg:white opacity:6 mask:fade-out-x-90p"></div>
+                        <div class="relative flex flex:col align-items:center w:100p h:100p pt:32 px:56 w:100p overflow:hidden z:1 text:center">
+                            <div class="font:2xl semibold tracking:tight mb:16 color:ink-1-i">
+                            Designers: Get up and running with analytics
+                            </div>
+                            <div class="w:100p h:100p bg:white bg-opacity:2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {# Pane 2 #}
+            <div class="relative z:2 w:100p max-w:640 sm:w:640 h:288 sm:h:288 bg:sheet-4-i radius-t:xl flex-shrink:0 overflow:hidden pt:1 px:1" style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--edge-1-i),1) 0%, rgba(var(--sheet-6-i),1) 100%); box-shadow: 0 48px 96px 24px rgba(var(--sheet-6-i), 1);">
+                <div class="absolute top:n160 left:n160 w:320 h:320 bg:radial-white opacity:20"></div>
+                <div class="absolute top:n48 left:n48 w:96 h:96 bg:radial-white opacity:30"></div>
+                <div class="absolute top:n160 right:n160 w:320 h:320 bg:radial-white opacity:20"></div>
+                <div class="absolute top:n48 right:n48 w:96 h:96 bg:radial-white opacity:30"></div>
+                <div class="relative w:100p h:100p radius-t:15"  style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--sheet-3-i),1) 0%, rgba(var(--sheet-6-i),1) 100%);">
+                    {# Contents #}
+                    <div class="absolute top:0 left:0 w:100p h:100p overflow:hidden tracking:normal">
+                        {# Email Header #}
+                        <div class="flex justify-content:between align-items:center px:14 pt:14 pb:14">
+                            {# Left #}
+                            <div class="flex align-items:center gap:8 leading:130">
+                                <div class="w:36 h:36 bg:sheet-1-i radius:full flex align-items:center justify-content:center" style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--sheet-1-i),1) 0%, rgba(var(--sheet-4-i),1) 100%); box-shadow: 0 8px 16px 0px rgba(var(--sheet-6-i), 0.2), 0 4px 4px 0px rgba(var(--sheet-6-i), 0.5), inset 0 1px 1px 0 rgba(255,255,255,0.08);">
+                                    {{ icons.logoIcon('w:16')}}
+                                </div>
+                                <div class="mb:2">
+                                    <div>
+                                        <div class="inline-block font:xs medium opacity:70">
+                                            Mike @ Blame
+                                        </div>
+                                        <div class="hidden sm:inline-block font:2xs medium opacity:50">
+                                            info@blame.design
+                                        </div>
+                                    </div>
+                                    <div class="font:2xs medium opacity:50">
+                                        to you
+                                    </div>
+                                </div>
+                            </div>
+                            {# Right #}
+                            <div class="flex align-items:center gap:12 pr:4">
+                                <div class="font:2xs opacity:50">
+                                    Nov 7, 2025, 3:00 PM <span class="hidden sm:inline">(moments ago)</span>
+                                </div>
+                                {{ icons.back('w:12 opacity:50 mb:2')}}
+                                {{ icons.ellipsisV('w:12 opacity:50 mb:2')}}
+                            </div>
+                        </div>
+                        {# Divider #}
+                        <div class="w:100p h:1 bg:white opacity:6 mask:fade-out-x-90p"></div>
+                        <div class="relative flex flex:col align-items:center w:100p h:100p pt:16 sm:pt:32 px:28 sm:px:56 w:100p overflow:hidden z:1 text:center">
+                            <div class="font:2xl semibold tracking:tight mb:16 color:ink-2-i leading:120 max-w:288 sm:max-w:none">
+                                Designers: Get up and running with analytics
+                            </div>
+                            <div class="w:100p h:100p bg:white bg-opacity:2 mt:4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {# Pane 3 #}
+            <div class="hidden sm:block relative w:100p h:224 bg:sheet-4-i radius-tr:xl overflow:hidden pt:1 px:1" style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--edge-2-i),1) 0%, rgba(var(--sheet-6-i),1) 100%); box-shadow: 0 48px 96px 24px rgba(var(--sheet-6-i), 1);">
+                <div class="absolute top:n112 right:n112 w:224 h:224 bg:radial-purple-i opacity:30"></div>
+                <div class="absolute top:n48 right:n48 w:96 h:96 bg:radial-purple-i opacity:30"></div>
+                <div class="absolute top:1 right:1 w:640 h:100p radius-tr:15 overflow:hidden"  style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--sheet-4-i),1) 0%, rgba(var(--sheet-6-i),1) 100%);">
+                    <div class="absolute top:n320 right:n320 w:640 h:640 bg:radial-purple-i opacity:8"></div>
+                    {# Contents #}
+                    <div class="absolute top:0 left:0 w:100p h:100p overflow:hidden tracking:normal opacity:50">
+                        {# Email Header #}
+                        <div class="flex justify-content:between align-items:center px:14 pt:14 pb:14">
+                            {# Left #}
+                            <div class="flex align-items:center gap:8 leading:130">
+                                <div class="w:36 h:36 bg:sheet-1-i radius:full flex align-items:center justify-content:center" style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--sheet-1-i),1) 0%, rgba(var(--sheet-4-i),1) 100%); box-shadow: 0 8px 16px 0px rgba(var(--sheet-6-i), 0.2), 0 4px 4px 0px rgba(var(--sheet-6-i), 0.5), inset 0 1px 1px 0 rgba(255,255,255,0.08);">
+                                    {{ icons.logoIcon('w:16')}}
+                                </div>
+                                <div class="mb:2">
+                                    <div>
+                                        <div class="inline-block font:xs medium opacity:70">
+                                            Mike @ Blame
+                                        </div>
+                                        <div class="hidden sm:inline-block font:2xs medium opacity:50">
+                                            info@blame.design
+                                        </div>
+                                    </div>
+                                    <div class="font:2xs medium opacity:50">
+                                        to you
+                                    </div>
+                                </div>
+                            </div>
+                            {# Right #}
+                            <div class="flex align-items:center gap:12 pr:4">
+                                <div class="font:2xs opacity:50">
+                                    Nov 7, 2025, 3:00 PM (moments ago)
+                                </div>
+                                {{ icons.back('w:12 opacity:50 mb:2')}}
+                                {{ icons.ellipsisV('w:12 opacity:50 mb:2')}}
+                            </div>
+                        </div>
+                        {# Divider #}
+                        <div class="w:100p h:1 bg:white opacity:6 mask:fade-out-x-90p"></div>
+                        <div class="relative flex flex:col align-items:center w:100p h:100p pt:32 px:56 w:100p overflow:hidden z:1 text:center">
+                            <div class="font:2xl semibold tracking:tight mb:16 color:ink-1-i">
+                            Designers: Get up and running with analytics
+                            </div>
+                            <div class="w:100p h:100p bg:white bg-opacity:2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

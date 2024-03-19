@@ -21,6 +21,7 @@ $utilities: (
     ),
     border-radius: (
         variants: (
+            25p: 25%,
             100p: 100%,
             2: 0.125rem,
             5: 0.3125rem,
@@ -31,6 +32,7 @@ $utilities: (
     ),
     border-top-radius: (
         variants: (
+            25p: 25%,
             100p: 100%,
             2: 0.125rem,
             5: 0.3125rem,
@@ -60,6 +62,26 @@ $utilities: (
         ),
     ),
     border-bottom-right-radius: (
+        variants: (
+            100p: 100%,
+            2: 0.125rem,
+            5: 0.3125rem,
+            7: 0.4375rem,
+            9: 0.5625rem,
+            15: 0.9375rem,
+        ),
+    ),
+    border-top-left-radius: (
+        variants: (
+            100p: 100%,
+            2: 0.125rem,
+            5: 0.3125rem,
+            7: 0.4375rem,
+            9: 0.5625rem,
+            15: 0.9375rem,
+        ),
+    ),
+    border-top-right-radius: (
         variants: (
             100p: 100%,
             2: 0.125rem,
@@ -118,6 +140,8 @@ $utilities: (
             minus48: calc(100% - 3rem),
             minus56: calc(100vh - 3.5rem),
             minus64: calc(100% - 4rem),
+            minus128: calc(100% - 8rem),
+            minus320: calc(100% - 20rem),
             plus2: calc(100% + 0.125rem),
             plus24: calc(100% + 1.5rem),
             plus48: calc(100% + 3rem),
