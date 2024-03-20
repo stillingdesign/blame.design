@@ -5,8 +5,8 @@ if(document.querySelector('[data-page="home"]')) {
 
     // Variables
     const btns = document.querySelectorAll('[data-hero-btn]');
-    const lineOne = document.querySelector('[data-headline-one]');
-    const lineTwo = document.querySelector('[data-headline-two]');
+    const lineOne = document.querySelector('[data-hero-headline-one]');
+    const lineTwo = document.querySelector('[data-hero-headline-two]');
     const results = document.querySelector('[data-hero-results]');
 
     // Update Button Classes on Option Click
@@ -31,7 +31,7 @@ if(document.querySelector('[data-page="home"]')) {
         const timing = 2;
         const easing = 'power4.inOut';
         updateButtonClasses(btn);
-        if(option === `"b"`) {
+        if(option === `b`) {
             const tmln = gsap.timeline({});
             tmln
                 .to(lineOne, {overwrite:true, y: lineOneHeight * -1, duration: timing, ease: easing}, 0)
@@ -44,7 +44,7 @@ if(document.querySelector('[data-page="home"]')) {
                 .to('[data-hero-results-a]', {overwrite:true, autoAlpha:0, duration: timing, ease: easing}, 0)
                 .to('[data-hero-results-b]', {overwrite:true, autoAlpha:1, duration: timing, ease: easing}, 0)
         }
-        if(option === `"a"`) {
+        if(option === `a`) {
             const tmln = gsap.timeline({});
             tmln
                 .to(lineTwo, {overwrite:true, y: 0, duration: timing, ease: easing}, 0)
