@@ -42,6 +42,7 @@ function invert() {
                 .to('[data-header-bg]', { backgroundColor: 'rgba(217, 217, 217, 1)', borderColor: 'rgba(13,13,13,0.08' }, 0)
                 .to('[data-header-btn-bg]', { backgroundColor: 'rgba(13, 13, 13, 1)' }, 0)
                 .to('[data-header-btn-inner]', { backgroundColor: 'rgba(255, 255, 255, 0.5)' }, 0)
+                .to('[data-modal-signup-bg-inner]', { backgroundColor: 'rgba(217, 217, 217, 0.95)' }, 0)
         }
         if( theme == 'dark' ) {
             tmln
@@ -49,6 +50,7 @@ function invert() {
                 .to('[data-header-bg]', { backgroundColor: 'rgba(8, 8, 8, 1)', borderColor: 'rgba(255,255,255,0.08' }, 0)
                 .to('[data-header-btn-bg]', { backgroundColor: 'rgba(255, 255, 255, 1)' }, 0)
                 .to('[data-header-btn-inner]', { backgroundColor: 'rgba(8, 8, 8, 0.5)' }, 0)
+                .to('[data-modal-signup-bg-inner]', { backgroundColor: 'rgba(8, 8, 8, 0.95)' }, 0)
         }
     });
 }

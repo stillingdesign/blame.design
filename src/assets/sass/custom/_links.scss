@@ -9,6 +9,11 @@
 .btn > .btn\:inner { @include apply("relative flex align-items:center justify-content:center radius:full w:100p"); }
 
 // Button Sizes
+.btn\:3xs {
+    @include apply("font:3xs p:1");
+    .btn\:inner { @include apply("px:10 py:6")}
+}
+
 .btn\:xs {
     @include apply("font:xs p:1");
     .btn\:inner { @include apply("px:12 py:8  ")}
@@ -323,6 +328,24 @@
                 }
             }
         }
+    }
+}
+
+.btn\:frameless   {
+    @include apply("color:ink-3 transition:200");
+    transform: translate3d(0, 0, 0);
+    & > .btn\:inner { @include apply("gap:4 tracking:loosest regular opacity:60 transition:200")}
+    & > .btn\:gradient { @include apply("hidden"); }
+    &.btn\:hover {
+        @media (hover: hover) {
+            &:hover {
+                @include apply("transition:300");
+                & > .btn\:inner { @include apply("color:primary-rg opacity:100 transition:300")}
+            }
+        }
+    }
+    &:focus-visible {
+        & > .btn\:inner { @include apply("opacity:100 transition:100")}
     }
 }
 

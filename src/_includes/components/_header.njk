@@ -28,15 +28,15 @@
             </ul>
         </nav>
         {# CTA #}
-        <div class="relative flex-shrink:0 hidden sm:block min-w:112">
-            <a href="{{ base.signupLink }}" data-header-btn class="relative btn btn:md btn:hover {% if theme == 'dark' %}btn:header-i{% else %}btn:header{% endif %}">
+        <div class="relative flex flex-shrink:0 hidden sm:block min-w:112">
+            <button data-modal-signup-trigger aria-expanded="false" aria-controls="modal-signup" data-header-btn class="relative btn btn:md btn:hover w:100p {% if theme == 'dark' %}btn:header-i{% else %}btn:header{% endif %}">
                 <div data-header-btn-bg class="btn:gradient"></div>
                 <div data-header-btn-inner class="btn:inner">
                     <div class="btn:text">
                         {{ base.signupText }}
                     </div>
                 </div>
-            </a>
+            </button>
         </div>
     </div>
 </header>

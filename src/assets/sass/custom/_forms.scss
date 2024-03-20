@@ -77,6 +77,34 @@
 
 
 // Form Field Styles
+.form\:modal  {
+    @include apply("color:ink-3 bg:ink-3 bg-opacity:10 backdrop backdrop-blur:sm transition:200");
+    transform: translate3d(0, 0, 0);
+    input { @include apply("bg:sheet-4 bg-opacity:80 transition:200")}
+    input::placeholder { color: rgba(var(--ink-3), 0.5); transition: color 200ms linear 0ms; }
+    button { @include apply("bg:primary-rg border:1 border:primary-rg bg-opacity:20 border-opacity:40 color:primary-rg")}
+    & > .form\:gradient { @include apply("absolute w:100p hidden ratio:1-1"); }
+    & > .form\:icon { @include apply("color:primary-rg"); }
+    // Hover
+    @media (hover: hover) {
+        &:hover {
+            @include apply("bg-opacity:20 transition:300");
+            animation: bump 50ms cubic-bezier(0,0.7,1,0.7) 25ms;
+            input { @include apply("bg:sheet-3 bg-opacity:90 transition:300")}
+            input::placeholder { color: rgba(var(--ink-3), 0.6); }
+        }
+        button:hover {
+            @include apply("bg-opacity:40 border-opacity:60 transition:300 cubic-out");
+            animation: bump 75ms cubic-bezier(0,0.7,1,0.7) 25ms;
+        }
+    }
+    // Focus Within + Focus Visible
+    &:focus-within { @include apply("bg:primary-rg bg-opacity:30 transition:300"); }
+    input:focus-visible { @include apply("bg:sheet-3 bg-opacity:100 transition:300")}
+    input:focus-visible::placeholder { color: rgba(var(--ink-3), 0.7); }
+    button:focus-visible { @include apply("bg-opacity:100 border-opacity:100 color:white transition:300 cubic-out"); }
+}
+
 .form\:primary-i   {
     @include apply("color:ink-3-i bg:ink-3-i bg-opacity:10 backdrop backdrop-blur:sm transition:200");
     transform: translate3d(0, 0, 0);

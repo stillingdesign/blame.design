@@ -3,6 +3,7 @@
 
 .animate\:rotate-clockwise-20 { animation: rotate-clockwise 20s linear infinite; }
 .animate\:rotate-counterclockwise-10 { animation: rotate-counterclockwise 10s linear infinite; }
+.animate\:rotate-signup-gradients { animation: rotate-counterclockwise 20s linear infinite; }
 
 @keyframes rotate-clockwise {
 	0% { transform: rotate(0deg); }

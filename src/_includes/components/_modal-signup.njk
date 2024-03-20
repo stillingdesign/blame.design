@@ -1,0 +1,72 @@
+{% import "components/_icons.njk" as icons %}
+{% import "components/_elements.njk" as elements %}
+{% import "components/_graphics.njk" as graphics %}
+
+<div data-modal-signup id="modal-signup" class="fixed top:0 left:0 z:9 w:100p h:100p flex align-items:center justify-content:center overflow:hidden" style="opacity:0; visibility:hidden;">
+    {# Background #}
+    <div data-modal-signup-bg class="absolute w:100p h:100p" style="opacity:0;">
+        <div data-modal-signup-bg-inner class="relative w:100p h:100p"style="{% if theme == 'dark' %}background-color: rgba(8,8,8,0.95);{% else %}background-color: rgba(217,217,217,0.95);{% endif %}"></div>
+    </div>
+    {# Form Wrapper #}
+    <div data-modal-signup-wrapper class="relative flex align-items:center justify-content:center">
+        {# Decorations #}
+        <div class="absolute flex align-items:center justify-content:center w:100p h:100p">
+            {# Gradients #}
+            <div data-modal-signup-gradients class="absolute flex align-items:center justify-content:center w:100p h:100p transform animate:rotate-signup-gradients" style="opacity:0; transform: scale3d(0,0,0);">
+                <div class="absolute w:320 h:320 bg:radial-teal-i left:n80 top:n80 opacity:30"></div>
+                <div class="absolute w:448 h:384 bg:radial-blue-i opacity:50"></div>
+                <div class="absolute w:320 h:320 bg:radial-purple-i right:n80 bottom:n80 opacity:30"></div>
+            </div>
+        </div>
+        {# Form #}
+        <div data-modal-signup-outer class="relative z:1 transform" style="opacity:0; transform: scale3d(0.5,0.5,0.5);">
+            <div data-modal-signup-inner class="relative w:320 bg:sheet-6 radius:xl color:ink-3 overflow:hidden" style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--sheet-3),1) 0%, rgba(var(--sheet-6),1) 100%); box-shadow: 0 24px 96px 0 rgba(0,0,0,0.25), 0 8px 16px 0 rgba(0,0,0,0.02), 0 0 0 1px rgba(0,0,0,0.02);">
+                {# Content #}
+                <div data-modal-signup-content class="relative flex flex:col align-items:center text:center pt:48 px:24 mb:18">
+                    <h2 data-modal-signup-headline class="font:2xl medium tracking:tight mb:4">
+                        Get Blame's newsletter
+                    </h2>
+                    <p data-modal-signup-subhead class="leading:140 opacity:60">
+                        <span class="tracking:normal">How to drive revenue with design</span> <span class="space:nowrap tracking:tight">and prove it—directly to your inbox.</span>
+                    </p>
+                </div>
+                {# CTA #}
+                <div data-modal-signup-form class="relative flex flex:col align-items:center text:center pb:24 px:24">
+                    {{ elements.formSingle(
+                        color="modal",
+                        size="md",
+                        classes="w:100p",
+                        icon=icons.emailOutline('w:100p'),
+                        formName="subscribe",
+                        fieldType="email",
+                        fieldName="email",
+                        placeholder="Enter email for updates",
+                        animate=true, 
+                        hover=true,
+                        attrInput='data-modal-signup-input',
+                        attrInner=""
+                    )}}
+                </div>
+            </div>
+            {# Nav #}
+            <div data-modal-signup-nav class="absolute top:0 left:0 w:100p py:1 pr:1 font:3xs font:mono uppercase tracking:loosest flex align-items:center justify-content:between border-b:1 border:black border-opacity:10 pointer-events:none">
+                <div class="flex align-items:center gap:4 pl:12 color:blue">
+                    {{ icons.check('w:12')}}
+                    <div>
+                        Spam free
+                    </div>
+                </div>
+                {{ elements.btnBtn(
+                    color="frameless",
+                    size="3xs",
+                    link="#",
+                    label="close",
+                    iconR=icons.close('w:16 mr:n2'),
+                    hover=true,
+                    attr='data-modal-signup-close',
+                    classes='pointer-events:auto'
+                )}} 
+            </div>
+        </div>
+    </div>
+</div>

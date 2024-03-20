@@ -567,23 +567,25 @@ changefreq: daily
                     </p>
                     {# Button #}
                     <div class="md:hidden flex-shrink:0">
-                        {{ elements.btnLink(
+                        {{ elements.btnBtn(
                             color="simple",
                             size="md",
                             link=collection.url,
                             label="Get Blame's Newsletter",
                             hover=true,
-                            classes=''
+                            classes='',
+                            attr='data-modal-signup-trigger aria-expanded="false" aria-controls="modal-signup"'
                         )}} 
                     </div>
                     <div class="hidden md:block">
-                        {{ elements.btnLink(
+                        {{ elements.btnBtn(
                             color="simple",
                             size="xl",
                             link=collection.url,
                             label="Get Blame's Newsletter",
                             hover=true,
-                            classes=''
+                            classes='',
+                            attr='data-modal-signup-trigger aria-expanded="false" aria-controls="modal-signup"'
                         )}} 
                     </div>
                 </div>
@@ -1190,7 +1192,7 @@ changefreq: daily
                     placeholder="Enter email for updates",
                     animate=true, 
                     hover=true,
-                    attr="data-hero-form",
+                    attr="data-bottom-form",
                     attrInner=""
                 )}}
             </div>
