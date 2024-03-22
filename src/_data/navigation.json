@@ -24,22 +24,10 @@
         "subFooter": true,
         "menuItems": [
             {
-                "label": "Terms",
+                "label": "Blame's Analytics",
                 "header": false,
                 "footer": true,
-                "url": "/legal/terms"
-            },
-            {
-                "label": "Privacy",
-                "header": false,
-                "footer": true,
-                "url": "/legal/privacy"
-            },
-            {
-                "label": "Status",
-                "header": false,
-                "footer": true,
-                "url": "/status"
+                "url": "#"
             }
         ]
     }
