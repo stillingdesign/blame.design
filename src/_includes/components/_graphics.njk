@@ -378,3 +378,94 @@
         </div>
     </div>
 {% endmacro %}
+
+{% macro grandstand() %}
+    <div aria-hidden="true" class="relative flex flex:col w:100p h:100p">
+        {# Status Bar #}
+        <div class="relative flex flex-shrink:0 justify-content:between w:100p px:12 border-b:1 border:ink-3-i border-opacity:10 z:1">
+            <div class="relative flex align-items:center gap:0 flex-shrink:0">
+                <div class="w:8 h:8 radius:full bg-opacity:10 border-opacity:20 border:1 border:white bg:white mr:4"></div>
+                <div class="w:8 h:8 radius:full bg-opacity:10 border-opacity:20 border:1 border:white bg:white mr:4"></div>
+                <div class="w:8 h:8 radius:full bg-opacity:10 border-opacity:20 border:1 border:white bg:white"></div>
+                <div class="flex align-items:center justify-content:center w:28 h:24 ml:6 border-x:1 border:white border-opacity:10">
+                    {{ icons.figmaLogo('w:12 opacity:40') }}
+                </div>
+                <div class="flex align-items:center h:100p px:6 border-r:1 border:white border-opacity:10 bg:white bg-opacity:4">
+                    <div class="font:2xs medium gradient-text bg:white bg-opacity:30 tracking:normal">
+                        Design file
+                    </div>
+                    <div class="relative flex align-items:center justify-content:center w:8 h:8 ml:4 opacity:20">
+                        <div class="absolute w:8 h:1 bg:white transform rotate:45"></div>
+                        <div class="absolute w:8 h:1 bg:white transform rotate:n45"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# Page Contents #}
+        <div class="relative w:100p h:100p pt:24 flex align-items:start justify-content:center gap:24">
+            {# Watermarked #}
+            <div class="relative w:100p h:100p hidden md:flex flex:col gap:2 tracking:normal">
+                <div class="font:xs medium gradient-text bg:white bg-opacity:30">
+                    &nbsp;
+                </div>
+                <div class="relative w:100p h:100p bg:sheet-2-i"></div>
+            </div>
+            {# Design #}
+            <div class="relative flex-shrink:0 w:10-12 md:w:50p h:100p flex flex:col gap:2 tracking:normal">
+                <div class="font:xs medium gradient-text bg:white bg-opacity:30">
+                    Design handoff
+                </div>
+                <div class="relative w:100p h:100p bg:sheet-1-i border:1 border:blue border-opacity:30 px:24 py:16">
+                    <div class="relative w:100p flex align-items:center justify-content:between">
+                        <div class="flex align-items:center gap:8 mb:8">
+                            <div>
+                                <div class="w:8 h:1 bg:ink-1-i"></div>
+                                <div class="w:8 h:1 bg:ink-1-i my:2"></div>
+                                <div class="w:8 h:1 bg:ink-1-i"></div>
+                            </div>
+                            <div class="color:ink-1-i font:sm md:font:md">
+                                Acme Dashboard
+                            </div>
+                        </div>
+                        <div class="color:ink-2-i font:2xs medium leading:100p bg:white bg-opacity:10 px:6 py:2 radius:xs mb:10">
+                            Create item
+                        </div>
+                    </div>
+                    <div class="relative flex align-items:end justify-content:around gap:16 px:16 w:100p ratio:2-1 bg:edge-1-i">
+                        <div class="w:100p bg:blue bg-opacity:20 radius-t:md border:1 border:blue border-opacity:30" style="height:50%;"></div>
+                        <div class="w:100p bg:blue bg-opacity:25 radius-t:md border:1 border:blue border-opacity:30" style="height:60%;"></div>
+                        <div class="w:100p bg:blue bg-opacity:30 radius-t:md border:1 border:blue border-opacity:30" style="height:70%;"></div>
+                        <div class="w:100p bg:blue bg-opacity:35 radius-t:md border:1 border:blue border-opacity:30" style="height:80%;"></div>
+                        <div class="w:100p bg:blue bg-opacity:40 radius-t:md border:1 border:blue border-opacity:30" style="height:90%;"></div>
+                    </div>
+                    <div class="absolute w:4 h:4 bg:white border:blue border:1 top:n2 left:n2 ml:n1"></div>
+                    <div class="absolute w:4 h:4 bg:white border:blue border:1 top:n2 right:n2 mr:n1"></div>
+                </div>
+            </div>
+            {# Watermarked #}
+            <div class="relative w:100p h:100p hidden md:flex flex:col gap:2 tracking:normal">
+                <div class="font:xs medium gradient-text bg:white bg-opacity:10 space:nowrap">
+                    Version 2
+                </div>
+                <div class="relative w:100p h:100p bg:sheet-2-i"></div>
+            </div>
+            {# Comments #}
+            <div class="absolute top:24 ml:96 px:12 py:4 radius:full bg:sheet-6 color:ink-1 font:xs medium tracking:normal" style="box-shadow: 0 8px 8px 0 rgba(0,0,0,0.25);">
+                {{ icons.tailL('absolute left:n4 bottom:0 w:16 color:sheet-6')}}
+                <span class="color:blue">@mktg</span> is this what you meant?
+            </div>
+            <div class="absolute top:80 mt:8 left:8 md:left:48 px:12 py:4 radius:full bg:sheet-6 color:ink-1 font:xs medium tracking:normal" style="box-shadow: 0 8px 8px 0 rgba(0,0,0,0.25);">
+                {{ icons.tailR('absolute right:n4 bottom:0 w:16 color:sheet-6')}}
+                <span class="color:blue">@bethany</span> can I get copy
+            </div>
+            <div class="absolute top:144 mt:6 right:8 md:right:48 px:12 py:4 radius:full bg:sheet-6 color:ink-1 font:xs medium tracking:normal" style="box-shadow: 0 8px 8px 0 rgba(0,0,0,0.25);">
+                {{ icons.tailL('absolute left:n4 bottom:0 w:16 color:sheet-6')}}
+                <span class="color:blue">@dev</span> can we animate this?
+            </div>
+            <div class="absolute top:192 mt:12 left:8 md:left:128 px:12 py:4 radius:full bg:sheet-6 color:ink-1 font:xs medium tracking:normal" style="box-shadow: 0 8px 8px 0 rgba(0,0,0,0.25);">
+                {{ icons.tailR('absolute right:n4 bottom:0 w:16 color:sheet-6')}}
+                <span class="color:blue">@pm</span> when is this due?
+            </div>
+        </div>
+    </div>
+{% endmacro %}
