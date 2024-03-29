@@ -5,3 +5,4 @@ import './interactions/modal-signup.js';
 
 // Animations
 import './animations/home.js';
+import './animations/scroll-marquee.js';

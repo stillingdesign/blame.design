@@ -1,18 +1,21 @@
 [
     {
         "name": "Mission",
+        "url": "/mission/",
         "header": true,
         "footer": true,
         "mobile": true
     },
     {
         "name": "Methods",
+        "url": "/methods/",
         "header": true,
         "footer": true,
         "mobile": true
     },
     {
         "name": "Opinions",
+        "url": "/opinions/",
         "header": true,
         "footer": true,
         "mobile": true
