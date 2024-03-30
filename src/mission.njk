@@ -50,7 +50,7 @@ changefreq: daily
         <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3-i border:dashed border-opacity:10 mb:24"></div>
         {# Headline #}
         <div class="container">
-            <h2 class="font:14vw sm:font:10-5vw md:font:8vw lg:font:12xl leading:110 tracking:tighter lg:tracking:tight">
+            <h2 class="font:14vw sm:font:10-5vw md:font:8vw lg:font:12xl leading:110 tracking:tighter lg:tracking:tight gradient-text" style="background-image: linear-gradient(180deg, rgba(var(--ink-3-i),1) 25%, rgba(var(--ink-3-i),0.35) 150%);">
                 Enable builders <span class="space:nowrap">and creators</span> <span class="space:nowrap">to lead,</span> watch business grow.
             </h2>
         </div>
@@ -262,21 +262,46 @@ changefreq: daily
     </section>
 
     {# Design-led Growth #}
-    <section data-invert="light" class="section bg:sheet-6 color:ink-3">
+    <section data-invert="light" class="section section:py bg:sheet-6 color:ink-3 z:1">
         {# Vert Dividers #}
         <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
             <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
-                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div>
-                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div>
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:15"></div>
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:15"></div>
             </div>
         </div>
         {# Zig Zag Edge #}
         <div class="absolute top:n10 mt:n1 w:100p h:12 z:3 transform rotate:180" style="background-image: url('/assets/images/utility/tooth-down-16-D9D9D9.svg'); background-size: 1rem 1rem;"></div>
+        {# Horz Divider #}
+        <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15"></div>
         {# Container #}
-        <div class="container section:py">
-            <h2 class="font:7xl sm:font:11xl leading:120 tracking:tighter">
-                This is a method to elegantly drive business growth via understanding, aesthetics, and action...
-            </h2>
+        <div class="container flex flex:col align-items:center justify-content:center">
+            {# Line Dividers :: Absolute #}
+            <div class="absolute hidden lg:block w:100vw lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 top:96"></div>
+            <div class="absolute hidden lg:block w:100vw lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 top:192 mt:10"></div>
+            <div class="absolute hidden lg:block w:100vw lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 top:288 mt:20"></div>
+            <div class="absolute hidden lg:block w:100vw lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 top:384 mt:28"></div>
+            {# Handles #}
+            <div class="absolute top:n8 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                <div class="w:1 h:100p bg:ink-3"></div>
+                <div class="h:1 w:100p bg:ink-3 absolute"></div>
+            </div>
+            <div class="absolute top:n8 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                <div class="w:1 h:100p bg:ink-3"></div>
+                <div class="h:1 w:100p bg:ink-3 absolute"></div>
+            </div>
+            {# Headline #}
+            <div class="relative mt:12 mb:24 sm:mb:72 w:100p">
+                <h2 class="font:8-75vw sm:font:7vw lg:font:11-5xl leading:130 md:leading:120 tracking:tighter">
+                    <span class="gradient-text" style="background-image:linear-gradient(0deg, rgba(var(--ink-3), 1) 0%, rgba(var(--ink-3), 1) 80%);">Growth design identifies and actionably solves for marketing challenges with data, design, and code to </span><span class="gradient-text" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);">drive business growth.</span>
+                </h2>
+            </div>
+        </div>
+        {# Cards #}
+        <div class="container grid sm:grid-cols:3 gap:24">
+            <div class="flex ratio:1-1 bg:sheet-5 radius:xl shadow:lg"></div>
+            <div class="flex ratio:1-1 bg:sheet-5 radius:xl shadow:lg"></div>
+            <div class="flex ratio:1-1 bg:sheet-5 radius:xl shadow:lg"></div>
         </div>
     </section>
 
