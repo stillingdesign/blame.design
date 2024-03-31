@@ -1,0 +1,44 @@
+---
+layout: "main.njk"
+seoTitle: "Blame: Design-led growth for SaaS companies"
+seoDescription: "Unleash creative people and processes to unlock the next large wave of growth for your business."
+ogTitle: "Blame: Design-led growth for SaaS companies"
+ogDesc: "Unleash creative people and processes to unlock the next large wave of growth for your business."
+ogImage: "/assets/images/og/default.jpg"
+ogImageAlt: "Person with 90s style apparrel sitting on office chair with large old computer on lap with their thumbs up."
+noindex: true
+theme: dark
+changefreq: yearly
+---
+{% import "components/_icons.njk" as icons %}
+{% import "components/_elements.njk" as elements %}
+
+<div class="w:100p h:100vh flex align-items:center justify-content:center">
+    <div class="container flex flex:col align-items:center text:center">
+        <h1 class="font:8vw lg:font:12xl leading:110">
+            This page is <span class="space:nowrap">still being built</span>
+        </h1>
+        <p class="font:5vw lg:font:8xl leading:130 mt:12 mb:16 opacity:60">
+            Sign up for the newsletter to be notified <span class="space:nowrap">once the site is fully complete.</span>
+        </p>
+        <div class="flex align-items:center gap:12">
+            {{ elements.btnBtn(
+                color="primary-i",
+                size="lg",
+                link=collection.url,
+                label="Signup",
+                hover=true,
+                classes='min-w:96',
+                attr='data-modal-signup-trigger aria-expanded="false" aria-controls="modal-signup"'
+            )}} 
+            {{ elements.btnLink(
+                color="simple-i",
+                size="lg",
+                link="/",
+                label="Home",
+                hover=true,
+                classes='min-w:96'
+            )}} 
+        </div>
+    </div>
+</div>

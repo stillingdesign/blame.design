@@ -5,8 +5,9 @@ module.exports = {
 
     twitterHandle: "@goblamedesign",
     twitterLink: "https://twitter.com/blamedesign",
-    githubLink: "https://github.com/stillingdesign",
-    linkedinLink: "https://www.linkedin.com/company/blamedesign/",
+    githubLink: "https://github.com/stillingdesign/blame.design/",
+    linkedinLink: "https://www.linkedin.com/company/blame/",
+    instagramLink: "https://www.instagram.com/blame_design",
 
     salesLink: "/start/",
     salesText: "Start a project",
