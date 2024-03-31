@@ -55,24 +55,3 @@ function headerInvert() {
     });
 }
 window.addEventListener('load', headerInvert);
-
-// GPT: Debounce function to limit the rate at which a function is executed
-function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-        var context = this, args = arguments;
-        var later = function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-}
-
-// GPT: Refresh ScrollTrigger when the window is resized or the orientation changes
-window.addEventListener('resize', debounce(function() {
-    ScrollTrigger.refresh();
-}, 250));
