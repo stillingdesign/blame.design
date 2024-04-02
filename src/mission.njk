@@ -266,8 +266,8 @@ changefreq: daily
         {# Vert Dividers #}
         <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
             <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
-                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:15"></div>
-                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:15"></div>
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div>
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div>
             </div>
         </div>
         {# Zig Zag Edge #}
@@ -275,7 +275,7 @@ changefreq: daily
         {# Horz Divider #}
         <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15"></div>
         {# Container #}
-        <div class="container flex flex:col align-items:center justify-content:center">
+        <div class="container flex flex:col align-items:center justify-content:center mb:24 sm:mb:96">
             {# Line Dividers :: Absolute #}
             <div class="absolute hidden lg:block w:100vw lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 top:96"></div>
             <div class="absolute hidden lg:block w:100vw lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 top:192 mt:10"></div>
@@ -291,17 +291,141 @@ changefreq: daily
                 <div class="h:1 w:100p bg:ink-3 absolute"></div>
             </div>
             {# Headline #}
-            <div class="relative mt:12 mb:24 sm:mb:72 w:100p">
-                <h2 class="font:8-75vw sm:font:7vw lg:font:11-5xl leading:130 md:leading:120 tracking:tighter">
+            <div class="relative mt:12 w:100p">
+                <p class="font:8-75vw sm:font:7vw lg:font:11-5xl leading:130 md:leading:120 tracking:tighter">
                     <span class="gradient-text" style="background-image:linear-gradient(0deg, rgba(var(--ink-3), 1) 0%, rgba(var(--ink-3), 1) 80%);">Growth design identifies and actionably solves for marketing challenges with data, design, and code to </span><span class="gradient-text" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);">drive business growth.</span>
+                </p>
+            </div>
+        </div>
+        {# Article #}
+        <div class="container flex flex:col pb:72 sm:pb:112 md:pb:160 font:lg sm:font:3xl md:font:4xl">
+            <div class="absolute w:minus24 sm:w:plus48 h:100p left:12 sm:left:n24 top:0 bg:sheet-5 shadow:2xl"></div>
+            <div class="absolute top:0 left:32 sm:left:48 md:left:72 h:100p border-l:1 border:red border-opacity:50"></div>
+            <div class="hidden sm:block md:hidden absolute top:64 mt:n5 left:n24 w:plus48 h:100p bg:repeat opacity:20" style="background-image: url(/assets/images/utility/ruled-paper-51-blue.svg); background-size: 5.625rem 5.625rem;"></div>
+            <div class="hidden md:block absolute top:64 mt:n5 left:n24 w:plus48 h:100p bg:repeat opacity:20" style="background-image: url(/assets/images/utility/ruled-paper-51-blue.svg); background-size: 6.375rem 6.375rem;"></div>
+            <div class="relative">
+                <div class="absolute sm:hidden bottom:2 left:n12 w:plus24 border-b:1 border:blue opacity:40"></div>
+                <h2 class="relative font:6xl sm:font:7xl md:font:9xl leading:100 font:serif tracking:tighter px:24 sm:px:96 pt:48 sm:pt:56 md:pt:48 mt:4">
+                    The details
                 </h2>
+            </div>
+            {% set articleOuter = 'relative flex flex:col align-items:end pl:24 pr:24 sm:pl:96 sm:pr:72 lg:pr:96' %}
+            {% set articleContent = 'relative max-w:768 flex-shrink:0 color:ink-1 flex flex:col gap:8 sm:gap:40 md:gap:48 mt:16 pt:1 sm:mt:40 sm:pt:5 md:mt:0 md:pt:0' %}
+            {# Marketing #}
+            <div class="{{ articleOuter }} pt:28 sm:pt:48 md:pt:56 mt:6 md:mt:2">
+                <div class="relative w:100p">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 162 66" class="absolute top:n4 sm:top:n6 md:top:n4 left:n14 sm:left:n16 w:96 sm:w:144 md:w:160 h:auto">
+                        <path stroke="rgba(var(--blue), 1)" stroke-width="1.5" stroke-linecap="round" d="M56 6C10 7-29 37 33 55c63 19 127 12 123-26C152-8-16-8 6 31c21 40 154 39 155 6C162 3 39-2 23 2"/>
+                    </svg>
+                    <h3 class="tracking:tighter medium">
+                        Marketing
+                    </h3>
+                </div>
+                <div class="{{ articleContent }}">
+                    <p>
+                        Growth design has a deep understanding of products, <span class="space:nowrap">how they</span> fit into the market, and how to find, and speak with, an audience that is searching for <span class="space:nowrap">these solutions.</span>
+                    </p>
+                    <p class="mt:6 md:mt:2">
+                        Growth design's first objective is to obtain this audience through organic and paid channels. Upon discovery, <span class="space:nowrap">the objective</span> shifts <span class="space:nowrap">to conversion.</span>
+                    </p>
+                </div>
+            </div>
+            {# Design#}
+            <div class="{{ articleOuter }} pt:32 sm:pt:48 mt:n2 md:mt:4">
+                <div class="relative w:100p mt:n1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 130 66" class="absolute top:n4 sm:top:n6 left:n14 sm:left:n16 md:left:n18 w:80 sm:w:112 md:w:128 h:auto">
+                        <path stroke="rgba(var(--blue), 1)" stroke-width="1.5" stroke-linecap="round" d="M44 56C10 53-3 39 2 21 8 4 58 5 82 9c24 5 68 22 35 42S13 64 11 31 57-1 78 3s46 15 39 39-51 29-86 17"/>
+                    </svg>
+                    <h3 class="tracking:tighter medium">
+                        Design
+                    </h3>
+                </div>
+                <div class="{{ articleContent }}">
+                    <p>
+                        Growth design solves these challenges through... design. Though, not solely visual—as these solutions require multi-faceted considerations to sustainably and <span class="space:nowrap">efficiently produce</span> <span class="space:nowrap">quality results.</span>
+                    </p>
+                    <p class="mt:6 md:mt:2">
+                        In practice, growth design meets an audience wherever they are, then captures their interest by addressing their needs, and, lastly, provides a route that solves <span class="space:nowrap">their task.</span>
+                    </p>
+                </div>
+            </div>
+            {# Engineering #}
+            <div class="{{ articleOuter }} pt:32 sm:pt:48 mt:n2 md:mt:4">
+                <div class="relative w:100p mt:n1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 194 66" class="absolute top:n4 sm:top:n6 left:n12 sm:left:n14 md:left:n20 w:112 sm:w:160 md:w:192 h:auto">
+                        <path stroke="rgba(var(--blue), 1)" stroke-width="1.5" stroke-linecap="round" d="M114 56c40 7 79-2 79-22S127 1 54 7c-74 7-60 39-19 49 41 11 150 17 152-22 1-39-173-47-173-4-1 43 110 40 134 24"/>
+                    </svg>
+                    <h3 class="tracking:tighter medium">
+                        Engineering
+                    </h3>
+                </div>
+                <div class="{{ articleContent }}">
+                    <p>
+                        To be put into action, most of the above requires code. <span class="space:nowrap">To fully</span> consider and account for solutions, growth design deeply understands the systems that <span class="space:nowrap">it operates within.</span>
+                    </p>
+                    <p class="pt:1 sm:pt:0 mt:6 md:mt:2">
+                        Driving growth requires efficiency. By unifying roles and responsibilities, growth design eliminates endless back-and-fourth, along with confusion <span class="space:nowrap">and complacency.</span>
+                    </p>
+                </div>
+            </div>
+            {# Aside #}
+            <div class="{{ articleOuter }} pt:32 sm:pt:48 mt:n1 sm:mt:n2 md:mt:4">
+                <div class="relative w:100p mt:n2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 162 66" class="absolute top:n4 sm:top:n6 left:n6 sm:left:n8 w:96 sm:w:144 md:w:160 h:auto">
+                        <path stroke="rgba(var(--blue), 1)" stroke-width="1.5" stroke-linecap="round" d="M111 9C83 1 8 7 1 31c-6 24 108 47 149 17 42-30-50-58-104-43s-57 44 0 56 109-6 108-26S96-10 49 13"/>
+                    </svg>
+                    <h3 class="tracking:tighter medium">
+                        Open to all
+                    </h3>
+                </div>
+                <div class="{{ articleContent }}">
+                    <p>
+                        Anyone can operate as a growth designer. At its core, <span class="space:nowrap">it is</span> <span class="space:nowrap">a borderless</span> approach to marketing that promotes end-to-end ownership, quality, efficiency <span class="space:nowrap">and impact.</span>
+                    </p>
+                    <p class="mt:6 md:mt:2">
+                        Enjoy generalization? Tired of only getting to work on one, small piece of the puzzle? With a can-do attitude and some GPT/Googling skills, growth design <span class="space:nowrap">may be just for you!</span>
+                    </p>
+                </div>
             </div>
         </div>
         {# Cards #}
-        <div class="container grid sm:grid-cols:3 gap:24">
-            <div class="flex ratio:1-1 bg:sheet-5 radius:xl shadow:lg"></div>
-            <div class="flex ratio:1-1 bg:sheet-5 radius:xl shadow:lg"></div>
-            <div class="flex ratio:1-1 bg:sheet-5 radius:xl shadow:lg"></div>
+        <div class="container grid sm:grid-cols:3 gap:24 mt:96">
+            {# Card 1 #}
+            <div class="relative flex align-items:center justify-content:center">
+                <div class="absolute w:plus96 h:plus96 border:1 border:dashed border:black radius:100p border-opacity:10 bg:fade-left"></div>
+                <div class="relative z:1 w:100p ratio:1-1 bg:sheet-5 radius:xl shadow:lg p:1 overflow:hidden">
+                    <div class="relative w:100p h:100p bg:sheet-6 radius:15 p:24">
+                        <h3 class="font:4xl tracking:tight leading:100 mb:12">
+                            <span class="font:serif italic tracking:tighter opacity:60">join</span><br> Marketing
+                        </h3>
+                        <p class="font:xl leading:140 opacity:60">
+                            Growth design understands how <span class="space:nowrap">to acquire</span> and engage an audience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {# Card 2 #}
+            <div class="relative flex align-items:center justify-content:center">
+                <div class="absolute w:plus96 h:plus96 border:1 border:dashed border:black radius:100p opacity:10"></div>
+                <div class="relative z:1 w:100p ratio:1-1 bg:sheet-5 radius:xl shadow:lg p:1 overflow:hidden">
+                    <div class="relative w:100p h:100p bg:sheet-6 radius:15 p:24">
+                        <h3 class="font:4xl tracking:tight leading:100">
+                            <span class="font:serif italic tracking:tighter opacity:60">with</span><br> Design
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            {# Card 3 #}
+            <div class="relative flex align-items:center justify-content:center">
+                <div class="absolute w:plus96 h:plus96 border:1 border:dashed border:black radius:100p border-opacity:10 bg:fade-right"></div>
+                <div class="relative z:1 w:100p ratio:1-1 bg:sheet-5 radius:xl shadow:lg p:1 overflow:hidden">
+                    <div class="relative w:100p h:100p bg:sheet-6 radius:15 p:24">
+                        <h3 class="font:4xl tracking:tight leading:100">
+                            <span class="font:serif italic tracking:tighter opacity:60">and</span><br> Engineering
+                        </h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
