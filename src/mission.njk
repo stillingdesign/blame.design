@@ -262,7 +262,7 @@ changefreq: daily
     </section>
 
     {# Design-led Growth #}
-    <section data-invert="light" class="section section:py bg:sheet-6 color:ink-3 z:1">
+    <section data-invert="light" class="section section:pt bg:sheet-6 color:ink-3 z:1">
         {# Vert Dividers #}
         <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
             <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
@@ -274,7 +274,7 @@ changefreq: daily
         <div class="absolute top:n10 mt:n1 w:100p h:12 z:3 transform rotate:180" style="background-image: url('/assets/images/utility/tooth-down-16-D9D9D9.svg'); background-size: 1rem 1rem;"></div>
         {# Horz Divider #}
         <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15"></div>
-        {# Container #}
+        {# Headline Container #}
         <div class="container flex flex:col align-items:center justify-content:center mb:24 sm:mb:96">
             {# Line Dividers :: Absolute #}
             <div class="absolute hidden lg:block w:100vw lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 top:96"></div>
@@ -291,18 +291,21 @@ changefreq: daily
                 <div class="h:1 w:100p bg:ink-3 absolute"></div>
             </div>
             {# Headline #}
-            <div class="relative mt:12 w:100p">
+            <div class="relative mt:12 w:100p z:3">
                 <p class="font:8-75vw sm:font:7vw lg:font:11-5xl leading:130 md:leading:120 tracking:tighter">
                     <span class="gradient-text" style="background-image:linear-gradient(0deg, rgba(var(--ink-3), 1) 0%, rgba(var(--ink-3), 1) 80%);">Growth design identifies and actionably solves for marketing challenges with data, design, and code to </span><span class="gradient-text" style="background-image: linear-gradient(135deg, rgba(var(--teal-i), 1) 0%, rgba(var(--blue-i), 1) 40%, rgba(var(--purple-i), 1) 80%);">drive business growth.</span>
                 </p>
             </div>
         </div>
-        {# Article #}
-        <div class="container flex flex:col pb:72 sm:pb:112 md:pb:160 font:lg sm:font:3xl md:font:4xl">
-            <div class="absolute w:minus24 sm:w:plus48 h:100p left:12 sm:left:n24 top:0 bg:sheet-5 shadow:2xl"></div>
+        {# Article Container  #}
+        <div class="container flex flex:col pb:72 sm:pb:112 md:pb:160 font:lg sm:font:3xl md:font:4xl z:2">
+            <div class="absolute w:minus24 sm:w:plus48 h:100p left:12 sm:left:n24 top:0 bg:sheet-5 shadow:2xl overflow:hidden radius-tr:72 sm:radius-tr:96 md:radius-tr:144">
+                <div class="hidden sm:block md:hidden absolute top:64 mt:n5 left:0 w:100p h:100p bg:repeat opacity:20" style="background-image: url(/assets/images/utility/ruled-paper-51-blue.svg); background-size: 5.625rem 5.625rem;"></div>
+                <div class="hidden md:block absolute top:64 mt:n5 left:0 w:100p h:100p bg:repeat opacity:20" style="background-image: url(/assets/images/utility/ruled-paper-51-blue.svg); background-size: 6.375rem 6.375rem;"></div>
+                <div class="absolute bottom:0 left:0 w:100p h:64 bg:sheet-5"></div>
+                <div class="absolute top:0 right:0 w:56 h:56 sm:w:72 sm:h:72 md:w:128 md:h:128 bg:sheet-3" style="box-shadow: 0 8px 48px 0 rgba(0,0,0,0.3); background: linear-gradient(45deg, rgba(var(--sheet-2), 1) 0%, rgba(var(--edge-2), 1) 100%);"></div>
+            </div>
             <div class="absolute top:0 left:32 sm:left:48 md:left:72 h:100p border-l:1 border:red border-opacity:50"></div>
-            <div class="hidden sm:block md:hidden absolute top:64 mt:n5 left:n24 w:plus48 h:100p bg:repeat opacity:20" style="background-image: url(/assets/images/utility/ruled-paper-51-blue.svg); background-size: 5.625rem 5.625rem;"></div>
-            <div class="hidden md:block absolute top:64 mt:n5 left:n24 w:plus48 h:100p bg:repeat opacity:20" style="background-image: url(/assets/images/utility/ruled-paper-51-blue.svg); background-size: 6.375rem 6.375rem;"></div>
             <div class="relative">
                 <div class="absolute sm:hidden bottom:2 left:n12 w:plus24 border-b:1 border:blue opacity:40"></div>
                 <h2 class="relative font:6xl sm:font:7xl md:font:9xl leading:100 font:serif tracking:tighter px:24 sm:px:96 pt:48 sm:pt:56 md:pt:48 mt:4">
@@ -388,44 +391,44 @@ changefreq: daily
                 </div>
             </div>
         </div>
-        {# Cards #}
-        <div class="container grid sm:grid-cols:3 gap:24 mt:96">
+        {# Closing Cards #}
+        <div class="container grid sm:grid-cols:3 gap:24 mt:n24">
             {# Card 1 #}
             <div class="relative flex align-items:center justify-content:center">
-                <div class="absolute w:plus96 h:plus96 border:1 border:dashed border:black radius:100p border-opacity:10 bg:fade-left"></div>
-                <div class="relative z:1 w:100p ratio:1-1 bg:sheet-5 radius:xl shadow:lg p:1 overflow:hidden">
-                    <div class="relative w:100p h:100p bg:sheet-6 radius:15 p:24">
-                        <h3 class="font:4xl tracking:tight leading:100 mb:12">
-                            <span class="font:serif italic tracking:tighter opacity:60">join</span><br> Marketing
-                        </h3>
-                        <p class="font:xl leading:140 opacity:60">
-                            Growth design understands how <span class="space:nowrap">to acquire</span> and engage an audience.
-                        </p>
-                    </div>
+                <div class="absolute w:plus96 h:plus96 border:1 border:dashed border:black radius:100p border-opacity:15 bg:fade-left"></div>
+                <div class="relative z:1 w:100p ratio:1-1 overflow:hidden">
+                    <p class="relative w:100p h:100p flex flex:col align-items:center justify-content:center text:center radius:15 p:24 font:8xl tracking:tight leading:100 mb:12">
+                        <span class="font:serif italic tracking:tighter color:blue">merge</span> Marketing
+                    </p>
                 </div>
             </div>
             {# Card 2 #}
             <div class="relative flex align-items:center justify-content:center">
-                <div class="absolute w:plus96 h:plus96 border:1 border:dashed border:black radius:100p opacity:10"></div>
-                <div class="relative z:1 w:100p ratio:1-1 bg:sheet-5 radius:xl shadow:lg p:1 overflow:hidden">
-                    <div class="relative w:100p h:100p bg:sheet-6 radius:15 p:24">
-                        <h3 class="font:4xl tracking:tight leading:100">
-                            <span class="font:serif italic tracking:tighter opacity:60">with</span><br> Design
-                        </h3>
-                    </div>
+                <div class="absolute w:plus96 h:plus96 border:1 border:dashed border:black radius:100p border-opacity:15"></div>
+                <div class="relative z:1 w:100p ratio:1-1 overflow:hidden">
+                    <p class="relative w:100p h:100p flex flex:col align-items:center justify-content:center text:center radius:15 p:24 font:8xl tracking:tight leading:100 mb:12">
+                        <span class="font:serif italic tracking:tighter color:blue">with</span> Design
+                    </p>
                 </div>
             </div>
             {# Card 3 #}
             <div class="relative flex align-items:center justify-content:center">
-                <div class="absolute w:plus96 h:plus96 border:1 border:dashed border:black radius:100p border-opacity:10 bg:fade-right"></div>
-                <div class="relative z:1 w:100p ratio:1-1 bg:sheet-5 radius:xl shadow:lg p:1 overflow:hidden">
-                    <div class="relative w:100p h:100p bg:sheet-6 radius:15 p:24">
-                        <h3 class="font:4xl tracking:tight leading:100">
-                            <span class="font:serif italic tracking:tighter opacity:60">and</span><br> Engineering
-                        </h3>
-                    </div>
+                <div class="absolute w:plus96 h:plus96 border:1 border:dashed border:black radius:100p border-opacity:15 bg:fade-right"></div>
+                <div class="relative z:1 w:100p ratio:1-1 overflow:hidden">
+                    <p class="relative w:100p h:100p flex flex:col align-items:center justify-content:center text:center radius:15 p:24 font:8xl tracking:tighter leading:100 mb:12">
+                        <span class="font:serif italic color:blue">and</span> Engineering
+                    </p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    {# Section #}
+    <section data-invert="dark" class="section section:py z:2 bg:sheet-6-i">
+        {# Zig Zag Edge #}
+        <div class="absolute top:n10 mt:n1 w:100p h:12 z:3 transform rotate:180" style="background-image: url('/assets/images/utility/tooth-down-16-080808.svg'); background-size: 1rem 1rem;"></div>
+        <div class="container">
+            more to come
         </div>
     </section>
 
