@@ -2,6 +2,7 @@ module.exports = {
     url: process.env.URL || "http://localhost:8080",
     domain: "https://blame.design",
     name: "Blame",
+    env: process.env.ENVIRONMENT || "local",
 
     twitterHandle: "@goblamedesign",
     twitterLink: "https://twitter.com/blamedesign",

@@ -81,7 +81,7 @@
 
         <!-- Scripts -->
         <script src="/assets/javascript/main.js"></script>
-        {% if base.url == base.domain %}
+        {% if base.env == 'PROD' %} 
             <script defer data-domain="blame.design" src="https://plausible.io/js/script.js"></script>
         {% endif %}
     </body>
