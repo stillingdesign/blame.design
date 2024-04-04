@@ -1,0 +1,168 @@
+---
+layout: "main.njk"
+tags: blog
+theme: light
+changefreq: monthly
+---
+{% import "components/_icons.njk" as icons %}
+{% import "components/_elements.njk" as elements %}
+{% import "components/_graphics.njk" as graphics %}
+{% set maxWidth = '672' %}
+<main>
+
+    {% macro vertDividers() %}
+        {# Vert Dividers #}
+        <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
+            <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div>
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div>
+            </div>
+        </div>
+        {# Vert Dividers Inner #}
+        <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
+            <div class="relative w:100p h:100p max-w:{{ maxWidth }} flex justify-content:between">
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 ml:n24"></div>
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mr:n24"></div>
+            </div>
+        </div>
+    {% endmacro %}
+
+    {# Hero #}
+    <section class="section section:pt pb:72">
+        {{ vertDividers()}}
+        {# Horz Dividers #}
+        <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 mb:16"></div>
+        {# Container #}
+        <div class="container flex flex:col align-items:center">
+            {# Eyebrow #}
+            <div class="relative flex align-items:center justify-content:start gap:6 w:100p max-w:{{ maxWidth }} py:4 mb:10">
+                {# Handles #}
+                <div class="absolute top:n24 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <div class="absolute top:n24 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <p class="opacity:60">
+                    {{ category | capitalize }}
+                </p>
+                <div class="w:2 h:2 radius:full bg:ink-3 opacity:60 mr:n2"></div>
+                <p class="opacity:60">
+                    {{ duration | capitalize }}
+                </p>
+            </div>
+            {# Headline #}
+            <div class="relative w:100p max-w:{{ maxWidth }}">
+                <div class="relative">
+                    <h1 class="font:7xl tracking:tighter leading:120 medium mb:14">
+                        {{ headline | safe }}
+                    </h1>
+                </div>
+                <div class="relative">
+                    <div class="absolute left:n24 top:8 h:20 border-l:1 border:primary-rg"></div>
+                    <p class="font:2xl leading:150 opacity:70">
+                        {{ description | safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# Content #}
+    <section class="section section:pb">
+        {{ vertDividers()}}
+        {# Horz Divider #}
+        <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15"></div>
+        {# Subheader #}
+        <div class="sticky top:56 w:100p flex flex:col align-items:center mb:n1 z:8">
+            <div class="container flex align-items:center justify-content:between">
+                {# Background #}
+                <div class="absolute top:0 left:n24 w:plus48 h:100p px:1 pb:1">
+                    <div class="w:100p h:100p bg:sheet-6 bg-opacity:20 backdrop backdrop-blur:sm blur:fix"></div>
+                </div>
+                {# Vert Dividers Inner #}
+                <div class="absolute top:0 left:0 w:100p h:100p flex align-items:center justify-content:center">
+                    <div class="relative w:100p h:100p max-w:{{ maxWidth }} flex justify-content:between">
+                        <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 ml:n24"></div>
+                        <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mr:n24"></div>
+                    </div>
+                </div>
+                {# Date #}
+                <div class="relative min-w:112 flex justify-content:start align-items:center font:sm opacity:60">
+                    {{ icons.calendar('w:14 mr:6')}}
+                    <time datetime="{{ date }}">
+                        {{ date | dateFull }}
+                    </time>
+                </div>
+                {# Centered #}
+                <div class="relative flex align-items:center justify-content:between w:100p max-w:{{ maxWidth }} py:8 overflow:hidden">
+                    {# Link #}
+                    <div class="relative flex align-items:center pl:8 pr:10 h:26 radius:xs bg:sheet-5 font:mono tracking:tighter font:xs border:1 border:ink-3 border-opacity:15">
+                        {{ icons.share('w:12 mr:4 color:primary-rg')}}
+                        <div class="opacity:60">
+                            {{ base.url }}{{ page.url }}
+                        </div>
+                    </div>
+                    <div class="font:xs medium relative flex align-items:center gap:4">
+                        {{ elements.btnBtn(
+                            color="simple",
+                            size="blog-nav",
+                            label="Summary",
+                            iconR=icons.iconOpenai('w:14 mr:n4 mt:n1 ml:4 color:primary-rg'),
+                            hover=true,
+                            classes=''
+                        )}} 
+                        {{ elements.btnLink(
+                            color="simple",
+                            size="blog-nav",
+                            link="https://github.com/stillingdesign/blame.design/blob/main/src/blog/" ~ source,
+                            label="Source",
+                            iconR=icons.socialGithub('w:14 mr:n4 mt:n1 ml:4 color:primary-rg'),
+                            hover=true,
+                            classes=''
+                        )}} 
+                    </div>
+                    {# Headline #}
+                    <p class="absolute top:48 w:100p text:center font:serif font:lg leading:100 pb:1">
+                        {{ headline | safe }}
+                    </p>
+                </div>
+                {# Author #}
+                <div class="relative min-w:112 flex justify-content:end align-items:center gap:8 font:sm">
+                    <p class="opacity:60">
+                        {{ author }}
+                    </p>
+                    <div class="relative w:24 h:24 bg:blue radius:full flex align-items:center justify-content:center overflow:hidden">
+                        <img src="/assets/images/utility/avatar-mike-192.webp" alt class="relative flex w:100p h:100p object:cover">
+                    </div>
+                </div>
+                {# Border #}
+                <div class="absolute bottom:0 left:n24 w:plus48 border-t:1 border:ink-3 border-opacity:10"></div>
+            </div>
+        </div>
+        {# Image #}
+        <div class="container z:9">
+            <div class="relative flex align-items:center justify-content:center w:plus48 ml:n24 ratio:16-9 bg:blue overflow:hidden">
+                <img src="/assets/images/mission/wtf-md.webp" width="1200" height="900" alt class="flex w:100p h:100p object:cover">
+            </div>
+        </div>
+        {# Content #}
+        <div class="container min-h:100vh section:pt">
+            {{ content | safe }}
+            <div class="relative min-w:128 flex justify-content:start">
+                    {{ elements.btnBtn(
+                        color="simple",
+                        size="sm",
+                        label="Copy link",
+                        hover=true,
+                        iconL=icons.link('w:12 mr:4'),
+                        hover=true
+                    )}}
+                </div>
+        </div>
+    </section>
+
+
+</main>
