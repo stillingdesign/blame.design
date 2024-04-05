@@ -112,9 +112,9 @@ changefreq: monthly
                 {# Centered #}
                 <div class="relative flex align-items:center justify-content:start sm:justify-content:between gap:12 w:100p md:max-w:{{ maxWidth }} py:8 overflow:hidden">
                     {# Link #}
-                    <button data-copy="{{ base.url }}{{ page.url }}" data-subheader-hide class="relative hidden sm:flex align-items:center justify-content:start overflow:hidden pl:8 pr:10 h:26 radius:xs bg:sheet-5 font:mono tracking:tighter font:xs border:1 border:ink-3 border-opacity:15 focus:primary group hover:bg:sheet-4 transition:200 cubic-out">
+                    <button data-copy="{{ base.url }}{{ page.url }}" data-subheader-hide class="relative hidden sm:flex align-items:center justify-content:start overflow:hidden pl:8 pr:10 h:26 radius:xs bg:sheet-5 font:mono tracking:tighter font:xs border:1 border:ink-3 border-opacity:15 focus:primary group hover:bg:sheet-4 hover:shadow:2xs">
                         {{ icons.share('w:12 mr:4 color:primary-rg flex-shrink:0 ')}}
-                        <div class="relative opacity:60 space:nowrap overflow:ellipsis w:100p focus:white group-hover:opacity:100 transition:200 cubic-out">
+                        <div class="relative opacity:60 space:nowrap overflow:ellipsis w:100p focus:white group-hover:opacity:100">
                             {{ base.url }}{{ page.url }}
                         </div>
                         <div class="absolute right:0 top:0 w:12 h:100p bg:fade-right-sheet-5 focus:hide"></div>
