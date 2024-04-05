@@ -24,7 +24,7 @@ if(document.querySelector('[data-page="blog-post"]')) {
         });
         tmln
             .to('[data-subheader-hide]', { y: -22, autoAlpha:0, duration:1, ease: 'power3.inOut' }, 0)
-            .to('[data-subheader-show]', { y: 0, autoAlpha:1, duration:1, ease: 'power3.inOut' }, 0);
+            .to('[data-subheader-show]', { y: 2, autoAlpha:1, duration:1, ease: 'power3.inOut' }, 0);
     }
     swapSubheader();
 
