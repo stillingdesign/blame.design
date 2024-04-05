@@ -86,7 +86,7 @@ changefreq: monthly
         {# Horz Divider #}
         <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15"></div>
         {# Subheader #}
-        <div data-subheader class="sticky top:56 w:100p flex flex:col align-items:center mb:n1 z:8">
+        <div data-subheader class="sticky top:56 w:100p flex flex:col align-items:center mb:n1 z:8 blur:fix">
             <div class="container flex align-items:center justify-content:between gap:8 sm:gap:16">
                 {# Background #}
                 <div class="absolute top:0 left:n24 w:plus48 h:100p px:1 pb:1">
@@ -112,13 +112,16 @@ changefreq: monthly
                 {# Centered #}
                 <div class="relative flex align-items:center justify-content:start sm:justify-content:between gap:12 w:100p md:max-w:{{ maxWidth }} py:8 overflow:hidden">
                     {# Link #}
-                    <div data-subheader-hide class="relative hidden sm:flex align-items:center justify-content:start overflow:hidden pl:8 pr:10 h:26 radius:xs bg:sheet-5 font:mono tracking:tighter font:xs border:1 border:ink-3 border-opacity:15">
+                    <button data-copy="{{ base.url }}{{ page.url }}" data-subheader-hide class="relative hidden sm:flex align-items:center justify-content:start overflow:hidden pl:8 pr:10 h:26 radius:xs bg:sheet-5 font:mono tracking:tighter font:xs border:1 border:ink-3 border-opacity:15 focus:primary group hover:bg:sheet-4 transition:200 cubic-out">
                         {{ icons.share('w:12 mr:4 color:primary-rg flex-shrink:0 ')}}
-                        <div class="relative opacity:60 space:nowrap overflow:ellipsis w:100p">
+                        <div class="relative opacity:60 space:nowrap overflow:ellipsis w:100p focus:white group-hover:opacity:100 transition:200 cubic-out">
                             {{ base.url }}{{ page.url }}
                         </div>
-                        <div class="absolute right:0 top:0 w:12 h:100p bg:fade-right-sheet-5"></div>
-                    </div>
+                        <div class="absolute right:0 top:0 w:12 h:100p bg:fade-right-sheet-5 focus:hide"></div>
+                        <div data-confirm class="absolute right:0 top:0 w:58 h:100p flex align-items:center pl:6 pr:4 radius-l:xs color:white bg:primary-rg" style="transform: translate3d(3.625rem,0,0);">
+                            Copied!
+                        </div>
+                    </button>
                     {# Buttons #}
                     <div data-subheader-hide class="font:xs medium relative flex align-items:center gap:4 flex-shrink:0">
                         <div class="relative">
@@ -171,7 +174,7 @@ changefreq: monthly
         {# Image #}
         <div data-hero-img class="container z:9">
             <div class="relative flex align-items:center justify-content:center w:plus48 ml:n24 ratio:16-9 bg:blue overflow:hidden">
-                <img src="/assets/images/mission/wtf-md.webp" width="1200" height="900" alt class="flex w:100p h:100p object:cover">
+                <img src="/assets/images/mission/wtf-md.webp" width="1200" height="900" alt class="flex w:100p h:100p object:cover blur:fix">
             </div>
         </div>
         {# Content #}

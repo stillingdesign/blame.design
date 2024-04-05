@@ -383,6 +383,9 @@
 }
 
 .focus\:primary:focus-visible {@include apply("opacity:100 color:white bg:primary-rg border:1 border:primary-rg outline:none"); }
+.focus\:primary:focus-visible .focus\:white {@include apply("opacity:100 color:white"); }
+.focus\:primary:focus-visible .focus\:hide {@include apply("opacity:0"); }
+.focus\:primary:focus-visible svg {@include apply("opacity:100 color:white"); }
 
 // Bump Animation
 @keyframes bump {

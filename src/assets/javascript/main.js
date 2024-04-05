@@ -1,4 +1,5 @@
 // Interactions
+import './interactions/copy.js';
 import './interactions/forms.js';
 import './interactions/header.js';
 import './interactions/modal-signup.js';
