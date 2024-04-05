@@ -19,7 +19,7 @@ changefreq: monthly
             </div>
         </div>
         {# Vert Dividers Inner #}
-        <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
+        <div class="absolute top:0 w:100p h:100p hidden md:flex align-items:center justify-content:center px:12 sm:px:24">
             <div class="relative w:100p h:100p max-w:{{ maxWidth }} flex justify-content:between">
                 <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 ml:n24"></div>
                 <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mr:n24"></div>
@@ -28,20 +28,29 @@ changefreq: monthly
     {% endmacro %}
 
     {# Hero #}
-    <section class="section section:pt pb:72">
+    <section class="section pt:96 sm:pt:96 md:pt:160 pb:24 sm:pb:24 md:pb:72">
         {{ vertDividers()}}
         {# Horz Dividers #}
         <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 mb:16"></div>
         {# Container #}
-        <div class="container flex flex:col align-items:center">
+        <div class="container flex flex:col align-items:center pt:4 md:pt:0">
+            {# Handles #}
+            <div class="absolute top:n24 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 flex md:hidden align-items:center justify-content:center border-t:1">
+                <div class="w:1 h:100p bg:ink-3"></div>
+                <div class="h:1 w:100p bg:ink-3 absolute"></div>
+            </div>
+            <div class="absolute top:n24 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 flex md:hidden align-items:center justify-content:center border-t:1">
+                <div class="w:1 h:100p bg:ink-3"></div>
+                <div class="h:1 w:100p bg:ink-3 absolute"></div>
+            </div>
             {# Eyebrow #}
             <div class="relative flex align-items:center justify-content:start gap:6 w:100p max-w:{{ maxWidth }} py:4 mb:10">
-                {# Handles #}
-                <div class="absolute top:n24 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                {# Handles Md #}
+                <div class="absolute top:n24 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
                     <div class="w:1 h:100p bg:ink-3"></div>
                     <div class="h:1 w:100p bg:ink-3 absolute"></div>
                 </div>
-                <div class="absolute top:n24 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 flex align-items:center justify-content:center border-t:1">
+                <div class="absolute top:n24 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
                     <div class="w:1 h:100p bg:ink-3"></div>
                     <div class="h:1 w:100p bg:ink-3 absolute"></div>
                 </div>
@@ -56,13 +65,13 @@ changefreq: monthly
             {# Headline #}
             <div class="relative w:100p max-w:{{ maxWidth }}">
                 <div class="relative">
-                    <h1 class="font:7xl tracking:tighter leading:120 medium mb:14">
+                    <h1 class="font:10vw sm:font:10xl tracking:tighter leading:110 medium mb:14">
                         {{ headline | safe }}
                     </h1>
                 </div>
                 <div class="relative">
-                    <div class="absolute left:n24 top:8 h:20 border-l:1 border:primary-rg"></div>
-                    <p class="font:2xl leading:150 opacity:70">
+                    <div class="absolute hidden md:block left:n24 top:8 h:20 border-l:1 border:primary-rg"></div>
+                    <p class="font:5-5vw sm:font:2xl leading:150 opacity:70">
                         {{ description | safe }}
                     </p>
                 </div>
@@ -77,52 +86,61 @@ changefreq: monthly
         <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15"></div>
         {# Subheader #}
         <div class="sticky top:56 w:100p flex flex:col align-items:center mb:n1 z:8">
-            <div class="container flex align-items:center justify-content:between">
+            <div class="container flex align-items:center justify-content:between gap:8 sm:gap:16">
                 {# Background #}
                 <div class="absolute top:0 left:n24 w:plus48 h:100p px:1 pb:1">
                     <div class="w:100p h:100p bg:sheet-6 bg-opacity:20 backdrop backdrop-blur:sm blur:fix"></div>
                 </div>
+                {# Vert Dividers #}
+                <div class="absolute sm:hidden top:0 left:12 h:100p border-l:1 border:ink-3 border-opacity:10"></div>
+                <div class="absolute sm:hidden top:0 right:12 h:100p border-l:1 border:ink-3 border-opacity:10"></div>
                 {# Vert Dividers Inner #}
-                <div class="absolute top:0 left:0 w:100p h:100p flex align-items:center justify-content:center">
+                <div class="absolute top:0 left:0 w:100p h:100p hidden md:flex align-items:center justify-content:center">
                     <div class="relative w:100p h:100p max-w:{{ maxWidth }} flex justify-content:between">
                         <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 ml:n24"></div>
                         <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mr:n24"></div>
                     </div>
                 </div>
                 {# Date #}
-                <div class="relative min-w:112 flex justify-content:start align-items:center font:sm opacity:60">
+                <div class="relative md:min-w:112 flex-shrink:0 hidden sm:flex justify-content:start align-items:center font:sm opacity:60">
                     {{ icons.calendar('w:14 mr:6')}}
                     <time datetime="{{ date }}">
                         {{ date | dateFull }}
                     </time>
                 </div>
                 {# Centered #}
-                <div class="relative flex align-items:center justify-content:between w:100p max-w:{{ maxWidth }} py:8 overflow:hidden">
+                <div class="relative flex align-items:center justify-content:start sm:justify-content:between gap:12 w:100p md:max-w:{{ maxWidth }} py:8 overflow:hidden">
                     {# Link #}
-                    <div class="relative flex align-items:center pl:8 pr:10 h:26 radius:xs bg:sheet-5 font:mono tracking:tighter font:xs border:1 border:ink-3 border-opacity:15">
-                        {{ icons.share('w:12 mr:4 color:primary-rg')}}
-                        <div class="opacity:60">
+                    <div class="relative hidden sm:flex align-items:center justify-content:start overflow:hidden pl:8 pr:10 h:26 radius:xs bg:sheet-5 font:mono tracking:tighter font:xs border:1 border:ink-3 border-opacity:15">
+                        {{ icons.share('w:12 mr:4 color:primary-rg flex-shrink:0 ')}}
+                        <div class="relative opacity:60 space:nowrap overflow:ellipsis w:100p">
                             {{ base.url }}{{ page.url }}
                         </div>
+                        <div class="absolute right:0 top:0 w:12 h:100p bg:fade-right-sheet-5"></div>
                     </div>
-                    <div class="font:xs medium relative flex align-items:center gap:4">
-                        {{ elements.btnBtn(
-                            color="simple",
-                            size="blog-nav",
-                            label="Summary",
-                            iconR=icons.iconOpenai('w:14 mr:n4 mt:n1 ml:4 color:primary-rg'),
-                            hover=true,
-                            classes=''
-                        )}} 
-                        {{ elements.btnLink(
-                            color="simple",
-                            size="blog-nav",
-                            link="https://github.com/stillingdesign/blame.design/blob/main/src/blog/" ~ source,
-                            label="Source",
-                            iconR=icons.socialGithub('w:14 mr:n4 mt:n1 ml:4 color:primary-rg'),
-                            hover=true,
-                            classes=''
-                        )}} 
+                    {# Buttons #}
+                    <div class="font:xs medium relative flex align-items:center gap:4 flex-shrink:0">
+                        <div class="relative">
+                            {{ elements.btnBtn(
+                                color="simple",
+                                size="blog-nav",
+                                label="Summary",
+                                iconR=icons.iconOpenai('w:14 mr:n4 mt:n1 ml:4 color:primary-rg'),
+                                hover=true,
+                                classes=''
+                            )}} 
+                        </div>
+                        <div class="relative hidden sm:block">
+                            {{ elements.btnLink(
+                                color="simple",
+                                size="blog-nav",
+                                link="https://github.com/stillingdesign/blame.design/blob/main/src/blog/" ~ source,
+                                label="Source",
+                                iconR=icons.socialGithub('w:14 mr:n4 mt:n1 ml:4 color:primary-rg'),
+                                hover=true,
+                                classes=''
+                            )}} 
+                        </div>
                     </div>
                     {# Headline #}
                     <p class="absolute top:48 w:100p text:center font:serif font:lg leading:100 pb:1">
@@ -130,7 +148,7 @@ changefreq: monthly
                     </p>
                 </div>
                 {# Author #}
-                <div class="relative min-w:112 flex justify-content:end align-items:center gap:8 font:sm">
+                <div class="relative md:min-w:112 flex-shrink:0 flex justify-content:end align-items:center gap:8 font:sm">
                     <p class="opacity:60">
                         {{ author }}
                     </p>
