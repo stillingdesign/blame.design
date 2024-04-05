@@ -8,7 +8,8 @@ changefreq: monthly
 {% import "components/_elements.njk" as elements %}
 {% import "components/_graphics.njk" as graphics %}
 {% set maxWidth = '672' %}
-<main>
+
+<main data-page="blog-post">
 
     {% macro vertDividers() %}
         {# Vert Dividers #}
@@ -66,7 +67,7 @@ changefreq: monthly
             <div class="relative w:100p max-w:{{ maxWidth }}">
                 <div class="relative">
                     <h1 class="font:10vw sm:font:10xl tracking:tighter leading:110 medium mb:14">
-                        {{ headline | safe }}
+                        {{ headlineDisplay | safe }}
                     </h1>
                 </div>
                 <div class="relative">
@@ -85,7 +86,7 @@ changefreq: monthly
         {# Horz Divider #}
         <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15"></div>
         {# Subheader #}
-        <div class="sticky top:56 w:100p flex flex:col align-items:center mb:n1 z:8">
+        <div data-subheader class="sticky top:56 w:100p flex flex:col align-items:center mb:n1 z:8">
             <div class="container flex align-items:center justify-content:between gap:8 sm:gap:16">
                 {# Background #}
                 <div class="absolute top:0 left:n24 w:plus48 h:100p px:1 pb:1">
@@ -111,7 +112,7 @@ changefreq: monthly
                 {# Centered #}
                 <div class="relative flex align-items:center justify-content:start sm:justify-content:between gap:12 w:100p md:max-w:{{ maxWidth }} py:8 overflow:hidden">
                     {# Link #}
-                    <div class="relative hidden sm:flex align-items:center justify-content:start overflow:hidden pl:8 pr:10 h:26 radius:xs bg:sheet-5 font:mono tracking:tighter font:xs border:1 border:ink-3 border-opacity:15">
+                    <div data-subheader-hide class="relative hidden sm:flex align-items:center justify-content:start overflow:hidden pl:8 pr:10 h:26 radius:xs bg:sheet-5 font:mono tracking:tighter font:xs border:1 border:ink-3 border-opacity:15">
                         {{ icons.share('w:12 mr:4 color:primary-rg flex-shrink:0 ')}}
                         <div class="relative opacity:60 space:nowrap overflow:ellipsis w:100p">
                             {{ base.url }}{{ page.url }}
@@ -119,7 +120,7 @@ changefreq: monthly
                         <div class="absolute right:0 top:0 w:12 h:100p bg:fade-right-sheet-5"></div>
                     </div>
                     {# Buttons #}
-                    <div class="font:xs medium relative flex align-items:center gap:4 flex-shrink:0">
+                    <div data-subheader-hide class="font:xs medium relative flex align-items:center gap:4 flex-shrink:0">
                         <div class="relative">
                             {{ elements.btnBtn(
                                 color="simple",
@@ -143,9 +144,12 @@ changefreq: monthly
                         </div>
                     </div>
                     {# Headline #}
-                    <p class="absolute top:48 w:100p text:center font:serif font:lg leading:100 pb:1">
-                        {{ headline | safe }}
-                    </p>
+                    <div data-subheader-show class="absolute w:100p sm:text:center font:serif font:lg leading:100 pb:1 overflow:hidden" style="opacity:0; transform:translate3d(0,32px,0);">
+                        <p class="relative space:nowrap overflow:ellipsis w:100p">
+                            {{ headline }}
+                        </p>
+                        <div class="absolute right:0 top:0 h:100p w:64 bg:fade-right"></div>
+                    </div>
                 </div>
                 {# Author #}
                 <div class="relative md:min-w:112 flex-shrink:0 flex justify-content:end align-items:center gap:8 font:sm">
@@ -158,16 +162,20 @@ changefreq: monthly
                 </div>
                 {# Border #}
                 <div class="absolute bottom:0 left:n24 w:plus48 border-t:1 border:ink-3 border-opacity:10"></div>
+                {# Progress #}
+                <div class="absolute bottom:0 left:n24 w:plus48">
+                    <div data-progress class="border-t:1 border:primary-rg w:100p transform:left" style="transform: scale3d(0,1,1);"></div>
+                </div>
             </div>
         </div>
         {# Image #}
-        <div class="container z:9">
+        <div data-hero-img class="container z:9">
             <div class="relative flex align-items:center justify-content:center w:plus48 ml:n24 ratio:16-9 bg:blue overflow:hidden">
                 <img src="/assets/images/mission/wtf-md.webp" width="1200" height="900" alt class="flex w:100p h:100p object:cover">
             </div>
         </div>
         {# Content #}
-        <div class="container min-h:100vh section:pt">
+        <div data-content class="container section:pt" style="min-height:300vh;">
             {{ content | safe }}
             <div class="relative min-w:128 flex justify-content:start">
                     {{ elements.btnBtn(
