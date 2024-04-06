@@ -32,7 +32,7 @@ changefreq: monthly
     <section class="section pt:96 sm:pt:96 md:pt:160 pb:24 sm:pb:24 md:pb:72">
         {{ vertDividers()}}
         {# Horz Dividers #}
-        <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 mb:16"></div>
+        <div class="w:100p sm:w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 mb:16"></div>
         {# Container #}
         <div class="container flex flex:col align-items:center pt:4 md:pt:0">
             {# Handles #}
@@ -84,12 +84,12 @@ changefreq: monthly
     <section class="section section:pb">
         {{ vertDividers()}}
         {# Horz Divider #}
-        <div class="w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15"></div>
+        <div class="w:100p sm:w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15"></div>
         {# Subheader #}
-        <div data-subheader class="sticky top:56 w:100p flex flex:col align-items:center mb:n1 z:8 blur:fix">
+        <div data-subheader class="sticky top:56 w:100p flex flex:col align-items:center mb:n1 z:7 blur:fix" >
             <div class="container flex align-items:center justify-content:between gap:8 sm:gap:16">
                 {# Background #}
-                <div class="absolute top:0 left:n24 w:plus48 h:100p px:1 pb:1">
+                <div class="absolute top:0 left:0 sm:left:n24 w:100p sm:w:plus48 h:100p px:1 pb:1">
                     <div class="w:100p h:100p bg:sheet-6 bg-opacity:20 backdrop backdrop-blur:sm blur:fix"></div>
                 </div>
                 {# Vert Dividers #}
@@ -131,7 +131,8 @@ changefreq: monthly
                                 label="Summary",
                                 iconR=icons.iconOpenai('w:14 mr:n4 mt:n1 ml:4 color:primary-rg'),
                                 hover=true,
-                                classes=''
+                                classes='',
+                                attr='data-modal-summary-trigger aria-expanded="false" aria-controls="modal-summary"'
                             )}} 
                         </div>
                         <div class="relative hidden sm:block">
@@ -164,15 +165,52 @@ changefreq: monthly
                     </div>
                 </div>
                 {# Border #}
-                <div class="absolute bottom:0 left:n24 w:plus48 border-t:1 border:ink-3 border-opacity:10"></div>
+                <div class="absolute bottom:0 left:0 sm:left:n24 w:100p sm:w:plus48 border-t:1 border:ink-3 border-opacity:10"></div>
                 {# Progress #}
-                <div class="absolute bottom:0 left:n24 w:plus48">
+                <div class="absolute bottom:0 left:0 sm:left:n24 w:100p sm:w:plus48">
                     <div data-progress class="border-t:1 border:primary-rg w:100p transform:left" style="transform: scale3d(0,1,1);"></div>
                 </div>
             </div>
         </div>
+        {# Summary #}
+        <div data-modal-summary id="modal-summary" class="fixed top:0 left:0 z:9 w:100p h:100p px:24 flex align-items:center justify-content:center overflow:hidden" style="opacity:0; visibility:hidden;">
+            {# Background #}
+            <div data-modal-summary-bg class="absolute w:100p h:100p" style="background-color: rgba(217,217,217,0.95); opacity:0;"></div>
+            {# Frame #}
+            <div data-modal-summary-inner class="relative p:1 w:100p max-w:{{ maxWidth }} bg:edge-2 radius:xl shadow:2xl" style="opacity:0; transform: scale3d(0.5,0.5,0.5);">
+                <div class="relative w:100p flex flex:col bg:sheet-4 radius:15 max-h:512 overflow:scroll">
+                    <div class="relative flex align-items:center justify-content:between px:24 sm:px:48 pt:18 sm:pt:32">
+                        <div class="flex align-items:center gap:6">
+                            <h2 class="font:lg sm:font:xl medium tracking:tighter">
+                                Summary
+                            </h2>
+                            <div>
+                                {{ elements.tag(
+                                    color="blue",
+                                    size="xs",
+                                    label="<span class='hidden sm:inline'>Powered</span> by OpenAI",
+                                    iconR=icons.iconOpenai('w:12 ml:4 mt:n1 mb:n1'),
+                                    classes=''
+                                )}}
+                            </div>
+                        </div>
+                        {{ elements.btnBtn(
+                            color="simple",
+                            size="xs",
+                            label="Close",
+                            hover=true,
+                            attr='data-modal-summary-close',
+                            classes='pointer-events:auto'
+                        )}}
+                    </div>
+                    <p class="font:lg sm:font:xl leading:200 sm:leading:180 opacity:70 px:24 sm:px:48 pb:24 sm:pb:48 pt:8 sm:pt:16">
+                        This article advocates for designers to learn coding to bridge the gap between design and development, streamline the production process, and foster innovation. It emphasizes the importance of designers understanding HTML, CSS, and JavaScript to prototype ideas rapidly and communicate effectively with developers, arguing that a hybrid skill set leads to more cohesive digital products.
+                    </p>
+                </div>
+            </div>
+        </div>
         {# Image #}
-        <div data-hero-img class="container z:9">
+        <div data-hero-img class="container z:8">
             <div class="relative flex align-items:center justify-content:center w:plus48 ml:n24 ratio:16-9 bg:blue overflow:hidden">
                 <img src="/assets/images/mission/wtf-md.webp" width="1200" height="900" alt class="flex w:100p h:100p object:cover blur:fix">
             </div>

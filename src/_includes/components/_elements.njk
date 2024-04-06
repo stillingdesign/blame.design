@@ -48,7 +48,7 @@
         <div class="tag:inner">
             {% if iconL %}{{ iconL }}{% endif %}
             <div class="tag:text">
-                {{ label }}
+                {{ label | safe }}
             </div>
             {% if iconR %}{{ iconR }}{% endif %}
         </div>
