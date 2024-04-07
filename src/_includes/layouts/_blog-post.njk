@@ -224,18 +224,17 @@ changefreq: monthly
             </div>
         </div>
         {# Content #}
-        <div data-content class="container section:pt" style="min-height:300vh;">
-            {{ content | safe }}
-            <div class="relative min-w:128 flex justify-content:start">
-                    {{ elements.btnBtn(
-                        color="simple",
-                        size="sm",
-                        label="Copy link",
-                        hover=true,
-                        iconL=icons.link('w:12 mr:4'),
-                        hover=true
-                    )}}
+        <div data-content class="container flex justify-content:between pt:96" style="min-height:300vh;">
+            {# Left Rail #}
+            <div></div>
+            {# Center #}
+            <div class="relative w:100p max-w:{{ maxWidth }}">
+                <div class="markdown">
+                    {{ content | safe }}
                 </div>
+            </div>
+            {# Right Rail #}
+            <div></div>
         </div>
     </section>
 

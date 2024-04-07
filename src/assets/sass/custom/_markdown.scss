@@ -1,0 +1,40 @@
+@use "sass:map";
+@use "uniform" as *;
+
+.markdown {
+    @include apply('font:spectral font:22');
+
+    // Spacings 
+    & > p + h2 { @include apply('mt:48'); }
+    & > p + p { @include apply('mt:24'); }
+
+    // Heading 2
+    & > h2 {
+        @include apply('relative font:4xl font:sans tracking:tight leading:130 mb:24');
+        text-wrap: balance;
+        &:before {
+            @include apply('absolute top:6 left:n24 mt:n1 bg:ink-1');
+            content:'';
+            height: 1em;
+            width: 1px;
+        }
+        &:after {
+            @include apply('absolute top:14 left:n28 w:12 text:center mt:n1 ml:n2 font:2xs font:mono color:primary-rg pt:1 pb:2 uppercase tracking:loosest bg:sheet-6');
+            content:'H2';
+        }
+    }
+
+    // Paragraph
+    & > p { @include apply('leading:170 tracking:tighter color:ink-2'); text-wrap: pretty;}
+    & > p > strong { @include apply('color:ink-3'); }
+    & > p > mark { background: linear-gradient(180deg, rgba(var(--yellow), 0.6) 0%, rgba(var(--yellow), 0.8) 100%); background-position: left 0 bottom 40%; background-size: 100% 50%; background-repeat: no-repeat;}
+
+    // First Paragraph
+    & > p:first-child { @include apply('font:2xl tracking:tighter mb:36'); text-wrap: balance;}
+
+    & > p:first-child::first-letter {
+        @include apply('font:serif color:ink-3');
+        initial-letter:2;
+    }
+
+}
