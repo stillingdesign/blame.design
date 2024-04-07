@@ -29,7 +29,7 @@ changefreq: monthly
     {% endmacro %}
 
     {# Hero #}
-    <section class="section pt:96 sm:pt:96 md:pt:160 pb:24 sm:pb:24 md:pb:72">
+    <section class="section pt:96 sm:pt:96 md:pt:160 pb:24 sm:pb:24 md:pb:48">
         {{ vertDividers()}}
         {# Horz Dividers #}
         <div class="w:100p sm:w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 mb:16"></div>
@@ -204,15 +204,23 @@ changefreq: monthly
                         )}}
                     </div>
                     <p class="font:lg sm:font:xl leading:200 sm:leading:180 opacity:70 px:24 sm:px:48 pb:24 sm:pb:48 pt:8 sm:pt:16">
-                        This article advocates for designers to learn coding to bridge the gap between design and development, streamline the production process, and foster innovation. It emphasizes the importance of designers understanding HTML, CSS, and JavaScript to prototype ideas rapidly and communicate effectively with developers, arguing that a hybrid skill set leads to more cohesive digital products.
+                        {{ summary | safe }}
                     </p>
                 </div>
             </div>
         </div>
         {# Image #}
-        <div data-hero-img class="container z:8">
-            <div class="relative flex align-items:center justify-content:center w:plus48 ml:n24 ratio:16-9 bg:blue overflow:hidden">
-                <img src="/assets/images/mission/wtf-md.webp" width="1200" height="900" alt class="flex w:100p h:100p object:cover blur:fix">
+        <div data-hero-img class="container z:8 ">
+            <div class="relative w:plus48 ml:n24 bg:blue">
+                <picture class="relative">
+                    <source media="(min-width: 1024px)" srcset="/assets/images/blog/{{ heroPath }}-hero-md.webp">
+                    <source media="(min-width: 768px)" srcset="/assets/images/blog/{{ heroPath }}-hero-sm.webp">
+                    <source media="(max-width: 767px)" srcset="/assets/images/blog/{{ heroPath }}-hero.webp">
+                    <img src="/assets/images/blog/{{ heroPath }}-hero.jpg" class="relative w:100p h:auto" width="1152" height="864" alt="{{ ogImageAlt }}">
+                </picture>
+                <div class="absolute bottom:8 right:8 px:4 radius:2xs medium tracking:loose uppercase font:2xs bg:white bg-opacity:50 shadow:2xs">
+                    Made with {{ imgSource }}
+                </div>
             </div>
         </div>
         {# Content #}
