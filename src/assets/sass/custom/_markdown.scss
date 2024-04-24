@@ -41,7 +41,8 @@
     // Paragraph
     & > p { @include apply('leading:170 tracking:tighter color:ink-2'); text-wrap: pretty;}
     & > p > strong { @include apply('color:ink-3'); }
-    & > p > mark { background: linear-gradient(180deg, rgba(var(--yellow), 0.6) 0%, rgba(var(--yellow), 0.8) 100%); background-position: left 0 bottom 40%; background-size: 100% 50%; background-repeat: no-repeat;}
+    & > p > mark { background: linear-gradient(180deg, rgba(var(--yellow), 0.1) 0%, rgba(var(--yellow), 0.4) 100%); background-position: left 0 bottom 40%; background-size: 100% 50%; background-repeat: no-repeat;}
+    & > p > code { @include apply('font:mono color:primary-rg border:1 border:primary-rg border-opacity:30 bg:primary-rg bg-opacity:10 leading:100 inline-block pb:5 pt:4 px:4 transform translate-y:n2 radius:xs tracking:tighter space:nowrap'); font-size:0.75em; }
 
     // Link
     a {
