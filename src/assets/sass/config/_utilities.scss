@@ -160,6 +160,7 @@ $utilities: (
             100p: 100%,
             110p: 110%,
             200p: 200%,
+            minus16: calc(100% - 1rem),
             minus24: calc(100% - 1.5rem),
             minus48: calc(100% - 3rem),
             minus56: calc(100vh - 3.5rem),

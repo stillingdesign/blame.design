@@ -148,11 +148,10 @@ changefreq: monthly
                         </div>
                     </div>
                     {# Headline #}
-                    <div data-subheader-show class="absolute w:100p sm:text:center font:serif font:lg leading:100 pb:4 overflow:hidden" style="opacity:0; transform:translate3d(0,32px,0);">
+                    <div data-subheader-show class="absolute w:100p sm:text:center font:serif font:lg leading:100 pb:4 overflow:hidden mask:fade-out-r sm:mask:none" style="opacity:0; transform:translate3d(0,32px,0);">
                         <p class="relative space:nowrap w:100p">
                             {{ headline }}
                         </p>
-                        <div class="absolute right:0 top:0 h:100p w:64 bg:fade-right"></div>
                     </div>
                 </div>
                 {# Author #}
@@ -224,7 +223,7 @@ changefreq: monthly
             </div>
         </div>
         {# Content #}
-        <div data-content class="container flex justify-content:between pt:96" style="min-height:300vh;">
+        <div data-content class="container flex justify-content:between pt:96">
             {# Left Rail #}
             <div></div>
             {# Center #}
