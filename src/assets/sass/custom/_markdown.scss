@@ -71,11 +71,11 @@
     // Blockquote
     & > blockquote {
         @include apply('relative');
-        &:before { @include apply('absolute top:8 left:n24 w:1 h:minus16 bg:primary-rg'); content: ''; }
+        &:before { @include apply('absolute top:8 left:n12 sm:left:n24 w:1 h:minus16 bg:primary-rg'); content: ''; }
         p {
-            @include apply('relative font:serif font:6xl italic leading:130 color:primary-rg tracking:tighter');
+            @include apply('relative font:serif font:5xl sm:font:6xl italic leading:130 color:primary-rg tracking:tighter');
             text-wrap: balance;
-            &:before { @include apply('absolute top:0 left:n16'); content: '“'; }
+            &:before { @include apply('absolute top:0 left:n12 sm:left:n16'); content: '“'; }
             &:after { @include apply('inline'); content: '”'; }
         }
     }
