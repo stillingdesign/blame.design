@@ -17,13 +17,7 @@
         @include apply('relative font:4xl font:sans tracking:tighter leading:130 mb:28 medium');
         text-wrap: balance;
         &:before {
-            @include apply('absolute top:6 left:n12 sm:left:n24 mt:n1 bg:ink-1');
-            content:'';
-            height: 1em;
-            width: 1px;
-        }
-        &:after {
-            @include apply('absolute top:14 left:n16 sm:left:n28 w:12 text:center mt:n1 ml:n2 font:2xs font:mono color:primary-rg pt:1 pb:2 uppercase tracking:loosest bg:sheet-6');
+            @include apply('absolute top:n18 md:top:12 left:0 md:left:n36 ml:n2 md:ml:2 pl:1 w:20 h:18 flex align-items:center justify-content:center color:white radius:2xs bg:primary-rg uppercase tracking:loosest text:center font:mono font:2xs');
             content:'H2';
         }
     }
@@ -32,8 +26,12 @@
     & > h3 {
         @include apply('relative font:3xl font:sans tracking:tight leading:130 mb:20');
         text-wrap: balance;
+        &:before {
+            @include apply('absolute top:4 left:n24 mt:n1 w:1 h:28 hidden md:flex bg:primary-rg');
+            content: '';
+        }
         &:after {
-            @include apply('absolute top:12 mt:n1 left:n28 w:12 text:center mt:n1 ml:n2 font:2xs font:mono color:primary-rg pt:1 pb:2 uppercase tracking:loosest bg:sheet-6');
+            @include apply('absolute top:n18 md:top:8 left:n4 md:left:n36 mt:1 ml:2 pl:1 w:20 h:18 flex align-items:center justify-content:center color:primary-rg radius:2xs bg:sheet-6 uppercase tracking:loosest text:center font:mono font:2xs');
             content:'H3';
         }
     }
@@ -65,6 +63,10 @@
                     transition: opacity 300ms cubic-bezier(0, 0.66, 0.33, 1) 0ms;
                 }
             }
+        }
+        &:focus-visible {
+            @include apply("outline:none bg:primary-rg color:white radius:xs");
+            &:before {opacity:0;}
         }
     }
 

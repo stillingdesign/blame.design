@@ -1,23 +1,54 @@
----
-layout: "layouts/_blog-post.njk"
-seoTitle: "Guide: Should designers know code?"
-seoDescription: "A well-reasoned explanation on why learning to code is necessary—but even more so, taking a generalist approach toward design."
-ogTitle: "Guide: Should designers know code?"
-ogDesc: "A well-reasoned explanation on why learning to code is necessary—but even more so, taking a generalist approach toward design."
-ogImage: "/assets/images/og/know-code.jpg"
-ogImageAlt: "a man wearing a red striped button up, jeans, and a hat sitting in front of a computer in a dark room filled with plants trying to type code"
-headlineDisplay: '<span class="opacity:50">If you’re designing screens,</span> you should probably know code'
-headline: 'If you’re designing screens, you should probably know code'
-description: 'A well-reasoned guide on why learning to code is necessary—<span class="space:nowrap">but even</span> more so, taking a generalist approach <span class="space:nowrap">toward design.</span>'
-summary: This article advocates for designers to learn coding to bridge the gap between design and development, streamline the production process, and foster innovation. It emphasizes the importance of designers understanding HTML, CSS, and JavaScript to prototype ideas rapidly and communicate effectively with developers, arguing that a hybrid skill set leads to more cohesive digital products.
-date: "2024-04-04"
-duration: 10 min read
-category: opinions
-author: Mike Stilling
-heroPath: know-code
-imgSource: MidJourney
-source: know-code.md
-changefreq: daily
+---json
+{
+    "layout": "layouts/_blog-post.njk",
+    "seoTitle": "Guide: Should designers know code?",
+    "seoDescription": "A well-reasoned explanation on why learning to code is necessary—but even more so, taking a generalist approach toward design.",
+    "ogTitle": "Guide: Should designers know code?",
+    "ogDesc": "A well-reasoned explanation on why learning to code is necessary—but even more so, taking a generalist approach toward design.",
+    "ogImage": "/assets/images/og/know-code.jpg",
+    "ogImageAlt": "a man wearing a red striped button up, jeans, and a hat sitting in front of a computer in a dark room filled with plants trying to type code",
+    "headline": "If you’re designing screens, you should probably know code",
+    "headlineDisplay": "<span class='opacity:50'>If you’re designing screens,</span> you should probably know code",
+    "description": "A well-reasoned guide on why learning to code is necessary—<span class='space:nowrap'>but even</span> more so, taking a generalist approach <span class='space:nowrap'>toward design.</span>",
+    "summary": "This article advocates for designers to learn coding to bridge the gap between design and development, streamline the production process, and foster innovation. It emphasizes the importance of designers understanding HTML, CSS, and JavaScript to prototype ideas rapidly and communicate effectively with developers, arguing that a hybrid skill set leads to more cohesive digital products.",
+    "date": "",
+    "date": "2024-04-04",
+    "duration": "10 min read",
+    "category": "opinions",
+    "author": "Mike Stilling",
+    "heroPath": "know-code",
+    "imageSource": "MidJourney",
+    "source": "know-code.md",
+    "changefreq": "monthly",
+    "tocLabel": "In this article:",
+    "toc": [
+        {
+            "title": "Introduction",
+            "link": "#content-start",
+            "tag": "p"
+        },
+        {
+            "title": "The fundamentals",
+            "link": "#the-fundamental-reason-to-know-code-as-a-person-who-is-designing-screens",
+            "tag": "h2"
+        },
+        {
+            "title": "Business case",
+            "link": "#the-business-case-for-knowing-code-and-generalization",
+            "tag": "h2"
+        },
+        {
+            "title": "How to generalize",
+            "link": "#how-to-generalize-your-skillset-as-a-designer",
+            "tag": "h2"
+        },
+        {
+            "title": "Why settle",
+            "link": "#why-settle-for-less",
+            "tag": "h2"
+        }
+    ]
+}
 ---
 
 Well, we’ve heard it all before—and yet, it still piques our interest. Don’t know code? Chances are you are here due to uncertainty. If you do know code, you’re likely seeking confirmation that you have made <span class="space:nowrap">the right choice. 🤔</span>
@@ -66,7 +97,7 @@ Here, <mark>reviews become the largest delay.</mark> Each team hits a wall of fe
 
 <mark>Teams attempt to employ an array of costly tools to fix these challenges…</mark> only to add to the problem. When design is the hang-up, marketers resort <span class="space:nowrap">to apps</span> like [Canva](https://www.canva.com/) or [Adobe Express](https://www.adobe.com/express/) resulting in hokey design. When engineering is too slow, a ["composable" CMS](https://www.contentful.com/) is added, creating a clunky codebase with fresh, new bottlenecks. Inboxes are full-up with notifications from that new [PM tool](https://www.atlassian.com/software/jira), while [Slack](https://slack.com/) <span class="space:nowrap">is overflowing</span> with messages to get around it. <mark>None of these tools address the underlying problems.</mark>
 
-### Prevent misalignment, increase revenue
+### Stay aligned, increase revenue
 
 <mark>Generalization can solve all of these problems</mark> through cross-functional empathy. By understanding what’s important to other departments, designers can proactively account for this during the design process. <span class="space:nowrap">With that,</span> knowing code allows designers to understand the technical implications of their designs—preventing minuscule details from eating <span class="space:nowrap">up gobs</span> of engineering time _and/or_ leaving engineering to only solve <span class="space:nowrap">for real engineering challenges.</span>
 

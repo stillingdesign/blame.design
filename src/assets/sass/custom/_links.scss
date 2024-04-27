@@ -683,6 +683,31 @@
     }
 }
 
+.toc-link {
+    @include apply("relative flex flex:col pt:2");
+    a {
+        @include apply("flex align-items:center justify-content:between gap:8 leading:100 py:8 px:12 lg:ml:n12 lg:w:plus24 radius:full mx:2 lg:mx:0");
+        .left { @include apply("flex align-items:center gap:8"); }
+        .right { @include apply("flex-shrink:0 w:14 transform translate-x:n6 opacity:0 transition:300 cubic-out"); }
+        .tag { @include apply("relative flex-shrink:0 font:2xs uppercase font:mono opacity:60 w:12 text:center transition:300 cubic-out");}
+        .label { @include apply("font:sm tracking:normal opacity:80 transition:300 cubic-out");}
+        @media (hover: hover) {
+            &:hover {
+                @include apply("color:primary-rg transition:300 cubic-out");
+                .right { @include apply("translate-x:0 opacity:100"); }
+                .tag { @include apply("opacity:100");}
+                .label { @include apply("opacity:100");}
+            }
+        }
+        &:focus-visible {
+            @include apply("color:white bg:primary-rg transition:300 cubic-out outline:none");
+            .right { @include apply("translate-x:0 opacity:100"); }
+            .tag { @include apply("opacity:100");}
+            .label { @include apply("opacity:100");}
+        }
+    }
+}
+
 // Tag focuses
 .tag:focus-visible {
     @include apply("color:ink-3-i bg:primary-rg bg-opacity:100 opacity:100 transition:300");

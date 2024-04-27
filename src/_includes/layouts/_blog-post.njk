@@ -218,22 +218,75 @@ changefreq: monthly
                     <img src="/assets/images/blog/{{ heroPath }}-hero.jpg" class="relative w:100p h:auto" width="1152" height="864" alt="{{ ogImageAlt }}">
                 </picture>
                 <div class="absolute bottom:8 right:8 px:4 radius:2xs medium tracking:loose uppercase font:2xs bg:white bg-opacity:50 shadow:2xs">
-                    Made with {{ imgSource }}
+                    Made with {{ imageSource }}
                 </div>
             </div>
         </div>
         {# Content #}
-        <div data-content class="container flex justify-content:between pt:96">
-            {# Left Rail #}
-            <div></div>
+        <div data-content class="container flex flex:col align-items:center lg:align-items:stretch lg:flex:row justify-content:between pt:24 lg:pt:96">
+            {# Left Rail • ToC #}
+            <div data-blog-toc class="relative w:100p max-w:{{maxWidth}} lg:max-w:192 mb:48">
+                <div class="sticky top:112 flex flex:col w:100p pt:10 lg:px:0 lg:pt:0 bg:sheet-5 bg-opacity:50 lg:bg:transparent radius:xl lg:radius:none border:1 lg:border:0 border:black border-opacity:10 overflow:hidden">
+                    <h2 class="relative font:lg mb:4 medium px:16 lg:px:0">
+                        {% if tocLabel %}{{ tocLabel }}{% else %}Contents{% endif %}
+                    </h2>
+                    <ol class="relative flex flex:col border-t:1 border:black border-opacity:10 border:dashed mb:n2 lg:mb:0">
+                    {% for link in toc %}
+                        <li class="toc-link">
+                            <a data-anchor-scroll href="{{ link.link }}">
+                                <div class="left">
+                                    <div class="tag">
+                                        {{ link.tag }}
+                                    </div>
+                                    <div class="label">
+                                        <p>
+                                            {{ link.title }}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    {{ icons.chevR('w:14') }}
+                                </div>
+                            </a>
+                            <div class="w:100p border-b:1 border:black border-opacity:10 border:dashed mt:2"></div>
+                            {% if link.items %}
+                                <ol class="relative flex flex:col">
+                                    {% for item in link.items %}
+                                        <li class="toc-link">
+                                            <a data-anchor-scroll href="{{ item.link }}">
+                                                <div class="left">
+                                                    <div class="tag">
+                                                        {{ item.tag }}
+                                                    </div>
+                                                    <div class="label">
+                                                        <p>
+                                                            {{ item.title }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="right">
+                                                    {{ icons.chevR('w:14') }}
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <div class="border-b:1 border:black border-opacity:10 border:dashed mt:2"></div>
+                                    {% endfor %}
+                                </ol>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
             {# Center #}
-            <div class="relative w:100p max-w:{{ maxWidth }}">
+            <div class="relative w:100p max-w:{{ maxWidth }} flex-shrink:0">
+                <div id="content-start"></div>
                 <div class="markdown">
                     {{ content | safe }}
                 </div>
             </div>
             {# Right Rail #}
-            <div></div>
+            <div class="relative w:100p lg:max-w:192 h:100p"></div>
         </div>
     </section>
 
