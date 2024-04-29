@@ -2,9 +2,9 @@
 
 {# Button :: Link #}
 {% macro btnLink(color, size, classes, link, label, iconL, iconR, animate, hover, attr, attrInner) %}
-    <a href="{{ link }}" {{ attr }} class="relative btn btn:{{ color }} btn:{{ size }} {{ classes }} {% if hover %}btn:hover{% endif %}">
+    <a href="{{ link }}" {{ attr | safe }} class="relative btn btn:{{ color }} btn:{{ size }} {{ classes }} {% if hover %}btn:hover{% endif %}">
         <div class="btn:gradient {% if animate %}animate:conic-spin{% endif %}"></div>
-        <div {{ attrInner }} class="btn:inner">
+        <div {{ attrInner | safe }} class="btn:inner">
             {% if iconL %}{{ iconL }}{% endif %}
             <div class="btn:text">
                 {{ label }}

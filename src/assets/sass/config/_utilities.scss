@@ -33,12 +33,16 @@ $utilities: (
     border-top-radius: (
         variants: (
             25p: 25%,
+            33p: 33%,
+            50p: 50%,
             100p: 100%,
             2: 0.125rem,
             5: 0.3125rem,
             7: 0.4375rem,
             9: 0.5625rem,
             15: 0.9375rem,
+            48: 3rem,
+            96: 6rem,
         ),
     ),
     border-bottom-radius: (
@@ -149,6 +153,7 @@ $utilities: (
             14vw: 14vw,
             15vw: 15vw,
             20vw: 20vw,
+            23vw: 23vw,
         ),
     ),
     height: (
@@ -227,6 +232,7 @@ $utilities: (
             528: 33rem,
             672: 42rem,
             704: 44rem,
+            720: 45rem,
             736: 46rem,
             832: 52rem,
             864: 54rem,

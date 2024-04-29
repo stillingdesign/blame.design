@@ -686,7 +686,7 @@
 .toc-link {
     @include apply("relative flex flex:col pt:2");
     a {
-        @include apply("flex align-items:center justify-content:between gap:8 leading:100 py:8 px:12 lg:ml:n12 lg:w:plus24 radius:full mx:2 lg:mx:0");
+        @include apply("flex align-items:center justify-content:between gap:8 leading:100 py:8 px:12 ml:2 mr:2 lg:ml:n12 lg:mr:0 lg:w:plus24 radius:full");
         .left { @include apply("flex align-items:center gap:8"); }
         .right { @include apply("flex-shrink:0 w:14 transform translate-x:n6 opacity:0 transition:300 cubic-out"); }
         .tag { @include apply("relative flex-shrink:0 font:2xs uppercase font:mono opacity:60 w:12 text:center transition:300 cubic-out");}
