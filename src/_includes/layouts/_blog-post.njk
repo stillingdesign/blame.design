@@ -324,11 +324,12 @@ changefreq: monthly
                         {{ elements.btnLink(
                             color="simple",
                             size="sm",
-                            link="https://github.com/stillingdesign/blame.design/blob/main/src/blog/" ~ source,
+                            link=igImage,
                             label="Get an image for your Story",
                             iconL=icons.socialInstagram('w:14 mr:6 mt:n1 ml:n2 color:primary-rg'),
                             hover=true,
-                            classes='w:100p sm:w:auto'
+                            classes='w:100p sm:w:auto',
+                            attr='target="_blank" rel="noopener noreferrer"'
                         )}} 
                     </div>
                 </div>
@@ -343,10 +344,16 @@ changefreq: monthly
                         </div>
                     </div>
                     <img src="{{ ogImage }}" alt="{{ ogImageAlt }}" width="600" height="315" class="w:100p h:auto flex-shrink:0">
-                    <div class="opacity:70 flex align-items:center gap:4 font:2xs mt:2 leading:100 px:8 pb:8 pt:4">
-                        <div>1,000 likes</div>
+                    <div class="flex align-items:center gap:4 font:2xs mt:2 leading:100 px:8 pb:8 pt:4">
+                        <div class="flex align-items:center">
+                            {{ icons.heart('w:12 mr:2 color:primary-rg') }}
+                            <div class="opacity:70">1,000 likes</div>
+                        </div>
                         <div>•</div>
-                        <div>300 comments</div>
+                        <div class="flex align-items:center">
+                            {{ icons.chatCenter('w:12 mr:2 color:primary-rg') }}
+                            <div class="opacity:70">300 comments</div>
+                        </div>
                     </div>
                 </div>
             </div>
