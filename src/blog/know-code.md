@@ -13,7 +13,7 @@
     "description": "A well-reasoned guide on why learning to code is necessary—<span class='space:nowrap'>but even</span> more so, taking a generalist approach <span class='space:nowrap'>toward design.</span>",
     "summary": "This article advocates for designers to learn coding and adopt a generalist approach, integrating skills like marketing and project management to enhance project execution and value. It challenges traditional specialization, arguing that a broader skill set makes one indispensable and improves outcomes.",
     "date": "",
-    "date": "2024-04-04",
+    "date": "2024-04-30",
     "duration": "10 min read",
     "category": "opinions",
     "author": "Mike Stilling",
