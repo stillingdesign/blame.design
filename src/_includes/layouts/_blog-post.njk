@@ -336,11 +336,11 @@ changefreq: monthly
                 {# Graphic #}
                 <div class="relative flex flex:col justify-content:center w:100p max-w:384 sm:max-w:none sm:w:288 mt:20 sm:mb:20 sm:mr:24 bg:sheet-5 shadow:md radius:sm border:1 border:black border-opacity:15">
                     <div class="flex align-items:center pt:8 pb:6 px:10 gap:8">
-                        <div class="relative z:1 w:28 h:28 bg:black flex-shrink:0 radius:full overflow:hidden">
+                        <div class="relative z:1 w:28 h:28 flex-shrink:0 radius:full overflow:hidden">
                             <img src="/assets/images/utility/avatar-1.webp" alt="" class="w:100p h:auto">
                         </div>
                         <div class="leading:120 font:sm" style="text-wrap:balance;">
-                            This f*cking idiot thinks we should <span class="space:nowrap">all code</span> and learn marketing. 🤡
+                            {{ fauxSocial | safe }}
                         </div>
                     </div>
                     <img src="{{ ogImage }}" alt="{{ ogImageAlt }}" width="600" height="315" class="w:100p h:auto flex-shrink:0">

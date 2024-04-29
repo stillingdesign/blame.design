@@ -19,6 +19,7 @@
     "author": "Mike Stilling",
     "heroPath": "know-code",
     "imageSource": "MidJourney",
+    "fauxSocial": "This f*cking bozo thinks we should <span class='space:nowrap'>all code</span> and learn marketing. 🤡",
     "source": "know-code.md",
     "changefreq": "monthly",
     "tocLabel": "In this article:",
