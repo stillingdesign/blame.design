@@ -43,10 +43,48 @@
     src: url("/assets/fonts/spacemono-i.woff2") format("woff2");
     unicode-range: U+0020-007F,U+00A0-00FF,U+20AC,U+2010,U+2013,U+2014,U+2018,U+2019,U+201A,U+201C,U+201D,U+201E,U+2039,U+203A,U+2026,U+2022;
 }
+
+@font-face {
+    font-family: 'Spectral';
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fonts/spectral.woff2") format("woff2");
+    unicode-range: U+0020-007F,U+00A0-00FF,U+20AC,U+2010,U+2013,U+2014,U+2018,U+2019,U+201A,U+201C,U+201D,U+201E,U+2039,U+203A,U+2026,U+2022;
+}
+
+@font-face {
+    font-family: 'Spectral';
+    font-style:  italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/assets/fonts/spectral-i.woff2") format("woff2");
+    unicode-range: U+0020-007F,U+00A0-00FF,U+20AC,U+2010,U+2013,U+2014,U+2018,U+2019,U+201A,U+201C,U+201D,U+201E,U+2039,U+203A,U+2026,U+2022;
+}
+
+@font-face {
+    font-family: 'Spectral';
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/assets/fonts/spectral-bold.woff2") format("woff2");
+    unicode-range: U+0020-007F,U+00A0-00FF,U+20AC,U+2010,U+2013,U+2014,U+2018,U+2019,U+201A,U+201C,U+201D,U+201E,U+2039,U+203A,U+2026,U+2022;
+}
+
+@font-face {
+    font-family: 'Spectral';
+    font-style:  italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/assets/fonts/spectral-bold-i.woff2") format("woff2");
+    unicode-range: U+0020-007F,U+00A0-00FF,U+20AC,U+2010,U+2013,U+2014,U+2018,U+2019,U+201A,U+201C,U+201D,U+201E,U+2039,U+203A,U+2026,U+2022;
+}
+
 /* purgecss end ignore */
 
 $font-families: (
     sans: ('Neue Montreal', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'),
     serif: ('OT Brut', Georgia, Cambria, 'Times New Roman', Times, serif),
+    spectral: ('Spectral', Georgia, Cambria, 'Times New Roman', Times, serif),
     mono: ('Space Mono', 'Courier New', Courier, monospace),
 );

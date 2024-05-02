@@ -2,9 +2,9 @@
 
 {# Button :: Link #}
 {% macro btnLink(color, size, classes, link, label, iconL, iconR, animate, hover, attr, attrInner) %}
-    <a href="{{ link }}" {{ attr }} class="relative btn btn:{{ color }} btn:{{ size }} {{ classes }} {% if hover %}btn:hover{% endif %}">
+    <a href="{{ link }}" {{ attr | safe }} class="relative btn btn:{{ color }} btn:{{ size }} {{ classes }} {% if hover %}btn:hover{% endif %}">
         <div class="btn:gradient {% if animate %}animate:conic-spin{% endif %}"></div>
-        <div {{ attrInner }} class="btn:inner">
+        <div {{ attrInner | safe }} class="btn:inner">
             {% if iconL %}{{ iconL }}{% endif %}
             <div class="btn:text">
                 {{ label }}
@@ -48,7 +48,7 @@
         <div class="tag:inner">
             {% if iconL %}{{ iconL }}{% endif %}
             <div class="tag:text">
-                {{ label }}
+                {{ label | safe }}
             </div>
             {% if iconR %}{{ iconR }}{% endif %}
         </div>
@@ -83,7 +83,7 @@
                 </button>
             </div>
             {# Success #}
-            <div data-success class="form:success" style="visibility:hidden; opacity:0; box-shadow: 0 0 48px 10px rgba(0,0,0,1); transform: translate3d(100%, 0px, 0px);">
+            <div data-success class="form:success" style="visibility:hidden; opacity:0; box-shadow: 0 0 48px 10px rgba(0,0,0,0.2); transform: translate3d(100%, 0px, 0px);">
                 <div>
                     {{ icons.check('w:16 color:green ml:n1') }}
                 </div>

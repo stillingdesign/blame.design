@@ -1,0 +1,561 @@
+---
+layout: "main.njk"
+tags: blog
+theme: light
+changefreq: monthly
+---
+{% import "components/_icons.njk" as icons %}
+{% import "components/_elements.njk" as elements %}
+{% import "components/_graphics.njk" as graphics %}
+{% set maxWidth = '672' %}
+
+<main data-page="blog-post">
+
+    {% macro vertDividers() %}
+        {# Vert Dividers #}
+        <div class="absolute top:0 w:100p h:100p flex align-items:center justify-content:center px:12 sm:px:24">
+            <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div>
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10"></div>
+            </div>
+        </div>
+        {# Vert Dividers Inner #}
+        <div class="absolute top:0 w:100p h:100p hidden md:flex align-items:center justify-content:center px:12 sm:px:24">
+            <div class="relative w:100p h:100p max-w:{{ maxWidth }} flex justify-content:between">
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 ml:n24"></div>
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mr:n24"></div>
+            </div>
+        </div>
+    {% endmacro %}
+
+    {# Hero #}
+    <section class="section pt:96 sm:pt:96 md:pt:160 pb:24 sm:pb:24 md:pb:48">
+        {{ vertDividers()}}
+        {# Horz Dividers #}
+        <div class="w:100p sm:w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 mb:16"></div>
+        {# Container #}
+        <div class="container flex flex:col align-items:center pt:4 md:pt:0">
+            {# Handles #}
+            <div class="absolute top:n24 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 flex md:hidden align-items:center justify-content:center border-t:1">
+                <div class="w:1 h:100p bg:ink-3"></div>
+                <div class="h:1 w:100p bg:ink-3 absolute"></div>
+            </div>
+            <div class="absolute top:n24 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 flex md:hidden align-items:center justify-content:center border-t:1">
+                <div class="w:1 h:100p bg:ink-3"></div>
+                <div class="h:1 w:100p bg:ink-3 absolute"></div>
+            </div>
+            {# Eyebrow #}
+            <div class="relative flex align-items:center justify-content:start gap:6 w:100p max-w:{{ maxWidth }} py:4 mb:10">
+                {# Handles Md #}
+                <div class="absolute top:n24 left:8 sm:left:n28 mt:1 ml:n1 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <div class="absolute top:n24 right:8 sm:right:n28 mt:1 mr:n1 w:12 h:12 hidden md:flex align-items:center justify-content:center border-t:1">
+                    <div class="w:1 h:100p bg:ink-3"></div>
+                    <div class="h:1 w:100p bg:ink-3 absolute"></div>
+                </div>
+                <p class="opacity:60">
+                    {{ category | capitalize }}
+                </p>
+                <div class="w:2 h:2 radius:full bg:ink-3 opacity:60 mr:n2"></div>
+                <p class="opacity:60">
+                    {{ duration | capitalize }}
+                </p>
+            </div>
+            {# Headline #}
+            <div class="relative w:100p max-w:{{ maxWidth }}">
+                <div class="relative">
+                    <h1 class="font:10vw sm:font:10xl tracking:tighter leading:110 medium mb:14">
+                        {{ headlineDisplay | safe }}
+                    </h1>
+                </div>
+                <div class="relative">
+                    <div class="absolute hidden md:block left:n24 top:8 h:20 border-l:1 border:primary-rg"></div>
+                    <p class="font:5-5vw sm:font:2xl leading:150 opacity:70">
+                        {{ description | safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# Content #}
+    <section class="section pb:72">
+        {{ vertDividers()}}
+        {# Horz Divider #}
+        <div class="w:100p sm:w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15"></div>
+        {# Subheader #}
+        <div data-subheader class="sticky top:56 w:100p flex flex:col align-items:center mb:n1 z:7 blur:fix" >
+            <div class="container flex align-items:center justify-content:between gap:8 sm:gap:16">
+                {# Background #}
+                <div class="absolute top:0 left:0 sm:left:n24 w:100p sm:w:plus48 h:100p px:1 pb:1">
+                    <div class="w:100p h:100p bg:sheet-6 bg-opacity:20 backdrop backdrop-blur:sm blur:fix"></div>
+                </div>
+                {# Vert Dividers #}
+                <div class="absolute sm:hidden top:0 left:12 h:100p border-l:1 border:ink-3 border-opacity:10"></div>
+                <div class="absolute sm:hidden top:0 right:12 h:100p border-l:1 border:ink-3 border-opacity:10"></div>
+                {# Vert Dividers Inner #}
+                <div class="absolute top:0 left:0 w:100p h:100p hidden md:flex align-items:center justify-content:center">
+                    <div class="relative w:100p h:100p max-w:{{ maxWidth }} flex justify-content:between">
+                        <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 ml:n24"></div>
+                        <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mr:n24"></div>
+                    </div>
+                </div>
+                {# Date #}
+                <div class="relative md:min-w:112 flex-shrink:0 hidden sm:flex justify-content:start align-items:center font:sm opacity:60">
+                    {{ icons.calendar('w:14 mr:6')}}
+                    <time datetime="{{ date }}">
+                        {{ date | dateFull }}
+                    </time>
+                </div>
+                {# Centered #}
+                <div class="relative flex align-items:center justify-content:start sm:justify-content:between gap:12 w:100p md:max-w:{{ maxWidth }} py:8 overflow:hidden">
+                    {# Link #}
+                    <button data-copy="{{ base.url }}{{ page.url }}" data-subheader-hide class="relative hidden sm:flex align-items:center justify-content:start overflow:hidden pl:8 pr:10 h:26 radius:xs bg:sheet-5 font:mono tracking:tighter font:xs border:1 border:ink-3 border-opacity:15 focus:primary group hover:bg:sheet-4 hover:shadow:2xs">
+                        {{ icons.share('w:12 mr:4 color:primary-rg flex-shrink:0 ')}}
+                        <div class="relative opacity:60 space:nowrap overflow:ellipsis w:100p focus:white group-hover:opacity:100">
+                            {{ base.url }}{{ page.url }}
+                        </div>
+                        <div class="absolute right:0 top:0 w:12 h:100p bg:fade-right-sheet-5 focus:hide"></div>
+                        <div data-confirm class="absolute right:0 top:0 w:58 h:100p flex align-items:center pl:6 pr:4 radius-l:xs color:white bg:primary-rg" style="transform: translate3d(3.625rem,0,0);">
+                            Copied!
+                        </div>
+                    </button>
+                    {# Buttons #}
+                    <div data-subheader-hide class="font:xs medium relative flex align-items:center gap:4 flex-shrink:0">
+                        <div class="relative">
+                            {{ elements.btnBtn(
+                                color="simple",
+                                size="blog-nav",
+                                label="Summary",
+                                iconR=icons.iconOpenai('w:14 mr:n4 mt:n1 ml:4 color:primary-rg'),
+                                hover=true,
+                                classes='',
+                                attr='data-modal-summary-trigger aria-expanded="false" aria-controls="modal-summary"'
+                            )}} 
+                        </div>
+                        <div class="relative hidden sm:block">
+                            {{ elements.btnLink(
+                                color="simple",
+                                size="blog-nav",
+                                link="https://github.com/stillingdesign/blame.design/blob/main/src/blog/" ~ source,
+                                label="Source",
+                                iconR=icons.socialGithub('w:14 mr:n4 mt:n1 ml:4 color:primary-rg'),
+                                hover=true,
+                                classes=''
+                            )}} 
+                        </div>
+                    </div>
+                    {# Headline #}
+                    <div data-subheader-show class="absolute w:100p sm:text:center font:serif font:lg leading:100 pb:4 overflow:hidden mask:fade-out-r sm:mask:none" style="opacity:0; transform:translate3d(0,32px,0);">
+                        <p class="relative space:nowrap w:100p">
+                            {{ headline }}
+                        </p>
+                    </div>
+                </div>
+                {# Author #}
+                <div class="relative md:min-w:112 flex-shrink:0 flex justify-content:end align-items:center gap:8 font:sm">
+                    <p class="opacity:60">
+                        {{ author }}
+                    </p>
+                    <div class="relative w:24 h:24 bg:blue radius:full flex align-items:center justify-content:center overflow:hidden">
+                        <img src="/assets/images/utility/avatar-mike-192.webp" alt class="relative flex w:100p h:100p object:cover">
+                    </div>
+                </div>
+                {# Border #}
+                <div class="absolute bottom:0 left:0 sm:left:n24 w:100p sm:w:plus48 border-t:1 border:ink-3 border-opacity:10"></div>
+                {# Progress #}
+                <div class="absolute bottom:0 left:0 sm:left:n24 w:100p sm:w:plus48">
+                    <div data-progress class="border-t:1 border:primary-rg w:100p transform:left" style="transform: scale3d(0,1,1);"></div>
+                </div>
+            </div>
+        </div>
+        {# Summary #}
+        <div data-modal-summary id="modal-summary" class="fixed top:0 left:0 z:9 w:100p h:100p px:24 flex align-items:center justify-content:center overflow:hidden" style="opacity:0; visibility:hidden;">
+            {# Background #}
+            <div data-modal-summary-bg class="absolute w:100p h:100p" style="background-color: rgba(217,217,217,0.95); opacity:0;"></div>
+            {# Frame #}
+            <div data-modal-summary-inner class="relative p:1 w:100p max-w:{{ maxWidth }} bg:edge-2 radius:xl shadow:2xl" style="opacity:0; transform: scale3d(0.5,0.5,0.5);">
+                <div class="relative w:100p flex flex:col bg:sheet-4 radius:15 max-h:512 overflow:scroll">
+                    <div class="relative flex align-items:center justify-content:between px:24 sm:px:48 pt:18 sm:pt:32">
+                        <div class="flex align-items:center gap:6">
+                            <h2 class="font:lg sm:font:xl medium tracking:tighter">
+                                Summary
+                            </h2>
+                            <div>
+                                {{ elements.tag(
+                                    color="blue",
+                                    size="xs",
+                                    label="<span class='hidden sm:inline'>Powered</span> by OpenAI",
+                                    iconR=icons.iconOpenai('w:12 ml:4 mt:n1 mb:n1'),
+                                    classes=''
+                                )}}
+                            </div>
+                        </div>
+                        {{ elements.btnBtn(
+                            color="simple",
+                            size="xs",
+                            label="Close",
+                            hover=true,
+                            attr='data-modal-summary-close',
+                            classes='pointer-events:auto'
+                        )}}
+                    </div>
+                    <p class="font:lg sm:font:xl leading:200 sm:leading:180 opacity:70 px:24 sm:px:48 pb:24 sm:pb:48 pt:8 sm:pt:16">
+                        {{ summary | safe }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {# Image #}
+        <div data-hero-img class="container z:8 ">
+            <div class="relative w:plus48 ml:n24 bg:blue">
+                <picture class="relative">
+                    <source media="(min-width: 1024px)" srcset="/assets/images/blog/{{ heroPath }}-hero-md.webp">
+                    <source media="(min-width: 768px)" srcset="/assets/images/blog/{{ heroPath }}-hero-sm.webp">
+                    <source media="(max-width: 767px)" srcset="/assets/images/blog/{{ heroPath }}-hero.webp">
+                    <img src="/assets/images/blog/{{ heroPath }}-hero.jpg" class="relative w:100p h:auto" width="1152" height="864" alt="{{ ogImageAlt }}">
+                </picture>
+                <div class="absolute bottom:8 right:8 px:4 radius:2xs medium tracking:loose uppercase font:2xs bg:white bg-opacity:50 shadow:2xs">
+                    Made with {{ imageSource }}
+                </div>
+            </div>
+        </div>
+        {# Content #}
+        <div data-content class="container flex flex:col align-items:center lg:align-items:stretch lg:flex:row justify-content:between pt:24 lg:pt:96">
+            {# Left Rail • ToC #}
+            <div data-blog-toc class="relative w:100p max-w:{{maxWidth}} lg:max-w:192 mb:48 lg:mb:8">
+                <div class="sticky top:112 flex flex:col w:100p pt:10 lg:px:0 lg:pt:0 bg:sheet-5 bg-opacity:50 lg:bg:transparent radius:xl lg:radius:none border:1 lg:border:0 border:black border-opacity:10 overflow:hidden lg:overflow:visible">
+                    <h2 class="relative font:lg mb:4 medium px:16 lg:px:0">
+                        {% if tocLabel %}{{ tocLabel }}{% else %}Contents{% endif %}
+                    </h2>
+                    <ol class="relative flex flex:col border-t:1 border:black border-opacity:10 border:dashed mb:n2 lg:mb:0">
+                    {% for link in toc %}
+                        <li class="toc-link">
+                            <a data-anchor-scroll href="{{ link.link }}">
+                                <div class="left">
+                                    <div class="tag">
+                                        {{ link.tag }}
+                                    </div>
+                                    <div class="label">
+                                        <p>
+                                            {{ link.title }}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="right">
+                                    {{ icons.chevR('w:14') }}
+                                </div>
+                            </a>
+                            <div class="w:100p border-b:1 border:black border-opacity:10 border:dashed mt:2"></div>
+                            {% if link.items %}
+                                <ol class="relative flex flex:col">
+                                    {% for item in link.items %}
+                                        <li class="toc-link">
+                                            <a data-anchor-scroll href="{{ item.link }}">
+                                                <div class="left">
+                                                    <div class="tag">
+                                                        {{ item.tag }}
+                                                    </div>
+                                                    <div class="label">
+                                                        <p>
+                                                            {{ item.title }}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="right">
+                                                    {{ icons.chevR('w:14') }}
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <div class="border-b:1 border:black border-opacity:10 border:dashed mt:2"></div>
+                                    {% endfor %}
+                                </ol>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+            {# Center #}
+            <div class="relative w:100p max-w:{{ maxWidth }} flex-shrink:0">
+                <div id="content-start"></div>
+                <div class="markdown">
+                    {{ content | safe }}
+                </div>
+            </div>
+            {# Right Rail #}
+            <div class="relative w:100p lg:max-w:192 h:100p"></div>
+        </div>
+    </section>
+
+    {# CTA • Share #}
+    <section class="section pb:144 sm:pb:192 md:pb:224 mb:n72 sm:mb:n144 md:mb:n160">
+        {{ vertDividers() }}
+        {# Horz Divider #}
+        <div class="w:100p sm:w:plus96 lg:w:100p lg:mask:fade-out-x-75p border-t:1 border:ink-3 border:dashed border-opacity:15 mb:72"></div>
+        {# Container #}
+        <div class="container flex flex:col align-items:center">
+            <div class="font:serif font:23vw sm:font:17xl leading:80 uppercase tracking:tight mb:n12 sm:mb:n40 mask:fade-out-b gradient-text bg:ink-3 bg-opacity:10 space:nowrap text:center">
+                The end
+            </div>
+            {# Card #}
+            <div class="relative w:100p max-w:720 flex flex:col-reverse sm:flex:row justify-content:between align-items:center sm:align-items:stretch px:16 sm:px:0 bg:primary-rg bg-opacity:10 border:1 border:primary-rg border-opacity:30 radius:xl shadow:xl backdrop backdrop-blur:sm">
+                {# Text #}
+                <div class="relativ flex flex:col align-items:center sm:align-items:start md:w:50p sm:pl:24 pt:20 pb:20 md:flex-shrink:0 max-w:384 md:max-w:none text:center sm:text:left">
+                    <h2 class="font:6xl sm:font:7xl leading:110 tracking:tighter color:primary-hv mb:6 sm:mb:8">
+                        Help {{icons.wordmark('w:96 sm:w:112 inline color:ink-3')}} start<br> the conversation
+                    </h2>
+                    <p class="sm:font:lg opacity:70 mb:16">
+                        Agree or disagree? Let us know on LinkedIn. <span class="space:nowrap">This is really just a push for organic social lol.</span>
+                    </p>
+                    <div class="flex flex:col sm:flex:row align-items:center gap:6 w:100p max-w:384 sm:w:auto sm:max-w:none">
+                        {{ elements.btnLink(
+                            color="simple",
+                            size="sm",
+                            link="https://www.linkedin.com/sharing/share-offsite/?url=" ~ base.url ~ page.url,
+                            label="Share on LinkedIn",
+                            iconL=icons.socialLinkedin('w:14 mr:6 mt:n2 ml:n2 color:primary-rg'),
+                            hover=true,
+                            classes='w:100p sm:w:auto',
+                            attr='target="_blank" rel="noopener noreferrer"'
+                        )}}
+                        {{ elements.btnLink(
+                            color="simple",
+                            size="sm",
+                            link=igImage,
+                            label="Get an image for your Story",
+                            iconL=icons.socialInstagram('w:14 mr:6 mt:n1 ml:n2 color:primary-rg'),
+                            hover=true,
+                            classes='w:100p sm:w:auto',
+                            attr='target="_blank" rel="noopener noreferrer"'
+                        )}} 
+                    </div>
+                </div>
+                {# Graphic #}
+                <div class="relative flex flex:col justify-content:center w:100p max-w:384 sm:max-w:none sm:w:288 mt:20 sm:mb:20 sm:mr:24 bg:sheet-5 shadow:md radius:sm border:1 border:black border-opacity:15">
+                    <div class="flex align-items:center pt:8 pb:6 px:10 gap:8">
+                        <div class="relative z:1 w:28 h:28 flex-shrink:0 radius:full overflow:hidden">
+                            <img src="/assets/images/utility/avatar-1.webp" alt="" class="w:100p h:auto">
+                        </div>
+                        <div class="leading:120 font:sm" style="text-wrap:balance;">
+                            {{ fauxSocial | safe }}
+                        </div>
+                    </div>
+                    <img src="{{ ogImage }}" alt="{{ ogImageAlt }}" width="600" height="315" class="w:100p h:auto flex-shrink:0">
+                    <div class="flex align-items:center gap:4 font:2xs mt:2 leading:100 px:8 pb:8 pt:4">
+                        <div class="flex align-items:center">
+                            {{ icons.heart('w:12 mr:2 color:primary-rg') }}
+                            <div class="opacity:70">1,000 likes</div>
+                        </div>
+                        <div>•</div>
+                        <div class="flex align-items:center">
+                            {{ icons.chatCenter('w:12 mr:2 color:primary-rg') }}
+                            <div class="opacity:70">300 comments</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# CTA • Email #}
+    <section class="section pt:72 sm:pt:112 md:pt:128 overflow:hidden radius-t:96 sm:radius-t:100p mt:n24 sm:mt:n64 z:3" style="background: radial-gradient(50% 100% at 50% 0%, rgba(var(--sheet-4),1) 0%, rgba(var(--sheet-6),1) 100%); box-shadow: 0 -48px 48px 0 rgba(var(--sheet-6),1)">
+        {# Border top #}
+        <div class="absolute top:0 left:0 w:100p h:100p border-t:1 border-opacity:10 border:white mask:fade-out-x-90p radius-t:25p sm:radius-t:100p"></div>
+        {# Vert Dividers #}
+        <div class="absolute bottom:0 w:100p h:minus320 lg:h:minus128 flex align-items:center justify-content:center px:12 sm:px:24">
+            <div class="relative w:100p h:100p max-w:1200 flex justify-content:between">
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-t"></div>
+                <div class="relative h:100p border-l:1 border:ink-3 border-opacity:10 mask:fade-out-t"></div>
+            </div>
+        </div>
+        {# Content #}
+        <div class="container z:3 flex flex:col align-items:center text:center">
+            <div class="relative z:2 flex flex:col align-items:center">
+                <h2 class="flex flex:col align-items:center font:7xl sm:font:9xl md:font:10xl medium tracking:tighter leading:100 mb:12">
+                    <span class="gradient-text block px:4" style="background-image: linear-gradient(0deg, rgba(var(--ink-3), 1) 0%, rgba(var(--ink-3),0.2) 100%)">
+                        Get Blame's
+                    </span>
+                    <span>Newsletter</span>
+                </h2>
+                <p class="font:xl sm:font:2xl leading:130 opacity:60 mb:24 max-w:288 sm:max-w:352">
+                    <span class="tracking:normal">How to drive revenue with design</span> <span class="tracking:tight">and prove it—directly to your inbox.</span>
+                </p>
+                {# CTA #}
+                {{ elements.formSingle(
+                    color="primary",
+                    size="xl",
+                    classes="min-w:288",
+                    icon=icons.emailOutline('w:100p'),
+                    formName="subscribe",
+                    fieldType="email",
+                    fieldName="email",
+                    placeholder="Enter email for updates",
+                    animate=true, 
+                    hover=true,
+                    attr="data-bottom-form",
+                    attrInner=""
+                )}}
+            </div>
+        </div>
+        {# Graphics #}
+        <div class="container flex align-items:end justify-content:center mt:32 sm:mt:48" aria-hidden="true">
+            {# Gradients #}
+            <div class="absolute w:512 h:512 top:n80 left:n256 bg:radial-teal-i opacity:20 transform rotate:n12"></div>
+            <div class="absolute w:512 h:512 top:n80 right:n256 bg:radial-purple-i opacity:20 transform rotate:12"></div>
+            <div class="absolute w:100p h:448 top:n192 bg:radial-blue-i opacity:30"></div>
+            {# Pane 1 #}
+            <div class="hidden sm:block relative w:100p h:224 bg:sheet-4 radius-tl:xl overflow:hidden pt:1 px:1" style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--edge-2),1) 0%, rgba(var(--sheet-6),1) 100%); box-shadow: 0 48px 96px 24px rgba(var(--sheet-6-i), 0.1);">
+                <div class="absolute top:n112 left:n112 w:224 h:224 bg:radial-teal-i opacity:30"></div>
+                <div class="absolute top:n48 left:n48 w:96 h:96 bg:radial-teal-i opacity:30"></div>
+                <div class="absolute top:1 left:1 w:640 h:100p radius-tl:15 overflow:hidden"  style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--sheet-4),1) 0%, rgba(var(--sheet-6),1) 100%);">
+                    <div class="absolute top:n320 left:n320 w:640 h:640 bg:radial-teal-i opacity:6"></div>
+                    {# Contents #}
+                    <div class="absolute top:0 left:0 w:100p h:100p overflow:hidden tracking:normal">
+                        {# Email Header #}
+                        <div class="flex justify-content:start align-items:center px:14 pt:14 pb:14">
+                            {# Left #}
+                            <div class="flex align-items:center gap:8 leading:130">
+                                <div class="w:36 h:36 bg:sheet-1 radius:full flex align-items:center justify-content:center" style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--sheet-1),1) 0%, rgba(var(--sheet-4),1) 100%); box-shadow: 0 8px 16px 0px rgba(var(--sheet-6-i), 0.05), 0 4px 4px 0px rgba(var(--sheet-6-i), 0.2), inset 0 1px 1px 0 rgba(255,255,255,0.08);">
+                                    {{ icons.logoIcon('w:16')}}
+                                </div>
+                                <div class="mb:2">
+                                    <div>
+                                        <div class="inline-block font:xs medium opacity:70">
+                                            Mike @ Blame
+                                        </div>
+                                        <div class="hidden sm:inline-block font:2xs medium opacity:50">
+                                            info@blame.design
+                                        </div>
+                                    </div>
+                                    <div class="font:2xs medium opacity:50">
+                                        to you
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {# Divider #}
+                        <div class="w:100p h:1 bg:black opacity:6 mask:fade-out-x-90p"></div>
+                        <div class="relative flex flex:col align-items:center w:100p h:100p pt:32 px:56 w:100p overflow:hidden z:1 text:center">
+                            <div class="font:2xl semibold tracking:tight mb:16 color:ink-1-i">
+                                Figma is not the place for a design system
+                            </div>
+                            <div class="w:100p h:100p bg:white bg-opacity:30"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {# Pane 2 #}
+            <div class="relative z:2 w:100p max-w:640 sm:w:640 h:288 sm:h:288 bg:sheet-4 radius-t:xl flex-shrink:0 overflow:hidden pt:1 px:1" style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--edge-1),1) 0%, rgba(var(--sheet-6),1) 100%); box-shadow: 0 48px 96px 24px rgba(var(--sheet-6-i), 0.1);">
+                <div class="absolute top:n160 left:n160 w:320 h:320 bg:radial-white opacity:20"></div>
+                <div class="absolute top:n48 left:n48 w:96 h:96 bg:radial-white opacity:30"></div>
+                <div class="absolute top:n160 right:n160 w:320 h:320 bg:radial-white opacity:20"></div>
+                <div class="absolute top:n48 right:n48 w:96 h:96 bg:radial-white opacity:30"></div>
+                <div class="relative w:100p h:100p radius-t:15"  style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--sheet-3),1) 0%, rgba(var(--sheet-6),1) 100%);">
+                    {# Contents #}
+                    <div class="absolute top:0 left:0 w:100p h:100p overflow:hidden tracking:normal">
+                        {# Email Header #}
+                        <div class="flex justify-content:between align-items:center px:14 pt:14 pb:14">
+                            {# Left #}
+                            <div class="flex align-items:center gap:8 leading:130">
+                                <div class="w:36 h:36 bg:sheet-1 radius:full flex align-items:center justify-content:center" style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--sheet-1),1) 0%, rgba(var(--sheet-4),1) 100%); box-shadow: 0 8px 16px 0px rgba(var(--sheet-6-i), 0.05), 0 4px 4px 0px rgba(var(--sheet-6-i), 0.2), inset 0 1px 1px 0 rgba(255,255,255,0.08);">
+                                    {{ icons.logoIcon('w:16')}}
+                                </div>
+                                <div class="mb:2">
+                                    <div>
+                                        <div class="inline-block font:xs medium opacity:70">
+                                            Mike @ Blame
+                                        </div>
+                                        <div class="hidden sm:inline-block font:2xs medium opacity:50">
+                                            info@blame.design
+                                        </div>
+                                    </div>
+                                    <div class="font:2xs medium opacity:50">
+                                        to you
+                                    </div>
+                                </div>
+                            </div>
+                            {# Right #}
+                            <div class="flex align-items:center gap:12 pr:4">
+                                <div class="font:2xs opacity:50">
+                                    Nov 7, 2025, 3:00 PM <span class="hidden sm:inline">(moments ago)</span>
+                                </div>
+                                {{ icons.back('w:12 opacity:50 mb:2')}}
+                                {{ icons.ellipsisV('w:12 opacity:50 mb:2')}}
+                            </div>
+                        </div>
+                        {# Divider #}
+                        <div class="w:100p h:1 bg:black opacity:6 mask:fade-out-x-90p"></div>
+                        <div class="relative flex flex:col align-items:center w:100p h:100p pt:16 sm:pt:32 px:28 sm:px:56 w:100p overflow:hidden z:1 text:center">
+                            <div class="font:2xl semibold tracking:tight mb:16 color:ink-2 leading:120 max-w:288 sm:max-w:none">
+                                Designers: Get up and running with analytics
+                            </div>
+                            <div class="relative w:100p h:100p flex justify-content:around align-items:end bg:white bg-opacity:20 mt:4 radius:lg shadow:xl">
+                                <div class="w:1-12 h:160 bg:blue-i bg-opacity:20 mask:fade-out-b radius-t:xs border:1 border:blue border-opacity:40"></div>
+                                <div class="w:1-12 h:144 bg:blue-i bg-opacity:20 mask:fade-out-b radius-t:xs border:1 border:blue border-opacity:40"></div>
+                                <div class="w:1-12 h:128 bg:blue-i bg-opacity:20 mask:fade-out-b radius-t:xs border:1 border:blue border-opacity:40"></div>
+                                <div class="w:1-12 h:112 bg:blue-i bg-opacity:20 mask:fade-out-b radius-t:xs border:1 border:blue border-opacity:40"></div>
+                                <div class="w:1-12 h:128 bg:blue-i bg-opacity:20 mask:fade-out-b radius-t:xs border:1 border:blue border-opacity:40"></div>
+                                <div class="w:1-12 h:144 bg:blue-i bg-opacity:20 mask:fade-out-b radius-t:xs border:1 border:blue border-opacity:40"></div>
+                                <div class="w:1-12 h:160 bg:blue-i bg-opacity:20 mask:fade-out-b radius-t:xs border:1 border:blue border-opacity:40"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {# Pane 3 #}
+            <div class="hidden sm:block relative w:100p h:224 bg:sheet-4-i radius-tr:xl overflow:hidden pt:1 px:1" style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--edge-2),1) 0%, rgba(var(--sheet-6),1) 100%); box-shadow: 0 48px 96px 24px rgba(var(--sheet-6-i), 0.1);">
+                <div class="absolute top:n112 right:n112 w:224 h:224 bg:radial-purple-i opacity:30"></div>
+                <div class="absolute top:n48 right:n48 w:96 h:96 bg:radial-purple-i opacity:30"></div>
+                <div class="absolute top:1 right:1 w:640 h:100p radius-tr:15 overflow:hidden"  style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--sheet-4),1) 0%, rgba(var(--sheet-6),1) 100%);">
+                    <div class="absolute top:n320 right:n320 w:640 h:640 bg:radial-purple-i opacity:8"></div>
+                    {# Contents #}
+                    <div class="absolute top:0 left:0 w:100p h:100p overflow:hidden tracking:normal opacity:50">
+                        {# Email Header #}
+                        <div class="flex justify-content:between align-items:center px:14 pt:14 pb:14">
+                            {# Left #}
+                            <div class="flex align-items:center gap:8 leading:130">
+                                <div class="w:36 h:36 bg:sheet-1 radius:full flex align-items:center justify-content:center" style="background: radial-gradient(150% 100% at 50% 0%, rgba(var(--sheet-1),1) 0%, rgba(var(--sheet-4),1) 100%); box-shadow: 0 8px 16px 0px rgba(var(--sheet-6-i), 0.05), 0 4px 4px 0px rgba(var(--sheet-6-i), 0.2), inset 0 1px 1px 0 rgba(255,255,255,0.08);">
+                                    {{ icons.logoIcon('w:16')}}
+                                </div>
+                                <div class="mb:2">
+                                    <div>
+                                        <div class="inline-block font:xs medium opacity:70">
+                                            Mike @ Blame
+                                        </div>
+                                        <div class="hidden sm:inline-block font:2xs medium opacity:50">
+                                            info@blame.design
+                                        </div>
+                                    </div>
+                                    <div class="font:2xs medium opacity:50">
+                                        to you
+                                    </div>
+                                </div>
+                            </div>
+                            {# Right #}
+                            <div class="flex align-items:center gap:12 pr:4">
+                                <div class="font:2xs opacity:50">
+                                    Nov 5, 2025, 2:00 PM
+                                </div>
+                                {{ icons.back('w:12 opacity:50 mb:2')}}
+                                {{ icons.ellipsisV('w:12 opacity:50 mb:2')}}
+                            </div>
+                        </div>
+                        {# Divider #}
+                        <div class="w:100p h:1 bg:black opacity:6 mask:fade-out-x-90p"></div>
+                        <div class="relative flex flex:col align-items:center w:100p h:100p pt:32 px:56 w:100p overflow:hidden z:1 text:center">
+                            <div class="font:2xl semibold tracking:tight mb:16 color:ink-1-i">
+                                Figma is not the place for a design system
+                            </div>
+                            <div class="w:100p h:100p bg:white bg-opacity:40"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>

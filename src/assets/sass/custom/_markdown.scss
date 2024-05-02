@@ -1,0 +1,93 @@
+@use "sass:map";
+@use "uniform" as *;
+
+.markdown {
+    @include apply('font:spectral font:lg sm:font:22');
+
+    // Spacings 
+    & > p + h2              { @include apply('mt:72'); }
+    & > blockquote + h3     { @include apply('mt:56'); }
+    & > p + h3              { @include apply('mt:48'); }
+    & > blockquote + p,
+    & > p + blockquote      { @include apply('mt:36'); }
+    & > p + p               { @include apply('mt:28'); }
+
+    // Heading 2
+    & > h2 {
+        @include apply('relative font:4xl font:sans tracking:tighter leading:130 mb:28 medium');
+        text-wrap: balance;
+        &:before {
+            @include apply('absolute top:n18 md:top:12 left:0 md:left:n36 ml:n2 md:ml:2 pl:1 w:20 h:18 flex align-items:center justify-content:center color:white radius:2xs bg:primary-rg uppercase tracking:loosest text:center font:mono font:2xs');
+            content:'H2';
+        }
+    }
+
+    // Heading 3
+    & > h3 {
+        @include apply('relative font:3xl font:sans tracking:tight leading:130 mb:20');
+        text-wrap: balance;
+        &:before {
+            @include apply('absolute top:4 left:n24 mt:n1 w:1 h:28 hidden md:flex bg:primary-rg');
+            content: '';
+        }
+        &:after {
+            @include apply('absolute top:n18 md:top:8 left:n4 md:left:n36 mt:1 ml:2 pl:1 w:20 h:18 flex align-items:center justify-content:center color:primary-rg radius:2xs bg:sheet-6 uppercase tracking:loosest text:center font:mono font:2xs');
+            content:'H3';
+        }
+    }
+
+    // Paragraph
+    & > p { @include apply('leading:170 tracking:tighter color:ink-2'); text-wrap: pretty;}
+    & > p > strong { @include apply('color:ink-3'); }
+    & > p > mark { background: linear-gradient(180deg, rgba(var(--yellow), 0.1) 0%, rgba(var(--yellow), 0.4) 100%); background-position: left 0 bottom 40%; background-size: 100% 50%; background-repeat: no-repeat;}
+    & > p > code { @include apply('font:mono color:primary-rg border:1 border:primary-rg border-opacity:30 bg:primary-rg bg-opacity:10 leading:100 inline-block pb:5 pt:4 px:4 transform translate-y:n2 radius:xs tracking:tighter space:nowrap'); font-size:0.75em; }
+
+    // Link
+    a {
+        @include apply("relative color:link-rg space:nowrap");
+        &:before {
+            content:'';
+            position: absolute;
+            bottom: 0.125em;
+            left:0;
+            width: 100%;
+            height: 0.0625em;
+            background-color: rgba(var(--link-rg), 1);
+            opacity: 0.5;
+            transition: opacity 200ms cubic-bezier(0, 0.66, 0.33, 1) 0ms;
+        }
+        @media (hover: hover) {
+            &:hover {
+                &:before {
+                    opacity: 1;
+                    transition: opacity 300ms cubic-bezier(0, 0.66, 0.33, 1) 0ms;
+                }
+            }
+        }
+        &:focus-visible {
+            @include apply("outline:none bg:primary-rg color:white radius:xs");
+            &:before {opacity:0;}
+        }
+    }
+
+    // Blockquote
+    & > blockquote {
+        @include apply('relative');
+        &:before { @include apply('absolute top:8 left:n12 sm:left:n24 w:1 h:minus16 bg:primary-rg'); content: ''; }
+        p {
+            @include apply('relative font:serif font:5xl sm:font:6xl italic leading:130 color:primary-rg tracking:tighter');
+            text-wrap: balance;
+            &:before { @include apply('absolute top:0 left:n12 sm:left:n16'); content: '“'; }
+            &:after { @include apply('inline'); content: '”'; }
+        }
+    }
+
+    // First Paragraph
+    & > p:first-child { @include apply('font:2xl tracking:tighter mb:36'); text-wrap: balance;}
+
+    & > p:first-child::first-letter {
+        @include apply('font:serif color:ink-3');
+        initial-letter:2;
+    }
+
+}

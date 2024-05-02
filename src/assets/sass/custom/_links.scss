@@ -44,6 +44,11 @@
     .btn\:inner { @include apply("px:12 sm:px:18 py:12")}
 }
 
+.btn\:blog-nav {
+    @include apply("font:xs medium p:1");
+    .btn\:inner { @include apply("px:10 py:6")}
+}
+
 // Conic Initial Stop Vals
 @property --conic-t {
     syntax: '<number>';
@@ -349,6 +354,7 @@
     }
 }
 
+
 // Conic Gradient Rotation Animation
 @property --conic-spin {
     syntax: '<angle>';
@@ -369,6 +375,7 @@
     transform: translate3d(0, 0, 0);
     & > .btn\:inner { @include apply("bg:primary-rg bg-opacity:100 color:ink-3-i transition:300")}
     & > .btn\:inner > .btn\:text { opacity:1; }
+    & > .btn\:inner > svg { @include apply('color:white transition:300') }
     & > .btn\:gradient {
         @include apply("absolute w:100p flex ratio:1-1");
         background: rgba(var(--primary-rg), 1);
@@ -376,6 +383,9 @@
 }
 
 .focus\:primary:focus-visible {@include apply("opacity:100 color:white bg:primary-rg border:1 border:primary-rg outline:none"); }
+.focus\:primary:focus-visible .focus\:white {@include apply("opacity:100 color:white"); }
+.focus\:primary:focus-visible .focus\:hide {@include apply("opacity:0"); }
+.focus\:primary:focus-visible svg {@include apply("opacity:100 color:white"); }
 
 // Bump Animation
 @keyframes bump {
@@ -669,6 +679,31 @@
         .card-inset-cta-shading {
             box-shadow: inset 0 6px 6px 0 rgba(0,0,0,0.08), inset 0 2px 2px 0 rgba(0,0,0,0.08), inset 0 -2px 2px 0 rgba(0,0,0,0.08);
             transition: box-shadow 500ms cubic-bezier(.8,0,.2,1) 0ms;
+        }
+    }
+}
+
+.toc-link {
+    @include apply("relative flex flex:col pt:2");
+    a {
+        @include apply("flex align-items:center justify-content:between gap:8 leading:100 py:8 px:12 ml:2 mr:2 lg:ml:n12 lg:mr:0 lg:w:plus24 radius:full");
+        .left { @include apply("flex align-items:center gap:8"); }
+        .right { @include apply("flex-shrink:0 w:14 transform translate-x:n6 opacity:0 transition:300 cubic-out"); }
+        .tag { @include apply("relative flex-shrink:0 font:2xs uppercase font:mono opacity:60 w:12 text:center transition:300 cubic-out");}
+        .label { @include apply("font:sm tracking:normal opacity:80 transition:300 cubic-out");}
+        @media (hover: hover) {
+            &:hover {
+                @include apply("color:primary-rg transition:300 cubic-out");
+                .right { @include apply("translate-x:0 opacity:100"); }
+                .tag { @include apply("opacity:100");}
+                .label { @include apply("opacity:100");}
+            }
+        }
+        &:focus-visible {
+            @include apply("color:white bg:primary-rg transition:300 cubic-out outline:none");
+            .right { @include apply("translate-x:0 opacity:100"); }
+            .tag { @include apply("opacity:100");}
+            .label { @include apply("opacity:100");}
         }
     }
 }
