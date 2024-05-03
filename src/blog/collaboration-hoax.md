@@ -2,17 +2,16 @@
 {
     "layout": "layouts/_blog-post.njk",
     "seoTitle": "Collaboration is a hoax",
-    "seoDescription": "A well-reasoned explanation on why learning to code is necessary—but even more so, taking a generalist approach toward design.",
+    "seoDescription": "Feedback, comments, reactions, and hand-offs: this is order giving, not working together, and there's way too much of it.",
     "ogTitle": "Collaboration is a hoax",
-    "ogDesc": "A well-reasoned explanation on why learning to code is necessary—but even more so, taking a generalist approach toward design.",
+    "ogDesc": "Feedback, comments, reactions, and hand-offs: this is order giving, not working together, and there's way too much of it.",
     "ogImage": "/assets/images/og/collaboration-hoax.jpg",
     "igImage": "/assets/images/blog/collaboration-hoax-ig.jpg",
     "ogImageAlt": "a bunch of weirdos dressed in 90s apparel standing around an old computer",
     "headline": "Collaboration is a hoax",
-    "headlineDisplay": "<span class='space:nowrap'>Collaboration is a hoax</span>",
-    "description": "A well-reasoned guide on why learning to code is necessary—<span class='space:nowrap'>but even</span> more so, taking a generalist approach <span class='space:nowrap'>toward design.</span>",
-    "summary": "This article advocates for designers to learn coding and adopt a generalist approach, integrating skills like marketing and project management to enhance project execution and value. It challenges traditional specialization, arguing that a broader skill set makes one indispensable and improves outcomes.",
-    "date": "",
+    "headlineDisplay": "Collaboration <span class='space:nowrap'>is a hoax</span>",
+    "description": "Feedback, comments, reactions, <span class='space:nowrap'>and hand-offs:</span> this is order <span class='space:nowrap'>giving, not working</span> together, <span class='space:nowrap'>and there's way too much of it.</span>",
+    "summary": "The article criticizes the excessive emphasis on collaboration in modern workplaces, pointing out that it often leads to inefficiencies and dissatisfaction among employees. It argues for the implementation of smaller, focused teams and more streamlined processes as a means to enhance productivity and empower the individuals who actually execute the work.",
     "date": "2024-05-05",
     "duration": "10 min read",
     "category": "opinions",
@@ -69,7 +68,7 @@ How we define collaboration is part of the problem. How often do we need more fe
 
 In this scenario, the do'er is left to create on their own, which by definition, isn't collaborative. This is the heart of the "collaboration" issue. <mark>There are loads of people talking about the work and few actually doing it</mark>—which is the exact opposite of what collaboration should be.
 
-### Misaligned Priorities
+### Misaligned priorities
 
 People who do the work have to be experts in their field and concentrate to get things done. Their paycheck depends on their ability to "do". But, the work is just part of the job. They are also responsible for how fast a project finishes, how well it's done, and whether it succeeds or fails.
 
@@ -77,13 +76,13 @@ Because of this, a person who talks about doing stuff and a person who actually 
 
 How easy is it for this boss to blame others when a project then goes haywire? If the schedule gets delayed, it's the do'er's fault for not working quick enough. If things turn out bad, it's because the do'er didn’t adequately follow instructions. It sounds harsh, but it happens all the time.
 
-### Unfounded Feedback
+### Unfounded feedback
 
 Builders play a crucial role but often don't have the final say due to the company's structure and culture. Sometimes, higher-ups give input on areas they might not fully understand, like visual design.
 
 Should we value feedback from someone who doesn't know much about the task? And how can team members feel comfortable challenging higher-ups' ideas? These are important questions to consider.
 
-### Eliminated Ownership
+### Eliminated ownership
 
 Feedback can be unhelpful when it comes from those lacking technical understanding. Designers are familiar with vague requests like "Make it pop!".
 
@@ -91,7 +90,7 @@ This leaves the task of interpreting feedback and seeking clarity to those who a
 
 Consequently, only small portions of everyone's ideas, including the builder's, are implemented. Compromises are made universally, leading to outcomes with no distinct ownership. When the result is positive, credit is often usurped. When it's negative, blame is allocated.
 
-### No Clear Path Forward
+### No clear path forward
 
 All of this creates yet another mess—learning from the work that was just done, which is often the responsibility of an entirely different team.
 
@@ -99,7 +98,7 @@ Often, the team monitoring outcomes is rewarded for success, even though they ar
 
 In essence, all of this leaves the do'er, the person with the most knowledge about the task, who just singlehandedly built the output, as nothing more than a pair of hands for less familiar say'ers. This individual is then left in the dark, waiting for the next task to come through, while their own thoughts, opinions, and role are ignored.
 
-### Job Dissatisfaction
+### Job dissatisfaction
 
 Is it surprising that technical IC’s turnover rate is higher than directors? Let's think about why they pick their field. Learning to build something is a big personal investment.
 
@@ -107,7 +106,7 @@ Usually, this choice comes from a strong interest and pleasure in the building p
 
 After reaching achieving this goal, we find ourselves in roles directed by someone who doesn't understand even the basics of this process *(and often earns more)*, showing no regard.
 
-## How Did We Get Here?
+## How did we get here?
 
 The concept of collaboration has evolved over time. In the past, roles like design and front-end development were distinct due to technological limitations. As organizations grew, hierarchical structures seemed necessary. Nowadays, however, technological advancements allow individuals to perform a broader range of tasks.
 
@@ -117,7 +116,7 @@ Websites can be built from scratch using serverless hosting or visual builders l
 
 In the past, a marketing website project would have needed a marketer, copywriter, designer, front-end developer, and back-end developer. Nowadays, one individual can easily handle such a project from start to finish.
 
-### Processes Prevent Change
+### Processes prevent change
 
 "Collaboration" seems to fuel today's bloated creative process, often leading to an overload of feedback from multiple sources.
 
@@ -127,7 +126,7 @@ Software companies are business-minded, often designing their products to appeal
 
 On social platforms, views and comments drive ad views and revenue. However, in a corporate setting, a high volume of reactions, comments, and shares typically leads to increased stress and extended timelines, not productivity.
 
-## Less Collaboration, Better Work, More Productivity
+## Less collaboration, better work, more productivity
 
 What's the solution? Let's examine the team structures behind top-notch design.
 
@@ -135,7 +134,7 @@ Most leading products in terms of craft, impact, and efficiency are created by s
 
 This doesn't imply that layoffs are the solution, or that individual contributors can change existing organization sizes and structures. Our challenge is to effect change without the authority to do so. How can we produce higher-quality work more quickly with fewer people, within a company burdened by a time-consuming hierarchy?
 
-### Build Trust
+### Build trust
 
 Changing hierarchy and traditional patterns is tough because it involves people giving up control over our work. They're not only worried about losing influence, but they also fear the work will fail without their guidance, which could reflect poorly on them.
 
@@ -143,7 +142,7 @@ The first concern is hard to address, but the second can be handled by consisten
 
 By doing this, you can support your work with strong logic that considers the different priorities across your company. This approach will build trust over time. Ideally, we can then start to gradually remove unnecessary reviews and approvals. Meanwhile, it enables us, the creators, to confidently respond to whack feedback.
 
-### Own the Right Things
+### Own the right things
 
 The fear of stakeholders losing their "say" is understandable, especially if their only contribution is through communication. This is usually the case for non-technical roles, such as brand marketers, whose primary asset is their opinion. Knowledge and execution by makers can make these roles redundant. Ideally, such roles would not have existed, but there's no need for rudeness.
 
@@ -151,7 +150,7 @@ Generally, stakeholders have other responsibilities. Managers should focus on su
 
 However, this is easier said than done. It's not as simple as telling them to "Mind your own business!" When trust-building fails and regaining ownership is challenging, there are always additional steps to consider…
 
-### Visualize the Potential
+### Visualize the potential
 
 Collaboration often leads to inefficiency, job dissatisfaction, low-quality work, and mediocre results. If this is your experience, demonstrate the drawbacks of these flawed processes to your colleagues.
 
@@ -161,7 +160,7 @@ Take a project that's hindered by excessive "collaboration" and create an altern
 
 Without the chaos of constant feedback, this "spike" should require less time to complete. As the layout isn't being constantly altered, it should look significantly better. Overall, this alternative version should demonstrate the flaws in the current process and inspire everyone involved to embrace the potential for change.
 
-### Set Yourself Free
+### Set yourself free
 
 I've been in a couple of roles, even after trying all of this, where “collaboration” continually was problematic—impacting efficiency, quality, and morale. If you’ve proven your effectiveness and still experience micromanagement, consider leaving the company. It’s them, not you.
 
