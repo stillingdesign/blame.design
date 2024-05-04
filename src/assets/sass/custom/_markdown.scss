@@ -10,7 +10,9 @@
     & > p + h3              { @include apply('mt:48'); }
     & > blockquote + p,
     & > p + blockquote      { @include apply('mt:36'); }
-    & > p + p               { @include apply('mt:28'); }
+    & > p + p,
+    & > p + img,
+    & > img + p             { @include apply('mt:28'); }
 
     // Heading 2
     & > h2 {
