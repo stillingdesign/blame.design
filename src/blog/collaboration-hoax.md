@@ -19,7 +19,7 @@
     "heroPath": "collaboration-hoax",
     "imageSource": "MidJourney",
     "fauxSocial": "Apparently working together sux according to this 💩head with a blog.",
-    "source": "know-code.md",
+    "source": "collaboration-hoax.md",
     "changefreq": "monthly",
     "tocLabel": "In this article:",
     "toc": [
