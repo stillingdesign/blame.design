@@ -9,7 +9,7 @@
     "igImage": "/assets/images/blog/collaboration-hoax-ig.jpg",
     "ogImageAlt": "a bunch of weirdos dressed in 90s apparel standing around an old computer",
     "headline": "Collaboration is a hoax",
-    "headlineDisplay": "Collaboration <span class='space:nowrap'>is a hoax</span>",
+    "headlineDisplay": "Collaboration<br class='sm:hidden'> <span class='space:nowrap'>is a hoax</span>",
     "description": "Feedback, comments, reactions, <span class='space:nowrap'>and hand-offs:</span> this is order <span class='space:nowrap'>giving, not working</span> together, <span class='space:nowrap'>and there's way too much of it.</span>",
     "summary": "The article criticizes the excessive emphasis on collaboration in modern workplaces, pointing out that it often leads to inefficiencies and dissatisfaction among employees. It argues for the implementation of smaller, focused teams and more streamlined processes as a means to enhance productivity and empower the individuals who actually execute the work.",
     "date": "2024-05-05",
