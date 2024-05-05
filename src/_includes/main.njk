@@ -80,10 +80,11 @@
         {% include "components/_modal-signup.njk" %}
 
         <!-- Scripts -->
-        <script src="/assets/javascript/main.js"></script>
         {% if base.env == 'PROD' %} 
-            <script defer data-domain="blame.design" src="https://plausible.io/js/script.js"></script>
+            <script defer data-domain="blame.design" src="https://plausible.io/js/script.tagged-events.js"></script>
+            <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
         {% endif %}
+        <script src="/assets/javascript/main.js"></script>
     </body>
 
 </html>

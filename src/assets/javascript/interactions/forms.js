@@ -33,6 +33,8 @@ if (document.querySelector('[data-form]')) {
                 .then(response => {
                     if (response.ok) {
                         // Show success message
+                        function logSuccess() { console.log('Plausible signup successful!'); }
+                        plausible('Signup', {callback: logSuccess});
                         const tmln = gsap.timeline({});
                         tmln
                             .to(success, { autoAlpha: 1, x:0, duration: 1, ease: "power3.out" })
