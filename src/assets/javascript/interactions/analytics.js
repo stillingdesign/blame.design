@@ -1,4 +1,4 @@
-// Scroll Depth Tracking
+// Scroll Depth Tracking Sections
 function scrollDepth() {
     document.addEventListener('DOMContentLoaded', function () {
         const sections = document.querySelectorAll('section');
