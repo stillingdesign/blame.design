@@ -30,7 +30,4 @@ function scrollDepth() {
     });
 }
 
-// If on prod, run Analytics.
-if(window.location.hostname == 'blame.design') {
-    scrollDepth();
-}
+scrollDepth();
