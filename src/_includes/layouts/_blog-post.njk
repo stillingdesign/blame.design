@@ -124,7 +124,7 @@ changefreq: monthly
                 {# Centered #}
                 <div class="relative flex align-items:center justify-content:start sm:justify-content:between gap:12 w:100p md:max-w:{{ maxWidth }} py:8 overflow:hidden">
                     {# Link #}
-                    <button data-copy="{{ base.url }}{{ page.url }}" data-subheader-hide class="relative hidden sm:flex align-items:center justify-content:start overflow:hidden pl:8 pr:10 h:26 radius:xs bg:sheet-5 font:mono tracking:tighter font:xs border:1 border:ink-3 border-opacity:15 focus:primary group hover:bg:sheet-4 hover:shadow:2xs">
+                    <button data-copy="{{ base.url }}{{ page.url }}" data-subheader-hide class="relative hidden sm:flex align-items:center justify-content:start overflow:hidden pl:8 pr:10 h:26 radius:xs bg:sheet-5 font:mono tracking:tighter font:xs border:1 border:ink-3 border-opacity:15 focus:primary group hover:bg:sheet-4 hover:shadow:2xs plausible-event-name=Link+copied">
                         {{ icons.share('w:12 mr:4 color:primary-rg flex-shrink:0 ')}}
                         <div class="relative opacity:60 space:nowrap overflow:ellipsis w:100p focus:white group-hover:opacity:100">
                             {{ base.url }}{{ page.url }}
@@ -143,7 +143,7 @@ changefreq: monthly
                                 label="Summary",
                                 iconR=icons.iconOpenai('w:14 mr:n4 mt:n1 ml:4 color:primary-rg'),
                                 hover=true,
-                                classes='',
+                                classes='plausible-event-name=Summary+viewed',
                                 attr='data-modal-summary-trigger aria-expanded="false" aria-controls="modal-summary"'
                             )}} 
                         </div>
@@ -155,7 +155,7 @@ changefreq: monthly
                                 label="Source",
                                 iconR=icons.socialGithub('w:14 mr:n4 mt:n1 ml:4 color:primary-rg'),
                                 hover=true,
-                                classes=''
+                                classes='plausible-event-name=Source+viewed'
                             )}} 
                         </div>
                     </div>
@@ -245,7 +245,7 @@ changefreq: monthly
                     <ol class="relative flex flex:col border-t:1 border:black border-opacity:10 border:dashed mb:n2 lg:mb:0">
                     {% for link in toc %}
                         <li class="toc-link">
-                            <a data-anchor-scroll href="{{ link.link }}">
+                            <a data-anchor-scroll href="{{ link.link }} plausible-event-name=ToC+click">
                                 <div class="left">
                                     <div class="tag">
                                         {{ link.tag }}
@@ -330,7 +330,7 @@ changefreq: monthly
                             label="Share on LinkedIn",
                             iconL=icons.socialLinkedin('w:14 mr:6 mt:n2 ml:n2 color:primary-rg'),
                             hover=true,
-                            classes='w:100p sm:w:auto',
+                            classes='w:100p sm:w:auto plausible-event-name=Share+LinkedIn',
                             attr='target="_blank" rel="noopener noreferrer"'
                         )}}
                         {{ elements.btnLink(
@@ -340,7 +340,7 @@ changefreq: monthly
                             label="Get an image for your Story",
                             iconL=icons.socialInstagram('w:14 mr:6 mt:n1 ml:n2 color:primary-rg'),
                             hover=true,
-                            classes='w:100p sm:w:auto',
+                            classes='w:100p sm:w:auto plausible-event-name=Share+Instagram',
                             attr='target="_blank" rel="noopener noreferrer"'
                         )}} 
                     </div>
@@ -399,7 +399,7 @@ changefreq: monthly
                 {{ elements.formSingle(
                     color="primary",
                     size="xl",
-                    classes="min-w:288",
+                    classes="min-w:288 plausible-event-name=Footer+form+click",
                     icon=icons.emailOutline('w:100p'),
                     formName="subscribe",
                     fieldType="email",

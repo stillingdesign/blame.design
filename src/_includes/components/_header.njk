@@ -6,7 +6,7 @@
     <div class="container z:9 flex align-items:center justify-content:between font:sm">
         {# Logo #}
         <div class="relative block flex-shrink:0 sm:min-w:112">
-            <a href="/" data-header-logo class="h:40 px:8 ml:n8 inline-flex align-items:center justify-content:start radius:full focus:primary border:1">
+            <a href="/" data-header-logo class="h:40 px:8 ml:n8 inline-flex align-items:center justify-content:start radius:full focus:primary border:1 plausible-event-name=Header+navigate">
                 {{ icons.wordmark('w:66 transition:100') }}
             </a>
         </div>
@@ -21,7 +21,7 @@
                             link=collection.url,
                             label=collection.name,
                             hover=true,
-                            classes=''
+                            classes='plausible-event-name=Header+navigate'
                         )}} 
                     </li>
                 {% endfor %}
@@ -29,7 +29,7 @@
         </nav>
         {# CTA #}
         <div class="relative flex flex-shrink:0 hidden sm:block min-w:112">
-            <button data-modal-signup-trigger aria-expanded="false" aria-controls="modal-signup" data-header-btn class="relative btn btn:md btn:hover w:100p {% if theme == 'dark' %}btn:header-i{% else %}btn:header{% endif %}">
+            <button data-modal-signup-trigger aria-expanded="false" aria-controls="modal-signup" data-header-btn class="relative btn btn:md btn:hover w:100p plausible-event-name=Header+open+modal {% if theme == 'dark' %}btn:header-i{% else %}btn:header{% endif %}">
                 <div data-header-btn-bg class="btn:gradient"></div>
                 <div data-header-btn-inner class="btn:inner">
                     <div class="btn:text">

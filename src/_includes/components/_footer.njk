@@ -5,7 +5,7 @@
     <div class="container">
         <div class="relative flex align-items:center justify-content:between border-b:1 pb:24 sm:pb:32 {% if theme == 'dark' %}border:edge-1-i{% else %}border:edge-2{% endif %}">
             <div class="flex align-items:center w:192">
-                <a href="/" class="px:6 py:6 ml:n6 mr:8 inline-flex align-items:center justify-content:start radius:md border:1 focus:primary">
+                <a href="/" class="px:6 py:6 ml:n6 mr:8 inline-flex align-items:center justify-content:start radius:md border:1 focus:primary plausible-event-name=Footer+navigate">
                     {{ icons.wordmark('w:64') }}
                 </a>
                 <div class="block">
@@ -27,27 +27,30 @@
                 </div>
             </div>
             <div class="flex align-items:center border:1 radius:full p:4 {% if theme == 'dark' %}border:edge-1-i border-opacity:50{% else %}border:edge-2{% endif %}">
-                {% macro footerSocial(link, icon) %}
-                    <a href="{{ link }}" class="w:32 h:32 flex align-items:center justify-content:center radius:full border:1 border:primary-rg border-opacity:0 bg:primary-rg bg-opacity:0 focus:primary transition:300 {% if theme == 'dark' %}hover:bg-opacity:30 hover:border-opacity:50{% else %}hover:color:primary-hv hover:bg-opacity:20 hover:border-opacity:40{% endif %}">
+                {% macro footerSocial(classes, link, icon) %}
+                    <a href="{{ link }}" class="w:32 h:32 flex align-items:center justify-content:center radius:full border:1 border:primary-rg border-opacity:0 bg:primary-rg bg-opacity:0 focus:primary transition:300 {% if theme == 'dark' %}hover:bg-opacity:30 hover:border-opacity:50{% else %}hover:color:primary-hv hover:bg-opacity:20 hover:border-opacity:40{% endif %} {{ classes }}">
                         {{ icon }}
                     </a>
                 {% endmacro %}
                 {{ footerSocial(
+                    classes="plausible-event-name=View+Instagram",
                     link=base.instagramLink,
                     icon=icons.socialInstagram('w:14')
                 )}}
                 {{ footerSocial(
+                    classes="plausible-event-name=View+LinkedIn",
                     link=base.linkedinLink,
                     icon=icons.socialLinkedin('w:16 mb:2')
                 )}}
                 {{ footerSocial(
+                    classes="plausible-event-name=View+GitHub",
                     link=base.githubLink,
                     icon=icons.socialGithub('w:18')
                 )}}
             </div>
             <div class="relative hidden sm:flex align-items:center justify-content:end gap:12 w:192 tracking:tight mt:1">
                 <div>
-                    <span class="opacity:70">Created by</span> <a href="https://www.mikestilling.com/?utm_source=blame&utm_medium=footer" target="_blank" rel="noopener noreferrer" class="{% if theme == 'dark' %}link:inverse{% else %}link:regular{% endif %}">Mike Stilling</a>
+                    <span class="opacity:70">Created by</span> <a href="https://www.mikestilling.com/?utm_source=blame&utm_medium=footer" target="_blank" rel="noopener noreferrer" class="{% if theme == 'dark' %}link:inverse{% else %}link:regular{% endif %} plausible-event-name=View+creator">Mike Stilling</a>
                 </div>
             </div>
         </div>
@@ -59,7 +62,7 @@
         <div class="w:0 border-l:1 {% if theme == 'dark' %}border:edge-2-i{% else %}border:edge-2{% endif %}"></div>
         <ul class="flex align-items:center justify-content:end gap:4 mr:n12 my:8 sm:w:224">
             <li>
-                <a href="https://plausible.io/blame.design" class="inline-block opacity:70 py:8 px:12 radius:full space:nowrap border:1 focus:primary hover:opacity:100 transition:100 {% if theme == 'dark' %}hover:color:link-hv-i{% else %}hover:color:link-hv{% endif %}">
+                <a href="https://plausible.io/blame.design" class="inline-block opacity:70 py:8 px:12 radius:full space:nowrap border:1 focus:primary hover:opacity:100 transition:100 {% if theme == 'dark' %}hover:color:link-hv-i{% else %}hover:color:link-hv{% endif %} plausible-event-name=View+analytics">
                     Blame's Analytics
                 </a>
             </li>

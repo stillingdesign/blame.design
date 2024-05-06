@@ -49,7 +49,7 @@ changefreq: daily
                         size="xs",
                         label="Test A",
                         attr='data-hero-btn="a"',
-                        classes='cursor:not-allowed'
+                        classes='cursor:not-allowed plausible-event-name=Test+A+click'
                     )}}
                     {{ elements.btnBtn(
                         color="disabled-i",
@@ -57,7 +57,7 @@ changefreq: daily
                         label="Test B",
                         attr='data-hero-btn="b"',
                         hover=true,
-                        classes=''
+                        classes='plausible-event-name=Test+B+click'
                     )}}
                     <div class="hidden sm:block font:2xs opacity:40 ml:4 sm:ml:8 font:mono uppercase tracking:loosest">
                         headline
@@ -157,7 +157,7 @@ changefreq: daily
                         {{ elements.formSingle(
                             color="primary-i",
                             size="xl",
-                            classes="min-w:288",
+                            classes="min-w:288 plausible-event-name=Hero+form+click",
                             icon=icons.emailOutline('w:100p'),
                             formName="subscribe",
                             fieldType="email",
@@ -572,7 +572,7 @@ changefreq: daily
                             size="md",
                             label="Get Blame's Newsletter",
                             hover=true,
-                            classes='',
+                            classes='plausible-event-name=Collaboration+modal+open',
                             attr='data-modal-signup-trigger aria-expanded="false" aria-controls="modal-signup"'
                         )}} 
                     </div>
@@ -582,7 +582,7 @@ changefreq: daily
                             size="xl",
                             label="Get Blame's Newsletter",
                             hover=true,
-                            classes='',
+                            classes='plausible-event-name=Collaboration+modal+open',
                             attr='data-modal-signup-trigger aria-expanded="false" aria-controls="modal-signup"'
                         )}} 
                     </div>
@@ -1182,7 +1182,7 @@ changefreq: daily
                 {{ elements.formSingle(
                     color="primary-i",
                     size="xl",
-                    classes="min-w:288",
+                    classes="min-w:288 plausible-event-name=Footer+form+click",
                     icon=icons.emailOutline('w:100p'),
                     formName="subscribe",
                     fieldType="email",
