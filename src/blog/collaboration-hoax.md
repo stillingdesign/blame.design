@@ -116,7 +116,7 @@ The concept of collaboration has evolved over time. In the past, roles like desi
 
 Technology has significantly progressed over the years, which should have resulted in organizational changes. The convergence of design and development roles is just the beginning. Software has become user-friendly and tools like ChatGPT are readily available. For instance, let's consider the ease of building a marketing website today, what implications does this have?
 
-Websites can be built constructed on-the-fly using frameworks and "serverless" hosting or visual builders like Webflow. With ChatGPT, the necessity for a copywriter is questionable. If an engineer configured and integrated the analytics tool, couldn't they could also monitor it? After all, it is their work, wouldn't they be most interested in and accountable for its results?
+Websites can be constructed on-the-fly using frameworks and "serverless" hosting or visual builders like Webflow. With ChatGPT, the necessity for a copywriter is questionable. If an engineer configured and integrated the analytics tool, couldn't they could also monitor it? After all, it is their work, wouldn't they be most interested in and accountable for its results?
 
 In the past, an initial marketing site build would have needed a marketer, copywriter, designer, front-end developer, and back-end developer. Today, <mark>one person can easily handle such a project from end-to-end.</mark>
 
