@@ -7,12 +7,15 @@
     // Spacings 
     & > p + h2              { @include apply('mt:72'); }
     & > blockquote + h3     { @include apply('mt:56'); }
+    & > ol + h3,
     & > p + h3              { @include apply('mt:48'); }
     & > blockquote + p,
     & > p + blockquote      { @include apply('mt:36'); }
+    & > p + h4              { @include apply('mt:32'); }
     & > p + p,
     & > p + img,
     & > img + p             { @include apply('mt:28'); }
+    & > p + ol             { @include apply('mt:24'); }
 
     // Heading 2
     & > h2 {
@@ -38,9 +41,16 @@
         }
     }
 
+    // Heading 4
+    & > h4 {
+        @include apply('relative font:2xl font:sans medium tracking:tight leading:130 mb:16');
+        text-wrap: balance;
+    }
+
     // Paragraph
     & > p { @include apply('leading:170 tracking:tighter color:ink-2'); text-wrap: pretty;}
     & > p > strong { @include apply('color:ink-3'); }
+    mark,
     & > p > mark { background: linear-gradient(180deg, rgba(var(--yellow), 0.1) 0%, rgba(var(--yellow), 0.4) 100%); background-position: left 0 bottom 40%; background-size: 100% 50%; background-repeat: no-repeat;}
     & > p > code { @include apply('font:mono color:primary-rg border:1 border:primary-rg border-opacity:30 bg:primary-rg bg-opacity:10 leading:100 inline-block pb:5 pt:4 px:4 transform translate-y:n2 radius:xs tracking:tighter space:nowrap'); font-size:0.75em; }
 
@@ -83,6 +93,13 @@
             &:after { @include apply('inline'); content: '”'; }
         }
     }
+
+    // Image
+    & > img { @include apply("relative w:100p h:auto")}
+
+    // Ordered list
+    & > ol { @include apply('relative flex flex:col gap:16 list:decimal pl:16 sm:pl:24 leading:150'); }
+    & > ol > li::marker { @include apply('color:primary-rg bold'); }
 
     // First Paragraph
     & > p:first-child { @include apply('font:2xl tracking:tighter mb:36'); text-wrap: balance;}
