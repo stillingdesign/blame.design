@@ -11,7 +11,7 @@
     "headline": "How to design with scrappy data",
     "headlineDisplay": "<span class=''>How to design</span> <span class='space:nowrap color:primary-rg'>with scrappy data</span>",
     "description": "A how-to on analytics data for SaaS marketing websites<br class='hidden sm:block'> from some guy who barely passed highschool algebra",
-    "summary": "This article advocates for designers to learn coding and adopt a generalist approach, integrating skills like marketing and project management to enhance project execution and value. It challenges traditional specialization, arguing that a broader skill set makes one indispensable and improves outcomes.",
+    "summary": "The blog post underscores the importance of data for marketing websites, even for non-data scientists. It covers understanding the marketing funnel, user acquisition channels, and measuring impact through analytics. Tools like Google Analytics or Plausible Analytics are recommended to gather data on button clicks and scroll depth, aiding in design decisions and user conversion rates. The focus is on practical methods for data-driven design improvements.",
     "date": "",
     "date": "2024-05-07",
     "duration": "12 min read",
