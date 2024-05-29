@@ -108,7 +108,7 @@ Usually, this choice comes from a strong interest and pleasure in the building p
 
 > We find ourselves in roles directed by someone who doesn't understand even the basics of these processes
 
-After reaching achieving this goal, we find ourselves in roles directed by someone who doesn't understand even the basics of these processes *(and often earns more)*, showing no regard for the technical implications of their shallow direction. 😒
+After reaching this goal, we find ourselves in roles directed by someone who doesn't understand even the basics of these processes *(and often earns more)*, showing no regard for the technical implications of their shallow direction. 😒
 
 ## How did we get here?
 
