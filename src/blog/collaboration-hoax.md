@@ -78,7 +78,7 @@ Because of this, a person who talks about doing stuff and a person who actually 
 
 ### Unfounded feedback
 
-Builders play a crucial role but often don't have the final say due to the company's structure and culture. Often, higher-ups and stakeholders give blocking input on areas they do not understand, like visual functionality (engineering) an design.
+Builders play a crucial role but often don't have the final say due to the company's structure and culture. Often, higher-ups and stakeholders give blocking input on areas they do not understand.
 
 Should we value feedback from someone who doesn't know the front-end from the back? How can we feel comfortable challenging suggestions like this? These are important questions to consider. 🤨
 
