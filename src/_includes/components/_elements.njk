@@ -71,11 +71,12 @@
 {# Single Field Form :: Link || still need to add theming to error/success #}
 {% macro formSingle(color, size, classes, icon, formName, fieldType, fieldName, placeholder, animate, hover, attr, attrInner, attrInput ) %}
     <div data-form="{{ formLoc }}" class="relative flex flex:col align-items:center justify-content:center">
-        <form name="{{ formName }}" method="POST" netlify {{ attr }} novalidate class="relative form:single form:{{ color }} form:{{ size }} {{ classes }}">
+        <form name="{{ formName }}" method="POST" netlify netlify-honeypot="fake" {{ attr }} novalidate class="relative form:single form:{{ color }} form:{{ size }} {{ classes }}">
             <div class="form:gradient {% if animate %}animate:conic-spin{% endif %}"></div>
             <div class="form:icon">
                 {{ icon }}
             </div>
+            <input name="fake" style="position: absolute !important; width:0 !important; hight:0 !important; opacity:0;"/>
             <div {{ attrInner }} class="form:inner">
                 <input {{ attrInput }} autocomplete="off" type="{{ fieldType | slugify }}" name="{{ fieldName | slugify }}" id="{{ fieldName | slugify }}" placeholder="{{ placeholder }}" />
                 <button type="submit" aria-label="Submit form">
